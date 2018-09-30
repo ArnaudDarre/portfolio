@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Google Analytics -->
+
+	<!-- Google Tag Manager -->
+
+	<title>
+		{% if page.title %} 
+			{{ page.title }} | {{ site.title }}
+		{% else %} 
+			{{ site.title }} | {{ site.description }}
+		{% endif %}
+	</title>	
+
+	<!-- META -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="{{ site.description }} ">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/favicon-16x16.png">
+	<link rel="manifest" href="{{ site.url }}/site.webmanifest">
+	<link rel="mask-icon" href="{{ site.url }}/safari-pinned-tab.svg" color="#007bff">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="{{ site.url }}{{ site.resourceurl }}/stylesheets/style.css" />
+	
+	<!-- VENDOR -->
+	<!-- font awesome -->
+	<link href="{{ site.url }}{{ site.resourceurl }}/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+    <!-- owl carousel -->
+	<link href="{{ site.url }}{{ site.resourceurl }}/vendor/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+	
+    <!-- VENDOR -->
+	<!-- jquery -->
+	<script src="{{ site.url }}{{ site.resourceurl }}/vendor/jquery/jquery-3.3.1.min.js"></script>
+	<!-- owl carousel -->
+	<script src="{{ site.url }}{{ site.resourceurl }}/vendor/owlcarousel/owl.carousel.min.js"></script>
+	<!-- flexslider -->
+	<script src="{{ site.url }}{{ site.resourceurl }}/vendor/flexslider/jquery.flexslider-min.js"></script>
+	<!-- isotope (blog filter) -->
+	<script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
+
+	<!-- JAVASCRIPT -->
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/accordions.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/anchor.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/buttons.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/carousel.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/cursor.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/filter.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/form.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/join.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/modals.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/script.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/slider.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/tabs.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}/js/tooltips.js"></script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+		
+<header class="header">
+
+	<div class="header__menu menu">
+        <a href="" class="menu__button button button--menu">
+            <span class="button__inner"></span>
+        </a>
+        <a href="{{ site.url }}/" class="button button--icon fas fa-angle-left"></a>
+        <a href="#commandments" class="button button--icon fas fa-circle-o"></a>
+        <h1>{{ page.title }}</h1>
+        <div class="anchor">
+            <a href="#target-0" class="active"><i class="fa fa-circle-o"></i></a>
+            <a href="#target-1">1.</a>
+            <a href="#target-2"><i class="fa fa-gamepad"></i></a>
+        </div>
+        <!-- download files -->
+        <div class="links">
+            <a class="button button--download" href="" download>Download CSS</a>
+            <a class="button button--download" href="" download>Download JS</a>
+            <a class="button button--download" href="" download>Download HTML</a>
+        </div>
+    </div>
+
+
+<!-- scroll to top button -->
+<a class="button--scroll-top button button--icon button--highlight fas fa-chevron-up"></a>
+
+<!-- cookie banner -->
+<div class="cookie">
+	<p class="cookie__text body--small">We want to give you the best service by using cookies. Carry on browsing if you are happy with this, or <a href="{{ site.url }}/privacy-policy" class="button--underline">find out</a> how we manage your cookies.</p>
+	<button class="cookie__button button button--small button--primary-darken button--animate fas fa-check">
+		<p class="button__inner">Got it</p>
+	</button>
+</div>
