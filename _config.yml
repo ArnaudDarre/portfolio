@@ -2,9 +2,9 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Fada
+title: Arnaud Darre
 description: >- # this means to ignore newlines until "baseurl:"
-  Library of integration and development ressources for the web. You can find CSS and Javascript tricks, HTML blocks (such as buttons or forms) ready to use, and much more.
+  Print and web designer based in London. Discover my work and profile on my homemade online portfolio.
 
 # Personnal settings
 name: "Arnaud Darre"
