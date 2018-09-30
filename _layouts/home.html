@@ -1,0 +1,9 @@
+{% include header.html %}
+
+{% for page in site.pages %}
+    {% if page.category contains 'builder' %}
+        <a href="{{ site.url }}/{{ page.layout }}/">{{ page.title }}</a>
+    {% endif %}
+{% endfor %}
+
+{% include footer.html %}

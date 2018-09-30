@@ -1,1 +1,28 @@
-theme: jekyll-theme-cayman
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Fada
+description: >- # this means to ignore newlines until "baseurl:"
+  Library of integration and development ressources for the web. You can find CSS and Javascript tricks, HTML blocks (such as buttons or forms) ready to use, and much more.
+
+# Personnal settings
+name: "Arnaud Darre"
+email: arnaudarre@gmail.com
+twitter_username: jekyllrb
+github_username:  ArnaudDarre
+
+# Additional settings
+timezone: Europe/London
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
