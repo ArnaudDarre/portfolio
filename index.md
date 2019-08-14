@@ -1,5 +1,4 @@
 ---
-layout: home
-
+layout: index
+title: Arnaud Darré
 ---
-**jnjnjnjn**
