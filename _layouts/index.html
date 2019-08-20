@@ -1,9 +1,94 @@
 {% include header.html %}
 
-{% for page in site.pages %}
-    {% if page.category contains 'builder' %}
-        <a href="{{ site.url }}/{{ page.layout }}/">{{ page.title }}</a>
-    {% endif %}
-{% endfor %}
+<section class="section">
+    <h1 class="section__title headline">{{ page.title }}</h1>
+    <div class="section__content">
+        <div class="">
+            <h2 class="title">Graphic and Web Designer</h2>
+            <p class="subtitle">Come and discover my work, explore my aspirations and inspirations and contact me for a chit chat!</p>
+        </div>
+        <div class="">
+            <div class="">
+                <p class="lead">Website crafter from desig to development and content by toours truly.</p>
+                <p class="body--small">I will chat about The Beatles, Typography, space, design systems, Science-fiction, music, Buffy the Vampire Slayer and anything your are passionate about.</p>
+            </div>
+            <p class="lead">Available for freelance work.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h1 class="section__title headline">Portfolio</h1>
+    <div class="section__content">
+        <div class="block">
+            <p>Browse through some crunchy bites or check the entire collection.</p>
+            <div class="nav"></div>
+        </div>
+        <div class="block">
+            <p class="label">{{ project.category }}</p>
+            <h2 class="title">{{ project.title }}</h2>
+            <p class="lead">{{ project.subtitle }}</p>
+        </div>
+    </div>
+</section>
+    
+<section class="section">
+    <h1 class="section__title headline">About</h1>
+    <div class="section__content">
+        <div class="block">
+            <h2 class="lead">How I approach design:</h2>
+            <p class="title">Want to draw something together?</p>
+            <p class="body">Graphic and even web design are not so different from a drawing or a painting composition. It all has to do with the use of breathing space around elements, colours, hierarchy and last but not least contrast.</p>
+            <p class="body">This is why each design should start with a pen and paper. This playful but effective method allows to enhance creativity by shortening the bond between the brain and the design tool: your hand (and not the computer).</p>
+        </div>
+        <div class="block">
+            <h2 class="lead">What I like doing:</h2>
+            <div class="card card--skills">
+                <h3 class="card__header subhead">{{ skill.title }}</h3>
+                <p class="card__content body">{{ skill.description }}</p>
+                <p class="label">Project</p>
+                <a class="body">{{ skill.project }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h1 class="section__title headline">Contact</h1>
+    <div class="section__content">
+        <div class="block">
+            <p class="title">Howdy stranger!</p>
+            <h2 class="subtitle">Feel free to drop a line here…</h2>
+            <div class="form">
+                <div class="form__group">
+                    <label for="name" class="form__label">Name</label>
+                    <input type="text" name="name" id="name" class="form__input">
+                </div>
+                <div class="form__group">
+                    <label for="surname" class="form__label">surname</label>
+                    <input type="text" name="surname" id="surname" class="form__input">
+                </div>
+                <div class="form__group">
+                    <label for="subject" class="form__label">subject</label>
+                    <input type="text" name="subject" id="subject" class="form__input">
+                </div>
+                <div class="form__group">
+                    <label for="message" class="form__label">message</label>
+                    <input type="text" name="message" id="message" class="form__input">
+                </div>
+                <button type="submit" class="form__button button button--large button--secondary">
+                    <p class="button__inner">Send</p>
+                </button>
+            </div>
+        </div>
+        <div class="block">
+            <h2 class="subtitle">…or contact me via social media.</h2>
+            <a href="" class="button button--icon button--large" title="Behance profile"></a>
+            <a href="" class="button button--icon button--large" title="Github profile"></a>
+            <a href="" class="button button--icon button--large" title="Linkedin profile"></a>
+            <a href="" class="button button--icon button--large" title="Spotify profile"></a>
+        </div>
+    </div>
+</section>
 
 {% include footer.html %}
