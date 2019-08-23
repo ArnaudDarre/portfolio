@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-
-
 // —————————————————————————————————————————————————————————————————
 // ANCHOR
 // —————————————————————————————————————————————————————————————————
+
+
 
 $.scrollTo = $.fn.scrollTo = function(x, y, options){
    if (!(this instanceof $)) return $.fn.scrollTo.apply($('html, body'), arguments);

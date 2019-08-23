@@ -1,19 +1,17 @@
 $(document).ready(function() {
 
-
-
 // —————————————————————————————————————————————————————————————————
 // FORM
 // —————————————————————————————————————————————————————————————————
-// CHANGE STYLE ON FOCUS
-// CUSTOM SELECT
-// CUSTOM FILE UPLOAD
+// change style on focus
+// custom select
+// custom file upload
 // —————————————————————————————————————————————————————————————————
 
 
 
 // —————————————————————————————————————————————————————————————————
-// CHANGE STYLE ON FOCUS
+// change style on focus
 // —————————————————————————————————————————————————————————————————
 
 $(".form__input").focus(function() {
@@ -26,7 +24,7 @@ $(".form__input").focusout(function() {
 
 
 // —————————————————————————————————————————————————————————————————
-// CUSTOM SELECT
+// custom select
 // —————————————————————————————————————————————————————————————————
 
 $('select').each(function(){
@@ -95,7 +93,7 @@ $('.form__dropdown').bind('mousewheel DOMMouseScroll', function(e) {
 
 
 // —————————————————————————————————————————————————————————————————
-// CUSTOM FILE UPLOAD
+// custom file upload
 // —————————————————————————————————————————————————————————————————
 
 ;(function($) {

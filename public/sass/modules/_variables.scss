@@ -15,15 +15,18 @@
 // 1. colors
 // —————————————————————————————————————————————————————————————————
 
-$primary: 	#007bff;
-$secondary: #64f0ff;
-$dark: 	    #161656;
-$highlight:	#ff6f00;
+$primary: 	#00ffc4;
+$secondary: #3b6e68;
+$highlight:	#f03c3c;
+$dark: 	    #4c3e3e;
 
 $primary-darken:  darken($primary, 15%);
 $primary-lighten: lighten($primary, 15%);
 
-$error: #ff224a;
+$info:      #00d7e9;
+$success:   #2ce71c;
+$warning:   #ffdd00;
+$error:     #f03c3c;
 
 $black: 	    #000a1e;
 $darker-grey:   #8c8c96;

@@ -1,12 +1,10 @@
 $(document).ready(function() {
 
-
-
 // —————————————————————————————————————————————————————————————————
 // MODALS
 // —————————————————————————————————————————————————————————————————
 
-// PREVENT PAGE SCROLL WHEN MODAL OPENED
+
 
 // open
 $(".js-button-modal").click(function(event) {
