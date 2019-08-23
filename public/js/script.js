@@ -1,22 +1,20 @@
 $(document).ready(function() {
 
-
-
 // —————————————————————————————————————————————————————————————————
 // SCRIPT
 // —————————————————————————————————————————————————————————————————
-// PARALLAX SCROLLING
-// NEWS WIDGET ANIMATION
-// MENU SCROLL ANIMATION
-// MENU OPEN ANIMATION
-// BACK TO TOP
-// COOKIE BAR ACCEPT
+// parallax scrolling
+// news widget animation
+// menu scroll animation
+// menu open animation
+// back to top
+// cookie bar accept
 // —————————————————————————————————————————————————————————————————
 
 
 
 // —————————————————————————————————————————————————————————————————
-// NEWS WIDGET ANIMATION
+// parallax scrolling
 // —————————————————————————————————————————————————————————————————
 
 window.addEventListener('scroll', doParallax);
@@ -28,7 +26,7 @@ function doParallax(){
 
 
 // —————————————————————————————————————————————————————————————————
-// NEWS WIDGET ANIMATION
+// news widget animation
 // —————————————————————————————————————————————————————————————————
 
 if ($(window).width() > 575) {   
@@ -44,7 +42,7 @@ else {
 
 
 // —————————————————————————————————————————————————————————————————
-// MENU SCROLL ANIMATION
+// menu scroll animation
 // —————————————————————————————————————————————————————————————————
 
 $(window).scroll(function() { //the scrolled element
@@ -59,7 +57,7 @@ $(window).scroll(function() { //the scrolled element
 
 
 // —————————————————————————————————————————————————————————————————
-// MENU OPEN ANIMATION
+// menu open animation
 // —————————————————————————————————————————————————————————————————
 
 $('.button--menu').click(function(){
@@ -70,7 +68,7 @@ $('.button--menu').click(function(){
 
 
 // —————————————————————————————————————————————————————————————————
-// BACK TO TOP
+// back to top
 // —————————————————————————————————————————————————————————————————
 
 var btn = $('.button--scroll-top');
@@ -91,7 +89,7 @@ btn.on('click', function(e) {
 
 
 // —————————————————————————————————————————————————————————————————
-// COOKIE BAR ACCEPT
+// cookie bar accept
 // —————————————————————————————————————————————————————————————————
 
 var cookieKey = "__applied_blockchain_cookie_banner"
