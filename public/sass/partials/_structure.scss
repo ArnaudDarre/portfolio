@@ -1,0 +1,376 @@
+@charset "UTF-8";
+
+// —————————————————————————————————————————————————————————————————
+// STRUCTURE
+// —————————————————————————————————————————————————————————————————
+// general
+// responsive
+// z-index
+// hover classes
+// section
+// containers
+// elements
+// header
+// footer
+// —————————————————————————————————————————————————————————————————
+
+
+
+// —————————————————————————————————————————————————————————————————
+// general
+// —————————————————————————————————————————————————————————————————
+
+* {
+	@include box-sizing(border-box);
+	outline: none;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body.js-freeze {
+	overflow: hidden;
+}
+
+.row {
+	@include display-flex();
+	@include flex-wrap(wrap);
+	@include calc(width, '100% + '$integer);
+	margin-left: -$integer/2;
+	margin-right: -$integer/2;
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.clear:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+[class*="col--"] {
+	float: left;
+	position: relative;
+	padding: 0 $integer/2;
+	width: 100%;
+}
+
+@for $i from 1 through 12 {
+	.col--#{$i} 			{ width: $i*$col; }
+	.coloffset--#{$i} 		{ margin-left: $i*$col; }
+}
+
+@include responsive(min-width, $mobile-min) {
+	@for $i from 1 through 12 {
+		.col--sm#{$i} 		{ width: $i*$col; }
+		.coloffset--sm#{$i} { margin-left: $i*$col; }
+	}
+}
+
+@include responsive(min-width, $tablet-min) {
+	@for $i from 1 through 12 {
+		.col--md#{$i} 		{ width: $i*$col; }
+		.coloffset--md#{$i} { margin-left: $i*$col; }
+	}
+}
+
+@include responsive(min-width, $desktop-min) {
+	@for $i from 1 through 12 {
+		.col--lg#{$i} 		{ width: $i*$col; }
+		.coloffset--lg#{$i} { margin-left: $i*$col; }
+	}
+}
+
+@include responsive(min-width, $desktop-lg-min) {
+	@for $i from 1 through 12 {
+		.col--xl#{$i} 		{ width: $i*$col; }
+		.coloffset--xl#{$i} { margin-left: $i*$col; }
+	}
+}
+
+// margins & paddings
+
+.no-margin {
+	margin: 0 !important;
+
+	&--top { margin-top: 0 !important; }
+	&--right { margin-right: 0 !important; }
+	&--bottom { margin-bottom: 0 !important; }
+	&--left { margin-left: 0 !important; }
+}
+
+.no-padding {
+	padding: 0 !important;
+
+	&--top { padding-top: 0 !important; }
+	&--right { padding-right: 0 !important; }
+	&--bottom { padding-bottom: 0 !important; }
+	&--left { padding-left: 0 !important; }
+}
+
+// embed responsively
+
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%; 
+
+	iframe, object, embed { 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+}        
+
+// text selection
+::-moz-selection {
+	background: $primary;
+	color: $white;
+}
+::selection {
+	background: $primary;
+	color: $white;
+}
+::-moz-selection {
+	background: $primary;
+	color: $white;
+}
+
+// remove autocomplete from webkit browsers
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0px 1000px $white inset;
+	@include transition(background-color $transition);
+}
+
+// prevent images from stretching with flex 
+
+img {
+	@include align-self(center);
+	width: 100%;
+}
+
+// lists
+
+ul {
+	list-style: disc;
+}
+
+li {
+	margin-left: 18px;
+
+	& + & {
+		padding-top: $integer/2 !important;
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// responsive
+// —————————————————————————————————————————————————————————————————
+
+.hide {
+	
+	&--desktop { @include responsive(max-width, $desktop-max) { display: none !important; } }
+	&--tablets { @include responsive(max-width, $tablet-max) { display: none !important; } }
+	&--mobile { @include responsive(max-width, $mobile-max) { display: none !important; } }
+	&--touch { @include responsive-mobile() { display: none !important; } }
+}
+
+.show {
+
+	&--phones { @include responsive(min-width, $mobile-min) { display: none !important; } }
+}
+
+// —————————————————————————————————————————————————————————————————
+// z-index
+// —————————————————————————————————————————————————————————————————
+
+.cookie				 	{ z-index: 10; }
+.button--scroll-top 	{ z-index: 11; }
+.header 				{ z-index: 12; }
+.anchor 				{ z-index: 13; }
+.modal 					{ z-index: 14; }
+
+@for $i from 0 through 9 {
+	.z-index--#{$i} { z-index: $i; }
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// hover classes
+// —————————————————————————————————————————————————————————————————
+
+.hover-grayscale {
+	@include filter(grayscale(100%));
+	@include transition(filter, $transition);
+	will-change: filter;
+	
+	@include hover-link {
+		@include filter(grayscale(0%));
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// section
+// —————————————————————————————————————————————————————————————————
+
+.section {
+	@include display-flex();
+	@include flex-direction(column);
+	position: relative;
+	min-height: 100vh;
+
+	&__title {
+	}
+
+	&__content {
+	}
+}
+
+// alignement
+
+.section {
+
+	&--left {
+		@include align-items(flex-start);
+		text-align: left;
+	}
+
+	&--center {
+		@include align-items(center);
+		text-align: center;
+	}
+
+	&--right {
+		@include align-items(flex-end);
+		text-align: right;
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// containers
+// —————————————————————————————————————————————————————————————————
+
+.block {
+}
+
+.card {
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+// logos 
+
+.logo {
+	
+	&__item {
+	}
+
+	&__background {
+		fill: $white;
+	}
+
+	&__icon {
+		fill: $black;
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// header
+// —————————————————————————————————————————————————————————————————
+
+.header {
+
+	&__bar {
+	}
+
+	&__logo {
+	}
+
+	&__button {
+	}
+
+	&__contact {
+	}
+
+	&__menu {
+		@include calc(height, '100vh - '$integer*8);
+		@include overflow-scroll();
+		padding: 0  $col*2 $integer*4 $col*2;
+		pointer-events: initial;
+		@include responsive(max-width, $tablet-max) {
+			padding: 0 $col $integer*6 $col;
+		}
+	}
+
+	&.js-opened {
+		@include transition(height $transition, background-color $transition);
+		will-change: height, background-color;
+		height: 100vh;
+		background-color: $white;
+
+		.header {
+
+			&__bar {
+				height: $integer*8;
+			}
+		}
+
+		.button--menu {
+	
+			&:before, &:after, .button__inner {
+				background-color: $black;
+			}
+		}
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// footer
+// —————————————————————————————————————————————————————————————————
+
+.footer {
+
+	&__item {
+	}
+
+	&__logo {
+	}
+
+	&__title {
+	}
+}

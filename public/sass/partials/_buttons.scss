@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+// —————————————————————————————————————————————————————————————————
+// BUTTONS
+// —————————————————————————————————————————————————————————————————
+// general
+// animate
+// color variant
+// size
+// close
+// menu
+// scroll to top
+// —————————————————————————————————————————————————————————————————
+
+
+
+// —————————————————————————————————————————————————————————————————
+// general
+// —————————————————————————————————————————————————————————————————
+
+.button {
+	@include transition(background-color $transition, transform $transition);
+	@include border-radius(100px);
+	@include display-flex(inline-flex !important);
+	@include justify-content(center);
+	@include align-items(center);
+	@include align-self(center);
+	will-change: background-color, transform;
+	cursor: pointer;
+	padding: 12px 24px;
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+
+	&__inner {
+		@include transform-style(preserve-3d);
+		@include backface-visibility (initial);
+		@include transition (color $transition, transform $transition);
+		will-change: color, transform;
+		display: block;
+		width: 100%;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	& + & {
+		margin-left: 5px;
+	}
+
+	&--icon {
+		padding: 0;
+		width: $integer*2;
+		height: $integer*2;
+	}
+
+	&--text {
+		@include transition(transform $transition);
+		will-change: transform;
+		padding: $integer/4 0;
+
+		&:hover {
+			@include transform(translateX($integer/4));
+		}
+	}
+
+	&--underline {
+		text-decoration: underline;
+	}
+}
+
+.button--stroke {
+	padding: 10px 22px;
+
+	&.button {
+
+		&--large {
+			padding: 16px 34px;
+		}
+
+		&--small {
+			padding: 4px 13px;
+		}
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// animate
+// —————————————————————————————————————————————————————————————————
+
+.button--animate:before {
+	@include transition(transform $transition);
+	@include pseudo-element('', 0, auto, auto, -140%, 100%, 100%);
+	@include display-flex(inline-flex);
+	@include align-items(center);
+	@include justify-content(center);
+	will-change: transform;
+	text-align: center;
+	background-color: transparent;
+}
+
+.button--animate:hover:before {
+	@include transform(translateX(140%));
+}
+.button--animate:hover .button__inner {
+	@include transform(translateX(180%));
+}
+
+.button--animate-top:before {
+	@include transition(transform $transition);
+	@include pseudo-element('', -140%, auto, auto, 0, 100%, 100%);
+	@include display-flex(inline-flex);
+	@include align-items(center);
+	@include justify-content(center);
+	will-change: transform;
+	text-align: center;
+	background-color: transparent;
+}
+
+.button--animate-top:hover:before {
+	@include transform(translateY(140%));
+}
+.button--animate-top:hover .button__inner {
+	@include transform(translateY(180%));
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// color variant
+// —————————————————————————————————————————————————————————————————
+
+@include button-fill-color('button--',
+//	prefix 			background	 		color
+	'primary'   	$primary 			$white,
+	'secondary' 	$secondary			$black,
+	'highlight' 	$highlight			$white,
+	'dark' 			$dark 				$white,
+	'white' 		$white 				$primary,
+	'facebook' 		$facebook 			$white,
+	'google' 		$google 			$white,
+	'linkedin' 		$linkedin 			$white,
+	'medium' 		$medium 			$white,
+	'twitter' 		$twitter 			$white
+);
+
+@include button-stroke-color('button--stroke.button--',
+//	prefix 			border-color	 	color
+	'primary'   	$primary 			$black,
+	'secondary' 	$secondary			$black,
+	'highlight' 	$highlight			$black,
+	'dark' 			$dark 				$black,
+	'white' 		$white 				$white
+);
+
+
+
+// —————————————————————————————————————————————————————————————————
+// size
+// —————————————————————————————————————————————————————————————————
+
+.button {
+
+	&--large {
+		padding: 18px 36px;
+
+		&.button--icon {
+			padding: 0;
+			width: $integer*3;
+			height: $integer*3;
+		}
+	}
+
+	&--small {
+		padding: 6px 15px;
+
+		&.button--icon {
+			padding: 0;
+			width: $integer*1.5;
+			height: $integer*1.5;
+		}
+	}
+
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// close
+// —————————————————————————————————————————————————————————————————
+
+.button--close {
+
+	&:before, &:after {
+		margin-top: -2px;
+		background-color: $black;
+		@include transform(rotate(0deg));
+		@include transition (transform $transition);
+		will-change: transform;
+		@include border-radius(0.15rem);
+		@include pseudo-element('', 50%, auto, auto, auto, 30px, 5px);
+	}
+
+	&.rotate:before {
+		@include transform(rotate(45deg));
+	}
+
+	&.rotate:after {
+		@include transform(rotate(-45deg));
+	}
+
+	&.rotate:hover:before, &.rotate:hover:after {
+		@include transform(rotate(0deg));
+	}
+	
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// menu
+// —————————————————————————————————————————————————————————————————
+
+.button--menu {
+	@include animation(button-menu-opacity 0.8s ease 0s);
+	position: relative;
+	display: block !important;
+	overflow: visible;
+	width: $integer*1.5;
+	height: $integer*1.5;
+	background-color: transparent !important;
+	border: 0;
+	padding-left: 0;
+	padding-right: 0;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:before, &:after, .button__inner {
+		background-color: $black;
+	}
+
+	&.alt {
+
+		&:before, &:after, .button__inner {
+			background-color: $white;
+		}	
+	}
+	
+	&:before, &:after {
+		@include transition(transform $transition);
+		@include border-radius(0.15rem);
+		@include pseudo-element('', 50%, auto, auto, 0, 30px, 5px);
+		will-change: transform;
+		margin-top: -4px;
+	}
+
+	&:before {
+		@include transform(translateY($integer/2));
+		@include animation(button-menu-close-before 0.8s ease);
+	}
+
+	&:after {
+		@include transform(translateY(-$integer/2));
+		@include animation(button-menu-close-after 0.8s ease);
+	}
+
+	.button__inner {
+		@include transform(translateY(-1px));
+		@include transition(opacity 0s ease 0.4s);
+		@include border-radius(0.15rem);
+		will-change: opacity;
+		width: $integer*1.5;
+		height: 5px;
+		position: absolute;
+	}
+
+	&.button--menu--open {
+
+		&:before {
+			@include animation(button-menu-open-before 0.8s ease);
+			transform: rotate(45deg); 
+		}
+
+		&:after {
+			@include animation(button-menu-open-after 0.8s ease);
+			transform: rotate(-45deg); 
+		}
+
+		.button__inner {
+			opacity: 0;
+		}
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// scroll to top
+// —————————————————————————————————————————————————————————————————
+
+.button--scroll-top {
+	@include transition(bottom $transition, transform $transition);
+	@include box-shadow($box-shadow-lg);
+	will-change: bottom, transform;
+    position: fixed;
+	bottom: -$integer*4;
+	right: $col;
+	@include responsive-mobile() {
+		display: none !important;
+	}
+
+	&.js-show {
+		bottom: $integer*1.5;
+	}
+
+	&:hover {
+		@include transform(translateY(-$integer/4));
+	}
+}

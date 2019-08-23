@@ -9,20 +9,38 @@ description: >- # this means to ignore newlines until "baseurl:"
 # Personnal settings
 name: "Arnaud Darre"
 email: arnaudarre@gmail.com
-twitter_username: jekyllrb
 github_username:  ArnaudDarre
+
+# social links
+github: https://github.com/appliedblockchain/
+linkedin: https://www.linkedin.com/company/applied-blockchain/
+medium: https://medium.com/@AppBlockchain_
+twitter: https://twitter.com/appblockchain
 
 # Additional settings
 timezone: Europe/London
 
+# permalinks config
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  posts:
+    output: true
+    permalink: /:title/
+
+# internal path
+resourceurl: /public/
+imageurl: /public/images/
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

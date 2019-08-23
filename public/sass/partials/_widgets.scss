@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+// —————————————————————————————————————————————————————————————————
+// WIDGETS
+// —————————————————————————————————————————————————————————————————
+// general
+// share
+// social
+// newsletter
+// news
+// cookies
+// —————————————————————————————————————————————————————————————————
+
+
+
+// —————————————————————————————————————————————————————————————————
+// general
+// —————————————————————————————————————————————————————————————————
+
+.widget {
+    position: relative;
+    @include border-radius($integer);
+
+    &__header {
+        @include display-flex();
+        @include border-top-right-radius($integer);
+        @include border-top-left-radius($integer);
+        width: 100%;
+    }
+
+    &__content {
+        @include border-bottom-right-radius($integer);
+        @include border-bottom-left-radius($integer);
+    }
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// share
+// —————————————————————————————————————————————————————————————————
+
+.share {
+    @include display-flex();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include transform(translateX(-$integer*4.5));
+    position: absolute;
+    top: 0;
+    padding-top: $integer/4;
+    
+    &__button {
+        
+        .post & {
+            margin-left: 0;
+            margin-bottom: $integer/4;
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// social
+// —————————————————————————————————————————————————————————————————
+
+.social {
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// newsletter
+// —————————————————————————————————————————————————————————————————
+
+.newsletter {
+
+    &__notice {
+        margin-top: $integer/2;
+        margin-bottom: $integer/2;
+    }
+    
+    &__button {
+        margin-top: $integer/2;
+    }
+
+    .form__label {
+        color: $white !important;
+    }
+
+    &__input {
+        max-width: $integer*25
+    }
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// news
+// —————————————————————————————————————————————————————————————————
+
+.widget {
+
+    &--news {
+        @include display-flex();
+        @include flex-direction(column);
+        @include align-items(center);
+        @include border-top-right-radius(0);
+        @include border-bottom-right-radius(0);
+        @include box-shadow($box-shadow-sm);
+        position: absolute;
+        top: 50%;
+        right: -$integer*26;
+        width: $integer*26;
+        background-color: $primary;
+        text-align: left;
+        color: $white;
+        @include responsive(max-width, $mobile-max) {
+            @include border-top-right-radius($integer);
+            @include border-bottom-right-radius($integer);
+            position: static;
+            margin-top: $integer;
+            margin-left: 5%;
+            width: 90%;
+        }
+
+        .button {
+            @include align-self(flex-start);
+            min-width: 128px;
+        }
+
+        .widget {
+            
+            &__header {
+                @include align-items(center);
+                @include border-top-right-radius(0);
+                background-color: $primary-darken;
+                padding: $integer;
+                @include responsive(max-width, $mobile-max) {
+                    @include border-top-left-radius($integer);
+                    @include border-top-right-radius($integer);
+                    @include flex-direction(column);
+                    font-size: 1rem;
+
+                    .button {
+                        margin-top: $integer/4;
+                    }
+                }
+            }
+            
+            &__content {
+                @include display-flex();
+                @include flex-direction(row);
+                padding: $integer;
+                @include responsive(max-width, $mobile-max) {
+                    font-size: 0.8rem;
+                }
+
+                .button {
+                    margin-top: $integer;
+                }
+            }
+
+            &__logo {
+                width: $integer*3;
+                margin-right: $integer;
+                @include responsive(max-width, $mobile-max) {
+                    display: none;
+                }
+            }
+
+            &__portrait {
+                width: $integer*5;
+                height: $integer*5;
+                margin-right: $integer;                
+            }
+        }
+
+        .testimonial__mark {
+            opacity: 0.1 !important;
+            top: $integer*3;
+            left: $integer*6;
+            width: $integer*5 !important;
+        }
+    }
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// cookies
+// —————————————————————————————————————————————————————————————————
+
+.cookie {
+    @include display-flex();
+    @include align-items(center);
+    @include justify-content(space-between);
+    @include transition(opacity $transition);
+    @include box-shadow($box-shadow-lg);
+    padding-left: $col*2;
+    padding-right: $col*2;
+    will-change: opacity;
+    background-color: $primary;
+    color: $white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: $integer/2;
+    padding-bottom: $integer/2;
+    opacity: 1;
+    display: none;
+    @include responsive(max-width, $mobile-max) {
+        @include justify-content(flex-start);
+        @include flex-wrap(wrap);
+        padding-left: $col;
+        padding-right: $col;
+    }
+    @include responsive-mobile() {
+        padding-right: $col;
+    }
+
+    &.js-cookie-accepted {
+        opacity: 0;
+    }
+
+    &__text {
+        padding-right: $integer;
+        @include responsive(max-width, $mobile-max) {
+            padding-right: 0;
+            margin-bottom: $integer/2;
+        }
+    }
+
+    &__button {
+        min-width: 75px;
+    }
+}
