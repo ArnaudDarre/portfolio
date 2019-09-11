@@ -31,6 +31,17 @@ html, body {
 	height: 100%;
 }
 
+body {
+
+	&:before {
+		@include pseudo-element('', 0, 0, 0, 0, 100vw, 100vh);
+		position: fixed;
+		border: $integer-xl solid $white;
+		box-sizing: border-box;
+		pointer-events: none;
+	}
+}
+
 body.js-freeze {
 	overflow: hidden;
 }
@@ -62,34 +73,34 @@ body.js-freeze {
 	width: 100%;
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through 16 {
 	.col--#{$i} 			{ width: $i*$col; }
 	.coloffset--#{$i} 		{ margin-left: $i*$col; }
 }
 
 @include responsive(min-width, $mobile-min) {
-	@for $i from 1 through 12 {
+	@for $i from 1 through 16 {
 		.col--sm#{$i} 		{ width: $i*$col; }
 		.coloffset--sm#{$i} { margin-left: $i*$col; }
 	}
 }
 
 @include responsive(min-width, $tablet-min) {
-	@for $i from 1 through 12 {
+	@for $i from 1 through 16 {
 		.col--md#{$i} 		{ width: $i*$col; }
 		.coloffset--md#{$i} { margin-left: $i*$col; }
 	}
 }
 
 @include responsive(min-width, $desktop-min) {
-	@for $i from 1 through 12 {
+	@for $i from 1 through 16 {
 		.col--lg#{$i} 		{ width: $i*$col; }
 		.coloffset--lg#{$i} { margin-left: $i*$col; }
 	}
 }
 
 @include responsive(min-width, $desktop-lg-min) {
-	@for $i from 1 through 12 {
+	@for $i from 1 through 16 {
 		.col--xl#{$i} 		{ width: $i*$col; }
 		.coloffset--xl#{$i} { margin-left: $i*$col; }
 	}
@@ -212,6 +223,10 @@ li {
 .anchor 				{ z-index: 13; }
 .modal 					{ z-index: 14; }
 
+.section__header 		{ z-index: 20; }
+
+body:before				{ z-index: 30; }
+
 @for $i from 0 through 9 {
 	.z-index--#{$i} { z-index: $i; }
 }
@@ -240,14 +255,24 @@ li {
 
 .section {
 	@include display-flex();
-	@include flex-direction(column);
 	position: relative;
 	min-height: 100vh;
-
+	background-color: $primary;
+	
+	&__header {
+		@include transform(rotate(-90deg));
+		@include transform-origin(top left);
+		position: fixed;
+		bottom: $integer-xxl;
+		left: $integer-xxl;
+	}
+	
 	&__title {
 	}
-
+	
 	&__content {
+		padding-top: $integer-xxxl;
+		padding-bottom: $integer-xl;
 	}
 }
 

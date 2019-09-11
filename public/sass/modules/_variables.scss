@@ -48,7 +48,7 @@ $twitter:   #1da1f2;
 // 2. general
 // —————————————————————————————————————————————————————————————————
 
-$col:     100%/16;
+$col:     100vw/16;
 
 $integer:		0.5rem; // 8px
 
@@ -57,8 +57,9 @@ $integer-xs:    $integer/4; // 2px
 $integer-sm:    $integer/2; // 4px
 $integer-md:    $integer;
 $integer-lg:    $integer*2; // 16px
-$integer--xl:   $integer*3; // 24px
-$integer--xxl:  $integer*5; // 40px
+$integer-xl:    $integer*3; // 24px
+$integer-xxl:   $integer*6; // 48px
+$integer-xxxl:  $integer*15; // 120px
 
 $transition:    0.4s ease 0s;
 

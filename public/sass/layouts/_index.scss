@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+// —————————————————————————————————————————————————————————————————
+// INDEX
+// —————————————————————————————————————————————————————————————————
+
+
+
+#landing {
+
+    .section__content {
+        @include display-flex();
+        @include flex-direction(column);
+        @include justify-content(space-between);
+        padding-bottom: $integer-xxxl;
+    }
+
+    .title {
+        padding-bottom: $integer-xxl;
+    }
+
+    .lead {
+        padding-bottom: $integer-xxl;
+    }
+}
