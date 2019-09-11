@@ -36,7 +36,7 @@ body {
 	&:before {
 		@include pseudo-element('', 0, 0, 0, 0, 100vw, 100vh);
 		position: fixed;
-		border: $integer-xl solid $white;
+		border: $integer-lg solid $white;
 		box-sizing: border-box;
 		pointer-events: none;
 	}
@@ -263,8 +263,8 @@ body:before				{ z-index: 30; }
 		@include transform(rotate(-90deg));
 		@include transform-origin(top left);
 		position: fixed;
-		bottom: $integer-xxl;
-		left: $integer-xxl;
+		bottom: $integer-xl;
+		left: $integer-xl;
 	}
 	
 	&__title {
@@ -272,7 +272,15 @@ body:before				{ z-index: 30; }
 	
 	&__content {
 		padding-top: $integer-xxxl;
+		padding-bottom: $integer-lg;
+	}
+
+	&__comment {
 		padding-bottom: $integer-xl;
+	}
+
+	&__subtitle {
+		padding-bottom: $integer-xxl;
 	}
 }
 
@@ -303,9 +311,23 @@ body:before				{ z-index: 30; }
 // —————————————————————————————————————————————————————————————————
 
 .block {
+	padding-bottom: $integer-xxl;
 }
 
 .card {
+	padding-top: $integer-xl;
+
+	&__title {
+		padding-bottom: $integer;
+	}
+
+	&__body {
+		padding-bottom: $integer-md;
+	}
+
+	&__label {
+		padding-bottom: $integer;
+	}
 }
 
 
