@@ -1,25 +1,29 @@
 {% include header.html %}
 
-<section class="section">
-    <h1 class="section__title headline">{{ page.title }}</h1>
-    <div class="section__content">
-        <div class="">
+<section id="landing" class="row section js-scrolling-letters__section">
+    <div class="section__header">
+        <h1 class="section__title headline js-scrolling-letters__text">Arnaud<br>Darré</h1>
+    </div>
+    <div class="coloffset--3 col--12 section__content">
+        <div class="row">
             <h2 class="title">Graphic and Web Designer</h2>
-            <p class="subtitle">Come and discover my work, explore my aspirations and inspirations and contact me for a chat!</p>
+            <p class="col--9 subtitle">Come and discover my <a href="" class="body--underline">work</a>, explore my <a href="" class="body--underline">aspirations</a> and inspirations and <a href="" class="body--underline">contact</a> me for a chat!</p>
         </div>
-        <div class="">
-            <div class="">
-                <p class="lead">Website crafter from desig to development and content by toours truly.</p>
+        <div class="row">
+            <div class="col--5">
+                <p class="lead">Website crafted from design to development and content by yours truly.</p>
                 <p class="body--small">I will chat about The Beatles, Typography, space, design systems, Science-fiction, music, Buffy the Vampire Slayer and anything your are passionate about.</p>
             </div>
-            <p class="lead">Available for freelance work.</p>
+            <p class="coloffset--3 col--4 lead">Available for freelance work.</p>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <h1 class="section__title headline">Portfolio</h1>
-    <div class="section__content">
+<section id="portfolio" class="row section js-scrolling-letters__section">
+    <div class="section__header">
+        <h1 class="section__title headline js-scrolling-letters__text">Portfolio</h1>
+    </div>
+    <div class="coloffset--3 col--12 section__content">
         <div class="block">
             <p>Browse through some crunchy bites or check the entire collection.</p>
             <div class="nav"></div>
@@ -32,9 +36,11 @@
     </div>
 </section>
     
-<section class="section">
-    <h1 class="section__title headline">About</h1>
-    <div class="section__content">
+<section id="about" class="row section js-scrolling-letters__section">
+    <div class="section__header">
+        <h1 class="section__title headline js-scrolling-letters__text">About</h1>
+    </div>
+    <div class="coloffset--3 col--12 section__content">
         <div class="block">
             <h2 class="lead">How I approach design:</h2>
             <p class="title">Want to draw something together?</p>
@@ -53,29 +59,33 @@
     </div>
 </section>
 
-<section class="section">
-    <h1 class="section__title headline">Contact</h1>
-    <div class="section__content">
+<section id="contact" class="row section js-scrolling-letters__section">
+    <div class="section__header">
+        <h1 class="section__title headline js-scrolling-letters__text">Contact</h1>
+    </div>
+    <div class="coloffset--3 col--12 section__content">
         <div class="block">
             <p class="title">Howdy stranger!</p>
             <h2 class="subtitle">Feel free to drop a line here…</h2>
-            <div class="form">
-                <div class="form__group">
+            <div class="row form">
+                <div class="col--5 form__group">
                     <label for="name" class="form__label">Name</label>
                     <input type="text" name="name" id="name" class="form__input">
                 </div>
-                <div class="form__group">
+                <div class="col--5 form__group">
                     <label for="surname" class="form__label">Surname</label>
                     <input type="text" name="surname" id="surname" class="form__input">
                 </div>
-                <div class="form__group">
+                <div class="col--10 form__group">
                     <label for="subject" class="form__label">Subject</label>
                     <input type="text" name="subject" id="subject" class="form__input">
                 </div>
-                <div class="form__group">
+                <div class="col--10 form__group">
                     <label for="message" class="form__label">Message</label>
                     <input type="text" name="message" id="message" class="form__input">
                 </div>
+            </div>
+            <div>
                 <button type="submit" class="form__button button button--large button--secondary">
                     <p class="button__inner">Send</p>
                 </button>

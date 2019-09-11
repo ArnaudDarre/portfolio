@@ -28,18 +28,18 @@
 	"partials/_accordions",
 	"partials/_buttons",
 	"partials/_carousel",
-	"partials/_fonts",
 	"partials/_form",
 	"partials/_modals",
 	"partials/_slider",
 	"partials/_structure",
 	"partials/_tooltips",
+	"partials/_typography",
 	"partials/_widgets";
 
 // PAGES
 @import
-	"pages/_index",
-	"pages/_projects-list";
+	"layouts/_index",
+	"layouts/_projects-list";
 
 @import
 	"modules/_ie";

@@ -7,7 +7,6 @@
 // chat
 // buttons
 // form
-// misc
 // —————————————————————————————————————————————————————————————————
 
 
@@ -19,8 +18,8 @@
 html, body {
 	font-family: $font;
 	font-size: 16px;
-	line-height: 1.2;
-	font-weight: $font-light;
+	line-height: 1.5;
+	font-weight: $font-regular;
 	color: $black;
 	/*-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -31,43 +30,46 @@ html, body {
 }
 
 .headline {
-	@include fontSize(3, $font-black, normal);
+	@include font-size(6.5, $font-black, normal);
+	line-height: 1;
 	text-transform: uppercase;
 }
 
 .title {
-	@include fontSize(2.5, $font-bold, normal);	
+	@include font-size(4, $font-black, normal);	
+	line-height: 1;
 }
 
 .subtitle {
-	@include fontSize(1.8, $font-bold, normal);
+	@include font-size(2.5, $font-bold, normal);
+	line-height: 1;
 }
 
-.comment, .post__update {
-	@include fontSize(1.5, $font-light, normal);
+.subhead {
+	@include font-size(1.5, $font-black, normal);
+	line-height: 1;
 	text-transform: uppercase;
 }
 
-.quote, .post__quote {
-	@include fontSize(1.5, $font-light, normal);
+.quote {
+	@include font-size(1.5, $font-bold, normal);
+	line-height: 1;
 }
 
-.lead, .post__title {
-	@include fontSize(1.5, $font-regular, normal);
+.lead {
+	@include font-size(1.5, $font-regular, normal);
+	line-height: 1;
 }
 
 .body {
 
-	&--large {
-		font-size: 1.25rem;
-	}
-	&--small {
-		font-size: 0.8rem;
-	}
+	&--large { font-size: 1.25rem; }
+	&--small { font-size: 0.75rem; }
 
-	&--bold {
-		font-weight: $font-bold;
-	}
+	&--bold { font-weight: $font-bold; }
+
+	&--italic { font-style: italic; }
+	&--underline { text-decoration: underline; }
 }
 
 // col text
@@ -89,7 +91,7 @@ html, body {
 // —————————————————————————————————————————————————————————————————
 
 .button {
-	@include fontSize(1, $font-black, normal);
+	@include font-size(1, $font-black, normal);
 	font-family: $font;
 	letter-spacing: 0.05rem;
 	line-height: 1;
@@ -100,12 +102,12 @@ html, body {
 	}
 
 	&.button--large {
-		@include fontSize(1.5, $font-black, normal);
+		@include font-size(1.5, $font-black, normal);
 		letter-spacing: 0.08rem;
 	}
 
 	&.button--small {
-		@include fontSize(0.8, $font-black, normal);
+		@include font-size(0.75, $font-black, normal);
 		letter-spacing: 0.04rem;
 		line-height: 1.5;
 	}
@@ -138,12 +140,12 @@ html, body {
 }
 
 .label, .form__label {
-	@include fontSize(0.8, $font-black, normal);
+	@include font-size(0.75, $font-black, normal);
 }
 
 .form {
 
 	&__input, .form__dropdown li {
-		@include fontSize(1, $font-light, normal);
+		@include font-size(1, $font-light, normal);
 	}
 }
