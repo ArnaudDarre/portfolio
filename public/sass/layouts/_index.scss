@@ -15,11 +15,14 @@
         padding-bottom: $integer-xxxl;
     }
 
-    .title {
-        padding-bottom: $integer-xxl;
-    }
-
     .lead {
-        padding-bottom: $integer-xxl;
+        padding-bottom: $integer-xl;
+    }
+}
+
+.card {
+
+    &--skills {
+        padding-right: $col;
     }
 }

@@ -51,15 +51,17 @@ html, body {
 	text-transform: uppercase;
 }
 
-.quote {
+.lead {
 	@include font-size(1.5, $font-bold, normal);
 	line-height: 1;
 }
 
-.lead {
+.quote {
 	@include font-size(1.5, $font-regular, normal);
 	line-height: 1;
-}
+}	
+
+// overides
 
 .body {
 
@@ -70,6 +72,15 @@ html, body {
 
 	&--italic { font-style: italic; }
 	&--underline { text-decoration: underline; }
+}
+
+// spacing between paragraphs
+
+.body {
+
+	& + & { padding-top: $integer; }
+	&--large { & + & { padding-top: $integer*1.25; }}
+	&--small { & + & { padding-top: $integer*0.75; }}
 }
 
 // col text

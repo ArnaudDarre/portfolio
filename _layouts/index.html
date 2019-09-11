@@ -6,15 +6,15 @@
     </div>
     <div class="coloffset--3 col--12 section__content">
         <div class="row">
-            <h2 class="title">Graphic and Web Designer</h2>
+            <h2 class="col--12 section__subtitle title">Graphic and Web Designer</h2>
             <p class="col--9 subtitle">Come and discover my <a href="" class="body--underline">work</a>, explore my <a href="" class="body--underline">aspirations</a> and inspirations and <a href="" class="body--underline">contact</a> me for a chat!</p>
         </div>
         <div class="row">
             <div class="col--5">
-                <p class="lead">Website crafted from design to development and content by yours truly.</p>
+                <p class="section__comment lead">Website crafted from design to development and content by yours truly.</p>
                 <p class="body--small">I will chat about The Beatles, Typography, space, design systems, Science-fiction, music, Buffy the Vampire Slayer and anything your are passionate about.</p>
             </div>
-            <p class="coloffset--3 col--4 lead">Available for freelance work.</p>
+            <p class="coloffset--3 col--4 section__comment lead">Available for freelance work.</p>
         </div>
     </div>
 </section>
@@ -25,7 +25,7 @@
     </div>
     <div class="coloffset--3 col--12 section__content">
         <div class="block">
-            <p>Browse through some crunchy bites or check the entire collection.</p>
+            <p class="section__comment">Browse through some crunchy bites or check the entire collection.</p>
             <div class="nav"></div>
         </div>
         <div class="block">
@@ -42,18 +42,24 @@
     </div>
     <div class="coloffset--3 col--12 section__content">
         <div class="block">
-            <h2 class="lead">How I approach design:</h2>
-            <p class="title">Want to draw something together?</p>
-            <p class="body">Graphic and even web design are not so different from a drawing or a painting composition. It all has to do with the use of breathing space around elements, colours, hierarchy and last but not least contrast.</p>
-            <p class="body">This is why each design should start with a pen and paper. This playful but effective method allows to enhance creativity by shortening the bond between the brain and the design tool: your hand (and not the computer).</p>
+            <div class="row">
+                <h2 class="col--12 section__comment lead">How I approach design:</h2>
+                <p class="col--12 section__subtitle title">Want to draw something together?</p>
+                <p class="col--8 body">Graphic and even web design are not so different from a drawing or a painting composition. It all has to do with the use of breathing space around elements, colours, hierarchy and last but not least contrast.</p>
+                <p class="col--8 body">This is why each design should start with a pen and paper. This playful but effective method allows to enhance creativity by shortening the bond between the brain and the design tool: your hand (and not the computer).</p>
+            </div>
         </div>
         <div class="block">
             <h2 class="lead">What I like doing:</h2>
-            <div class="card card--skills">
-                <h3 class="card__header subhead">{{ skill.title }}</h3>
-                <p class="card__content body">{{ skill.description }}</p>
-                <p class="label">Project</p>
-                <a class="body">{{ skill.project }}</a>
+            <div class="row">
+                {% for skill in site.data.skills %}
+                <div class="col--6 card card--skills">
+                    <h3 class="card__title subhead">{{ skill.title }}</h3>
+                    <p class="card__body body">{{ skill.description }}</p>
+                    <p class="card__label label">Project</p>
+                    <a href="{{ skill.project | slugify }}" class="body body__underline">{{ skill.project }}</a>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -65,8 +71,8 @@
     </div>
     <div class="coloffset--3 col--12 section__content">
         <div class="block">
-            <p class="title">Howdy stranger!</p>
-            <h2 class="subtitle">Feel free to drop a line here…</h2>
+            <p class="section__subtitle title">Howdy stranger!</p>
+            <h2 class="section__comment subtitle">Feel free to drop a line here…</h2>
             <div class="row form">
                 <div class="col--5 form__group">
                     <label for="name" class="form__label">Name</label>
@@ -92,7 +98,7 @@
             </div>
         </div>
         <div class="block">
-            <h2 class="subtitle">…or contact me via social media.</h2>
+            <h2 class="section__comment subtitle">…or contact me via social media.</h2>
             <a href="" class="button button--icon button--large" title="Behance profile"></a>
             <a href="" class="button button--icon button--large" title="Github profile"></a>
             <a href="" class="button button--icon button--large" title="Linkedin profile"></a>
