@@ -40,20 +40,42 @@
 // background shapes
 // —————————————————————————————————————————————————————————————————
 
-.background__cirle {
-    position: absolute;
-    height: 100vh;
-    width: 100vh;
-    background-color: $primary;
-    border-radius: 50%;
+.background {
 
-    &--landing {
-        top: -50vh;
-        left: -50vh;
+    &__square {
+        position: absolute;
+        background-color: $white;
+
+        &--landing {
+            @include transform(rotate(45deg));
+            top: 66.67vh;
+            right: -50vh;
+            height: 100vh;
+            width: 100vh;
+
+        }
+    }
+
+    &__cirle {
+        @extend .background__square;
+        border-radius: 50%;
+        
+        &--landing {
+            top: -50vh;
+            left: -50vh;
+            height: 100vh;
+            width: 100vh;
+        }
+    }
+
+    &__trigger {
+        position: absolute;
+    
+        &--landing {
+            @include transform(translateY(-$integer-md));
+            top: 50vh;
+        }
     }
 }
+    
 
-.trigger2 {
-    position: absolute;
-    top: 50vh;
-}
