@@ -46,8 +46,8 @@
 		a {
 			@include border-radius(50%);
 			background-color: $white;
-			width: $integer*2;
-			height: $integer*2;
+			width: $integer-md;
+			height: $integer-md;
 			position: absolute;
 			margin-top: -$integer;
 			top: 50%;
@@ -67,14 +67,14 @@
 		.slides__prev {
 			left: $integer;
 			&:before {
-				@include fontAwesome("\f104", auto, auto, auto, 13px, $primary);
+				@include font-awesome("\f104", auto, auto, auto, 13px, $primary);
 			}
 		}
 
 		.slides__next {
 			right: $integer;
 			&:before {
-				@include fontAwesome("\f105", auto, 13px, auto, auto, $primary);
+				@include font-awesome("\f105", auto, 13px, auto, auto, $primary);
 			}
 		}
 	}

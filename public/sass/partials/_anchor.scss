@@ -21,7 +21,7 @@
     }
 
     &__item + &__item {
-        padding-top: $integer*2;
+        padding-top: $integer-md;
     }
 
     &__dot {
@@ -29,8 +29,8 @@
         @include transition(transform $transition);
         will-change: transforn;
         background-color: white;
-        width: $integer/2;
-        height: $integer/2;
+        width: $integer-sm;
+        height: $integer-sm;
         display: block;
         position: relative;
 

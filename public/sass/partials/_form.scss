@@ -5,8 +5,6 @@
 // —————————————————————————————————————————————————————————————————
 // general
 // select
-// file
-// checkbox & radio
 // —————————————————————————————————————————————————————————————————
 
 
@@ -29,7 +27,7 @@
 	&__group {
 		position: relative;
 		width: 100%;
-		margin-bottom: $integer;
+		margin-bottom: $integer-md;
 		text-align: left;
 
 		&.focused {
@@ -37,11 +35,11 @@
 			.form {
 
 				&__label {
-					color: $primary;
+					color: $secondary;
 				}
 
 				&__input {
-					border-color: $primary;
+					border-color: $secondary;
 				}
 			}
 		}
@@ -64,23 +62,21 @@
 		overflow: hidden;
 		white-space: nowrap;
 		position: relative;
-		padding-left: $integer*0.75;
-		margin-bottom: $integer/2;
+		padding-bottom: $integer-sm;
 	}
 
 	&__input {
 		@include transition(border $transition);
 		@include text-overflow(ellipsis);
-		@include border-radius(20px !important);
 		will-change: border;
 		width: 100%;
 		background-color: transparent;
-		padding: 10px $integer*0.75 8px $integer*0.75;
-		border: 2px solid $medium-grey;
+		padding-bottom: $integer;
+		border-bottom: 2px solid $black;
 	}
 
 	&__button {
-		margin-top: $integer*2;
+		margin-top: $integer-md;
 	}
 	
 	&__footer {
@@ -116,7 +112,7 @@
 	}
 
 	&:after {
-		@include fontAwesome("\f078", 0, $integer*0.75, auto, auto, $primary);
+		@include font-awesome("\f078", 0, $integer, auto, auto, $primary);
 		@include transition(color $transition);
 		@include display-flex();
 		@include align-items(center);
@@ -127,14 +123,14 @@
 	}
 
 	.form__dropdown {
-		@include calc(top, '100% +' $integer/2);
+		@include calc(top, '100% +' $integer-sm);
 		@include box-shadow($box-shadow-lg);
 		@include border-radius($integer);
 		display: none;
 		position: absolute;
 		right: 0;
 		left: 0;
-		max-height: $integer*9;
+		max-height: $integer-xxl;
 		overflow: scroll;
 		z-index: 2;
 		background-color: $white;
@@ -145,7 +141,7 @@
 			@include transition(color $transition);
 			will-change: color;
 			margin: 0;
-			padding: 9px $integer*0.75;
+			padding: 9px $integer;
 			cursor: pointer;
 
 			&:nth-child(1) {
@@ -166,129 +162,3 @@
 		}
 	}
 }
-
-
-
-// —————————————————————————————————————————————————————————————————
-// file
-// —————————————————————————————————————————————————————————————————
-
-.form__file {
-	position: relative;
-
-	.form__input {
-	}
-
-	.form__button {
-		@include border-bottom-right-radius(0.2rem);
-		@include border-top-right-radius(0.2rem);
-		background-color: $medium-grey;
-		color: $white;
-		width: 130px !important;
-		margin: 0;
-		right: 0;
-		bottom: 0;
-		position: absolute;
-	}
-}
-
-
-
-// —————————————————————————————————————————————————————————————————
-// checkbox & radio
-// —————————————————————————————————————————————————————————————————
-
-.form__checkbox, .form__radio {
-
-	.form__input {
-		position: absolute;
-		opacity: 0;
-		width: 0;
-		height: 0;
-
-		&:checked + .form__label:before {
-			border-color: $primary;
-			border-width: $integer/2;
-		}
-	}
-
-	.form__label {
-		padding-left: $integer*1.5;
-		cursor: pointer;
-		margin: 0;
-		font-size: 1rem !important;
-		font-weight: 200;
-		overflow: visible;
-		color: $black !important;
-		white-space: normal;
-
-		&:before {
-			@include pseudo-element('', -1px, auto, auto, 0, $integer, $integer);
-			@include box-sizing(border-box);
-			@include transition(border 0.4s ease 0s);
-			will-change: border;
-			border: 2px solid $medium-grey;
-		}
-	}
-}
-
-.form__checkbox {
-
-	.form__input {
-
-		&:checked + .form__label:before {
-			border-width: $integer/2;
-		}
-
-		&:checked + .form__label:after {
-			opacity: 1;
-		}		
-	}
-
-	.form__label {
-
-		&:before {
-			@include border-radius($integer/4);
-		}
-
-		&:after {
-			@include transition(opacity $transition);
-			@include display-flex();
-			@include align-items(center);
-			@include justify-content(center);
-			@include fontAwesome("\f00c", 0, auto, auto, 0, $white);
-			will-change: opacity;
-			width: $integer;
-			height: $integer;
-			font-size: 0.7rem;
-			line-height: 0;
-			opacity: 0;
-		}
-	}
-}
-
-.form__radio {
-    @include display-flex();
-    @include align-items(center);
-    @include flex-basis(0);
-    height: $integer*2;
-
-	& + & {
-		margin-left: $integer;
-	}
-
-	.form__input {
-
-		&:checked + .form__label:before {
-			border-width: 7px;
-		}
-	}
-
-	.form__label {
-
-		&:before {
-			@include border-radius(50%);
-		}
-	}
-}
-

@@ -23,7 +23,7 @@
 		@include justify-content(space-between);
 		text-align: left;
 		cursor: pointer;
-		padding: $integer $integer*1.5;
+		padding: $integer $integer-md;
 
 		&.js-accordion-active {
 
@@ -52,11 +52,11 @@
 		cursor: initial;
 		display: none;
 		padding-top: 0;
-		padding-bottom: $integer*1.5;
+		padding-bottom: $integer-md;
 	}
 
 	&__subtitle {
-		padding: $integer*0.75 0;
+		padding: $integer-sm 0;
 
 		&:nth-child(1) {
 			padding-top: 0;

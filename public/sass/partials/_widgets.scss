@@ -7,7 +7,6 @@
 // share
 // social
 // newsletter
-// news
 // cookies
 // —————————————————————————————————————————————————————————————————
 
@@ -44,16 +43,16 @@
     @include display-flex();
     @include flex-direction(column);
     @include align-items(center);
-    @include transform(translateX(-$integer*4.5));
+    @include transform(translateX(-$integer-xl));
     position: absolute;
     top: 0;
-    padding-top: $integer/4;
+    padding-top: $integer-xs;
     
     &__button {
         
         .post & {
             margin-left: 0;
-            margin-bottom: $integer/4;
+            margin-bottom: $integer-xs;
             text-decoration: none;
         }
     }
@@ -77,12 +76,12 @@
 .newsletter {
 
     &__notice {
-        margin-top: $integer/2;
-        margin-bottom: $integer/2;
+        margin-top: $integer-sm;
+        margin-bottom: $integer-sm;
     }
     
     &__button {
-        margin-top: $integer/2;
+        margin-top: $integer-sm;
     }
 
     .form__label {
@@ -90,99 +89,7 @@
     }
 
     &__input {
-        max-width: $integer*25
-    }
-}
-
-
-
-// —————————————————————————————————————————————————————————————————
-// news
-// —————————————————————————————————————————————————————————————————
-
-.widget {
-
-    &--news {
-        @include display-flex();
-        @include flex-direction(column);
-        @include align-items(center);
-        @include border-top-right-radius(0);
-        @include border-bottom-right-radius(0);
-        @include box-shadow($box-shadow-sm);
-        position: absolute;
-        top: 50%;
-        right: -$integer*26;
-        width: $integer*26;
-        background-color: $primary;
-        text-align: left;
-        color: $white;
-        @include responsive(max-width, $mobile-max) {
-            @include border-top-right-radius($integer);
-            @include border-bottom-right-radius($integer);
-            position: static;
-            margin-top: $integer;
-            margin-left: 5%;
-            width: 90%;
-        }
-
-        .button {
-            @include align-self(flex-start);
-            min-width: 128px;
-        }
-
-        .widget {
-            
-            &__header {
-                @include align-items(center);
-                @include border-top-right-radius(0);
-                background-color: $primary-darken;
-                padding: $integer;
-                @include responsive(max-width, $mobile-max) {
-                    @include border-top-left-radius($integer);
-                    @include border-top-right-radius($integer);
-                    @include flex-direction(column);
-                    font-size: 1rem;
-
-                    .button {
-                        margin-top: $integer/4;
-                    }
-                }
-            }
-            
-            &__content {
-                @include display-flex();
-                @include flex-direction(row);
-                padding: $integer;
-                @include responsive(max-width, $mobile-max) {
-                    font-size: 0.8rem;
-                }
-
-                .button {
-                    margin-top: $integer;
-                }
-            }
-
-            &__logo {
-                width: $integer*3;
-                margin-right: $integer;
-                @include responsive(max-width, $mobile-max) {
-                    display: none;
-                }
-            }
-
-            &__portrait {
-                width: $integer*5;
-                height: $integer*5;
-                margin-right: $integer;                
-            }
-        }
-
-        .testimonial__mark {
-            opacity: 0.1 !important;
-            top: $integer*3;
-            left: $integer*6;
-            width: $integer*5 !important;
-        }
+        max-width: $integer-xxxl
     }
 }
 
@@ -206,8 +113,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding-top: $integer/2;
-    padding-bottom: $integer/2;
+    padding-top: $integer-sm;
+    padding-bottom: $integer-sm;
     opacity: 1;
     display: none;
     @include responsive(max-width, $mobile-max) {
@@ -228,7 +135,7 @@
         padding-right: $integer;
         @include responsive(max-width, $mobile-max) {
             padding-right: 0;
-            margin-bottom: $integer/2;
+            margin-bottom: $integer-sm;
         }
     }
 

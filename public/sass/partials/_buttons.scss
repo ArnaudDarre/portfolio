@@ -4,9 +4,9 @@
 // BUTTONS
 // —————————————————————————————————————————————————————————————————
 // general
+// size
 // animate
 // color variant
-// size
 // close
 // menu
 // scroll to top
@@ -27,7 +27,6 @@
 	@include align-self(center);
 	will-change: background-color, transform;
 	cursor: pointer;
-	padding: 12px 24px;
 	overflow: hidden;
 	position: relative;
 	white-space: nowrap;
@@ -47,19 +46,13 @@
 		margin-left: 5px;
 	}
 
-	&--icon {
-		padding: 0;
-		width: $integer*2;
-		height: $integer*2;
-	}
-
 	&--text {
 		@include transition(transform $transition);
 		will-change: transform;
-		padding: $integer/4 0;
+		padding: $integer-xs 0;
 
 		&:hover {
-			@include transform(translateX($integer/4));
+			@include transform(translateX($integer-xs));
 		}
 	}
 
@@ -81,6 +74,43 @@
 			padding: 4px 13px;
 		}
 	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// size
+// —————————————————————————————————————————————————————————————————
+
+.button {
+	padding: $integer-lg/2 $integer-lg;
+
+	&--icon {
+		padding: 0;
+		width: $integer-xl;
+		height: $integer-xl;
+	}
+
+	&--large {
+		padding: 18px 36px;
+
+		&.button--icon {
+			padding: 0;
+			width: $integer-xxl;
+			height: $integer-xxl;
+		}
+	}
+
+	&--small {
+		padding: 6px 15px;
+
+		&.button--icon {
+			padding: 0;
+			width: $integer-lg;
+			height: $integer-lg;
+		}
+	}
+
 }
 
 
@@ -134,7 +164,7 @@
 @include button-fill-color('button--',
 //	prefix 			background	 		color
 	'primary'   	$primary 			$white,
-	'secondary' 	$secondary			$black,
+	'secondary' 	$secondary			$white,
 	'highlight' 	$highlight			$white,
 	'dark' 			$dark 				$white,
 	'white' 		$white 				$primary,
@@ -153,36 +183,6 @@
 	'dark' 			$dark 				$black,
 	'white' 		$white 				$white
 );
-
-
-
-// —————————————————————————————————————————————————————————————————
-// size
-// —————————————————————————————————————————————————————————————————
-
-.button {
-
-	&--large {
-		padding: 18px 36px;
-
-		&.button--icon {
-			padding: 0;
-			width: $integer*3;
-			height: $integer*3;
-		}
-	}
-
-	&--small {
-		padding: 6px 15px;
-
-		&.button--icon {
-			padding: 0;
-			width: $integer*1.5;
-			height: $integer*1.5;
-		}
-	}
-
-}
 
 
 
@@ -227,8 +227,8 @@
 	position: relative;
 	display: block !important;
 	overflow: visible;
-	width: $integer*1.5;
-	height: $integer*1.5;
+	width: $integer-md;
+	height: $integer-md;
 	background-color: transparent !important;
 	border: 0;
 	padding-left: 0;
@@ -258,12 +258,12 @@
 	}
 
 	&:before {
-		@include transform(translateY($integer/2));
+		@include transform(translateY($integer-sm));
 		@include animation(button-menu-close-before 0.8s ease);
 	}
 
 	&:after {
-		@include transform(translateY(-$integer/2));
+		@include transform(translateY(-$integer-sm));
 		@include animation(button-menu-close-after 0.8s ease);
 	}
 
@@ -272,7 +272,7 @@
 		@include transition(opacity 0s ease 0.4s);
 		@include border-radius(0.15rem);
 		will-change: opacity;
-		width: $integer*1.5;
+		width: $integer-md;
 		height: 5px;
 		position: absolute;
 	}
@@ -306,17 +306,17 @@
 	@include box-shadow($box-shadow-lg);
 	will-change: bottom, transform;
     position: fixed;
-	bottom: -$integer*4;
+	bottom: -$integer-xl;
 	right: $col;
 	@include responsive-mobile() {
 		display: none !important;
 	}
 
 	&.js-show {
-		bottom: $integer*1.5;
+		bottom: $integer-md;
 	}
 
 	&:hover {
-		@include transform(translateY(-$integer/4));
+		@include transform(translateY(-$integer-xs));
 	}
 }

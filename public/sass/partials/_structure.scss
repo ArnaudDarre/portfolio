@@ -49,9 +49,9 @@ body.js-freeze {
 .row {
 	@include display-flex();
 	@include flex-wrap(wrap);
-	@include calc(width, '100% + '$integer);
-	margin-left: -$integer/2;
-	margin-right: -$integer/2;
+	@include calc(width, '100% + '$integer*2);
+	margin-left: -$integer;
+	margin-right: -$integer;
 
 	&:after {
 		content: '';
@@ -69,7 +69,7 @@ body.js-freeze {
 [class*="col--"] {
 	float: left;
 	position: relative;
-	padding: 0 $integer/2;
+	padding: 0 $integer;
 	width: 100%;
 }
 
@@ -217,15 +217,11 @@ li {
 // z-index
 // —————————————————————————————————————————————————————————————————
 
-.cookie				 	{ z-index: 10; }
-.button--scroll-top 	{ z-index: 11; }
-.header 				{ z-index: 12; }
-.anchor 				{ z-index: 13; }
-.modal 					{ z-index: 14; }
-
 .section__header 		{ z-index: 20; }
-
 body:before				{ z-index: 30; }
+.cookie				 	{ z-index: 40; }
+.anchor 				{ z-index: 50; }
+.modal 					{ z-index: 60; }
 
 @for $i from 0 through 9 {
 	.z-index--#{$i} { z-index: $i; }
@@ -312,6 +308,13 @@ body:before				{ z-index: 30; }
 
 .block {
 	padding-bottom: $integer-xxl;
+
+	&--project {
+
+		.label {
+			padding-bottom: $integer-lg;
+		}	
+	}
 }
 
 .card {
