@@ -129,14 +129,17 @@ html, body {
 }
 
 .button--icon {
-	font-size: 20px !important;
+	font-size: 1.5rem !important;
+	font-weight: 100;
 
 	&.button--large {
-		font-size: 30px !important;
+		font-size: 2.5rem !important;
+		font-weight: 100;
 	}
 
 	&.button--small {
-		font-size: 14px !important;
+		font-size: 1rem !important;
+		font-weight: 100;
 	}
 }
 
@@ -157,6 +160,6 @@ html, body {
 .form {
 
 	&__input, .form__dropdown li {
-		@include font-size(1, $font-light, normal);
+		@include font-size(1, $font-regular, normal);
 	}
 }

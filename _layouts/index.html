@@ -1,5 +1,6 @@
 {% include header.html %}
 
+<!-- landing -->
 <section id="landing" class="row section js-scrolling-letters__section">
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">Arnaud<br>Darré</h1>
@@ -19,23 +20,29 @@
     </div>
 </section>
 
+<!-- portfolio -->
 <section id="portfolio" class="row section js-scrolling-letters__section">
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">Portfolio</h1>
     </div>
     <div class="coloffset--3 col--12 section__content">
         <div class="block">
-            <p class="section__comment">Browse through some crunchy bites or check the entire collection.</p>
-            <div class="nav"></div>
+            <div class="row">
+                <p class="col--6 section__comment lead">Browse through some crunchy bites or check the entire collection.</p>
+                <div class="col--12 nav"></div>
+            </div>
         </div>
-        <div class="block">
-            <p class="label">{{ project.category }}</p>
-            <h2 class="title">{{ project.title }}</h2>
-            <p class="lead">{{ project.subtitle }}</p>
+        <div class="block block--project">
+            <div class="row">
+                <p class="col--12 label">Identity{{ project.category }}</p>
+                <h2 class="col--12 section__subtitle title">Applied Blockchain{{ project.title }}</h2>
+                <p class="col--6 body--bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor egestas arcu, sit amet aliquam justo sagittis sed. Aenean pharetra felis massa, ac ullamcorper ipsum efficitur vitae. In hendrerit sem in tellus condimentum, in eleifend tortor hendrerit. {{ project.subtitle }}</p>
+            </div>
         </div>
     </div>
 </section>
-    
+
+<!-- about -->
 <section id="about" class="row section js-scrolling-letters__section">
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">About</h1>
@@ -65,6 +72,7 @@
     </div>
 </section>
 
+<!-- contact -->
 <section id="contact" class="row section js-scrolling-letters__section">
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">Contact</h1>
@@ -73,36 +81,49 @@
         <div class="block">
             <p class="section__subtitle title">Howdy stranger!</p>
             <h2 class="section__comment subtitle">Feel free to drop a line here…</h2>
-            <div class="row form">
-                <div class="col--5 form__group">
-                    <label for="name" class="form__label">Name</label>
-                    <input type="text" name="name" id="name" class="form__input">
+            <div class="form">
+                <div class="row">
+                    <div class="col--5 form__group">
+                        <label for="name" class="form__label">Name</label>
+                        <input type="text" name="name" id="name" class="form__input">
+                    </div>
+                    <div class="col--5 form__group">
+                        <label for="surname" class="form__label">Surname</label>
+                        <input type="text" name="surname" id="surname" class="form__input">
+                    </div>
+                    <div class="col--10 form__group">
+                        <label for="subject" class="form__label">Subject</label>
+                        <select name="subject" id="subject" class="form__input">
+                            <option value="">—</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+                    <div class="col--10 form__group">
+                        <label for="message" class="form__label">Message</label>
+                        <textarea name="message" id="message" class="form__input" rows="4"></textarea>
+                    </div>
                 </div>
-                <div class="col--5 form__group">
-                    <label for="surname" class="form__label">Surname</label>
-                    <input type="text" name="surname" id="surname" class="form__input">
-                </div>
-                <div class="col--10 form__group">
-                    <label for="subject" class="form__label">Subject</label>
-                    <input type="text" name="subject" id="subject" class="form__input">
-                </div>
-                <div class="col--10 form__group">
-                    <label for="message" class="form__label">Message</label>
-                    <input type="text" name="message" id="message" class="form__input">
-                </div>
-            </div>
-            <div>
-                <button type="submit" class="form__button button button--large button--secondary">
+                <button type="submit" class="form__button button button--secondary">
                     <p class="button__inner">Send</p>
                 </button>
             </div>
         </div>
         <div class="block">
             <h2 class="section__comment subtitle">…or contact me via social media.</h2>
-            <a href="" class="button button--icon button--large" title="Behance profile"></a>
-            <a href="" class="button button--icon button--large" title="Github profile"></a>
-            <a href="" class="button button--icon button--large" title="Linkedin profile"></a>
-            <a href="" class="button button--icon button--large" title="Spotify profile"></a>
+            <a href="" title="Link to Behance profile" target="_blank" class="button button--icon button--stroke button--large button--highlight button--animate fas fa-plus">
+                <i class="button__inner fab fa-behance"></i>
+            </a>
+            <a href="" title="Link to Github profile" target="_blank" class="button button--icon button--stroke button--large button--highlight button--animate fas fa-plus">
+                <i class="button__inner fab fa-github"></i>
+            </a>
+            <a href="" title="Link to Linkedin profile" target="_blank" class="button button--icon button--stroke button--large button--highlight button--animate fas fa-plus">
+                <i class="button__inner fab fa-linkedin"></i>
+            </a>
+            <a href="" title="Link to Spotify profile" target="_blank" class="button button--icon button--stroke button--large button--highlight button--animate fas fa-plus">
+                <i class="button__inner fab fa-spotify"></i>
+            </a>
         </div>
     </div>
 </section>

@@ -36,7 +36,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.resourceurl }}vendors/scrollingletters/scrollingletters.css" />
 	
     <!-- VENDORS JS -->
-	<!-- jquery -->
+	<!-- jquery -->   
 	<script src="{{ site.url }}{{ site.resourceurl }}vendors/jquery/jquery-3.3.1.min.js"></script>
 	<!-- flexslider -->
 	<script src="{{ site.url }}{{ site.resourceurl }}vendors/flexslider/jquery.flexslider-min.js"></script>
@@ -48,7 +48,7 @@
 	<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 
 	<!-- JAVASCRIPT -->
-	<!-- <script src="{{ site.url }}{{ site.resourceurl }}js/accordions.js"></script>
+	<script src="{{ site.url }}{{ site.resourceurl }}js/accordions.js"></script>
 	<script src="{{ site.url }}{{ site.resourceurl }}js/anchor.js"></script>
 	<script src="{{ site.url }}{{ site.resourceurl }}js/blog.js"></script>
 	<script src="{{ site.url }}{{ site.resourceurl }}js/buttons.js"></script>
@@ -59,23 +59,20 @@
 	<script src="{{ site.url }}{{ site.resourceurl }}js/script.js"></script>
 	<script src="{{ site.url }}{{ site.resourceurl }}js/slider.js"></script>
 	<script src="{{ site.url }}{{ site.resourceurl }}js/tabs.js"></script>
-	<script src="{{ site.url }}{{ site.resourceurl }}js/tooltips.js"></script> -->
+	<script src="{{ site.url }}{{ site.resourceurl }}js/tooltips.js"></script>
 
 </head>
 
 <body>
 		
 <header class="header">
-
-	<!-- scroll to top button -->
-	<a class="button--scroll-top button button--icon button--highlight fas fa-chevron-up"></a>
-
-	<!-- cookie banner -->
-	<div class="cookie">
-		<p class="cookie__text body--small">We want to give you the best service by using cookies. Carry on browsing if you are happy with this, or <a href="{{ site.url }}/privacy-policy" class="button--underline">find out</a> how we manage your cookies.</p>
-		<button class="cookie__button button button--small button--primary-darken button--animate fas fa-check">
-			<p class="button__inner">Got it</p>
-		</button>
+	<div class="row">
+		<div class="col--3">
+			<img src="" alt="" class="logo">
+		</div>
+		<div class="coloffset--12 col--1">
+			<!-- scroll to top button -->
+			<a class="button--scroll-top button button--icon button--highlight fas fa-chevron-up"></a>
+		</div>
 	</div>
-
 </header>

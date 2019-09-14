@@ -1,0 +1,17 @@
+{% assign size = include.size %}
+{% assign style = include.style %}
+{% assign theme = include.theme %}
+{% assign icon = include.sizes %}
+{% assign link = include.link %}
+{% assign text = include.text %}
+{% assign target-blank = include.target-blank %}
+
+<a href="" title="Link to Behance profile" target="_blank" class="
+	{% if button-size == 'white' %}
+    {% elsif button-size == 'large' %} button--large
+	{% elsif button-size == 'small' %} button--small
+	{% endif %}
+
+	button button--icon button--stroke button--highlight button--animate fas fa-plus">
+	<p class="button__inner">{{ text }}</p>
+</a>
