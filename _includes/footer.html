@@ -4,5 +4,14 @@
 <script src="{{ site.url }}{{ site.resourceurl }}vendors/scrollingletters/charming.min.js"></script>
 <script src="{{ site.url }}{{ site.resourceurl }}vendors/scrollingletters/scrollingletters.js"></script>
 
+<script>
+	// build scene
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 1500})
+					// animate color and top border in relation to scroll position
+					.setTween(".background__cirle--landing", {scale: 3, xPercent: 120, yPercent: -56}) // the tween durtion can be omitted and defaults to 1
+					.addIndicators({name: "landing"}) // add indicators (requires plugin)
+					.addTo(controller);
+</script>
+
 </body>
 </html>

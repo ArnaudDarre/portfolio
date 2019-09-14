@@ -253,7 +253,7 @@ body:before				{ z-index: 30; }
 	@include display-flex();
 	position: relative;
 	min-height: 100vh;
-	background-color: $primary;
+	// background-color: $medium-grey;
 	
 	&__header {
 		@include transform(rotate(-90deg));
