@@ -1,3 +1,5 @@
+</div>
+
 <!-- VENDORS -->
 <!-- scrolling letters -->
 <script src="{{ site.url }}{{ site.resourceurl }}vendors/scrollingletters/imagesloaded.pkgd.min.js"></script>
@@ -11,12 +13,20 @@
 
 	// landing circle
 	var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--landing", duration: 1500})
-	.setTween(".background__cirle--landing", {scale: 3, xPercent: 120, yPercent: -56})
-	.addIndicators({name: "landing"}) // add indicators (requires plugin)
+	.setTween(".background__circle--landing", {scale: 3, xPercent: 80, yPercent: -80})
 	.addTo(controller);
 
-	var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--landing", duration: 1500})
-	.setTween(".background__square--landing", {scale: 3, xPercent: 0, yPercent: 120})
+	var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--landing", duration: 2000})
+	.setTween(".background__square--landing", {scale: 4, xPercent: 0, yPercent: 160})
+	.addTo(controller);
+
+	var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--about", duration: 2000})
+	.setTween(".background__circle--about", {scale: 6, xPercent: 0, yPercent: 80})
+	.addTo(controller);
+
+	var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--contact", duration: 1500})
+	.setTween(".background__square--contact", {scale: 2, xPercent: 0, yPercent: 40})
+	.addIndicators({name: " "}) // add indicators (requires plugin)
 	.addTo(controller);
 </script>
 

@@ -32,8 +32,7 @@ html, body {
 }
 
 body {
-	background-color: $primary;
-
+	
 	&:before {
 		@include pseudo-element('', 0, 0, 0, 0, 100vw, 100vh);
 		position: fixed;
@@ -41,10 +40,15 @@ body {
 		box-sizing: border-box;
 		pointer-events: none;
 	}
+	
+	&.js-freeze {
+		overflow: hidden;
+	}
 }
 
-body.js-freeze {
+.page {
 	overflow: hidden;
+	background-color: $primary;
 }
 
 .row {
@@ -254,6 +258,7 @@ body:before				{ z-index: 30; }
 	@include display-flex();
 	position: relative;
 	min-height: 100vh;
+	// background-color: $primary;
 	
 	&__header {
 		@include transform(rotate(-90deg));

@@ -3,41 +3,11 @@ $(document).ready(function() {
 // —————————————————————————————————————————————————————————————————
 // SCRIPT
 // —————————————————————————————————————————————————————————————————
-// parallax scrolling
-// news widget animation
 // menu scroll animation
 // menu open animation
 // back to top
 // cookie bar accept
 // —————————————————————————————————————————————————————————————————
-
-
-
-// —————————————————————————————————————————————————————————————————
-// parallax scrolling
-// —————————————————————————————————————————————————————————————————
-
-window.addEventListener('scroll', doParallax);
-function doParallax(){
-   var positionY = window.pageYOffset/4;
-   document.body.style.backgroundPosition = "0 -" + positionY + "px";
-}
-
-
-
-// —————————————————————————————————————————————————————————————————
-// news widget animation
-// —————————————————————————————————————————————————————————————————
-
-if ($(window).width() > 575) {   
-	setTimeout(function() {
-		$('.widget--news').animate({
-			right: '0'
-		}, 800, 'swing');
-	}, 1200);
-}
-else {  
-}; 
 
 
 

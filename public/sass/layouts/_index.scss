@@ -43,20 +43,26 @@
 .background {
 
     &__square {
+        @include transform(rotate(45deg));
         position: absolute;
         background-color: $white;
 
         &--landing {
-            @include transform(rotate(45deg));
             top: 66.67vh;
             right: -50vh;
             height: 100vh;
             width: 100vh;
+        }
 
+        &--contact {
+            top: 500px;
+            right: -200vh;
+            height: 200vw;
+            width: 200vw;
         }
     }
 
-    &__cirle {
+    &__circle {
         @extend .background__square;
         border-radius: 50%;
         
@@ -66,15 +72,23 @@
             height: 100vh;
             width: 100vh;
         }
+
+        &--about {
+            background-color: $primary;
+            top: 20vh;
+            left: 30vw;
+            height: 40vw;
+            width: 40vw;
+        }
     }
 
     &__trigger {
         position: absolute;
+        @include transform(translateY(-$integer-md));
     
-        &--landing {
-            @include transform(translateY(-$integer-md));
-            top: 50vh;
-        }
+        &--landing { top: 50vh;}
+        &--about { top: -30vh;}
+        &--contact { top: -50vh;}
     }
 }
     
