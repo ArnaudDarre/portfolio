@@ -36,11 +36,11 @@
 
 .project {
 
-    &__label {
+    &__category {
         padding-bottom: $integer-lg;
     }
 
-    &__lead {
+    &__subtitle {
         padding-bottom: $integer-md;
     }
 
@@ -110,5 +110,3 @@
         &--contact { top: -50vh;}
     }
 }
-    
-
