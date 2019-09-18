@@ -34,6 +34,25 @@
     }
 }
 
+.project {
+
+    &__label {
+        padding-bottom: $integer-lg;
+    }
+
+    &__lead {
+        padding-bottom: $integer-md;
+    }
+
+    &__cover {
+        position: absolute;
+        top: 0;
+        left: -$col*3;
+        width: 100vw;
+        height: 100%;
+    }
+}
+
 
 
 // —————————————————————————————————————————————————————————————————

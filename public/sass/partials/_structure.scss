@@ -313,13 +313,6 @@ body:before				{ z-index: 30; }
 
 .block {
 	padding-bottom: $integer-xxl;
-
-	&--project {
-
-		.label {
-			padding-bottom: $integer-lg;
-		}	
-	}
 }
 
 .card {
