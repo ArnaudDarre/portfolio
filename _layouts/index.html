@@ -42,10 +42,18 @@
                 <!-- <img src="{{ site.url }}{{ site.resourceurl }}projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg" alt="" class="project__cover"> -->
                 <div class="block project">
                     <div class="row">
-                        <p class="col--12 project__label label">{{ project.category }}</p>
-                        <h2 class="col--12 section__subtitle title">{{ project.title }}</h2>
-                        <h3 class="col--12 project__lead lead">{{ project.subtitle }}</h3>
-                        <p class="col--6 body--bold">{{ project.body }}</p>
+                        {% if project.category %}
+                            <p class="col--12 project__label label">{{ project.category }}</p>
+                        {% endif %}
+                        {% if project.title %}
+                            <h2 class="col--12 section__subtitle title">{{ project.title }}</h2>
+                        {% endif %}
+                        {% if project.subtitle %}
+                            <h3 class="col--12 project__lead lead">{{ project.subtitle }}</h3>
+                        {% endif %}
+                        {% if project.body %}
+                            <p class="col--6 body--bold">{{ project.body }}</p>
+                        {% endif %}
                     </div>
                 </div>
             {% endif %}
