@@ -162,26 +162,27 @@
 // —————————————————————————————————————————————————————————————————
 
 @include button-fill-color('button--',
-//	prefix 			background	 		color
-	'primary'   	$primary 			$white,
-	'secondary' 	$secondary			$white,
-	'highlight' 	$highlight			$white,
-	'dark' 			$dark 				$white,
-	'white' 		$white 				$primary,
-	'facebook' 		$facebook 			$white,
-	'google' 		$google 			$white,
-	'linkedin' 		$linkedin 			$white,
-	'medium' 		$medium 			$white,
-	'twitter' 		$twitter 			$white
+//	 prefix 		 background		 color
+	'primary'   	$primary 		$white,
+	'secondary' 	$secondary		$white,
+	'highlight' 	$highlight		$white,
+	'dark' 			$dark 			$white,
+	'white' 		$white 			$primary,
+	'facebook' 		$facebook 		$white,
+	'google' 		$google 		$white,
+	'linkedin' 		$linkedin 		$white,
+	'medium' 		$medium 		$white,
+	'twitter' 		$twitter 		$white
 );
 
 @include button-stroke-color('button--stroke.button--',
-//	prefix 			border-color	 	color
-	'primary'   	$primary 			$black,
-	'secondary' 	$secondary			$black,
-	'highlight' 	$highlight			$black,
-	'dark' 			$dark 				$black,
-	'white' 		$white 				$white
+//	 prefix 		 border-color	 color
+	'primary'   	$primary 		$black,
+	'secondary' 	$secondary		$black,
+	'highlight' 	$highlight		$black,
+	'dark' 			$dark 			$black,
+	'black'			$black 			$black,
+	'white' 		$white 			$white
 );
 
 

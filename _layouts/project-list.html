@@ -1,60 +1,6 @@
 {% include header.html %}
 
-<main>
-    <div class="sections">
-        <!-- index -->
-        <div class="sections__index">
-            <span class="sections__index-current">
-                <span class="sections__index-inner">01</span>
-            </span>
-            <span class="sections__index-total">04</span>
-        </div>
-        <!-- navigation down -->
-        <nav class="sections__nav">
-            <button class="sections__nav-item sections__nav-item--prev">
-                <svg class="icon icon--navup"><use xlink:href="#icon-navup"></use></svg>
-            </button>
-            <button class="sections__nav-item sections__nav-item--next">
-                <svg class="icon icon--navdown"><use xlink:href="#icon-navdown"></use></svg>
-            </button>
-        </nav>
-        {% assign ordered_projects = site.projects | sort:"featured" %}
-        {% for project in ordered_projects %}
-            {% if project.featured %}
-            <section class="section {% if project.featured == 1 %}section--current{% endif %}">
-                <img src="{{ site.url }}{{ site.resourceurl }}projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg" alt="" class="project__cover">
-                <div class="block project">
-                    <div class="row">
-                        <!-- {% if project.category %}
-                            <p class="col--12 project__category label">{{ project.category }}</p>
-                        {% endif %} -->
-                        {% if project.title %}
-                            <h2 class="col--12 section__subtitle project__title title">{{ project.title }}</h2>
-                        {% endif %}
-                        <!-- {% if project.subtitle %}
-                            <h3 class="col--12 project__subtitle lead">{{ project.subtitle }}</h3>
-                        {% endif %} -->
-                        {% if project.body %}
-                            <p class="col--6 project__body body--bold">{{ project.body }}</p>
-                        {% endif %}
-                    </div>
-                </div>
-            </section>
-            {% endif %}
-        {% endfor %}
-        <!-- <section class="section section--current">
-            <div class="section__content">
-                <h2 class="section__title">Hiking</h2>
-                <p class="section__description"><span class="section__description-inner">Hiking is the preferred term, in Canada and the United States, for a long, vigorous walk, usually on trails (footpaths), in the countryside, while the word walking is used for shorter, particularly urban walks.</span></p>
-            </div>
-            <div class="section__img">
-                <div class="section__img-inner" style="background-image: url(img/1.jpg)"></div>
-            </div>
-        </section> -->
-    </div><!--/ sections -->
-</main>
-
-<!-- <section class="section">
+<section class="section">
         <h1 class="title">{{ page.title }}</h1>
         <div class="filter">
             <button class="filter__item" data-filter=".all">All</button>
@@ -76,6 +22,6 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>
 
 {% include footer.html %}
