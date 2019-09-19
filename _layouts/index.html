@@ -37,27 +37,48 @@
                 <div class="col--12 nav"></div>
             </div>
         </div>
-        {% for project in site.projects %}
-            {% if project.featured %}
-                <!-- <img src="{{ site.url }}{{ site.resourceurl }}projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg" alt="" class="project__cover"> -->
-                <div class="block project">
-                    <div class="row">
-                        {% if project.category %}
-                            <p class="col--12 project__label label">{{ project.category }}</p>
-                        {% endif %}
-                        {% if project.title %}
-                            <h2 class="col--12 section__subtitle title">{{ project.title }}</h2>
-                        {% endif %}
-                        {% if project.subtitle %}
-                            <h3 class="col--12 project__lead lead">{{ project.subtitle }}</h3>
-                        {% endif %}
-                        {% if project.body %}
-                            <p class="col--6 body--bold">{{ project.body }}</p>
-                        {% endif %}
-                    </div>
+        <div class="project--carousel">
+            <nav class="project__nav">
+                <button class="project__nav-item project__nav-item--prev button button--icon button--large button--stroke button--black button--animate fas fa-chevron-left">
+                    <i class="button__inner fas fa-chevron-left"></i>
+                </button>
+                <div class="project__index">
+                    <span class="project__index-current">
+                        <span class="project__index-inner label">01</span>
+                    </span>
+                    <span class="project__index-total label">04</span>
                 </div>
-            {% endif %}
-        {% endfor %}
+                <button class="project__nav-item project__nav-item--next button button--icon button--large button--stroke button--black button--animate fas fa-chevron-right">
+                    <i class="button__inner fas fa-chevron-right"></i>
+                </button>
+            </nav>
+            {% assign ordered_projects = site.projects | sort:"featured" %}
+            {% for project in ordered_projects %}
+                {% if project.featured %}
+                    <section class="project__item {% if project.featured == 1 %}project__item--current{% endif %}">
+                        <div class="project__image">
+                            <div class="project__image-inner" style="background-image: url({{ site.url }}{{ site.resourceurl }}projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
+                        </div>
+                        <div class="block project">
+                            <div class="row">
+                                <!-- {% if project.category %}
+                                    <p class="col--12 project__category label">{{ project.category }}</p>
+                                {% endif %} -->
+                                {% if project.title %}
+                                    <h2 class="col--12 project__title section__subtitle title">{{ project.title }}</h2>
+                                {% endif %}
+                                <!-- {% if project.subtitle %}
+                                    <h3 class="col--12 project__subtitle lead">{{ project.subtitle }}</h3>
+                                {% endif %} -->
+                                {% if project.body %}
+                                    <p class="col--6 project__body body--bold">{{ project.body }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </section>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 </section>
 

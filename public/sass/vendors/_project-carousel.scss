@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+// —————————————————————————————————————————————————————————————————
+// PROJECT CAROUSEL
+// —————————————————————————————————————————————————————————————————
+
+
+
+.project--carousel {
+
+    .project {
+
+        &__index {
+            display: flex;
+
+            &-current {
+                padding-right: $integer-md;
+            }
+
+            &-inner {
+                display: block;
+            }
+
+            &-total {
+                position: relative;
+                margin: 0 0 0 $integer-xxl;
+                padding-left: $integer-md;
+
+                &:after {
+                    @include pseudo-element('', $integer, 100%, auto, auto, $integer-xxl, $integer-sm);
+                    background: $black;
+                }
+            }
+        }
+        
+        &__title {
+            overflow: hidden !important;
+            
+            span {
+                display: inline-block;
+            }
+        }
+        
+        &__body {
+            overflow: hidden !important;
+            position: relative;
+        }
+        
+        &__image {
+            overflow: hidden;
+            pointer-events: none;
+            
+            &-inner {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+        }
+    }
+}
+
+.project--carousel {
+    height: 100vh;
+    overflow: hidden !important;
+}
+
+.project__nav {
+    display: block;
+    z-index: 5;
+    padding: 2rem 4rem 0;
+}
+.project__item {
+    pointer-events: none;
+}
+.project__item--current {
+    pointer-events: auto;
+}
+.section__img {
+    height: auto;
+    overflow: hidden !important;
+    z-index: 99;
+}
+.js .project__item:not(.project__item--current) {
+    pointer-events: none;
+}
+.js .project__item:not(.project__item--current) .project__title span,
+.js .project__item:not(.project__item--current) .project__body,
+.js .project__item:not(.project__item--current) .project__image-inner {
+    opacity: 0;
+}

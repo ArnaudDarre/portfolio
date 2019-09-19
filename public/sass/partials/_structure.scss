@@ -277,11 +277,11 @@ body:before				{ z-index: 30; }
 	}
 
 	&__comment {
-		padding-bottom: $integer-xl;
+		margin-bottom: $integer-xl;
 	}
 
 	&__subtitle {
-		padding-bottom: $integer-xxl;
+		margin-bottom: $integer-xxl;
 	}
 }
 

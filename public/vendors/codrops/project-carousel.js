@@ -50,7 +50,7 @@
 			// description
 			this.DOM.description = this.DOM.el.querySelector('.project__body');
 			// image
-			this.DOM.image = this.DOM.el.querySelector('.project__cover');
+			this.DOM.image = this.DOM.el.querySelector('.project__image-inner');
 		}
 		show(direction) {
 			this.isHidden = false;
@@ -120,21 +120,11 @@
         }
         init() {
 			// DOM elements.
-			this.DOM.menuCtrl = this.DOM.el.querySelector('.sections__header > button.button-menu');
-			this.DOM.menu = {
-				wrapper: this.DOM.el.querySelector('.menu'),
-				items: Array.from(this.DOM.el.querySelectorAll('.menu > .menu__inner > .menu__item')),
-				menuCtrls: {
-					toggle: this.DOM.el.querySelector('.menu > .menu__toggle'),
-					open: this.DOM.el.querySelector('.menu > .menu__toggle > .menu__toggle-inner--open'),
-					close: this.DOM.el.querySelector('.menu > .menu__toggle > .menu__toggle-inner--close')
-				}
-			};
-			this.DOM.pagination = this.DOM.el.querySelector('.sections__index .sections__index-inner');
-			this.DOM.navigation = this.DOM.el.querySelector('.sections__nav');
-			this.DOM.navigation.prevCtrl = this.DOM.navigation.querySelector('button.sections__nav-item--prev');
-			this.DOM.navigation.nextCtrl = this.DOM.navigation.querySelector('button.sections__nav-item--next');
-			this.DOM.entries = Array.from(this.DOM.el.querySelectorAll('.section'), entry => new Entry(entry));
+			this.DOM.pagination = this.DOM.el.querySelector('.project__index .project__index-inner');
+			this.DOM.navigation = this.DOM.el.querySelector('.project__nav');
+			this.DOM.navigation.prevCtrl = this.DOM.navigation.querySelector('button.project__nav-item--prev');
+			this.DOM.navigation.nextCtrl = this.DOM.navigation.querySelector('button.project__nav-item--next');
+			this.DOM.entries = Array.from(this.DOM.el.querySelectorAll('.project__item'), entry => new Entry(entry));
 			this.entriesTotal = this.DOM.entries.length;
 			this.currentPos = 0;
 
@@ -173,8 +163,8 @@
 				// when both updatePageNumber, hide and show are finished:
 				Promise.all([this.currentEntry.hide(this.direction), newEntry.show(this.direction), this.updatePageNumber()]).then(() => {
 					this.isEntriesAnimating = false;
-					this.currentEntry.DOM.el.classList.remove('section--current');
-					newEntry.DOM.el.classList.add('section--current');
+					this.currentEntry.DOM.el.classList.remove('project__item--current');
+					newEntry.DOM.el.classList.add('project__item--current');
 					this.currentEntry = newEntry;
 				});
 			};
@@ -264,6 +254,6 @@
 	imagesLoaded(document.querySelectorAll('img'), () => {
 		document.body.classList.remove('loading');
 		// Init
-		new Slideshow(document.querySelector('.sections'));
+		new Slideshow(document.querySelector('.project--carousel'));
 	});
 };

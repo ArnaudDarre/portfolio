@@ -36,6 +36,14 @@
 
 .project {
 
+    &__item {
+        position: absolute;
+    }
+
+    &__image {
+        height: 45vh;
+    }
+
     &__category {
         padding-bottom: $integer-lg;
     }
