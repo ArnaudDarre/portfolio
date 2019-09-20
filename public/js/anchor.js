@@ -3,30 +3,50 @@ $(document).ready(function() {
 // —————————————————————————————————————————————————————————————————
 // ANCHOR
 // —————————————————————————————————————————————————————————————————
+// text anchor on landing
+// dot sidebar
+// —————————————————————————————————————————————————————————————————
 
 
+
+// —————————————————————————————————————————————————————————————————
+// text anchor on landing
+// —————————————————————————————————————————————————————————————————
+
+$('a.js-button-anchor').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+
+
+
+// —————————————————————————————————————————————————————————————————
+// dot sidebar
+// —————————————————————————————————————————————————————————————————
 
 $.scrollTo = $.fn.scrollTo = function(x, y, options){
-   if (!(this instanceof $)) return $.fn.scrollTo.apply($('html, body'), arguments);
-   options = $.extend({}, {
-       gap: {
-           x: 0,
-           y: -60
-       },
-       animation: {
-           easing: 'swing',
-           duration: 600,
-           complete: $.noop,
-           step: $.noop
-       }
-   }, options);
-   return this.each(function(){
-       var elem = $(this);
-       elem.stop().animate({
-           scrollLeft: !isNaN(Number(x)) ? x : $(y).offset().left + options.gap.x,
-           scrollTop: !isNaN(Number(y)) ? y : $(y).offset().top + options.gap.y
-       }, options.animation);
-   });
+    if (!(this instanceof $)) return $.fn.scrollTo.apply($('html, body'), arguments);
+    options = $.extend({}, {
+        gap: {
+            x: 0,
+            y: 0
+        },
+        animation: {
+            easing: 'swing',
+            duration: 600,
+            complete: $.noop,
+            step: $.noop
+        }
+    }, options);
+    return this.each(function(){
+        var elem = $(this);
+        elem.stop().animate({
+            scrollLeft: !isNaN(Number(x)) ? x : $(y).offset().left + options.gap.x,
+            scrollTop: !isNaN(Number(y)) ? y : $(y).offset().top + options.gap.y
+        }, options.animation);
+    });
 };
 var aChildren = $(".anchor__item").children();
 var aArray = [];
@@ -43,7 +63,7 @@ $(window).scroll(function(){
         var theID = aArray[i];
         var divPos = $(theID).offset().top; 
         var divHeight = $(theID).height(); 
-        if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+        if (windowPos >= divPos - 200 && windowPos < (divPos - 200 + divHeight)) {
             $(".anchor a[href='" + theID + "']").addClass("js-dot-active");
         } else {
             $(".anchor a[href='" + theID + "']").removeClass("js-dot-active");

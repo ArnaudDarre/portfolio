@@ -24,11 +24,11 @@
 
             &-total {
                 position: relative;
-                margin: 0 0 0 $integer-xxl;
+                margin: 0 0 0 $integer-xxxl;
                 padding-left: $integer-md;
 
                 &:after {
-                    @include pseudo-element('', $integer, 100%, auto, auto, $integer-xxl, $integer-sm);
+                    @include pseudo-element('', $integer, 100%, auto, auto, $integer-xxxl, $integer-sm);
                     background: $black;
                 }
             }

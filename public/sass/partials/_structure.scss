@@ -224,7 +224,7 @@ li {
 .section__header 		{ z-index: 20; }
 body:before				{ z-index: 30; }
 .cookie				 	{ z-index: 40; }
-.anchor 				{ z-index: 50; }
+.header 				{ z-index: 50; }
 .modal 					{ z-index: 60; }
 
 @for $i from 0 through 9 {
@@ -270,8 +270,8 @@ body:before				{ z-index: 30; }
 	}
 	
 	&__content {
-		padding-top: $integer-xxxl;
-		padding-bottom: $integer-xxxl;
+		padding-top: $integer-xxxxl;
+		padding-bottom: $integer-xxxxl;
 	}
 
 	&__comment {
@@ -279,7 +279,7 @@ body:before				{ z-index: 30; }
 	}
 
 	&__subtitle {
-		margin-bottom: $integer-xxl;
+		margin-bottom: $integer-xxxl;
 	}
 }
 
@@ -310,7 +310,7 @@ body:before				{ z-index: 30; }
 // —————————————————————————————————————————————————————————————————
 
 .block {
-	padding-bottom: $integer-xxl;
+	padding-bottom: $integer-xxxl;
 }
 
 .card {
@@ -358,6 +358,12 @@ body:before				{ z-index: 30; }
 // —————————————————————————————————————————————————————————————————
 
 .header {
+	pointer-events: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 
 	&__bar {
 	}
@@ -401,6 +407,18 @@ body:before				{ z-index: 30; }
 			}
 		}
 	}
+}
+
+.sidebar {
+	@include display-flex();
+	@include justify-content(center);
+	position: fixed;
+	top: 0;
+	right: $integer-lg*2;
+	height: 100vh;
+	padding-top: $integer-lg*2;
+	padding-bottom: $integer-lg*2;
+	pointer-events: initial;
 }
 
 
