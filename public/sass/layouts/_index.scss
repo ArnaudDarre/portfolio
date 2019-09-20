@@ -19,7 +19,6 @@
         @include display-flex();
         @include flex-direction(column);
         @include justify-content(space-between);
-        padding-bottom: $integer-xxxl;
     }
 
     .lead {
@@ -36,28 +35,48 @@
 
 .project {
 
+    &__nav {
+        @include display-flex();
+        @include align-items(center);
+    }
+
     &__item {
         position: absolute;
     }
 
     &__image {
-        height: 45vh;
+        @include transition(opacity 0.4s ease, transform 0.8s ease);
+        will-change: opacity, transform;
+        overflow: hidden;
+        position: absolute;
+        margin-top: -$integer-xl;
+        height: 50vh; 
+        width: 100%;
+        opacity: 0.4;
+        
+        @include hover-link {
+            @include transform(scale(1.02));
+            opacity: 1;
+        }
+
+        &-inner {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+    }
+
+    &__category, &__title, &__subtitle, &__body {
+        pointer-events: none;
     }
 
     &__category {
-        padding-bottom: $integer-lg;
+        margin-bottom: $integer-lg;
     }
 
     &__subtitle {
-        padding-bottom: $integer-md;
-    }
-
-    &__cover {
-        position: absolute;
-        top: 0;
-        left: -$col*3;
-        width: 100vw;
-        height: 100%;
+        margin-bottom: $integer-md;
     }
 }
 
@@ -72,13 +91,13 @@
     &__square {
         @include transform(rotate(45deg));
         position: absolute;
-        background-color: $white;
 
         &--landing {
             top: 66.67vh;
             right: -50vh;
             height: 100vh;
             width: 100vh;
+            background-color: $primary;
         }
 
         &--contact {
@@ -86,11 +105,12 @@
             right: -200vh;
             height: 200vw;
             width: 200vw;
+            background-color: $primary;
         }
     }
 
     &__circle {
-        @extend .background__square;
+        position: absolute;
         border-radius: 50%;
         
         &--landing {
@@ -98,14 +118,23 @@
             left: -50vh;
             height: 100vh;
             width: 100vh;
+            background-color: $primary;
         }
 
         &--about {
-            background-color: $primary;
             top: 20vh;
             left: 30vw;
             height: 40vw;
             width: 40vw;
+            background-color: $white;
+        }
+
+        &--about-small {
+            top: -200vh;
+            left: 160vw;
+            height: 20vw;
+            width: 20vw;
+            background-color: $primary;
         }
     }
 

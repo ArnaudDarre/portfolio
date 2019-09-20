@@ -31,45 +31,47 @@
         <h1 class="section__title headline js-scrolling-letters__text">Portfolio</h1>
     </div>
     <div class="coloffset--3 col--12 section__content">
-        <div class="block">
-            <div class="row">
-                <p class="col--6 section__comment lead">Browse through some crunchy bites or check the entire collection.</p>
-                <div class="col--12 nav"></div>
-            </div>
-        </div>
         <div class="project--carousel">
-            <nav class="project__nav">
-                <button class="project__nav-item project__nav-item--prev button button--icon button--large button--stroke button--black button--animate fas fa-chevron-left">
-                    <i class="button__inner fas fa-chevron-left"></i>
-                </button>
-                <div class="project__index">
-                    <span class="project__index-current">
-                        <span class="project__index-inner label">01</span>
-                    </span>
-                    <span class="project__index-total label">04</span>
+            <div class="block">
+                <div class="row">
+                    <p class="col--6 section__comment lead">Browse through some crunchy bites or check the entire collection.</p>
+                    <div class="col--12 nav"></div>
+                    <nav class="col--12 project__nav">
+                        <button class="project__nav-item project__nav-item--prev button button--icon button--large button--stroke button--black button--animate fas fa-chevron-left">
+                            <i class="button__inner fas fa-chevron-left"></i>
+                        </button>
+                        <div class="project__index">
+                            <span class="project__index-current">
+                                <span class="project__index-inner label">01</span>
+                            </span>
+                            <span class="project__index-total label">04</span>
+                        </div>
+                        <button class="project__nav-item project__nav-item--next button button--icon button--large button--stroke button--black button--animate fas fa-chevron-right">
+                            <i class="button__inner fas fa-chevron-right"></i>
+                        </button>
+                    </nav>
                 </div>
-                <button class="project__nav-item project__nav-item--next button button--icon button--large button--stroke button--black button--animate fas fa-chevron-right">
-                    <i class="button__inner fas fa-chevron-right"></i>
-                </button>
-            </nav>
+            </div>
             {% assign ordered_projects = site.projects | sort:"featured" %}
             {% for project in ordered_projects %}
                 {% if project.featured %}
                     <section class="project__item {% if project.featured == 1 %}project__item--current{% endif %}">
-                        <div class="project__image">
-                            <div class="project__image-inner" style="background-image: url({{ site.url }}{{ site.resourceurl }}projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
-                        </div>
                         <div class="block project">
                             <div class="row">
-                                <!-- {% if project.category %}
+                                <div class="coloffset--2 col--10">
+                                    <a href="{{ site.url }}projects/{{ project.title | slugify }}" class="project__image">
+                                        <div class="project__image-inner" style="background-image: url({{ site.url }}{{ site.resourceurl }}projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
+                                    </a>
+                                </div>
+                                {% if project.category %}
                                     <p class="col--12 project__category label">{{ project.category }}</p>
-                                {% endif %} -->
+                                {% endif %}
                                 {% if project.title %}
                                     <h2 class="col--12 project__title section__subtitle title">{{ project.title }}</h2>
                                 {% endif %}
-                                <!-- {% if project.subtitle %}
+                                {% if project.subtitle %}
                                     <h3 class="col--12 project__subtitle lead">{{ project.subtitle }}</h3>
-                                {% endif %} -->
+                                {% endif %}
                                 {% if project.body %}
                                     <p class="col--6 project__body body--bold">{{ project.body }}</p>
                                 {% endif %}
@@ -87,6 +89,7 @@
     <div class="section__background">
         <span class="background__trigger background__trigger--about"></span>
         <span class="background__circle background__circle--about"></span>
+        <span class="background__circle background__circle--about-small"></span>
     </div>
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">About</h1>

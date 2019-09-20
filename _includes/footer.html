@@ -19,17 +19,22 @@
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--landing", duration: 2000})
-	.setTween(".background__square--landing", {scale: 4, xPercent: 0, yPercent: 160})
+	.setTween(".background__square--landing", {scale: 5, xPercent: 0, yPercent: 160})
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--about", duration: 2000})
 	.setTween(".background__circle--about", {scale: 6, xPercent: 0, yPercent: 80})
 	.addTo(controller);
 
+	var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--about", duration: 2000})
+	.setTween(".background__circle--about-small", {rotation: 180, transformOrigin: "-80vw 50vw"})
+	// .addIndicators({name: " "}) // add indicators (requires plugin)
+	.addTo(controller);
+
 	var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--contact", duration: 1500})
 	.setTween(".background__square--contact", {scale: 2, xPercent: 0, yPercent: 40})
-	.addIndicators({name: " "}) // add indicators (requires plugin)
 	.addTo(controller);
+
 </script>
 
 </body>

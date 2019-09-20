@@ -48,7 +48,6 @@ body {
 
 .page {
 	overflow: hidden;
-	background-color: $primary;
 }
 
 .row {
@@ -258,7 +257,6 @@ body:before				{ z-index: 30; }
 	@include display-flex();
 	position: relative;
 	min-height: 100vh;
-	// background-color: $primary;
 	
 	&__header {
 		@include transform(rotate(-90deg));
@@ -273,7 +271,7 @@ body:before				{ z-index: 30; }
 	
 	&__content {
 		padding-top: $integer-xxxl;
-		padding-bottom: $integer-lg;
+		padding-bottom: $integer-xxxl;
 	}
 
 	&__comment {
