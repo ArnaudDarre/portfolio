@@ -59,8 +59,9 @@ $integer-sm:    $integer/2;     // 4px
 $integer-md:    $integer*2;     // 16px
 $integer-lg:    $integer*3;     // 24px
 $integer-xl:    $integer*5;     // 40px
-$integer-xxl:   $integer*10;    // 80px
-$integer-xxxl:  $integer*15;    // 120px
+$integer-xxl:   $integer*7;     // 56px
+$integer-xxxl:  $integer*10;    // 80px
+$integer-xxxxl: $integer*15;    // 120px
 
 $transition:    0.4s ease 0s;
 

@@ -129,11 +129,11 @@ html, body {
 }
 
 .button--icon {
-	font-size: 1.5rem !important;
+	font-size: 1rem !important;
 	font-weight: 100;
 
 	&.button--large {
-		font-size: 2rem !important;
+		font-size: 1.5rem !important;
 
 		.fab {
 			font-weight: 100;
@@ -141,7 +141,7 @@ html, body {
 	}
 
 	&.button--small {
-		font-size: 1rem !important;
+		font-size: 0.75rem !important;
 
 		.fab {
 			font-weight: 100;

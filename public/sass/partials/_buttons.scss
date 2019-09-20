@@ -304,20 +304,18 @@
 
 .button--scroll-top {
 	@include transition(bottom $transition, transform $transition);
-	@include box-shadow($box-shadow-lg);
 	will-change: bottom, transform;
     position: fixed;
-	bottom: -$integer-xl;
-	right: $col;
+	bottom: -$integer-xxl;
 	@include responsive-mobile() {
 		display: none !important;
 	}
 
 	&.js-show {
-		bottom: $integer-md;
+		bottom: $integer-lg*2;
 	}
 
 	&:hover {
-		@include transform(translateY(-$integer-xs));
+		@include transform(translateY(-$integer-sm));
 	}
 }

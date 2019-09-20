@@ -8,68 +8,40 @@
 
 .anchor {
     @include display-flex();
-    @include align-items(center);
-	position: fixed;
-    left: $col;
-    height: 100vh;
+    @include justify-content(center);
+    margin-top: $integer-xl;
+	pointer-events: initial;
 
+    // use if you want to draw a line between the dots
     &__container {
         @include display-flex();
         @include flex-direction(column);
         @include align-items(center);
-        width: 1px;
+        // background-color: $secondary;
+        // width: $integer-xs;
     }
+    
+    &__item {
 
-    &__item + &__item {
-        padding-top: $integer-md;
+        & + & {
+            margin-top: 40px;
+        }
     }
-
+    
     &__dot {
+        @include transition(transform 0.4s ease);
         @include border-radius(50%);
-        @include transition(transform $transition);
-        will-change: transforn;
-        background-color: white;
-        width: $integer-sm;
-        height: $integer-sm;
+        background-color: $secondary;
+        width: $integer;
+        height: $integer;
         display: block;
-        position: relative;
 
-        &:before {
-            @include transition(transform $transition);
-            @include pseudo-element('', 1px, 0, 0, 1px, 6px, 6px);
-            @include border-radius(50%);
-            will-change: transform;
-            border: 1px solid $white;
-            
+        @include hover-link {
+            @include transform(scale(2));
         }
-        
-        .js-dot-active &,    
-        &:hover, &:focus, &:active {
-            
-            &:before {
-                @include transition(transform $transition);
-                will-change: transform;
-                @include transform(scale(2.5));
-            }
-        }
-    }
 
-    &__text {
-        @include transition(opacity $transition);
-        will-change: opacity;
-        position: absolute;
-        left: 15px;
-        opacity: 0;
-        margin-top: -12px;
-        font-weight: 900;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-
-        .js-dot-active &,
-        .anchor__dot:hover ~ &, 
-        .anchor__dot:focus ~ &, 
-        .anchor__dot:active ~ & {
-            opacity: 1;
+        .js-dot-active & {
+            @include transform(scale(2));
         }
     }
 }
