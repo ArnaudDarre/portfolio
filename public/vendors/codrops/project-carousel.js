@@ -30,10 +30,12 @@
 	
 	// some animation settings.
 	const settings = {
-		image: {duration: 900, delay: 0, easing: [0.8,0,0.2,1]},
-		title: {duration: 700, delay: 200, easing: [0.8,0,0.2,1]},
-		description: {duration: 900, delay: 400, easing: 'easeOutExpo'},
-		pagination: {duration: 300, delay: 400, easing: 'easeInOutQuad'},
+		image: {duration: 800, delay: 0, easing: [0.8,0,0.2,1]},
+		title: {duration: 800, delay: 200, easing: [0.8,0,0.2,1]},
+		category: {duration: 400, delay: 200, easing: 'easeOutExpo'},
+		subtitle: {duration: 400, delay: 200, easing: 'easeOutExpo'},
+		description: {duration: 400, delay: 400, easing: 'easeOutExpo'},
+		pagination: {duration: 400, delay: 400, easing: 'easeInOutQuad'},
 	};
 	
 	class Entry {
@@ -47,6 +49,10 @@
 			this.DOM.title = this.DOM.el.querySelector('.project__title');
 			charming(this.DOM.title);
 			this.DOM.titleLetters = this.DOM.title.querySelectorAll('span');
+			// category
+			this.DOM.category = this.DOM.el.querySelector('.project__category');
+			// subtitle
+			this.DOM.subtitle = this.DOM.el.querySelector('.project__subtitle');
 			// description
 			this.DOM.description = this.DOM.el.querySelector('.project__body');
 			// image
@@ -63,6 +69,8 @@
 		toggle(direction) {
 			this.direction = direction; 
 			return Promise.all([this.toggleTitle(!this.isHidden), 
+								this.toggleCategory(!this.isHidden),
+								this.toggleSubtitle(!this.isHidden),
 								this.toggleDescription(!this.isHidden),
 								this.toggleImage(!this.isHidden)]);
 		}
@@ -79,6 +87,28 @@
 					duration: 1,
 					delay: (target, index) => this.isHidden ? settings.title.duration + settings.title.delay : settings.title.delay
 				}
+			}).finished;
+		}
+		toggleCategory() {
+			anime.remove(this.DOM.category);
+			return anime({
+				targets: this.DOM.category,
+				duration: settings.category.duration,
+				delay: !this.isHidden ? settings.category.duration * 0.5 + settings.category.delay : settings.category.delay,
+				easing: settings.category.easing,
+				translateY: this.isHidden ? [0, this.direction === 'next' ? '-10%' : '10%'] : [this.direction === 'next' ? '20%' : '-20%', 0],
+				opacity: this.isHidden ? 0 : 1
+			}).finished;
+		}
+		toggleSubtitle() {
+			anime.remove(this.DOM.subtitle);
+			return anime({
+				targets: this.DOM.subtitle,
+				duration: settings.subtitle.duration,
+				delay: !this.isHidden ? settings.subtitle.duration * 0.5 + settings.subtitle.delay : settings.subtitle.delay,
+				easing: settings.subtitle.easing,
+				translateY: this.isHidden ? [0, this.direction === 'next' ? '-10%' : '10%'] : [this.direction === 'next' ? '20%' : '-20%', 0],
+				opacity: this.isHidden ? 0 : 1
 			}).finished;
 		}
 		toggleDescription() {
@@ -198,44 +228,6 @@
 					}
 				}
 			}).finished;
-		}
-		toggleMenu() {
-			if ( this.isMenuAnimating ) return;
-			this.isMenuAnimating = true;
-
-			const toggleMenuCtrlFn = () => {
-				anime.remove([this.DOM.menu.menuCtrls.open, this.DOM.menu.menuCtrls.close]);
-				return anime({
-					targets: [this.DOM.menu.menuCtrls.open, this.DOM.menu.menuCtrls.close],
-					duration: settings.menuCtrl.duration,
-					easing: settings.menuCtrl.easing,
-					opacity: (target, index) => index ? !this.isMenuOpen ? 1 : 0 : !this.isMenuOpen ? 0 : 1,
-					translateX: (target, index) => index ? !this.isMenuOpen ? ['50%', '0%'] : '50%' : !this.isMenuOpen ? ['0%', '-50%'] : '0%'
-				}).finished;
-			};
-
-			const toggleMenuItemsFn = () => {
-				anime.remove(this.DOM.menu.items);
-				return anime({
-					targets: this.DOM.menu.items,
-					duration: settings.menuItems.duration,
-					easing: settings.menuItems.easing,
-					delay: (target, index) => !this.isMenuOpen ? index * 80 : 0,
-					translateX: !this.isMenuOpen ? ['5%', '0%'] : '0%',
-					opacity: {
-						value: !this.isMenuOpen ? [0,1] : 0,
-						easing: 'linear',
-						delay: (target, index, total) => !this.isMenuOpen ? index * 80 : 0
-					}
-				}).finished;
-			};
-
-			this.DOM.menu.wrapper.classList.toggle('menu--open');
-
-			Promise.all([toggleMenuCtrlFn(), toggleMenuItemsFn()]).then(() => {
-				this.isMenuOpen = !this.isMenuOpen
-				this.isMenuAnimating = false;
-			});
 		}
 		toggleNavigationCtrls(animeconfig) {
 			return this.animate(Object.assign({
