@@ -30,19 +30,19 @@
 		margin-bottom: $integer-md;
 		text-align: left;
 
-		&.focused {
+		// &.focused {
 
-			.form {
+		// 	.form {
 
-				&__label {
-					color: $secondary;
-				}
+		// 		&__label {
+		// 			color: $secondary;
+		// 		}
 
-				&__input {
-					border-color: $secondary;
-				}
-			}
-		}
+		// 		&__input {
+		// 			border-color: $secondary;
+		// 		}
+		// 	}
+		// }
 	}
 
 	&__control {
