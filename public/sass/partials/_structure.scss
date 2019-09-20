@@ -150,15 +150,15 @@ body {
 
 // text selection
 ::-moz-selection {
-	background: $primary;
+	background: $secondary;
 	color: $white;
 }
 ::selection {
-	background: $primary;
+	background: $secondary;
 	color: $white;
 }
 ::-moz-selection {
-	background: $primary;
+	background: $secondary;
 	color: $white;
 }
 
@@ -173,7 +173,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-	-webkit-box-shadow: 0 0 0px 1000px $white inset;
+	-webkit-box-shadow: 0 0 0px 1000px $primary inset;
 	@include transition(background-color $transition);
 }
 
