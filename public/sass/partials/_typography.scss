@@ -83,6 +83,15 @@ html, body {
 	&--small { & + & { padding-top: $integer*0.75; }}
 }
 
+// alignement
+
+.body {
+
+	&--left { text-align: left; }
+	&--center { text-align: center; }
+	&--right { text-align: right; }
+}
+
 // col text
 
 @for $i from 1 through 4 {

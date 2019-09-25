@@ -17,6 +17,13 @@
 
 .project {
 
+    &__meta {
+
+        .label {
+            padding-top: $integer;
+        }
+    }
+
     &__mockup {
         @include background(center center, cover);
         height: 75vh;
