@@ -1,38 +1,46 @@
 {% include header.html %}
 
-<section id="projects" class="row section" style="background-image: url({{ site.url }}{{ site.resourceurl }}projects/{{ page.title | slugify }}/{{ page.title | slugify }}-cover.jpg)">
-    <div class="coloffset--3 col--12 section__content">
-            <div class="block">
-                <div class="row">
-                    <nav class="col--12 project__nav">
-                        <button class="project__nav-item project__nav-item--prev button button--icon button--large button--stroke button--black button--animate fas fa-chevron-left">
-                            <i class="button__inner fas fa-chevron-left"></i>
-                        </button>
-                        <button class="project__nav-item project__nav-item--next button button--icon button--large button--stroke button--black button--animate fas fa-chevron-right">
-                            <i class="button__inner fas fa-chevron-right"></i>
-                        </button>
-                    </nav>
-                </div>
+<!-- <section id="projects" class="row section" style="background-image: url({{ site.url }}{{ site.resourceurl }}projects/{{ page.title | slugify }}/{{ page.title | slugify }}-cover.jpg)"> -->
+<section id="projects" class="row section">
+        <div class="section__content">
+        <div class="coloffset--3 col--12 block">
+            <div class="row">
+                <nav class="col--12 project__nav">
+                    <button class="project__nav-item project__nav-item--prev button button--icon button--large button--stroke button--black button--animate fas fa-chevron-left">
+                        <i class="button__inner fas fa-chevron-left"></i>
+                    </button>
+                    <button class="project__nav-item project__nav-item--next button button--icon button--large button--stroke button--black button--animate fas fa-chevron-right">
+                        <i class="button__inner fas fa-chevron-right"></i>
+                    </button>
+                </nav>
             </div>
-            <div class="project__item">
-                <div class="project">
-                    <div class="row">
-                        {% if page.category %}
-                            <p class="col--12 project__category label">{{ page.category }}</p>
-                        {% endif %}
-                        {% if page.title %}
-                            <h2 class="col--12 project__title section__subtitle title">{{ page.title }}</h2>
-                        {% endif %}
-                        {% if page.subtitle %}
-                            <h3 class="col--12 project__subtitle lead">{{ page.subtitle }}</h3>
-                        {% endif %}
-                        {% if page.body %}
-                            <p class="col--6 project__body body--bold">{{ page.body }}</p>
-                        {% endif %}
-                    </div>
+        </div>
+        <div class="coloffset--3 col--12 block project__item">
+            <div class="project">
+                <div class="row">
+                    {% if page.category %}
+                        <p class="col--12 project__category label">{{ page.category }}</p>
+                    {% endif %}
+                    {% if page.title %}
+                        <h2 class="col--12 project__title section__subtitle title">{{ page.title }}</h2>
+                    {% endif %}
+                    {% if page.subtitle %}
+                        <h3 class="col--12 project__subtitle lead">{{ page.subtitle }}</h3>
+                    {% endif %}
+                    {% if page.body %}
+                        <p class="col--6 project__body body--bold">{{ page.body }}</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
+        {% if page.type == 'video' %}
+            <div class="coloffset--3 col--10 block">
+                <div class="embed-container">
+                    <iframe src="https://player.vimeo.com/video/{{ page.video_id }}?color=00ffc4&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+            </div>
+        {% endif %}
+        {{ content }}
     </div>
 </section>
 

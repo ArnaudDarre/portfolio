@@ -40,10 +40,6 @@
         @include align-items(center);
     }
 
-    &__item {
-        position: absolute;
-    }
-
     &__image {
         @include transition(opacity 0.4s ease, transform 0.8s ease);
         will-change: opacity, transform;

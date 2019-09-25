@@ -33,7 +33,11 @@
                 }
             }
         }
-        
+
+        &__item {
+            position: absolute;
+        }
+            
         &__title {
             overflow: hidden !important;
             
