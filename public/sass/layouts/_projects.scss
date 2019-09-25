@@ -7,5 +7,18 @@
 
 
 #projects {
-    background-color: §primary;
+    @include background(center center, cover);
+    
+    &:before {
+        @include pseudo-element('', 0, 0, 0, 0, 100%, 100%);
+        background-color: rgba($white, 0.8);
+    }
+}
+
+.project {
+
+    &__mockup {
+        @include background(center center, cover);
+        height: 75vh;
+    }
 }
