@@ -17,5 +17,5 @@ tags:
 ---
 
 <div class="block col--16">
-    <div class="project__mockup" style="background-image: url({{ site.url }}{{ site.resourceurl }}projects/{{ page.title | slugify }}/{{ page.title | slugify }}-mockup.jpg)"></div>
+    <div class="project__mockup" style="background-image: url({{ site.url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}-mockup.jpg)"></div>
 </div>

@@ -17,6 +17,19 @@
 
 .project {
 
+    &__nav {
+        @include display-flex();
+        @include align-items(center);
+    }
+
+    &__category {
+        margin-bottom: $integer-lg;
+    }
+
+    &__subtitle {
+        margin-bottom: $integer-md;
+    }
+
     &__meta {
 
         .label {

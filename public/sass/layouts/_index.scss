@@ -35,25 +35,19 @@
 
 .project {
 
-    &__nav {
-        @include display-flex();
-        @include align-items(center);
-    }
-
     &__image {
-        @include transition(opacity 0.4s ease, transform 0.8s ease);
-        will-change: opacity, transform;
+        // @include transition(transform 0.8s ease);
+        // will-change: transform;
         overflow: hidden;
         position: absolute;
-        margin-top: -$integer-xl;
+        margin-top: $integer-xxxxl;
         height: 50vh; 
         width: 100%;
         opacity: 0.4;
         
-        @include hover-link {
-            @include transform(scale(1.02));
-            opacity: 1;
-        }
+        // @include hover-link {
+        //     @include transform(scale(1.02));
+        // }
 
         &-inner {
             width: 100%;
@@ -65,14 +59,6 @@
 
     &__category, &__title, &__subtitle, &__body {
         pointer-events: none;
-    }
-
-    &__category {
-        margin-bottom: $integer-lg;
-    }
-
-    &__subtitle {
-        margin-bottom: $integer-md;
     }
 }
 
