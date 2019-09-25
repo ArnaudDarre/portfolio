@@ -9,7 +9,7 @@ category: Video
 video_id: 130741186
 
 featured: 1
-client: personal project
+client: Personal project
 tags: 
   - tag: Science-fiction
   - tag: Motion graphics
@@ -19,4 +19,3 @@ tags:
 <div class="block col--16">
     <div class="project__mockup" style="background-image: url({{ site.url }}{{ site.resourceurl }}projects/{{ page.title | slugify }}/{{ page.title | slugify }}-mockup.jpg)"></div>
 </div>
-
