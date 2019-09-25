@@ -5,6 +5,7 @@ $(document).ready(function() {
 // —————————————————————————————————————————————————————————————————
 // text anchor on landing
 // dot sidebar
+// scrollify (auto scroll to section)
 // —————————————————————————————————————————————————————————————————
 
 
@@ -82,6 +83,17 @@ $(".anchor a").click(function(evn){
     $('html,body').scrollTo(this.hash, this.hash);
 });
 
+
+
+// —————————————————————————————————————————————————————————————————
+// scrollify (auto scroll to section)
+// —————————————————————————————————————————————————————————————————
+
+$.scrollify({
+    section : ".section",
+    easing: "easeInOutQuad",
+    scrollSpeed: 1200
+});
 
 
 // —————————————————————————————————————————————————————————————————
