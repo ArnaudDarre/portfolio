@@ -47,16 +47,17 @@
             position: relative;
         }
     }
-}
 
-.js .project__item:not(.project__item--current) {
-    pointer-events: none;
-
-    .project__title span,
-    .project__category,
-    .project__subtitle,
-    .project__body,
-    .project__image-inner {
-        opacity: 0;
+    .project__item:not(.project__item--current) {
+        pointer-events: none;
+    
+        .project__title span,
+        .project__category,
+        .project__subtitle,
+        .project__body,
+        .project__image-inner {
+            opacity: 0;
+        }
     }
 }
+
