@@ -92,7 +92,8 @@ $(".anchor a").click(function(evn){
 $.scrollify({
     section : ".section",
     easing: "easeInOutQuad",
-    scrollSpeed: 1200
+    scrollSpeed: 1200,
+    updateHash: false
 });
 
 

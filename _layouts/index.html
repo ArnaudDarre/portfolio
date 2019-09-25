@@ -1,7 +1,7 @@
 {% include header.html %}
 
 <!-- scrollify -->
-<script src="{{ site.url }}{{ site.resourceurl }}vendors/scrollify/jquery.scrollify.min.js"></script>
+<script src="{{ site.url }}{{ site.resourceurl }}/vendors/scrollify/jquery.scrollify.min.js"></script>
 <script>$(function() { $.scrollify({ section : ".section", }); });</script>
 
 
@@ -32,6 +32,9 @@
 
 <!-- portfolio -->
 <section id="portfolio" class="row section js-scrolling-letters__section">
+    <div class="section__background">
+        <span class="background__trigger background__trigger--portfolio"></span>
+    </div>
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">Portfolio</h1>
     </div>
@@ -63,8 +66,8 @@
                         <div class="project">
                             <div class="row">
                                 <div class="coloffset--2 col--10">
-                                    <a href="{{ site.url }}projects/{{ project.title | slugify }}" class="project__image">
-                                        <div class="project__image-inner" style="background-image: url({{ site.url }}{{ site.resourceurl }}projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
+                                    <a href="{{ site.url }}/projects/{{ project.title | slugify }}" class="project__image">
+                                        <div class="project__image-inner" style="background-image: url({{ site.url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
                                     </a>
                                 </div>
                                 {% if project.category %}
@@ -115,7 +118,7 @@
                     <h3 class="card__title subhead">{{ skill.title }}</h3>
                     <p class="card__body body">{{ skill.description }}</p>
                     <p class="card__label label">Project</p>
-                    <a href="{{ skill.project | slugify }}" class="body body__underline">{{ skill.project }}</a>
+                    <a href="{{ site.url }}/projects/{{ skill.project | slugify }}" class="body body__underline">{{ skill.project }}</a>
                 </div>
                 {% endfor %}
             </div>
