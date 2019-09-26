@@ -1,0 +1,5 @@
+{% assign suffix = include.suffix %}
+
+<div class="col--16 block project__block">
+    <div class="project__mockup" style="background-image: url({{ site.url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}-mockup-cover{% if suffix %}-{{ suffix }}{% endif %}.jpg)"></div>
+</div>

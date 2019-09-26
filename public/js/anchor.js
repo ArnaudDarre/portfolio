@@ -17,7 +17,7 @@ $(document).ready(function() {
 $('a.js-button-anchor').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
+    }, 1200);
     return false;
 });
 
@@ -36,7 +36,7 @@ $.scrollTo = $.fn.scrollTo = function(x, y, options){
         },
         animation: {
             easing: 'swing',
-            duration: 600,
+            duration: 1200,
             complete: $.noop,
             step: $.noop
         }

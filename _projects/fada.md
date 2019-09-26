@@ -2,7 +2,7 @@
 layout: projects
 type: website
 featured: 2
-color: 
+color: turquoise
 
 # info
 title: Fada
@@ -11,14 +11,17 @@ body: Collection of ressources (mainly UI) coded during the development of the w
 category: Digital
 
 # meta
-client: 
-link: http://fada.arnaud-darre.com/
+client: Personal project
+website_url: http://fada.arnaud-darre.com/
+website_title: fada.arnaud-darre.com
 tags: #no more than three
-  - tag: 
-  - tag: 
+  - tag: Framework
+  - tag: CSS
   - tag: 
 
 # content
 video_id: #vimeo video id
 
 ---
+
+{% include components/project-mockup.html %}

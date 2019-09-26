@@ -12,7 +12,6 @@ category: Editorial
 
 # meta
 client: 
-link: #link to potential website
 tags: #no more than three
   - tag: 
   - tag: 

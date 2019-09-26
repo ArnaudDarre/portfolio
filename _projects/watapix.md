@@ -12,7 +12,8 @@ category: Identity
 
 # meta
 client: Watapix
-link: http://www.watapix.com/
+website_url: http://www.watapix.com/
+website_title: watapix.com
 tags: 
   - tag: 
   - tag: 

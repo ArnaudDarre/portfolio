@@ -1,7 +1,7 @@
 ---
 layout: projects
 type: website
-featured: 3
+featured: 4
 color: '#007BFF'
 
 # info
@@ -12,7 +12,8 @@ category: Digital
 
 # meta
 client: Applied Blockchain
-link: https://appliedblockchain.com/
+website_url: https://appliedblockchain.com/
+website_title: appliedblockchain.com
 tags: #no more than three
   - tag: 
   - tag: 

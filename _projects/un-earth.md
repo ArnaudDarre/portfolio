@@ -1,7 +1,7 @@
 ---
 layout: projects
 type: book
-featured: 4
+featured: 3
 color: 
 
 # info
@@ -12,7 +12,6 @@ category: Editorial
 
 # meta
 client: Degree Project
-link: #link to potential website
 tags: #no more than three
   - tag: 
   - tag: 

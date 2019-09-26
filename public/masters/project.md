@@ -12,7 +12,8 @@ category: [Digital, Drawing, Editorial, Identity, Posters, Typography, Video]
 
 # meta
 client: 
-link: #link to website
+website_url: 
+website_title: 
 tags: #no more than three
   - tag: 
   - tag: 

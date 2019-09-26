@@ -18,7 +18,7 @@
 .project {
 
     &__block {
-        padding-top: $integer-xxxxl;
+        padding-top: $integer-xxxl;
     }
 
     &__nav {
@@ -33,6 +33,10 @@
 
             &--next {
                 margin-left: $integer-xl;
+
+                &:first-child {
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -61,4 +65,8 @@
         @include background(center center, cover);
         height: 75vh;
     }
+
+    &__grid {
+        margin-bottom: $integer-md;
+   }
 }

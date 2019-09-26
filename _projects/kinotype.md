@@ -2,6 +2,7 @@
 layout: projects
 type: video
 featured: 1
+color: 
 
 # info
 title: Kinotype
@@ -11,7 +12,8 @@ category: Video
 
 # meta
 client: Personal project
-link:
+website_url: 
+website_link: 
 tags: 
   - tag: Science-fiction
   - tag: Motion graphics
@@ -22,6 +24,6 @@ video_id: 130741186
 
 ---
 
-<div class="col--16 block project__block">
-    <div class="project__mockup" style="background-image: url({{ site.url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}-mockup-cover.jpg)"></div>
-</div>
+{% include components/project-mockup.html %}
+{% include components/project-poster.html %}
+{% include components/project-grid.html %}
