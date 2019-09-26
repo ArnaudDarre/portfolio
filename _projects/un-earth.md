@@ -2,6 +2,7 @@
 layout: projects
 type: book
 featured: 4
+color: 
 
 # info
 title: '[un]earth'

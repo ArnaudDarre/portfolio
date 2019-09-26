@@ -2,6 +2,7 @@
 layout: projects
 type: book
 featured: 
+color: 
 
 # info
 title: Freedom on the Internet

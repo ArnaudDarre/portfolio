@@ -2,6 +2,7 @@
 layout: projects
 type: website
 featured: 3
+color: '#007BFF'
 
 # info
 title: Applied Blockchain

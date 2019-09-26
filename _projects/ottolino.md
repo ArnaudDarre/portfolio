@@ -2,6 +2,7 @@
 layout: projects
 type: typeface
 featured: 
+color: 
 
 # info
 title: Ottolino

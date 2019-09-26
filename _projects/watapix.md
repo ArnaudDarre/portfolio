@@ -1,7 +1,8 @@
 ---
 layout: projects
 type: identity
-featured: #add number here to feature the project on index
+featured: 
+color: '#00AEC7'
 
 # info
 title: Watapix
@@ -12,12 +13,12 @@ category: Identity
 # meta
 client: Watapix
 link: http://www.watapix.com/
-tags: #no more than three
+tags: 
   - tag: 
   - tag: 
   - tag: 
 
 # content
-video_id: #vimeo video id
+video_id: 
 
 ---
