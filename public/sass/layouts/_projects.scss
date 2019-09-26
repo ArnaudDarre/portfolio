@@ -17,9 +17,24 @@
 
 .project {
 
+    &__block {
+        padding-top: $integer-xxxxl;
+    }
+
     &__nav {
         @include display-flex();
         @include align-items(center);
+
+        &-item {
+
+            &--prev {
+                margin-right: $integer-xl;
+            }
+
+            &--next {
+                margin-left: $integer-xl;
+            }
+        }
     }
 
     &__category {
@@ -33,7 +48,12 @@
     &__meta {
 
         .label {
-            padding-top: $integer;
+            padding-top: $integer-md;
+            padding-bottom: $integer-sm;
+
+            &:first-child {
+                padding-top: $integer;
+            }
         }
     }
 
