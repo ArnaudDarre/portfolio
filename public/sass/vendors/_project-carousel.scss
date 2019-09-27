@@ -36,6 +36,25 @@
         &__item {
             position: absolute;
         }
+
+        &__image {
+            overflow: hidden;
+            position: absolute;
+            margin-top: $integer-xxxxl;
+            height: 50vh; 
+            width: 100%;
+            opacity: 0.2;
+   
+            &-inner {
+                @include background(50% 50%, cover);
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        &__category, &__title, &__subtitle, &__body {
+            pointer-events: none;
+        }
             
         &__title {
             overflow: hidden !important;
@@ -58,6 +77,7 @@
         .project__category,
         .project__subtitle,
         .project__body,
+        .project__button,
         .project__image-inner {
             opacity: 0;
         }

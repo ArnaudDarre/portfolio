@@ -1,13 +1,15 @@
 <header class="header">
     <div class="row">
-        <div class="col--1">
-            <img src="{{ site.url }}{{ site.resourceurl }}/images/logo.png" alt="Logo" class="logo">
+        <div class="sidebar sidebar--left">
         </div>
-        <div class="sidebar">
+        <div class="sidebar sidebar--right">
             <div class="">
-                <button class="button button--icon button--large button--white">
+                <a {% if page.layout == 'index' %}href="#landing" class="js-button-anchor"{% else %}href="{{ site.url }}/"{% endif %}>
+                    <img src="{{ site.url }}{{ site.resourceurl }}/images/logo.png" alt="Logo" class="header__logo">
+                </a>
+                <!-- <button class="button button--icon button--large button--secondary">
                     <i class="button__inner fas fa-bars"></i>
-                </button>
+                </button> -->
                 {% if page.layout == 'index' %}
                 <div class="anchor">
                     <div class="anchor__container">
@@ -35,7 +37,7 @@
                 </div>
                 {% endif %}
             </div>
-            <a class="button--scroll-top button button--icon button--large button--stroke button--secondary fas fa-chevron-up"></a>
+            <a class="button--scroll-top button button--icon button--secondary fas fa-chevron-up"></a>
         </div>
     </div>
 </header>

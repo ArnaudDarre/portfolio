@@ -51,13 +51,19 @@
 		will-change: transform;
 		padding: $integer-xs 0;
 
-		&:hover {
+		@include hover-link {
 			@include transform(translateX($integer-xs));
 		}
 	}
 
 	&--underline {
+		@include transition(color 0.4s ease);
+		will-change: color;
 		text-decoration: underline;
+
+		@include hover-link {
+			color: $secondary;
+		}
 	}
 }
 
@@ -163,11 +169,11 @@
 
 @include button-fill-color('button--',
 //	 prefix 		 background		 color
-	'primary'   	$primary 		$white,
+	'primary'   	$primary 		$black,
 	'secondary' 	$secondary		$white,
 	'highlight' 	$highlight		$white,
 	'dark' 			$dark 			$white,
-	'white' 		$white 			$primary,
+	'white' 		$white 			$black,
 	'facebook' 		$facebook 		$white,
 	'google' 		$google 		$white,
 	'linkedin' 		$linkedin 		$white,

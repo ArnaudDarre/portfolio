@@ -41,6 +41,10 @@
         }
     }
 
+    &__button {
+        text-align: right;
+    }
+
     &__category {
         margin-bottom: $integer-lg;
     }

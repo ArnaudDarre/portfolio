@@ -1,6 +1,5 @@
 ---
 layout: projects
-type: identity
 featured: 
 color: '#00aec7'
 

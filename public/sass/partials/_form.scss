@@ -123,25 +123,23 @@
 	}
 
 	.form__dropdown {
-		@include calc(top, '100% +' $integer-sm);
-		@include box-shadow($box-shadow-lg);
-		@include border-radius($integer);
+		@include calc(top, '100% -' $integer-xs);
 		display: none;
 		position: absolute;
 		right: 0;
 		left: 0;
-		max-height: $integer-xxxl;
+		max-height: $integer-xxxxl;
 		overflow: scroll;
 		z-index: 2;
-		background-color: $white;
-		border: 2px solid $primary;
+		background-color: $primary;
 		margin-left: 0;
+		border: $integer-xs solid $black;
 
 		li {
 			@include transition(color $transition);
 			will-change: color;
 			margin: 0;
-			padding: 9px $integer;
+			padding: $integer $integer !important;
 			cursor: pointer;
 
 			&:nth-child(1) {
@@ -153,7 +151,7 @@
 			}
 
 			& + li {
-				border-top: 1px solid $light-grey;
+				border-top: $integer-xs solid $black;
 			}
 
 			&:hover {

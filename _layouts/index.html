@@ -44,7 +44,7 @@
                 <div class="row">
                     <p class="col--6 section__comment lead">Browse through some crunchy bites or check the entire collection.</p>
                     <nav class="col--12 project__nav">
-                        <button class="project__nav-item project__nav-item--prev button button--icon button--large button--stroke button--black button--animate fas fa-chevron-left">
+                        <button class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
                             <i class="button__inner fas fa-chevron-left"></i>
                         </button>
                         <div class="project__index">
@@ -53,7 +53,7 @@
                             </span>
                             <span class="project__index-total label">04</span>
                         </div>
-                        <button class="project__nav-item project__nav-item--next button button--icon button--large button--stroke button--black button--animate fas fa-chevron-right">
+                        <button class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
                             <i class="button__inner fas fa-chevron-right"></i>
                         </button>
                     </nav>
@@ -82,6 +82,11 @@
                                 {% if project.body %}
                                     <p class="col--6 project__body body--bold">{{ project.body }}</p>
                                 {% endif %}
+                                <div class="col--6 project__button">
+                                    <a href="{{ site.url }}/projects/{{ project.title | slugify }}" class="button button--secondary button--animate fas fa-chevron-right">
+                                        <p class="button__inner">View project</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -118,7 +123,7 @@
                     <h3 class="card__title subhead">{{ skill.title }}</h3>
                     <p class="card__body body">{{ skill.description }}</p>
                     <p class="card__label label">Project</p>
-                    <a href="{{ site.url }}/projects/{{ skill.project | slugify }}" class="body body__underline">{{ skill.project }}</a>
+                    <a href="{{ site.url }}/projects/{{ skill.project | slugify }}" class="body button--underline">{{ skill.project }}</a>
                 </div>
                 {% endfor %}
             </div>
@@ -139,7 +144,7 @@
         <div class="block">
             <p class="section__subtitle title">Howdy stranger!</p>
             <h2 class="section__comment subtitle">Feel free to drop a line here…</h2>
-            <div class="form">
+            <form action="https://app.99inbound.com/api/e/lSKxMMdS" method="POST" class="form">
                 <div class="row">
                     <div class="col--5 form__group">
                         <label for="first_name" class="form__label">Name</label>
@@ -150,36 +155,28 @@
                         <input type="text" name="surname" id="surname" class="form__input">
                     </div>
                     <div class="col--10 form__group">
-                        <label for="subject" class="form__label">Subject</label>
-                        <select name="subject" id="subject" class="form__input">
-                            <option value="">—</option>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                        </select>
-                    </div>
-                    <div class="col--10 form__group">
                         <label for="message" class="form__label">Message</label>
                         <textarea name="message" id="message" class="form__input" rows="4"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="form__button button button--secondary">
+                <!-- prevent spam entries -->
+                <div style="position: absolute; left: -5000px;">
+                    <input type="checkbox" name="grass_fed_red_waved_profit" value="1" tabindex="-1" autocomplete="no">
+                </div>
+                <button type="submit" class="form__button button button--secondary button--animate fas fa-paper-plane">
                     <p class="button__inner">Send</p>
                 </button>
-            </div>
+            </form>
         </div>
         <div class="block">
             <h2 class="section__comment subtitle">…or contact me via social media.</h2>
-            <a href="" title="Link to Behance profile" target="_blank" class="button button--icon button--stroke button--large button--highlight button--animate fas fa-plus">
-                <i class="button__inner fab fa-behance"></i>
-            </a>
-            <a href="" title="Link to Github profile" target="_blank" class="button button--icon button--stroke button--large button--highlight button--animate fas fa-plus">
+            <a href="https://github.com/ArnaudDarre" title="Link to Github profile" target="_blank" class="button button--icon button--large button--secondary button--animate fas fa-plus">
                 <i class="button__inner fab fa-github"></i>
             </a>
-            <a href="" title="Link to Linkedin profile" target="_blank" class="button button--icon button--stroke button--large button--highlight button--animate fas fa-plus">
+            <a href="https://www.linkedin.com/in/arnauddarre/?locale=en_US" title="Link to Linkedin profile" target="_blank" class="button button--icon button--large button--secondary button--animate fas fa-plus">
                 <i class="button__inner fab fa-linkedin"></i>
             </a>
-            <a href="" title="Link to Spotify profile" target="_blank" class="button button--icon button--stroke button--large button--highlight button--animate fas fa-plus">
+            <a href="https://open.spotify.com/user/117157101?si=rvwOIUyNR72RwV6RagJOFg" title="Link to Spotify profile" target="_blank" class="button button--icon button--large button--secondary button--animate fas fa-plus">
                 <i class="button__inner fab fa-spotify"></i>
             </a>
         </div>

@@ -1,6 +1,5 @@
 ---
 layout: projects
-type: website
 featured: 4
 color: '#007bff'
 

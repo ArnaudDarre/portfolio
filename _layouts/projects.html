@@ -7,12 +7,12 @@
             <div class="row">
                 <nav class="col--12 project__nav">
                     {% if page.previous.url %}
-                        <a href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--stroke button--black button--animate fas fa-chevron-left">
+                        <a href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
                             <i class="button__inner fas fa-chevron-left"></i>
                         </a>
                     {% endif %}
                     {% if page.next.url %}
-                        <a href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--stroke button--black button--animate fas fa-chevron-right">
+                        <a href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
                             <i class="button__inner fas fa-chevron-right"></i>
                         </a>
                     {% endif %}
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        {% if page.type == 'video' %}
+        {% if page.category == 'Video' %}
             <div class="coloffset--3 col--10 block">
                 <div class="embed-container">
                     <iframe src="https://player.vimeo.com/video/{{ page.video_id }}?color=00ffc4&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>

@@ -1,6 +1,5 @@
 ---
 layout: projects
-type: website
 featured: 2
 color: turquoise
 

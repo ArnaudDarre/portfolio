@@ -17,6 +17,7 @@ website_link:
 tags: 
   - tag: Data Visualisation
   - tag: Motion Design
+  - tag: Poster
 
 # content
 video_id: 130741186

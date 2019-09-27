@@ -1,6 +1,5 @@
 ---
 layout: projects
-type: book
 featured: 
 color: '#231d1f'
 

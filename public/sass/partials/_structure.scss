@@ -222,9 +222,9 @@ li {
 // —————————————————————————————————————————————————————————————————
 
 .section__header 		{ z-index: 20; }
-body:before				{ z-index: 30; }
-.cookie				 	{ z-index: 40; }
-.header 				{ z-index: 50; }
+.cookie				 	{ z-index: 30; }
+.header 				{ z-index: 40; }
+body:before				{ z-index: 50; }
 .modal 					{ z-index: 60; }
 
 @for $i from 0 through 9 {
@@ -369,6 +369,9 @@ body:before				{ z-index: 30; }
 	}
 
 	&__logo {
+		@include align-self(flex-start);
+		width: $integer-xxl;
+		height: $integer-xxl;
 	}
 
 	&__button {
@@ -414,11 +417,18 @@ body:before				{ z-index: 30; }
 	@include justify-content(center);
 	position: fixed;
 	top: 0;
-	right: $integer-lg*2;
 	height: 100vh;
 	padding-top: $integer-lg*2;
 	padding-bottom: $integer-lg*2;
 	pointer-events: initial;
+	
+	&--left {
+		left: $integer-lg*2;
+	}
+	
+	&--right {
+		right: $integer-lg*2;
+	}
 }
 
 

@@ -33,35 +33,6 @@
     }
 }
 
-.project {
-
-    &__image {
-        // @include transition(transform 0.8s ease);
-        // will-change: transform;
-        overflow: hidden;
-        position: absolute;
-        margin-top: $integer-xxxxl;
-        height: 50vh; 
-        width: 100%;
-        opacity: 0.4;
-        
-        // @include hover-link {
-        //     @include transform(scale(1.02));
-        // }
-
-        &-inner {
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-    }
-
-    &__category, &__title, &__subtitle, &__body {
-        pointer-events: none;
-    }
-}
-
 
 
 // —————————————————————————————————————————————————————————————————
