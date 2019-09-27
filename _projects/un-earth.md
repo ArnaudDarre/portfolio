@@ -23,5 +23,17 @@ book_url:
 
 ---
 
-<p>[UN]EARTH offers us a vision. One that a civilization from space is going to lay on our society, our lifestyle, our behaviours. A project that uses sience-fiction to speak about the problems in our world, a glimpse that helps us question its methods. This project is a graphic anthology, a history book that tells us a tale, a new myth of world destruction.</p>
-<p>The immersion had to be complete. The aliens have their own writing, a limitless curiosity. They offer us their understanding of our world as they discovered it, and the harvested digital relics, damaged by time.</p>
+<!-- <p>[UN]EARTH offers us a vision. One that a civilization from space is going to lay on our society, our lifestyle, our behaviours. A project that uses sience-fiction to speak about the problems in our world, a glimpse that helps us question its methods. This project is a graphic anthology, a history book that tells us a tale, a new myth of world destruction.</p>
+<p>The immersion had to be complete. The aliens have their own writing, a limitless curiosity. They offer us their understanding of our world as they discovered it, and the harvested digital relics, damaged by time.</p> -->
+
+{% include components/project-cover.html %}
+{% include components/project-grid.html 
+  suffix='illustrations'
+%}
+{% include components/project-grid.html 
+  suffix='timeline'
+%}
+{% include components/project-image.html 
+  size='cover'
+  suffix='timeline'
+%}

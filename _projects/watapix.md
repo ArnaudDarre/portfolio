@@ -19,7 +19,13 @@ tags:
   - tag: 
   - tag: 
 
-# content
-video_id: 
-
 ---
+
+{% include components/project-cover.html %}
+{% include components/project-grid.html %}
+{% include components/project-image.html 
+  suffix='mockup-identity'
+%}
+{% include components/project-image.html 
+  suffix='mockup-research'
+%}

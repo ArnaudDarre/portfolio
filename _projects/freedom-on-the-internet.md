@@ -21,3 +21,5 @@ tags: #no more than three
 video_id: #vimeo video id
 
 ---
+
+{% include components/project-cover.html %}

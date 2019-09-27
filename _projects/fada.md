@@ -24,4 +24,4 @@ video_id: #vimeo video id
 
 ---
 
-{% include components/project-mockup.html %}
+{% include components/project-cover.html %}

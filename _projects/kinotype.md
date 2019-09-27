@@ -24,6 +24,6 @@ video_id: 130741186
 
 ---
 
-{% include components/project-mockup.html %}
+{% include components/project-cover.html %}
 {% include components/project-poster.html %}
 {% include components/project-grid.html %}

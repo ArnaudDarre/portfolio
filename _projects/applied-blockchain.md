@@ -15,11 +15,19 @@ client: Applied Blockchain
 website_url: https://appliedblockchain.com/
 website_title: appliedblockchain.com
 tags: #no more than three
+  - tag: UI
+  - tag: FinTech
   - tag: 
-  - tag: 
-  - tag: 
-
-# content
-video_id: 
 
 ---
+
+{% include components/project-cover.html %}
+{% include components/project-image.html 
+  suffix='mockup-compare-join'
+%}
+{% include components/project-image.html 
+  suffix='mockup-compare-media'
+%}
+{% include components/project-image.html 
+  suffix='mockup-compare-projects'
+%}

@@ -1,0 +1,6 @@
+{% assign size = include.size %}
+{% assign suffix = include.suffix %}
+
+<div class="{% if size == 'cover' %}col--16{% else %}coloffset--3 col--10{% endif %} block project__block">
+    <img src="{{ site.url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}{% if suffix %}-{{ suffix }}{% endif %}.jpg" alt="{{ page.title }} thumbnail" class="">
+</div>
