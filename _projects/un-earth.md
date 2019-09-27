@@ -35,14 +35,18 @@ book_url:
 
 {% include components/project-cover.html %}
 
-{% include components/project-grid.html 
-  suffix='illustrations'
-%}
-
 {% include components/project-body.html 
   quote='This project has been particularly fun because it blended a lot of different mediums and skills. And it allowed me to dive into written storytelling, something that I had only experienced graphically before.'
 %}
 
+{% include components/project-grid.html 
+  suffix='illustrations'
+  legend='Thumbnails of the illustrations'
+%}
+
+{% include components/project-body.html 
+  body-1='Amongst the artwork I created to accompany the book is a full timeline of the events that are described in the book.'
+%}
 
 {% include components/project-image.html 
   size='cover'
@@ -51,5 +55,6 @@ book_url:
 
 {% include components/project-grid.html 
   suffix='timeline'
+  legend='Thumbnails from the timeline'
 %}
 

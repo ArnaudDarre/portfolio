@@ -61,6 +61,11 @@
         }
     }
 
+    &__legend {
+        margin-top: $integer-md;
+        color: $dark-grey;
+    }
+
     &__mockup {
         @include background(center center, cover);
         height: 75vh;

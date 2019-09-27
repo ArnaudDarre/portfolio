@@ -30,12 +30,15 @@ tags: # no more than three
 
 {% include components/project-image.html 
   suffix='mockup-compare-join'
+  legend='Join page – before and after'
 %}
 
 {% include components/project-image.html 
   suffix='mockup-compare-media'
+  legend='Media page – before and after'
 %}
 
 {% include components/project-image.html 
   suffix='mockup-compare-projects'
+  legend='Projects page – before and after'
 %}

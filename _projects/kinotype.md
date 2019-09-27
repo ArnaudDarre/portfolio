@@ -25,6 +25,10 @@ video_id: 130741186
 
 {% include components/project-cover.html %}
 
-{% include components/project-poster.html %}
+{% include components/project-poster.html 
+  legend="Poster created with the data"
+%}
 
-{% include components/project-grid.html %}
+{% include components/project-grid.html 
+  legend="Thumbnails of the poster"
+%}
