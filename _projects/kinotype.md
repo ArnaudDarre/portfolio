@@ -15,9 +15,8 @@ client: Personal project
 website_url: 
 website_link: 
 tags: 
-  - tag: Science-fiction
-  - tag: Motion graphics
-  - tag: Data visualisation
+  - tag: Data Visualisation
+  - tag: Motion Design
 
 # content
 video_id: 130741186
@@ -25,5 +24,7 @@ video_id: 130741186
 ---
 
 {% include components/project-cover.html %}
+
 {% include components/project-poster.html %}
+
 {% include components/project-grid.html %}

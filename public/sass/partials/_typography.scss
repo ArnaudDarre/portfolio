@@ -58,7 +58,13 @@ html, body {
 
 .quote {
 	@include font-size(1.5, $font-regular, normal);
-	line-height: 1;
+
+	&:before {
+		@include pseudo-element('”', -$integer-xxxl, auto, auto, -$integer-xl, auto, auto);
+		z-index: -1;
+		font-size: 20rem;
+		color: $dark-grey;
+	}
 }	
 
 // overides
@@ -79,8 +85,8 @@ html, body {
 .body {
 
 	& + & { padding-top: $integer; }
-	&--large { & + & { padding-top: $integer*1.25; }}
-	&--small { & + & { padding-top: $integer*0.75; }}
+	&--large { & + & { padding-top: $integer*2; }}
+	&--small { & + & { padding-top: $integer*0.5; }}
 }
 
 // alignement

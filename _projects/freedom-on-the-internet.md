@@ -2,24 +2,25 @@
 layout: projects
 type: book
 featured: 
-color: 
+color: '#231d1f'
 
 # info
 title: Freedom on the Internet
-subtitle: 
-body: Suspendisse a tempus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque vulputate lacinia interdum. Pellentesque tempus vehicula magna sed ullamcorper. Integer lacinia eu leo ut fringilla. Nulla facilisi. Suspendisse potenti. Vivamus tristique arcu a diam malesuada, non congue odio suscipit. Quisque pretium erat eu ultrices pretium. Nullam commodo viverra hendrerit. 
+subtitle: A book on Internet Censorship
+body: This book explores how censorship, weather applied automatically by the author, or carried out by countries and organisation
 category: Editorial
 
 # meta
-client: 
-tags: #no more than three
-  - tag: 
-  - tag: 
-  - tag: 
-
-# content
-video_id: #vimeo video id
+client: Personal project
+tags: # no more than three
+  - tag: Editorial Design
 
 ---
+
+{% include components/project-image.html 
+  size='thumbnail'
+  pdf='true'
+  suffix='book'
+%}
 
 {% include components/project-cover.html %}

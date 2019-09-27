@@ -2,7 +2,7 @@
 layout: projects
 type: identity
 featured: 
-color: '#00AEC7'
+color: '#00aec7'
 
 # info
 title: Watapix
@@ -15,17 +15,25 @@ client: Watapix
 website_url: http://www.watapix.com/
 website_title: watapix.com
 tags: 
-  - tag: 
-  - tag: 
-  - tag: 
+  - tag: Brand Identity
+  - tag: Logo Design
 
 ---
 
+{% include components/project-image.html 
+  size='thumbnail'
+  pdf='true'
+  suffix='guidelines'
+%}
+
 {% include components/project-cover.html %}
-{% include components/project-grid.html %}
+
 {% include components/project-image.html 
   suffix='mockup-identity'
 %}
+
+{% include components/project-grid.html %}
+
 {% include components/project-image.html 
   suffix='mockup-research'
 %}

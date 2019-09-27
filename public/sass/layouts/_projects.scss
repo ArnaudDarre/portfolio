@@ -68,5 +68,36 @@
 
     &__grid {
         margin-bottom: $integer-md;
-   }
+    }
+
+    &__pdf {
+        @include display-flex();
+        @include align-items(center);
+        @include justify-content(center);
+
+        p {
+            @include transition(opacity 0.4s ease);
+            will-change: opacity;
+            position: absolute;
+            opacity: 0;
+        }
+
+        img {
+            @include transition(opacity 0.4s ease);
+            will-change: opacity;
+            opacity: 1;
+            border: $integer-sm solid $medium-grey;
+        }
+
+        @include hover-link {
+
+            p {
+                opacity: 1;
+            }
+
+            img {
+                opacity: 0.4;
+            }
+        }
+    }
 }

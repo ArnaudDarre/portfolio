@@ -1,6 +1,14 @@
 {% assign size = include.size %}
+{% assign pdf = include.pdf %}
 {% assign suffix = include.suffix %}
 
-<div class="{% if size == 'cover' %}col--16{% else %}coloffset--3 col--10{% endif %} block project__block">
-    <img src="{{ site.url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}{% if suffix %}-{{ suffix }}{% endif %}.jpg" alt="{{ page.title }} thumbnail" class="">
+<div class="{% if size == 'cover' %}col--16{% elsif size == 'thumbnail' %}coloffset--5 col--6{% else %}coloffset--3 col--10{% endif %} block project__block">
+    {% if pdf %}
+        <a href="{{ site.url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}{% if suffix %}-{{ suffix }}{% endif %}.pdf" target="_blank" class="project__pdf">
+            <p class="z-index--2 body--large">Click on the image to view the {{ suffix }}</p>
+            {% endif %}
+            <img src="{{ site.url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}{% if suffix %}-{{ suffix }}{% endif %}.jpg" alt="{{ page.title }} thumbnail" class="">
+            {% if pdf %}
+        </a>
+    {% endif %}
 </div>
