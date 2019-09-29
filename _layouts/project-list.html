@@ -1,24 +1,23 @@
 {% include header.html %}
 
 <section class="section">
-        <h1 class="title">{{ page.title }}</h1>
-        <div class="filter">
-            <button class="filter__item" data-filter=".all">All</button>
-            <button class="filter__item" data-filter=".editorial">Editorial</button>
-            <button class="filter__item" data-filter=".digital">Digital</button>
-            <button class="filter__item" data-filter=".identity">Identity</button>
-            <button class="filter__item" data-filter=".typography">Typography</button>
-            <button class="filter__item" data-filter=".posters">Posters</button>
-            <button class="filter__item" data-filter=".videos">Videos</button>
-            <button class="filter__item" data-filter=".drawings">Drawings</button>
-        </div>
-        <div class="grid">
-            <div class="col--lg4 col--md6">
-                <div class="card card--project" style="background-image: url();">
-                    <p class="label">{{ project.category }}</p>
-                    <h2 class="card__header lead">{{ project.title }}</h2>
-                    <p class="card__content body">{{ project.subtitle }}</p>
-                </div>
+    <h1 class="title">{{ page.title }}</h1>
+    <div class="filter">
+        <button class="filter__item" data-filter=".all">All</button>
+        <button class="filter__item" data-filter=".editorial">Editorial</button>
+        <button class="filter__item" data-filter=".digital">Digital</button>
+        <button class="filter__item" data-filter=".identity">Identity</button>
+        <button class="filter__item" data-filter=".typography">Typography</button>
+        <button class="filter__item" data-filter=".posters">Posters</button>
+        <button class="filter__item" data-filter=".videos">Videos</button>
+        <button class="filter__item" data-filter=".drawings">Drawings</button>
+    </div>
+    <div class="grid">
+        <div class="col--lg4 col--md6">
+            <div class="card card--project" style="background-image: url();">
+                <p class="label">{{ project.category }}</p>
+                <h2 class="card__header lead">{{ project.title }}</h2>
+                <p class="card__content body">{{ project.subtitle }}</p>
             </div>
         </div>
     </div>
