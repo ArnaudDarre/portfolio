@@ -3523,7 +3523,12 @@ html, body {
   padding-right: 6.25vw;
 }
 
-/* line 44, ../sass/layouts/_index.scss */
+/* line 36, ../sass/layouts/_index.scss */
+#about {
+  padding-bottom: 11.25rem;
+}
+
+/* line 48, ../sass/layouts/_index.scss */
 .background__square {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -3531,7 +3536,7 @@ html, body {
   transform: rotate(45deg);
   position: absolute;
 }
-/* line 48, ../sass/layouts/_index.scss */
+/* line 52, ../sass/layouts/_index.scss */
 .background__square--landing {
   top: 66.67vh;
   right: -50vh;
@@ -3539,7 +3544,7 @@ html, body {
   width: 100vh;
   background-color: #00ffc4;
 }
-/* line 56, ../sass/layouts/_index.scss */
+/* line 60, ../sass/layouts/_index.scss */
 .background__square--contact {
   top: 500px;
   right: -200vh;
@@ -3547,12 +3552,12 @@ html, body {
   width: 200vw;
   background-color: #00ffc4;
 }
-/* line 65, ../sass/layouts/_index.scss */
+/* line 69, ../sass/layouts/_index.scss */
 .background__circle {
   position: absolute;
   border-radius: 50%;
 }
-/* line 69, ../sass/layouts/_index.scss */
+/* line 73, ../sass/layouts/_index.scss */
 .background__circle--landing {
   top: -50vh;
   left: -50vh;
@@ -3560,7 +3565,7 @@ html, body {
   width: 100vh;
   background-color: #00ffc4;
 }
-/* line 77, ../sass/layouts/_index.scss */
+/* line 81, ../sass/layouts/_index.scss */
 .background__circle--about {
   top: 20vh;
   left: 30vw;
@@ -3568,7 +3573,7 @@ html, body {
   width: 40vw;
   background-color: #ffffff;
 }
-/* line 85, ../sass/layouts/_index.scss */
+/* line 89, ../sass/layouts/_index.scss */
 .background__circle--about-small {
   top: -200vh;
   left: 160vw;
@@ -3576,7 +3581,7 @@ html, body {
   width: 20vw;
   background-color: #00ffc4;
 }
-/* line 94, ../sass/layouts/_index.scss */
+/* line 98, ../sass/layouts/_index.scss */
 .background__trigger {
   position: absolute;
   -moz-transform: translateY(-1rem);
@@ -3584,15 +3589,15 @@ html, body {
   -webkit-transform: translateY(-1rem);
   transform: translateY(-1rem);
 }
-/* line 98, ../sass/layouts/_index.scss */
+/* line 102, ../sass/layouts/_index.scss */
 .background__trigger--landing {
   top: 50vh;
 }
-/* line 99, ../sass/layouts/_index.scss */
+/* line 103, ../sass/layouts/_index.scss */
 .background__trigger--about {
   top: -30vh;
 }
-/* line 100, ../sass/layouts/_index.scss */
+/* line 104, ../sass/layouts/_index.scss */
 .background__trigger--contact {
   top: -50vh;
 }
