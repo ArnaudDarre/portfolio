@@ -73,6 +73,6 @@
 
 <body>
 		
-{% include containers/menu.html %}
+<div class="page {% if page.layout == 'index' %}page--index{% endif %}">
 
-<div class="page">
+{% include containers/menu.html %}

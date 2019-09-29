@@ -4,7 +4,6 @@
 <script src="{{ site.url }}{{ site.resourceurl }}/vendors/scrollify/jquery.scrollify.min.js"></script>
 <script>$(function() { $.scrollify({ section : ".section", }); });</script>
 
-
 <!-- landing -->
 <section id="landing" class="row section js-scrolling-letters__section">
     <div class="section__background">
@@ -62,7 +61,7 @@
             {% assign ordered_projects = site.projects | sort:"featured" %}
             {% for project in ordered_projects %}
                 {% if project.featured %}
-                    <div class="project__item {% if project.featured == 1 %}project__item--current{% endif %}">
+                    <div class="project__item {% if project.featured == 1 %}project__item--current{% endif %} project__item--{{ project.title | slugify }}">
                         <div class="project">
                             <div class="row">
                                 <div class="coloffset--2 col--10">
@@ -182,5 +181,24 @@
         </div>
     </div>
 </section>
+
+<!-- VENDORS -->
+<!-- codrops -->
+<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/imagesloaded.pkgd.min.js"></script>
+<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/charming.min.js"></script>
+<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/anime.min.js"></script>
+<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/scrollingletters.js"></script>
+<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/project-carousel.js"></script>
+<!-- scrollify -->
+<script>
+    $.scrollify({
+        section : ".section",
+        easing: "easeInOutQuad",
+        scrollSpeed: 1200,
+        updateHash: false
+    });
+</script>
+<!-- scroll magic -->
+{% include vendors/scroll-magic.html %}
 
 {% include footer.html %}

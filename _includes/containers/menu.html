@@ -1,6 +1,11 @@
 <header class="header">
     <div class="row">
         <div class="sidebar sidebar--left">
+            {% if page.layout == 'projects' %}
+                <a href="{{ site.url }}/" class="button button--secondary button--animate fas fa-chevron-left">
+                    <p class="button__inner">Back</p>
+                </a>
+            {% endif %}
         </div>
         <div class="sidebar sidebar--right">
             <div class="">

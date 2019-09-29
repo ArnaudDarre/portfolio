@@ -86,17 +86,5 @@ $(".anchor a").click(function(evn){
 
 
 // —————————————————————————————————————————————————————————————————
-// scrollify (auto scroll to section)
-// —————————————————————————————————————————————————————————————————
-
-$.scrollify({
-    section : ".section",
-    easing: "easeInOutQuad",
-    scrollSpeed: 1200,
-    updateHash: false
-});
-
-
-// —————————————————————————————————————————————————————————————————
 
 });

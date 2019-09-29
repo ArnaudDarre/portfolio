@@ -37,11 +37,15 @@
         display: block;
 
         @include hover-link {
-            @include transform(scale(2));
+            @include animation(pulse 1s infinite);
         }
 
         .js-dot-active & {
             @include transform(scale(2));
+
+            @include hover-link {
+                @include animation(pulse-lg 1s infinite);
+            }
         }
     }
 }

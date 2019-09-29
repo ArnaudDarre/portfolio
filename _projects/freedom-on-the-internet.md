@@ -6,7 +6,7 @@ color: '#231d1f'
 # info
 title: Freedom on the Internet
 subtitle: A book on Internet Censorship
-body: This book explores how censorship, weather applied automatically by the author, or carried out by countries and organisation
+body: This book explores how censorship, weather applied automatically by the author, or carried out by countries and organisation affect the web and our daily lives. 
 category: Editorial
 
 # meta

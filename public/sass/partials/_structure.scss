@@ -370,8 +370,17 @@ body:before				{ z-index: 50; }
 
 	&__logo {
 		@include align-self(flex-start);
+		@include transition(transform 0.4s ease);
 		width: $integer-xxl;
 		height: $integer-xxl;
+
+		@include hover-link {
+			@include transform(rotate(-225deg) translateY($integer-xxs) scale(1.08));
+
+			.page--index & {
+				@include transform(rotate(225deg) translateY($integer-xxs) scale(1.08));
+			}
+		}
 	}
 
 	&__button {
@@ -428,6 +437,11 @@ body:before				{ z-index: 50; }
 	
 	&--right {
 		right: $integer-lg*2;
+	}
+
+	.button {
+		@include align-self(flex-start);
+		margin-top: $integer;
 	}
 }
 

@@ -175,7 +175,7 @@ html, body {
 }
 
 .label, .form__label {
-	@include font-size(0.75, $font-black, normal);
+	@include font-size(0.75, $font-bold, normal);
 }
 
 .form {

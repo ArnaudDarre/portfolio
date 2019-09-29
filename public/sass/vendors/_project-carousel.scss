@@ -35,6 +35,20 @@
 
         &__item {
             position: absolute;
+
+            &--applied-blockchain {
+
+                .char8 {
+                    width: $integer*1.5;
+                }
+            }
+
+            &--freedom-on-the-internet {
+
+                .char8, .char11, .char15 {
+                    width: $integer*1.5;
+                }
+            }
         }
 
         &__image {
