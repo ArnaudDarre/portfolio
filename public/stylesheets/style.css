@@ -3528,9 +3528,10 @@ html, body {
   letter-spacing: 0.015rem;
   font-weight: 700;
   font-style: normal;
+  color: #3b6e68;
 }
 
-/* line 183, ../sass/partials/_typography.scss */
+/* line 184, ../sass/partials/_typography.scss */
 .form__input, .form .form__dropdown li {
   font-size: 1rem;
   letter-spacing: 0.02rem;
@@ -3673,7 +3674,7 @@ html, body {
   min-width: 75px;
 }
 
-/* line 18, ../sass/layouts/_index.scss */
+/* line 11, ../sass/layouts/_index.scss */
 #landing .section__content {
   display: -webkit-flex;
   display: flex;
@@ -3682,93 +3683,19 @@ html, body {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 24, ../sass/layouts/_index.scss */
+/* line 17, ../sass/layouts/_index.scss */
 #landing .lead {
   padding-bottom: 2.5rem;
 }
 
-/* line 31, ../sass/layouts/_index.scss */
+/* line 24, ../sass/layouts/_index.scss */
 .card--skills {
   padding-right: 6.25vw;
 }
 
-/* line 36, ../sass/layouts/_index.scss */
+/* line 29, ../sass/layouts/_index.scss */
 #about {
   padding-bottom: 11.25rem;
-}
-
-/* line 48, ../sass/layouts/_index.scss */
-.background__square {
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-}
-/* line 52, ../sass/layouts/_index.scss */
-.background__square--landing {
-  top: 66.67vh;
-  right: -50vh;
-  height: 100vh;
-  width: 100vh;
-  background-color: #00ffc4;
-}
-/* line 60, ../sass/layouts/_index.scss */
-.background__square--contact {
-  top: 500px;
-  right: -200vh;
-  height: 200vw;
-  width: 200vw;
-  background-color: #00ffc4;
-}
-/* line 69, ../sass/layouts/_index.scss */
-.background__circle {
-  position: absolute;
-  border-radius: 50%;
-}
-/* line 73, ../sass/layouts/_index.scss */
-.background__circle--landing {
-  top: -50vh;
-  left: -50vh;
-  height: 100vh;
-  width: 100vh;
-  background-color: #00ffc4;
-}
-/* line 81, ../sass/layouts/_index.scss */
-.background__circle--about {
-  top: 20vh;
-  left: 30vw;
-  height: 40vw;
-  width: 40vw;
-  background-color: #ffffff;
-}
-/* line 89, ../sass/layouts/_index.scss */
-.background__circle--about-small {
-  top: -200vh;
-  left: 160vw;
-  height: 20vw;
-  width: 20vw;
-  background-color: #00ffc4;
-}
-/* line 98, ../sass/layouts/_index.scss */
-.background__trigger {
-  position: absolute;
-  -moz-transform: translateY(-1rem);
-  -ms-transform: translateY(-1rem);
-  -webkit-transform: translateY(-1rem);
-  transform: translateY(-1rem);
-}
-/* line 102, ../sass/layouts/_index.scss */
-.background__trigger--landing {
-  top: 50vh;
-}
-/* line 103, ../sass/layouts/_index.scss */
-.background__trigger--about {
-  top: -30vh;
-}
-/* line 104, ../sass/layouts/_index.scss */
-.background__trigger--contact {
-  top: -50vh;
 }
 
 /* line 9, ../sass/layouts/_projects.scss */
@@ -3838,9 +3765,8 @@ html, body {
 /* line 68, ../sass/layouts/_projects.scss */
 .project__legend {
   margin-top: 1rem;
-  color: #8c8c96;
 }
-/* line 73, ../sass/layouts/_projects.scss */
+/* line 72, ../sass/layouts/_projects.scss */
 .project__mockup {
   background-position: center center;
   -webkit-background-size: cover;
@@ -3848,11 +3774,11 @@ html, body {
   background-repeat: no-repeat;
   height: 75vh;
 }
-/* line 78, ../sass/layouts/_projects.scss */
+/* line 77, ../sass/layouts/_projects.scss */
 .project__grid {
   margin-bottom: 1rem;
 }
-/* line 82, ../sass/layouts/_projects.scss */
+/* line 81, ../sass/layouts/_projects.scss */
 .project__pdf {
   display: -webkit-flex;
   display: flex;
@@ -3861,7 +3787,7 @@ html, body {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 87, ../sass/layouts/_projects.scss */
+/* line 86, ../sass/layouts/_projects.scss */
 .project__pdf p {
   -moz-transition: opacity 0.4s ease;
   -o-transition: opacity 0.4s ease;
@@ -3871,7 +3797,7 @@ html, body {
   position: absolute;
   opacity: 0;
 }
-/* line 94, ../sass/layouts/_projects.scss */
+/* line 93, ../sass/layouts/_projects.scss */
 .project__pdf img {
   -moz-transition: opacity 0.4s ease;
   -o-transition: opacity 0.4s ease;
@@ -3881,11 +3807,11 @@ html, body {
   opacity: 1;
   border: 0.25rem solid #d7d7dc;
 }
-/* line 103, ../sass/layouts/_projects.scss */
+/* line 102, ../sass/layouts/_projects.scss */
 .project__pdf:hover p, .project__pdf:active p, .project__pdf:focus p {
   opacity: 1;
 }
-/* line 107, ../sass/layouts/_projects.scss */
+/* line 106, ../sass/layouts/_projects.scss */
 .project__pdf:hover img, .project__pdf:active img, .project__pdf:focus img {
   opacity: 0.4;
 }
@@ -3980,4 +3906,126 @@ html, body {
 .project--carousel .project__item:not(.project__item--current) .project__button,
 .project--carousel .project__item:not(.project__item--current) .project__image-inner {
   opacity: 0;
+}
+
+/* line 11, ../sass/vendors/_scroll-magic.scss */
+.background__square {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+}
+/* line 16, ../sass/vendors/_scroll-magic.scss */
+.background__square--landing {
+  top: 66.67vh;
+  right: -50vh;
+  height: 100vh;
+  width: 100vh;
+  background-color: #00ffc4;
+}
+/* line 17, ../sass/vendors/_scroll-magic.scss */
+.background__square--contact {
+  top: 500px;
+  right: -200vh;
+  height: 200vw;
+  width: 200vw;
+  background-color: #00ffc4;
+}
+/* line 19, ../sass/vendors/_scroll-magic.scss */
+.background__square--digital {
+  -moz-transform: rotate(64deg);
+  -ms-transform: rotate(64deg);
+  -webkit-transform: rotate(64deg);
+  transform: rotate(64deg);
+  top: -140vw;
+  left: -140vw;
+  height: 260vw;
+  width: 200vw;
+  background-color: #00ffc4;
+}
+/* line 20, ../sass/vendors/_scroll-magic.scss */
+.background__square--editorial {
+  -moz-transform: rotate(-16deg);
+  -ms-transform: rotate(-16deg);
+  -webkit-transform: rotate(-16deg);
+  transform: rotate(-16deg);
+  top: -160vw;
+  right: -140vw;
+  height: 260vw;
+  width: 200vw;
+  background-color: #00ffc4;
+}
+/* line 23, ../sass/vendors/_scroll-magic.scss */
+.background__circle {
+  position: absolute;
+  border-radius: 50%;
+}
+/* line 28, ../sass/vendors/_scroll-magic.scss */
+.background__circle--landing {
+  -moz-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  -webkit-transform: rotate(56deg);
+  transform: rotate(56deg);
+  top: -50vh;
+  left: -50vh;
+  height: 100vh;
+  width: 100vh;
+  background-color: #00ffc4;
+}
+/* line 29, ../sass/vendors/_scroll-magic.scss */
+.background__circle--about {
+  -moz-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  -webkit-transform: rotate(56deg);
+  transform: rotate(56deg);
+  top: 20vh;
+  left: 30vw;
+  height: 40vw;
+  width: 40vw;
+  background-color: #ffffff;
+}
+/* line 30, ../sass/vendors/_scroll-magic.scss */
+.background__circle--about-small {
+  -moz-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  -webkit-transform: rotate(56deg);
+  transform: rotate(56deg);
+  top: -200vh;
+  left: 160vw;
+  height: 20vw;
+  width: 20vw;
+  background-color: #00ffc4;
+}
+/* line 32, ../sass/vendors/_scroll-magic.scss */
+.background__circle--video {
+  -moz-transform: rotate(64deg);
+  -ms-transform: rotate(64deg);
+  -webkit-transform: rotate(64deg);
+  transform: rotate(64deg);
+  top: -120vw;
+  left: -260vw;
+  height: 260vw;
+  width: 260vw;
+  background-color: #00ffc4;
+}
+/* line 35, ../sass/vendors/_scroll-magic.scss */
+.background__trigger {
+  position: absolute;
+  -moz-transform: translateY(-1rem);
+  -ms-transform: translateY(-1rem);
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
+}
+/* line 39, ../sass/vendors/_scroll-magic.scss */
+.background__trigger--landing {
+  top: 50vh;
+}
+/* line 40, ../sass/vendors/_scroll-magic.scss */
+.background__trigger--about {
+  top: -30vh;
+}
+/* line 41, ../sass/vendors/_scroll-magic.scss */
+.background__trigger--contact {
+  top: -50vh;
 }

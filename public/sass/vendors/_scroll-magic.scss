@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+// —————————————————————————————————————————————————————————————————
+// SCROLL-MAGIC
+// —————————————————————————————————————————————————————————————————
+
+
+
+.background {
+
+    &__square {
+        @include transform(rotate(45deg));
+        position: absolute;
+
+        // index
+        &--landing {    @include  background-shape(66.67vh, -50vh, null, null, 100vh, 100vh, $primary, null); }
+        &--contact {    @include  background-shape(500px, -200vh, null, null, 200vw, 200vw, $primary, null); }
+        // projects
+        &--digital {    @include  background-shape(-140vw, null, null, -140vw, 260vw, 200vw, $primary, 64deg); }
+        &--editorial {  @include  background-shape(-160vw, -140vw, null, null, 260vw, 200vw, $primary, -16deg); }
+    }
+
+    &__circle {
+        position: absolute;
+        border-radius: 50%;
+        
+        // index
+        &--landing {    @include  background-shape(-50vh, null, null, -50vh, 100vh, 100vh, $primary, 56deg); }
+        &--about {      @include  background-shape(20vh, null, null, 30vw, 40vw, 40vw, $white, 56deg); }
+        &--about-small { @include background-shape(-200vh, null, null, 160vw, 20vw, 20vw, $primary, 56deg); }
+        // projects
+        &--video {      @include  background-shape(-120vw, null, null, -260vw, 260vw, 260vw, $primary, 64deg); }
+    }
+
+    &__trigger {
+        position: absolute;
+        @include transform(translateY(-$integer-md));
+    
+        &--landing { top: 50vh;}
+        &--about { top: -30vh;}
+        &--contact { top: -50vh;}
+    }
+}

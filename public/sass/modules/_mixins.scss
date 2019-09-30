@@ -5,10 +5,10 @@
 // —————————————————————————————————————————————————————————————————
 // general
 // media queris
-// buttons
 // fonts
 // forms
 // buttons
+// vendors
 // —————————————————————————————————————————————————————————————————
 
 
@@ -202,5 +202,38 @@
 				background-color: nth($i, 2);
 			}
 		}
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// vendors
+// —————————————————————————————————————————————————————————————————
+
+@mixin background-shape($top, $right, $bottom, $left, $height, $width, $background-color, $rotate) {
+	@if ($rotate != null) {
+		@include transform(rotate($rotate));
+	}
+	@if ($top != null) {
+		top: $top;
+	}
+	@if ($right != null) {
+		right: $right;
+	}
+	@if ($bottom != null) {
+		bottom: $bottom;
+	}
+	@if ($left != null) {
+		left: $left;
+	}
+	@if ($height != null) {
+		height: $height;
+	}
+	@if ($width != null) {
+		width: $width;
+	}
+	@if ($background-color != null) {
+		background-color: $background-color;
 	}
 }

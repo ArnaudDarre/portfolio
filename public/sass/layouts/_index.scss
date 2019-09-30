@@ -3,15 +3,8 @@
 // —————————————————————————————————————————————————————————————————
 // INDEX
 // —————————————————————————————————————————————————————————————————
-// general
-// background shapes
-// —————————————————————————————————————————————————————————————————
 
 
-
-// —————————————————————————————————————————————————————————————————
-// general
-// —————————————————————————————————————————————————————————————————
 
 #landing {
 
@@ -35,72 +28,4 @@
 
 #about {
     padding-bottom: $integer-xxxxl*1.5;
-}
-
-
-
-// —————————————————————————————————————————————————————————————————
-// background shapes
-// —————————————————————————————————————————————————————————————————
-
-.background {
-
-    &__square {
-        @include transform(rotate(45deg));
-        position: absolute;
-
-        &--landing {
-            top: 66.67vh;
-            right: -50vh;
-            height: 100vh;
-            width: 100vh;
-            background-color: $primary;
-        }
-
-        &--contact {
-            top: 500px;
-            right: -200vh;
-            height: 200vw;
-            width: 200vw;
-            background-color: $primary;
-        }
-    }
-
-    &__circle {
-        position: absolute;
-        border-radius: 50%;
-        
-        &--landing {
-            top: -50vh;
-            left: -50vh;
-            height: 100vh;
-            width: 100vh;
-            background-color: $primary;
-        }
-
-        &--about {
-            top: 20vh;
-            left: 30vw;
-            height: 40vw;
-            width: 40vw;
-            background-color: $white;
-        }
-
-        &--about-small {
-            top: -200vh;
-            left: 160vw;
-            height: 20vw;
-            width: 20vw;
-            background-color: $primary;
-        }
-    }
-
-    &__trigger {
-        position: absolute;
-        @include transform(translateY(-$integer-md));
-    
-        &--landing { top: 50vh;}
-        &--about { top: -30vh;}
-        &--contact { top: -50vh;}
-    }
 }
