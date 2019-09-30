@@ -5,22 +5,34 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: _data
+  label: Data
+  create: all
+  match: "**/*"
+  new_doc_ext: ".yml"
+- type: directory
   path: _includes
   label: Includes
   create: all
   match: "**/*"
-  new_doc_ext: ".html"
+  new_doc_ext: html
 - type: directory
   path: _layouts
   label: Layouts
   create: all
   match: "**/*"
-  new_doc_ext: ".html"
-- type: jekyll-pages
-  label: Pages
+  new_doc_ext: html
+- type: directory
+  path: _projects
+  label: Projects
   create: all
+  match: "**/*"
+  new_doc_ext: ".md"
 - type: jekyll-posts
   label: Posts
+  create: all
+- type: jekyll-pages
+  label: Pages
   create: all
 upload_dir: public
 public_path: "/public"
