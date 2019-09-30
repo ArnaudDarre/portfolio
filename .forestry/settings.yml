@@ -5,6 +5,12 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: _includes
+  label: Includes
+  create: all
+  match: "**/*"
+  new_doc_ext: ".html"
+- type: directory
   path: _layouts
   label: Layouts
   create: all
