@@ -3244,30 +3244,49 @@ body:before {
   position: fixed;
   top: 0;
   height: 100vh;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   pointer-events: none;
 }
-/* line 494, ../sass/partials/_structure.scss */
+@media (max-width: 767px) {
+  /* line 484, ../sass/partials/_structure.scss */
+  .sidebar {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+/* line 498, ../sass/partials/_structure.scss */
 .sidebar * {
   pointer-events: initial;
 }
-/* line 498, ../sass/partials/_structure.scss */
-.sidebar--left {
-  left: 1rem;
-}
 /* line 502, ../sass/partials/_structure.scss */
-.sidebar--right {
-  right: 1rem;
+.sidebar--left {
+  left: 3rem;
 }
-/* line 506, ../sass/partials/_structure.scss */
+@media (max-width: 767px) {
+  /* line 502, ../sass/partials/_structure.scss */
+  .sidebar--left {
+    left: 1rem;
+  }
+}
+/* line 509, ../sass/partials/_structure.scss */
+.sidebar--right {
+  right: 3rem;
+}
+@media (max-width: 767px) {
+  /* line 509, ../sass/partials/_structure.scss */
+  .sidebar--right {
+    right: 1rem;
+  }
+}
+/* line 516, ../sass/partials/_structure.scss */
 .sidebar .button {
   -webkit-align-self: flex-start;
   align-self: flex-start;
   margin-top: 0.5rem;
 }
 
-/* line 518, ../sass/partials/_structure.scss */
+/* line 528, ../sass/partials/_structure.scss */
 .footer {
   position: relative;
   padding-top: 7.5rem;
@@ -3275,7 +3294,7 @@ body:before {
   background-color: #3b6e68;
   color: #ffffff;
 }
-/* line 525, ../sass/partials/_structure.scss */
+/* line 535, ../sass/partials/_structure.scss */
 .footer__item {
   display: -webkit-flex;
   display: flex;
@@ -3284,7 +3303,7 @@ body:before {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 537, ../sass/partials/_structure.scss */
+/* line 547, ../sass/partials/_structure.scss */
 .footer .button {
   margin-top: 1.5rem;
   -webkit-align-self: flex-start;
@@ -4132,13 +4151,40 @@ html, body {
 }
 /* line 16, ../sass/vendors/_scroll-magic.scss */
 .background__square--landing {
-  top: 66.67vh;
   right: -50vh;
+  bottom: -66.67vh;
   height: 100vh;
   width: 100vh;
   background-color: #00ffc4;
 }
-/* line 17, ../sass/vendors/_scroll-magic.scss */
+@media (max-width: 767px) {
+  /* line 16, ../sass/vendors/_scroll-magic.scss */
+  .background__square--landing {
+    right: -50vw;
+    bottom: -66.67vw;
+    width: 100vw;
+    height: 100vw;
+  }
+}
+@media (pointer: coarse) {
+  /* line 16, ../sass/vendors/_scroll-magic.scss */
+  .background__square--landing {
+    right: -50vw;
+    bottom: -66.67vw;
+    width: 100vw;
+    height: 100vw;
+  }
+}
+@media only screen and (max-device-width: 1023px) and (orientation: landscape) {
+  /* line 16, ../sass/vendors/_scroll-magic.scss */
+  .background__square--landing {
+    right: -50vw;
+    bottom: -66.67vw;
+    width: 100vw;
+    height: 100vw;
+  }
+}
+/* line 37, ../sass/vendors/_scroll-magic.scss */
 .background__square--contact {
   top: 500px;
   right: -200vh;
@@ -4146,7 +4192,7 @@ html, body {
   width: 200vw;
   background-color: #00ffc4;
 }
-/* line 19, ../sass/vendors/_scroll-magic.scss */
+/* line 41, ../sass/vendors/_scroll-magic.scss */
 .background__square--digital {
   -moz-transform: rotate(64deg);
   -ms-transform: rotate(64deg);
@@ -4158,7 +4204,7 @@ html, body {
   width: 200vw;
   background-color: #00ffc4;
 }
-/* line 20, ../sass/vendors/_scroll-magic.scss */
+/* line 44, ../sass/vendors/_scroll-magic.scss */
 .background__square--editorial {
   -moz-transform: rotate(-16deg);
   -ms-transform: rotate(-16deg);
@@ -4170,48 +4216,63 @@ html, body {
   width: 200vw;
   background-color: #00ffc4;
 }
-/* line 23, ../sass/vendors/_scroll-magic.scss */
+/* line 49, ../sass/vendors/_scroll-magic.scss */
 .background__circle {
   position: absolute;
   border-radius: 50%;
 }
-/* line 28, ../sass/vendors/_scroll-magic.scss */
+/* line 54, ../sass/vendors/_scroll-magic.scss */
 .background__circle--landing {
-  -moz-transform: rotate(56deg);
-  -ms-transform: rotate(56deg);
-  -webkit-transform: rotate(56deg);
-  transform: rotate(56deg);
   top: -50vh;
   left: -50vh;
   height: 100vh;
   width: 100vh;
   background-color: #00ffc4;
 }
-/* line 29, ../sass/vendors/_scroll-magic.scss */
+@media (max-width: 767px) {
+  /* line 54, ../sass/vendors/_scroll-magic.scss */
+  .background__circle--landing {
+    top: -50vw;
+    left: -50vw;
+    width: 100vw;
+    height: 100vw;
+  }
+}
+@media (pointer: coarse) {
+  /* line 54, ../sass/vendors/_scroll-magic.scss */
+  .background__circle--landing {
+    top: -50vw;
+    left: -50vw;
+    width: 100vw;
+    height: 100vw;
+  }
+}
+@media only screen and (max-device-width: 1023px) and (orientation: landscape) {
+  /* line 54, ../sass/vendors/_scroll-magic.scss */
+  .background__circle--landing {
+    top: -50vh;
+    left: -50vh;
+    width: 100vh;
+    height: 100vh;
+  }
+}
+/* line 75, ../sass/vendors/_scroll-magic.scss */
 .background__circle--about {
-  -moz-transform: rotate(56deg);
-  -ms-transform: rotate(56deg);
-  -webkit-transform: rotate(56deg);
-  transform: rotate(56deg);
   top: 20vh;
   left: 30vw;
   height: 40vw;
   width: 40vw;
   background-color: #ffffff;
 }
-/* line 30, ../sass/vendors/_scroll-magic.scss */
+/* line 78, ../sass/vendors/_scroll-magic.scss */
 .background__circle--about-small {
-  -moz-transform: rotate(56deg);
-  -ms-transform: rotate(56deg);
-  -webkit-transform: rotate(56deg);
-  transform: rotate(56deg);
   top: -200vh;
   left: 160vw;
   height: 20vw;
   width: 20vw;
   background-color: #00ffc4;
 }
-/* line 32, ../sass/vendors/_scroll-magic.scss */
+/* line 82, ../sass/vendors/_scroll-magic.scss */
 .background__circle--video {
   top: -120vw;
   left: -260vw;
@@ -4219,7 +4280,7 @@ html, body {
   width: 260vw;
   background-color: #00ffc4;
 }
-/* line 33, ../sass/vendors/_scroll-magic.scss */
+/* line 85, ../sass/vendors/_scroll-magic.scss */
 .background__circle--identity {
   top: -10vw;
   right: -80vw;
@@ -4227,7 +4288,7 @@ html, body {
   width: 200vw;
   background-color: #00ffc4;
 }
-/* line 36, ../sass/vendors/_scroll-magic.scss */
+/* line 90, ../sass/vendors/_scroll-magic.scss */
 .background__trigger {
   position: absolute;
   -moz-transform: translateY(-1rem);
@@ -4235,15 +4296,15 @@ html, body {
   -webkit-transform: translateY(-1rem);
   transform: translateY(-1rem);
 }
-/* line 40, ../sass/vendors/_scroll-magic.scss */
+/* line 94, ../sass/vendors/_scroll-magic.scss */
 .background__trigger--landing {
   top: 50vh;
 }
-/* line 41, ../sass/vendors/_scroll-magic.scss */
+/* line 95, ../sass/vendors/_scroll-magic.scss */
 .background__trigger--about {
   top: -30vh;
 }
-/* line 42, ../sass/vendors/_scroll-magic.scss */
+/* line 96, ../sass/vendors/_scroll-magic.scss */
 .background__trigger--contact {
   top: -50vh;
 }
