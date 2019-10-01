@@ -5,7 +5,6 @@ $(document).ready(function() {
 // —————————————————————————————————————————————————————————————————
 // text anchor on landing
 // dot sidebar
-// scrollify (auto scroll to section)
 // —————————————————————————————————————————————————————————————————
 
 
