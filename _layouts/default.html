@@ -7,9 +7,16 @@
     </div>
     <div class="coloffset--3 col--12 section__content">
         <div class="row">
-            <h2 class="col--12 section__subtitle title">{{ page.section_title }}</h2>
-            <p class="col--9 section__comment subtitle">{{ page.section_subtitle }}</p>
-            <p class="col--5 lead">{{ page.section_lead }}</div>
+            {% if page.title %}
+                <h2 class="col--12 section__subtitle title">{{ page.title }}</h2>
+            {% endif %}
+            {% if page.subtitle %}
+                <p class="col--9 section__comment subtitle">{{ page.subtitle }}</p>
+            {% endif %}
+            {% if page.lead %}
+                <p class="col--5 lead">{{ page.lead }}</div>
+            {% endif %}
+            {{ content }}
     </div>
 </section>
 

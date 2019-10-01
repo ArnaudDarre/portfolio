@@ -12,7 +12,7 @@ category: Editorial
 # meta
 client: Personal project
 tags: # no more than three
-  - tag: Editorial Design
+  - Editorial Design
 
 ---
 

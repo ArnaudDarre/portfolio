@@ -14,8 +14,9 @@ client: Watapix
 website_url: http://www.watapix.com/
 website_title: watapix.com
 tags: 
-  - tag: Brand Identity
-  - tag: Logo Design
+  - Brand Identity
+  - Logo Design
+  - Design System
 
 ---
 
@@ -29,10 +30,12 @@ tags:
 
 {% include components/project-image.html 
   suffix='mockup-identity'
+  legend='Stationery'
 %}
 
 {% include components/project-grid.html %}
 
 {% include components/project-image.html 
   suffix='mockup-research'
+  legend='First research for the logo'
 %}

@@ -15,9 +15,9 @@ client: Applied Blockchain
 website_url: https://appliedblockchain.com/
 website_title: appliedblockchain.com
 tags: # no more than three
-  - tag: Brand Identity
-  - tag: Web Design
-  - tag: Web Development
+  - Brand Identity
+  - Web Design
+  - Web Development
 
 ---
 

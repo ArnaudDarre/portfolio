@@ -41,7 +41,7 @@
         <div class="project--carousel">
             <div class="block">
                 <div class="row">
-                    <p class="col--6 section__comment lead">Browse through some crunchy bites or check the entire collection.</p>
+                    <p class="col--6 section__comment lead">Browse through some crunchy bites.</p>
                     <nav class="col--12 project__nav">
                         <button class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
                             <i class="button__inner fas fa-chevron-left"></i>
@@ -65,7 +65,7 @@
                         <div class="project">
                             <div class="row">
                                 <div class="coloffset--2 col--10">
-                                    <a href="{{ site.url }}/projects/{{ project.title | slugify }}" class="project__image">
+                                    <a href="{{ project.url }}" class="project__image">
                                         <div class="project__image-inner" style="background-image: url({{ site.url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
                                     </a>
                                 </div>
@@ -82,8 +82,8 @@
                                     <p class="col--6 project__body body--bold">{{ project.body }}</p>
                                 {% endif %}
                                 <div class="col--6 project__button">
-                                    <a href="{{ site.url }}/projects/{{ project.title | slugify }}" class="button button--secondary button--animate fas fa-chevron-right">
-                                        <p class="button__inner">View project</p>
+                                    <a href="{{ project.url }}" class="button button--secondary button--animate fas fa-chevron-right">
+                                        <p class="button__inner">Discover</p>
                                     </a>
                                 </div>
                             </div>
@@ -109,7 +109,7 @@
         <div class="block">
             <div class="row">
                 <h2 class="col--12 section__comment lead">How I approach design:</h2>
-                <p class="col--12 section__subtitle title">Want to draw something together?</p>
+                <p class="col--12 section__subtitle title">Let's draw something together!</p>
                 <p class="col--8 body">Graphic and even web design are not so different from a drawing or a painting composition. It all has to do with the use of breathing space around elements, colours, hierarchy and last but not least contrast.</p>
                 <p class="col--8 body">This is why each design should start with a pen and paper. This playful but effective method allows to enhance creativity by shortening the bond between the brain and the design tool: your hand (and not the computer).</p>
             </div>
@@ -120,7 +120,7 @@
                 {% for skill in site.data.skills %}
                 <div class="col--6 card card--skills">
                     <h3 class="card__title subhead">{{ skill.title }}</h3>
-                    <p class="card__body body">{{ skill.description }}</p>
+                    <p class="card__body body">{{ skill.body }}</p>
                     <p class="card__label label">Project</p>
                     <a href="{{ site.url }}/projects/{{ skill.project | slugify }}" class="body button--underline">{{ skill.project }}</a>
                 </div>

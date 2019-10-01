@@ -15,9 +15,10 @@ client: Personal project
 website_url: 
 website_link: 
 tags: 
-  - tag: Data Visualisation
-  - tag: Motion Design
-  - tag: Poster
+  - Data Visualisation
+  - Motion Design
+  - Poster
+  - Science-fiction
 
 # content
 video_id: 130741186

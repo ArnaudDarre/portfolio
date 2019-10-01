@@ -12,12 +12,9 @@ category: Editorial
 # meta
 client: Degree Project
 tags: # no more than three
-  - tag: Editorial Design
-  - tag: Illustration
-  - tag: Storytelling
-
-# content
-book_url: 
+  - Editorial Design
+  - Illustration
+  - Science-fiction
 
 ---
 

@@ -1,4 +1,21 @@
-</div>
+<!-- <section class="footer">
+    <div class="row">
+        <div class="footer__item coloffset--2 col--5">
+            <div class="">
+                <h1 class="subtitle">Arnaud Darré</h1>
+                <h2 class="lead">Graphic & Web Designer</h2>
+            </div>
+            <p class="">Copyright © 2019 Arnaud Darré</p>
+        </div>
+        <div class="footer__item col--7">
+            <p class="subhead">What if my next prized creation was your idea?</p>
+            <p class="body--large">Contact me for a quote, a request, or just if you want to chat.</p>
+            <a href="{{ site.url }}" class="button button--primary button--animate fas fa-coffee">
+                <p class="button__inner">Let's have coffee</p>
+            </a>
+        </div>
+    </div>
+</section> -->
 
 {% if page.layout == 'index' %}
     <script>
@@ -31,12 +48,16 @@
         var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--editorial", duration: 1600})
             .setTween(".background__square--editorial", {xPercent: 20, yPercent: -30, rotation: 72})
             .addTo(controller);
-        var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--video", duration: 1500})
+        var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--video", duration: 1600})
             .setTween(".background__circle--video", {scale: 0.4, xPercent: 60, yPercent: -5})
-            .addIndicators({name: " "}) // add indicators (requires plugin)
+            .addTo(controller);
+        var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--identity", duration: 1600})
+            .setTween(".background__circle--identity", {scale: 0.8, xPercent: 60, yPercent: -40})
+            // .addIndicators({name: " "}) // add indicators (requires plugin)
             .addTo(controller);
     </script>
 {% endif %}
 
+</div>
 </body>
 </html>

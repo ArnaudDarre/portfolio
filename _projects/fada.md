@@ -14,8 +14,9 @@ client: Personal project
 website_url: http://fada.arnaud-darre.com/
 website_title: fada.arnaud-darre.com
 tags: # no more than three
-  - tag: Web Design
-  - tag: Web Development
+  - Web Design
+  - Web Development
+  - Design System
 
 ---
 

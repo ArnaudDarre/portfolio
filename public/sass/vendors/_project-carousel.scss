@@ -28,7 +28,7 @@
 
                 &:after {
                     @include pseudo-element('', $integer, 100%, auto, auto, $integer-xxxl, $integer-sm);
-                    background: $black;
+                    background: $secondary;
                 }
             }
         }
@@ -65,7 +65,7 @@
                 height: 100%;
             }
         }
-    
+
         &__category, &__title, &__subtitle, &__body {
             pointer-events: none;
         }

@@ -31,13 +31,13 @@
                         <p class="col--12 project__category label">{{ page.category }}</p>
                     {% endif %}
                     {% if page.title %}
-                        <h2 class="col--12 project__title section__subtitle title">{{ page.title }}</h2>
+                        <h1 class="col--12 project__title section__subtitle title">{{ page.title }}</h1>
                     {% endif %}
                     <div class="col--12">
                         <div class="row">
                             <div class="col--6">
                                 {% if page.subtitle %}
-                                    <h3 class="project__subtitle lead">{{ page.subtitle }}</h3>
+                                    <h2 class="project__subtitle lead">{{ page.subtitle }}</h2>
                                 {% endif %}
                                 {% if page.body %}
                                     <p class="project__body body--bold">{{ page.body }}</p>
@@ -55,7 +55,7 @@
                                 {% if page.tags %}
                                     <p class="label">Tags</p>
                                         {% for tag in page.tags %}
-                                            <p>{{ tag.tag }}</p>
+                                            <p>{{ tag }}</p>
                                         {% endfor %}
                                 {% endif %}
                             </div>
@@ -75,5 +75,34 @@
         <!-- <div class="project__related"></div> -->
     </div>
 </section>    
+
+<section id="related-projects" class="row section section--primary">
+    <div class="coloffset--3 col--12 section__content">
+        <h1 class="lead">Related projects</h1>
+        <div class="row">
+            {% for project in site.projects %}
+                {% if project.url != page.url %}	
+                    {% for tag in page.tags %} 
+                        {% if project.tags contains tag %}
+                            <div class="col--6 card card--project">
+                                <div class="card__content z-index--2">
+                                    <h2 class="card__title subtitle">{{ project.title }}</h2>
+                                    <h3 class="card__title body--large body--bold">{{ project.subtitle }}</h3>
+                                    <a href="{{ project.url }}" class="button button--small button--secondary button--animate fas fa-chevron-right">
+                                        <p class="button__inner">Discover</p>
+                                    </a>
+                                </div>
+                                <div class="project__image">
+                                    <div class="project__image-inner background-cover" style="background-image: url({{ site.url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
+                                </div>
+                            </div>
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
 {% include footer.html %}

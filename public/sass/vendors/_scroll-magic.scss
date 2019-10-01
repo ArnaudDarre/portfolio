@@ -29,7 +29,8 @@
         &--about {      @include  background-shape(20vh, null, null, 30vw, 40vw, 40vw, $white, 56deg); }
         &--about-small { @include background-shape(-200vh, null, null, 160vw, 20vw, 20vw, $primary, 56deg); }
         // projects
-        &--video {      @include  background-shape(-120vw, null, null, -260vw, 260vw, 260vw, $primary, 64deg); }
+        &--video {      @include  background-shape(-120vw, null, null, -260vw, 260vw, 260vw, $primary, null); }
+        &--identity {   @include  background-shape(-10vw, -80vw, null, null, 200vw, 200vw, $primary, null); }
     }
 
     &__trigger {

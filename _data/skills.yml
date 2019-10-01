@@ -1,23 +1,23 @@
 - title: Editorial Design
-  description: Layout of various materials such as books, catalogs, leaflets, etc.
+  body: Layout of various materials such as books, catalogs, leaflets, etc.
   project: '[un]earth'
 
 - title: Web Design
-  description: Design and prototyping of websites and mobile apps, from showcase websites to complex management tools.
+  body: Design and prototyping of websites and mobile apps, from showcase websites to complex management tools.
   project: Applied Blockchain
 
 - title: Front-end Development
-  description: Proficient in the major static front-end tools (HTML, Sass) and static frameworks (Jekyll).
+  body: Proficient in the major static front-end tools (HTML, Sass) and static frameworks (Jekyll).
   project: Fada
 
 - title: Brand Identity
-  description: Logo, identity and style guide, on multiple communication mediums, and management of the evolution of that brand .
+  body: Logo, identity and style guide, on multiple communication mediums, and management of the evolution of that brand .
   project: Watapix
 
 # - title: Typeface Design
-#   description: Design of complete font families, from the hand-drawn to vector shape.
+#   body: Design of complete font families, from the hand-drawn to vector shape.
 #   project: Ottolino
 
 - title: Motion Design
-  description: Motion design video production, using After Effects or hand-drawn animation.
+  body: Motion design video production, using After Effects or hand-drawn animation.
   project: Kinotype

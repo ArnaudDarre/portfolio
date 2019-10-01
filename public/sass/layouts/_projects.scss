@@ -15,6 +15,19 @@
     }
 }
 
+#related-projects {
+    min-height: auto;
+    padding-bottom: $integer-xxl;
+
+    .project__image {
+        position: absolute;
+        top: $integer-lg;
+        right: $integer-xl;
+        bottom: 0;
+        width: 65%;
+    }
+}
+
 .project {
 
     &__block {
@@ -39,6 +52,10 @@
                 }
             }
         }
+    }
+
+    &__image {
+        opacity: 0.2;
     }
 
     &__button {
