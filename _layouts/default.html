@@ -5,16 +5,16 @@
         <span class="background__circle background__circle--landing"></span>
         <span class="background__square background__square--landing"></span>
     </div>
-    <div class="coloffset--3 col--12 section__content">
+    <div class="coloffset--md3 col--md12 coloffset--2 col--12 section__content">
         <div class="row">
             {% if page.title %}
                 <h2 class="col--12 section__subtitle title">{{ page.title }}</h2>
             {% endif %}
             {% if page.subtitle %}
-                <p class="col--9 section__comment subtitle">{{ page.subtitle }}</p>
+                <p class="col--lg9 col--md10 col--12 section__comment subtitle">{{ page.subtitle }}</p>
             {% endif %}
             {% if page.lead %}
-                <p class="col--5 lead">{{ page.lead }}</div>
+                <p class="col--lg5 col--12 lead">{{ page.lead }}</div>
             {% endif %}
             {{ content }}
     </div>

@@ -33,16 +33,25 @@ html, body {
 	@include font-size(6.5, $font-black, normal);
 	line-height: 1;
 	text-transform: uppercase;
+	@include responsive(max-width, $tablet-max) {
+		font-size: 4rem;
+	}
 }
 
 .title {
 	@include font-size(4, $font-black, normal);	
 	line-height: 1;
+	@include responsive(max-width, $tablet-max) {
+		font-size: 3rem;
+	}
 }
 
 .subtitle {
 	@include font-size(2.5, $font-bold, normal);
 	line-height: 1;
+	@include responsive(max-width, $tablet-max) {
+		font-size: 2rem;
+	}
 }
 
 .subhead {
