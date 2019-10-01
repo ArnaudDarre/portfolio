@@ -461,7 +461,11 @@ body:before				{ z-index: 50; }
 	height: 100vh;
 	padding-top: $integer-lg*2;
 	padding-bottom: $integer-lg*2;
-	pointer-events: initial;
+	pointer-events: none;
+
+	* {
+		pointer-events: initial;
+	}
 	
 	&--left {
 		left: $integer-lg*2;

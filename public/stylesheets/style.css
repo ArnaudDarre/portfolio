@@ -3220,24 +3220,28 @@ body:before {
   height: 100vh;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  pointer-events: initial;
+  pointer-events: none;
 }
 /* line 466, ../sass/partials/_structure.scss */
+.sidebar * {
+  pointer-events: initial;
+}
+/* line 470, ../sass/partials/_structure.scss */
 .sidebar--left {
   left: 3rem;
 }
-/* line 470, ../sass/partials/_structure.scss */
+/* line 474, ../sass/partials/_structure.scss */
 .sidebar--right {
   right: 3rem;
 }
-/* line 474, ../sass/partials/_structure.scss */
+/* line 478, ../sass/partials/_structure.scss */
 .sidebar .button {
   -webkit-align-self: flex-start;
   align-self: flex-start;
   margin-top: 0.5rem;
 }
 
-/* line 486, ../sass/partials/_structure.scss */
+/* line 490, ../sass/partials/_structure.scss */
 .footer {
   position: relative;
   padding-top: 7.5rem;
@@ -3245,7 +3249,7 @@ body:before {
   background-color: #3b6e68;
   color: #ffffff;
 }
-/* line 493, ../sass/partials/_structure.scss */
+/* line 497, ../sass/partials/_structure.scss */
 .footer__item {
   display: -webkit-flex;
   display: flex;
@@ -3254,7 +3258,7 @@ body:before {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 505, ../sass/partials/_structure.scss */
+/* line 509, ../sass/partials/_structure.scss */
 .footer .button {
   margin-top: 1.5rem;
   -webkit-align-self: flex-start;
@@ -4017,7 +4021,7 @@ html, body {
   -ms-transform: rotate(-16deg);
   -webkit-transform: rotate(-16deg);
   transform: rotate(-16deg);
-  top: -160vw;
+  top: -170vw;
   right: -140vw;
   height: 260vw;
   width: 200vw;

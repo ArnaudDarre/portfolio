@@ -74,7 +74,6 @@ $('select').each(function(){
 });
 
 // prevent page scroll when hovering dropdown
-
 $('.form__dropdown').bind('mousewheel DOMMouseScroll', function(e) {
     var scrollTo = null;
 

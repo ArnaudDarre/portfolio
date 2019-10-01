@@ -17,7 +17,7 @@
         &--contact {    @include  background-shape(500px, -200vh, null, null, 200vw, 200vw, $primary, null); }
         // projects
         &--digital {    @include  background-shape(-140vw, null, null, -140vw, 260vw, 200vw, $primary, 64deg); }
-        &--editorial {  @include  background-shape(-160vw, -140vw, null, null, 260vw, 200vw, $primary, -16deg); }
+        &--editorial {  @include  background-shape(-170vw, -140vw, null, null, 260vw, 200vw, $primary, -16deg); }
     }
 
     &__circle {
