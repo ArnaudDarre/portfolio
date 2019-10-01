@@ -35,7 +35,7 @@
                     {% endif %}
                     <div class="col--12">
                         <div class="row">
-                            <div class="col--6">
+                            <div class="col--md6 col--12">
                                 {% if page.subtitle %}
                                     <h2 class="project__subtitle lead">{{ page.subtitle }}</h2>
                                 {% endif %}
@@ -43,7 +43,7 @@
                                     <p class="project__body body--bold">{{ page.body }}</p>
                                 {% endif %}
                             </div>
-                            <div class="col--4 body--right project__meta">
+                            <div class="col--md4 col--12 body--right project__meta">
                                 {% if page.client %}
                                     <p class="label">Client</p>
                                     <p class="body">{{ page.client }}</p>
@@ -65,14 +65,13 @@
             </div>
         </div>
         {% if page.category == 'Video' %}
-            <div class="coloffset--3 col--10 block">
+            <div class="coloffset--lg3 col--lg10 coloffset--md2 col--md12 coloffset--1 col--14 block project__block">
                 <div class="embed-container">
                     <iframe src="https://player.vimeo.com/video/{{ page.video_id }}?color=00ffc4&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         {% endif %}
         {{ content }}
-        <!-- <div class="project__related"></div> -->
     </div>
 </section>    
 
@@ -84,7 +83,7 @@
                 {% if project.url != page.url %}	
                     {% for tag in page.tags %} 
                         {% if project.tags contains tag %}
-                            <div class="col--6 card card--project">
+                            <div class="col--md6 col--12 card card--project">
                                 <div class="card__content z-index--2">
                                     <h2 class="card__title subtitle">{{ project.title }}</h2>
                                     <h3 class="card__title body--large body--bold">{{ project.subtitle }}</h3>

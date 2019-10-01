@@ -38,6 +38,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - public/sass
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/

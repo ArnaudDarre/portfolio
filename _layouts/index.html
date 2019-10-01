@@ -43,7 +43,7 @@
             <p class="section__header--mobile headline">Portfolio</p>
             <div class="block">
                 <div class="row">
-                    <p class="col--lg6 col--md9 section__comment lead hide--mobile">Here are some crunchy bites. Browse the projects once inside to check the collection.</p>
+                    <p class="col--lg6 col--md9 col--12 section__comment lead hide--mobile">Here are some crunchy bites. Browse the projects once inside to check the collection.</p>
                     <nav class="col--12 project__nav">
                         <button class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
                             <i class="button__inner fas fa-chevron-left"></i>
@@ -81,9 +81,9 @@
                                     <h3 class="col--12 project__subtitle lead">{{ project.subtitle }}</h3>
                                 {% endif %}
                                 {% if project.body %}
-                                    <p class="col--lg6 col--md9 project__body body--bold hide--mobile">{{ project.body }}</p>
+                                    <p class="col--lg6 col--md9 col--12 project__body body--bold hide--mobile">{{ project.body }}</p>
                                 {% endif %}
-                                <div class="col--6 project__button">
+                                <div class="col--6 col--12 project__button">
                                     <a href="{{ project.url }}" class="button button--secondary button--animate fas fa-chevron-right">
                                         <p class="button__inner">Discover</p>
                                     </a>
@@ -113,15 +113,15 @@
             <div class="row">
                 <h2 class="col--12 section__comment lead">How I approach design:</h2>
                 <p class="col--12 section__subtitle title">Let's draw something together!</p>
-                <p class="col--md8 body">Graphic and even web design are not so different from a drawing or a painting composition. It all has to do with the use of breathing space around elements, colours, hierarchy and last but not least contrast.</p>
-                <p class="col--md8 body">This is why each design should start with a pen and paper. This playful but effective method allows to enhance creativity by shortening the bond between the brain and the design tool: your hand (and not the computer).</p>
+                <p class="col--md8 col--12 body">Graphic and even web design are not so different from a drawing or a painting composition. It all has to do with the use of breathing space around elements, colours, hierarchy and last but not least contrast.</p>
+                <p class="col--md8 col--12 body">This is why each design should start with a pen and paper. This playful but effective method allows to enhance creativity by shortening the bond between the brain and the design tool: your hand (and not the computer).</p>
             </div>
         </div>
         <div class="">
             <h2 class="lead">What I like doing:</h2>
             <div class="row">
                 {% for skill in site.data.skills %}
-                <div class="col--lg6 card card--skills">
+                <div class="col--lg6 col--12 card card--skills">
                     <h3 class="card__title subhead">{{ skill.title }}</h3>
                     <p class="card__body body">{{ skill.body }}</p>
                     <p class="card__label label">Project</p>
@@ -149,15 +149,15 @@
             <h2 class="section__comment subtitle">Feel free to drop a line here…</h2>
             <form action="https://app.99inbound.com/api/e/lSKxMMdS" method="POST" class="form">
                 <div class="row">
-                    <div class="col--md5 form__group">
+                    <div class="col--md5 col--12 form__group">
                         <label for="first_name" class="form__label">Name</label>
                         <input type="text" name="first_name" id="first_name" class="form__input">
                     </div>
-                    <div class="col--md5 form__group">
+                    <div class="col--md5 col--12 form__group">
                         <label for="surname" class="form__label">Surname</label>
                         <input type="text" name="surname" id="surname" class="form__input">
                     </div>
-                    <div class="col--md10 form__group">
+                    <div class="col--md10 col--12 form__group">
                         <label for="message" class="form__label">Message</label>
                         <textarea name="message" id="message" class="form__input" rows="4"></textarea>
                     </div>

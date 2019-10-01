@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// —————————————————————————————————————————————————————————————————
+// SCROLLING-LETTERS
+// —————————————————————————————————————————————————————————————————
+
+ .js-scrolling-letters__text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+
+	.js .ioapi & {
+		position: fixed;
+		opacity: 0;
+		white-space: pre;
+	}
+
+	span {
+		display: inline-block;
+	}
+}

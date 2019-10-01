@@ -13,6 +13,12 @@
         @include pseudo-element('', 0, 0, 0, 0, 100%, 100%);
         background-color: rgba($white, 0.8);
     }
+
+    @include responsive(max-width, $tablet-max) {
+        .body--right {
+            text-align: left;
+        }
+    }
 }
 
 #related-projects {
@@ -25,6 +31,10 @@
         right: $integer-xl;
         bottom: 0;
         width: 65%;
+        @include responsive(max-width, $mobile-max) {
+            right: 0;
+            width: 80%;
+        }
     }
 }
 
@@ -86,6 +96,9 @@
     }
 
     &__meta {
+        @include responsive(max-width, $tablet-max) {
+            margin-top: $integer-md;
+        }
 
         .label {
             padding-top: $integer-md;
@@ -120,6 +133,7 @@
             will-change: opacity;
             position: absolute;
             opacity: 0;
+            text-align: center;
         }
 
         img {
@@ -136,7 +150,7 @@
             }
 
             img {
-                opacity: 0.4;
+                opacity: 0.3;
             }
         }
     }

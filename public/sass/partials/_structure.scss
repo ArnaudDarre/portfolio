@@ -80,6 +80,10 @@ body {
 	width: 100%;
 }
 
+[class*="coloffset--"] {
+	@include transform(translateX($integer));
+}
+
 @for $i from 1 through 16 {
 	.col--#{$i} 			{ width: $i*$col; }
 	.coloffset--#{$i} 		{ margin-left: $i*$col; }
@@ -289,8 +293,13 @@ body:before				{ z-index: 40; }
 	&__content {
 		padding-top: $integer-xxxxl;
 		padding-bottom: $integer-xxxxl;
+
 		@include responsive(max-width, $tablet-max) {
 			padding-top: $integer-xxl;
+
+			.page--projects & {
+				padding-top: $integer-xxxxl;
+			}
 		}
 	}
 

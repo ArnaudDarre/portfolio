@@ -25,16 +25,16 @@
 // PARTIALS
 @import 
 	"partials/_anchor",
-	"partials/_accordions",
+	// "partials/_accordions",
 	"partials/_buttons",
-	"partials/_carousel",
+	// "partials/_carousel",
 	"partials/_form",
-	"partials/_modals",
-	"partials/_slider",
+	// "partials/_modals",
+	// "partials/_slider",
 	"partials/_structure",
-	"partials/_tooltips",
-	"partials/_typography",
-	"partials/_widgets";
+	// "partials/_tooltips",
+	"partials/_typography";
+	// "partials/_widgets";
 
 // PAGES
 @import
@@ -45,7 +45,8 @@
 // PAGES
 @import
 	"vendors/_project-carousel",
-	"vendors/_scroll-magic";
+	"vendors/_scroll-magic",
+	"vendors/_scrolling-letters";
 
 @import
 	"modules/_ie";
