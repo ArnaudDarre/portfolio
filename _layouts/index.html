@@ -195,12 +195,16 @@
 <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/project-carousel.js"></script>
 <!-- scrollify -->
 <script>
-    $.scrollify({
-        section : ".section",
-        easing: "easeInOutQuad",
-        scrollSpeed: 1200,
-        updateHash: false
-    });
+    if ($(window).width() > 767) {   
+        $.scrollify({
+            section : ".section",
+            easing: "easeInOutQuad",
+            scrollSpeed: 1200,
+            updateHash: false
+        });
+    }
+    else {  
+    }; 
 </script>
 
 {% include footer.html %}
