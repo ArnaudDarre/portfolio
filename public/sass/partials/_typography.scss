@@ -33,24 +33,48 @@ html, body {
 	@include font-size(6.5, $font-black, normal);
 	line-height: 1;
 	text-transform: uppercase;
+	@include responsive-mobile() {
+		font-size: 4rem;
+	}
+	@include responsive(max-width, $desktop-max) {
+		font-size: 5rem;
+	}
 	@include responsive(max-width, $tablet-max) {
 		font-size: 4rem;
+	}
+	@include responsive(max-width, $mobile-max) {
+		font-size: 3rem;
+	}
+	@include responsive-mobile-landscape() {
+		display: none;
 	}
 }
 
 .title {
 	@include font-size(4, $font-black, normal);	
 	line-height: 1;
+	@include responsive-mobile() {
+		font-size: 3rem;
+	}
 	@include responsive(max-width, $tablet-max) {
 		font-size: 3rem;
+	}
+	@include responsive(max-width, $mobile-max) {
+		font-size: 2.5rem;
 	}
 }
 
 .subtitle {
 	@include font-size(2.5, $font-bold, normal);
 	line-height: 1;
+	@include responsive-mobile() {
+		font-size: 2rem;
+	}
 	@include responsive(max-width, $tablet-max) {
 		font-size: 2rem;
+	}
+	@include responsive(max-width, $mobile-max) {
+		font-size: 1.8rem;
 	}
 }
 

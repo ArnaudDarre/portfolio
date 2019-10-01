@@ -9,6 +9,9 @@
 .project--carousel {
 
     .project {
+        @include responsive(max-width, $mobile-max) {
+            height: 40vh;
+        }
 
         &__index {
             @include display-flex();
@@ -25,10 +28,16 @@
                 position: relative;
                 margin: 0 0 0 $integer-xxxl;
                 padding-left: $integer-md;
+                @include responsive(max-width, $mobile-max) {
+                    margin-left: $integer-xl;
+                }
 
                 &:after {
                     @include pseudo-element('', $integer, 100%, auto, auto, $integer-xxxl, $integer-sm);
                     background: $secondary;
+                    @include responsive(max-width, $mobile-max) {
+                        width: $integer-xl;
+                    }
                 }
             }
         }

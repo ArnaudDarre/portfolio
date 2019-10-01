@@ -210,14 +210,16 @@ li {
 .hide {
 	
 	&--desktop { @include responsive(max-width, $desktop-max) { display: none !important; } }
-	&--tablets { @include responsive(max-width, $tablet-max) { display: none !important; } }
+	&--tablet { @include responsive(max-width, $tablet-max) { display: none !important; } }
 	&--mobile { @include responsive(max-width, $mobile-max) { display: none !important; } }
 	&--touch { @include responsive-mobile() { display: none !important; } }
 }
 
 .show {
 
-	&--phones { @include responsive(min-width, $mobile-min) { display: none !important; } }
+	&--desktop { @include responsive(min-width, $desktop-min) { display: none !important; } }
+	&--tablet { @include responsive(min-width, $tablet-min) { display: none !important; } }
+	&--mobile { @include responsive(min-width, $mobile-min) { display: none !important; } }
 }
 
 
@@ -228,8 +230,8 @@ li {
 
 .section__header 		{ z-index: 20; }
 .cookie				 	{ z-index: 30; }
-.header 				{ z-index: 40; }
-body:before				{ z-index: 50; }
+body:before				{ z-index: 40; }
+.header 				{ z-index: 50; }
 .modal 					{ z-index: 60; }
 
 @for $i from 0 through 9 {
@@ -269,14 +271,27 @@ body:before				{ z-index: 50; }
 		position: fixed;
 		bottom: $integer-xl;
 		left: $integer-xl;
+
+		&--mobile {
+			margin-bottom: $integer-md;
+			@include responsive(min-width, $tablet-min) {
+				display: none;
+			}
+		}
 	}
 	
 	&__title {
+		@include responsive(max-width, $tablet-max) {
+			display: none;
+        }
 	}
 	
 	&__content {
 		padding-top: $integer-xxxxl;
 		padding-bottom: $integer-xxxxl;
+		@include responsive(max-width, $tablet-max) {
+			padding-top: $integer-xxl;
+		}
 	}
 
 	&__comment {
@@ -285,6 +300,9 @@ body:before				{ z-index: 50; }
 
 	&__subtitle {
 		margin-bottom: $integer-xxxl;
+		@include responsive(max-width, $tablet-max) {
+			margin-bottom: $integer-lg;
+		}
 	}
 }
 
@@ -325,6 +343,9 @@ body:before				{ z-index: 50; }
 
 .block {
 	padding-bottom: $integer-xxxl;
+	@include responsive(max-width, $mobile-max) {
+		padding-bottom: $integer-xl;
+	}
 }
 
 .card {
@@ -408,6 +429,10 @@ body:before				{ z-index: 50; }
 		@include transition(transform 0.4s ease);
 		width: $integer-xxl;
 		height: $integer-xxl;
+		@include responsive(max-width, $tablet-max) {
+			width: $integer-xl;
+			height: $integer-xl;
+		}
 
 		@include hover-link {
 			@include transform(rotate(-225deg) translateY($integer-xxs) scale(1.08));
@@ -418,42 +443,42 @@ body:before				{ z-index: 50; }
 		}
 	}
 
-	&__button {
-	}
+	// &__button {
+	// }
 
-	&__contact {
-	}
+	// &__contact {
+	// }
 
-	&__menu {
-		@include calc(height, '100vh - '$integer*8);
-		@include overflow-scroll();
-		padding: 0  $col*2 $integer*4 $col*2;
-		pointer-events: initial;
-		@include responsive(max-width, $tablet-max) {
-			padding: 0 $col $integer*6 $col;
-		}
-	}
+	// &__menu {
+	// 	@include calc(height, '100vh - '$integer*8);
+	// 	@include overflow-scroll();
+	// 	padding: 0  $col*2 $integer*4 $col*2;
+	// 	pointer-events: initial;
+	// 	@include responsive(max-width, $tablet-max) {
+	// 		padding: 0 $col $integer*6 $col;
+	// 	}
+	// }
 
-	&.js-opened {
-		@include transition(height $transition, background-color $transition);
-		will-change: height, background-color;
-		height: 100vh;
-		background-color: $white;
+	// &.js-opened {
+	// 	@include transition(height $transition, background-color $transition);
+	// 	will-change: height, background-color;
+	// 	height: 100vh;
+	// 	background-color: $white;
 
-		.header {
+	// 	.header {
 
-			&__bar {
-				height: $integer*8;
-			}
-		}
+	// 		&__bar {
+	// 			height: $integer*8;
+	// 		}
+	// 	}
 
-		.button--menu {
+	// 	.button--menu {
 	
-			&:before, &:after, .button__inner {
-				background-color: $black;
-			}
-		}
-	}
+	// 		&:before, &:after, .button__inner {
+	// 			background-color: $black;
+	// 		}
+	// 	}
+	// }
 }
 
 .sidebar {
@@ -462,8 +487,8 @@ body:before				{ z-index: 50; }
 	position: fixed;
 	top: 0;
 	height: 100vh;
-	padding-top: $integer-lg*2;
-	padding-bottom: $integer-lg*2;
+	padding-top: $integer-md;
+	padding-bottom: $integer-md*2;
 	pointer-events: none;
 
 	* {
@@ -471,11 +496,11 @@ body:before				{ z-index: 50; }
 	}
 	
 	&--left {
-		left: $integer-lg*2;
+		left: $integer-md;
 	}
 	
 	&--right {
-		right: $integer-lg*2;
+		right: $integer-md;
 	}
 
 	.button {

@@ -42,10 +42,16 @@
 
             &--prev {
                 margin-right: $integer-xl;
+                @include responsive(max-width, $mobile-max) {
+                    margin-right: $integer-md;
+                }
             }
 
             &--next {
                 margin-left: $integer-xl;
+                @include responsive(max-width, $mobile-max) {
+                    margin-left: $integer-md;
+                }
 
                 &:first-child {
                     margin-left: 0;
@@ -60,6 +66,15 @@
 
     &__button {
         text-align: right;
+        @include responsive(max-width, $desktop-max) {
+            text-align: left;
+            margin-top: $integer-md;
+        }
+        @include responsive(max-width, $mobile-max) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
     }
 
     &__category {

@@ -16,6 +16,9 @@
 
     .lead {
         padding-bottom: $integer-xl;
+        @include responsive(max-width, $mobile-max) {
+            padding-bottom: 0;
+        }
     }
 }
 
