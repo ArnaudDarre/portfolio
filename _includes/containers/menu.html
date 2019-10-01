@@ -2,18 +2,18 @@
     <div class="row">
         <div class="sidebar sidebar--left">
             {% if page.layout == 'projects' %}
-                <a href="{{ site.url }}/" class="button button--secondary button--animate fas fa-chevron-left hide--tablet">
+                <a href="{{ site.base-url }}/" class="button button--secondary button--animate fas fa-chevron-left hide--tablet">
                     <p class="button__inner">Back</p>
                 </a>
-                <a href="{{ site.url }}/" class="button button--small button--secondary button--animate fas fa-chevron-left show--tablet">
+                <a href="{{ site.base-url }}/" class="button button--small button--secondary button--animate fas fa-chevron-left show--tablet">
                     <p class="button__inner">Back</p>
                 </a>
             {% endif %}
         </div>
         <div class="sidebar sidebar--right">
             <div class="">
-                <a {% if page.layout == 'index' %}href="#landing" class="js-button-anchor"{% else %}href="{{ site.url }}/"{% endif %}>
-                    <img src="{{ site.url }}{{ site.resourceurl }}/images/logo.png" alt="Logo" class="header__logo">
+                <a {% if page.layout == 'index' %}href="#landing" class="js-button-anchor"{% else %}href="{{ site.base-url }}/"{% endif %}>
+                    <img src="{{ site.base-url }}{{ site.resourceurl }}/images/logo.png" alt="Logo" class="header__logo">
                 </a>
                 <!-- <button class="button button--icon button--large button--secondary">
                     <i class="button__inner fas fa-bars"></i>

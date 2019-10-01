@@ -29,6 +29,7 @@ collections:
     permalink: /:title/
 
 # internal path
+url: http://arnaud-darre.com
 resourceurl: /public
 
 # Exclude from processing.

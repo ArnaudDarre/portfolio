@@ -1,6 +1,6 @@
 {% include header.html %}
 
-<!-- <section id="projects" class="row section" style="background-image: url({{ site.url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}-cover.jpg)"> -->
+<!-- <section id="projects" class="row section" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}-cover.jpg)"> -->
 <section id="projects" class="row section">
     <div class="section__background">
         <span class="background__trigger background__trigger--{{ page.category | downcase }}"></span>
@@ -92,7 +92,7 @@
                                     </a>
                                 </div>
                                 <div class="project__image">
-                                    <div class="project__image-inner background-cover" style="background-image: url({{ site.url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
+                                    <div class="project__image-inner background-cover" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
                                 </div>
                             </div>
                             {% break %}

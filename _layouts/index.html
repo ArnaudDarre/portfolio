@@ -1,7 +1,7 @@
 {% include header.html %}
 
 <!-- scrollify -->
-<script src="{{ site.url }}{{ site.resourceurl }}/vendors/scrollify/jquery.scrollify.min.js"></script>
+<script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/scrollify/jquery.scrollify.min.js"></script>
 <script>$(function() { $.scrollify({ section : ".section", }); });</script>
 
 <!-- landing -->
@@ -68,7 +68,7 @@
                             <div class="row">
                                 <div class="coloffset--2 col--10">
                                     <a href="{{ project.url }}" class="project__image">
-                                        <div class="project__image-inner" style="background-image: url({{ site.url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
+                                        <div class="project__image-inner" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
                                     </a>
                                 </div>
                                 {% if project.category %}
@@ -125,7 +125,7 @@
                     <h3 class="card__title subhead">{{ skill.title }}</h3>
                     <p class="card__body body">{{ skill.body }}</p>
                     <p class="card__label label">Project</p>
-                    <a href="{{ site.url }}/projects/{{ skill.project | slugify }}" class="body button--underline">{{ skill.project }}</a>
+                    <a href="{{ site.base-url }}/projects/{{ skill.project | slugify }}" class="body button--underline">{{ skill.project }}</a>
                 </div>
                 {% endfor %}
             </div>
@@ -188,11 +188,11 @@
 
 <!-- VENDORS -->
 <!-- codrops -->
-<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/imagesloaded.pkgd.min.js"></script>
-<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/charming.min.js"></script>
-<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/anime.min.js"></script>
-<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/scrollingletters.js"></script>
-<script src="{{ site.url }}{{ site.resourceurl }}/vendors/codrops/project-carousel.js"></script>
+<script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/imagesloaded.pkgd.min.js"></script>
+<script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/charming.min.js"></script>
+<script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/anime.min.js"></script>
+<script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/scrollingletters.js"></script>
+<script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/project-carousel.js"></script>
 <!-- scrollify -->
 <script>
     $.scrollify({
