@@ -79,7 +79,7 @@
     <div class="coloffset--md3 coloffset--2 col--12 section__content">
         <h1 class="lead">Related projects</h1>
         <div class="row">
-            {% for project in site.projects %}
+            {% for project in site.projects limit:2 %}
                 {% if project.url != page.url %}	
                     {% for tag in page.tags %} 
                         {% if project.tags contains tag %}
