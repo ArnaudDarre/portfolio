@@ -371,6 +371,11 @@ body:before				{ z-index: 40; }
 	&__label {
 		padding-bottom: $integer;
 	}
+
+	&__icon {
+		font-size: 12rem;
+		color: rgba($secondary, 0.05);
+	}
 }
 
 
