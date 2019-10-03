@@ -121,14 +121,11 @@
             <h2 class="lead">What I like doing:</h2>
             <div class="row">
                 {% for skill in site.data.skills %}
-                <div class="col--lg6 col--12 card card--skills tooltip tooltip--tracking">
+                <div class="col--lg6 col--12 card card--skills">
                     <h3 class="card__title subhead">{{ skill.title }}</h3>
                     <p class="card__body body">{{ skill.body }}</p>
                     <p class="card__label label">Project</p>
                     <a href="{{ site.base-url }}/projects/{{ skill.project | slugify }}" class="body button--underline">{{ skill.project }}</a>
-                    <span class="tooltip__content">
-                        <span class="card__icon fas fa-{{ skill.icon }}"></span>
-                    </span>
                 </div>
                 {% endfor %}
             </div>
