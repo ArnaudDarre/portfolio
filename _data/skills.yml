@@ -1,23 +1,29 @@
 - title: Editorial Design
   body: Layout of various materials such as books, catalogs, leaflets, etc.
   project: '[un]earth'
+  icon: book
 
 - title: Web Design
   body: Design and prototyping of websites and mobile apps, from showcase websites to complex management tools.
   project: Applied Blockchain
+  icon: web
 
 - title: Front-end Development
   body: Proficient in the major static front-end tools (HTML, Sass) and static frameworks (Jekyll).
   project: Fada
+  icon: code
 
 - title: Brand Identity
   body: Logo, identity and style guide, on multiple communication mediums, and management of the evolution of that brand .
   project: Watapix
+  icon: box
 
 # - title: Typeface Design
 #   body: Design of complete font families, from the hand-drawn to vector shape.
 #   project: Ottolino
+#   icon: i-cursor
 
 - title: Motion Design
   body: Motion design video production, using After Effects or hand-drawn animation.
   project: Kinotype
+  icon: shapes
