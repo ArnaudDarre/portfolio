@@ -76,12 +76,10 @@
 </section>    
 
 <section id="related-projects" class="row section section--primary">
-    <div class="coloffset--md3 coloffset--2 col--12 section__content">
+    <div class="coloffset--2 col--12 section__content">
         <h1 class="lead">Related projects</h1>
         <div class="row">              
-            <!-- maximum number of related to posts to be printed -->
             {% assign maxRelated = 2 %} 
-            <!-- minimum number of common tags to have for a post to be considered as a related post -->
             {% assign minCommonTags =  1 %}
             {% assign maxRelatedCounter = 0 %}
             {% for project in site.projects %}
@@ -89,7 +87,6 @@
                 {% assign commonTags = '' %}
 
                 {% for tag in project.tags %}
-                    <!-- only compare if project is not same as current page  -->
                     {% if project.url != page.url %}
                     {% if page.tags contains tag %}
                         {% assign sameTagCount = sameTagCount | plus: 1 %}

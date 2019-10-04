@@ -42,11 +42,13 @@
 	"layouts/_project-list",
 	"layouts/_projects";
 
-// PAGES
+// VENDORS
 @import
 	"vendors/_project-carousel",
 	"vendors/_scroll-magic",
 	"vendors/_scrolling-letters";
 
+// OVERRIDES
 @import
-	"modules/_ie";
+	"overrides/_ie",
+	"overrides/_responsive";
