@@ -60,6 +60,10 @@ body {
 	margin-left: -$integer;
 	margin-right: -$integer;
 
+	@include responsive-mobile {
+		padding-right: $integer-xl;
+	}
+
 	&:after {
 		content: '';
 		display: block;
@@ -82,6 +86,13 @@ body {
 
 [class*="coloffset--"] {
 	@include transform(translateX($integer));
+
+	&.col--16 {
+		@include transform(none);
+		margin-left: $integer;
+    	padding-left: $integer-md*2;
+    	padding-right: $integer-md*2;
+	}
 }
 
 @for $i from 1 through 16 {
@@ -295,7 +306,7 @@ body:before				{ z-index: 40; }
 		padding-bottom: $integer-xxxxl;
 
 		@include responsive(max-width, $tablet-max) {
-			padding-top: $integer-xxl;
+			padding-top: $integer-md*2;
 
 			.page--projects & {
 				padding-top: $integer-xxxxl;
@@ -521,6 +532,9 @@ body:before				{ z-index: 40; }
 	}
 	
 	&--right {
+		@include flex-direction(column);
+		@include align-items(center);
+		@include justify-content(space-between);
 		right: $integer-lg*2;
 		@include responsive(max-width, $tablet-max) {
 			right: $integer-md;
@@ -561,5 +575,30 @@ body:before				{ z-index: 40; }
 	.button {
 		margin-top: $integer-lg;
 		@include align-self(flex-start);
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// header
+// —————————————————————————————————————————————————————————————————
+
+.nav {
+
+	&--mobile {
+		pointer-events: none;
+		display: none;
+		
+		@include responsive-mobile {
+			@include display-flex();
+			@include flex-direction(column);
+			@include align-items(center);
+			pointer-events: initial;
+		}
+
+		.button {
+			margin-left: 0;
+		}
 	}
 }
