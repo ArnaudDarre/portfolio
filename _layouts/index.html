@@ -14,18 +14,18 @@
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">Arnaud<br>Darré</h1>
     </div>
-    <div class="coloffset--md3 col--16 section__content">
+    <div class="coloffset--md3 coloffset--2 col--12 section__content">
         <div class="row">
-            <p class="col--16 section__header--mobile headline">Arnaud Darré</p>
-            <h2 class="col--md12 col--16 section__subtitle title">Graphic & Web Designer</h2>
-            <p class="col--md9 col--16 subtitle">Come and discover my <a href="#portfolio" class="js-button-anchor button--underline">work</a>, explore my <a href="#about" class="js-button-anchor button--underline">aspirations</a> and inspirations and <a href="#contact" class="js-button-anchor button--underline">contact</a> me for a chat!</p>
+            <p class="col--12 section__header--mobile headline">Arnaud Darré</p>
+            <h2 class="col--md12 col--12 section__subtitle title">Graphic & Web Designer</h2>
+            <p class="col--md9 col--12 subtitle">Come and discover my <a href="#portfolio" class="js-button-anchor button--underline">work</a>, explore my <a href="#about" class="js-button-anchor button--underline">aspirations</a> and inspirations and <a href="#contact" class="js-button-anchor button--underline">contact</a> me for a chat!</p>
         </div>
         <div class="row">
-            <div class="col--lg5 col--md9 col--16 hide--mobile">
+            <div class="col--lg5 col--md9 col--12 hide--mobile">
                 <p class="section__comment lead">Website crafted from design to development and content by yours truly.</p>
                 <p class="body--small">I will chat about The Beatles, Typography, space, design systems, Science-fiction, music, Buffy the Vampire Slayer and anything your are passionate about.</p>
             </div>
-            <p class="coloffset--lg3 col--lg4 col--md9 col--16 section__comment lead">Available for freelance work.</p>
+            <p class="coloffset--lg3 col--lg4 col--md9 col--12 section__comment lead">Available for freelance work.</p>
         </div>
     </div>
 </section>
@@ -38,13 +38,13 @@
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">Portfolio</h1>
     </div>
-    <div class="coloffset--md3 coloffset--2 col--16 section__content">
+    <div class="coloffset--md3 coloffset--2 col--12 section__content">
         <div class="project--carousel">
             <p class="section__header--mobile headline">Portfolio</p>
             <div class="block">
                 <div class="row">
-                    <p class="col--lg6 col--md9 col--16 section__comment lead hide--mobile">Here are some crunchy bites. Browse the projects once inside to check the collection.</p>
-                    <nav class="col--16 project__nav">
+                    <p class="col--lg6 col--md9 col--12 section__comment lead hide--mobile">Here are some crunchy bites. Browse the projects once inside to check the collection.</p>
+                    <nav class="col--12 project__nav">
                         <button class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
                             <i class="button__inner fas fa-chevron-left"></i>
                         </button>
@@ -72,18 +72,18 @@
                                     </a>
                                 </div>
                                 {% if project.category %}
-                                    <p class="col--16 project__category label">{{ project.category }}</p>
+                                    <p class="col--12 project__category label">{{ project.category }}</p>
                                 {% endif %}
                                 {% if project.title %}
-                                    <h2 class="col--16 project__title section__subtitle title">{{ project.title }}</h2>
+                                    <h2 class="col--12 project__title section__subtitle title">{{ project.title }}</h2>
                                 {% endif %}
                                 {% if project.subtitle %}
-                                    <h3 class="col--16 project__subtitle lead">{{ project.subtitle }}</h3>
+                                    <h3 class="col--12 project__subtitle lead">{{ project.subtitle }}</h3>
                                 {% endif %}
                                 {% if project.body %}
-                                    <p class="col--lg6 col--md9 col--16 project__body body--bold hide--mobile">{{ project.body }}</p>
+                                    <p class="col--lg6 col--md9 col--12 project__body body--bold hide--mobile">{{ project.body }}</p>
                                 {% endif %}
-                                <div class="col--6 col--16 project__button">
+                                <div class="col--6 col--12 project__button">
                                     <a href="{{ project.url }}" class="button button--secondary button--animate fas fa-microscope">
                                         <p class="button__inner">Discover</p>
                                     </a>
@@ -107,21 +107,21 @@
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">About</h1>
     </div>
-    <div class="coloffset--md3 coloffset--2 col--16 section__content">
+    <div class="coloffset--md3 coloffset--2 col--12 section__content">
         <div class="block">
             <p class="section__header--mobile headline">About</p>
             <div class="row">
-                <h2 class="col--16 section__comment lead">How I approach design:</h2>
-                <p class="col--16 section__subtitle title">Let's draw something together!</p>
-                <p class="col--md8 col--16 body">Graphic and even web design are not so different from a drawing or a painting composition. It all has to do with the use of breathing space around elements, colours, hierarchy and last but not least contrast.</p>
-                <p class="col--md8 col--16 body">This is why each design should start with a pen and paper. This playful but effective method allows to enhance creativity by shortening the bond between the brain and the design tool: your hand (and not the computer).</p>
+                <h2 class="col--12 section__comment lead">How I approach design:</h2>
+                <p class="col--12 section__subtitle title">Let's draw something together!</p>
+                <p class="col--md8 col--12 body">Graphic and even web design are not so different from a drawing or a painting composition. It all has to do with the use of breathing space around elements, colours, hierarchy and last but not least contrast.</p>
+                <p class="col--md8 col--12 body">This is why each design should start with a pen and paper. This playful but effective method allows to enhance creativity by shortening the bond between the brain and the design tool: your hand (and not the computer).</p>
             </div>
         </div>
         <div class="">
             <h2 class="lead">What I like doing:</h2>
             <div class="row">
                 {% for skill in site.data.skills %}
-                <div class="col--lg6 col--16 card card--skills">
+                <div class="col--lg6 col--12 card card--skills">
                     <h3 class="card__title subhead">{{ skill.title }}</h3>
                     <p class="card__body body">{{ skill.body }}</p>
                     <p class="card__label label">Project</p>
@@ -142,7 +142,7 @@
     <div class="section__header">
         <h1 class="section__title headline js-scrolling-letters__text">Contact</h1>
     </div>
-    <div class="coloffset--md3 coloffset--2 col--16 section__content">
+    <div class="coloffset--md3 coloffset--2 col--12 section__content">
         <div class="block">
             <p class="section__header--mobile headline">Contact</p>
             <p class="section__subtitle title">Howdy stranger!</p>
@@ -151,19 +151,19 @@
                 <input type="hidden" name="user_id" value="M0J8096TKC737WSLOOE2">
                 <input type="hidden" name="form_id" value="1">
                 <div class="row">
-                    <div class="col--md5 col--16 form__group">
+                    <div class="col--md5 col--12 form__group">
                         <label for="first_name" class="form__label">Name</label>
                         <input type="text" name="first_name" id="first_name" class="form__input" required="required">
                     </div>
-                    <div class="col--md5 col--16 form__group">
+                    <div class="col--md5 col--12 form__group">
                         <label for="surname" class="form__label">Surname</label>
                         <input type="text" name="surname" id="surname" class="form__input" required="required">
                     </div>
-                    <div class="col--md10 col--16 form__group">
+                    <div class="col--md10 col--12 form__group">
                         <label for="email" class="form__label">Email</label>
                         <input type="email" name="email" id="email" class="form__input" required="required">
                     </div>
-                    <div class="col--md10 col--16 form__group">
+                    <div class="col--md10 col--12 form__group">
                         <label for="message" class="form__label">Message</label>
                         <textarea name="message" id="message" class="form__input" rows="4"></textarea>
                     </div>

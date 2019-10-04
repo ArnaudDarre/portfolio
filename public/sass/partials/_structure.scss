@@ -60,10 +60,6 @@ body {
 	margin-left: -$integer;
 	margin-right: -$integer;
 
-	@include responsive-mobile {
-		padding-right: $integer-xl;
-	}
-
 	&:after {
 		content: '';
 		display: block;
@@ -86,13 +82,6 @@ body {
 
 [class*="coloffset--"] {
 	@include transform(translateX($integer));
-
-	&.col--16 {
-		@include transform(none);
-		margin-left: $integer;
-    	padding-left: $integer-md*2;
-    	padding-right: $integer-md*2;
-	}
 }
 
 @for $i from 1 through 16 {
