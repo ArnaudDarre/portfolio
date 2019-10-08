@@ -306,14 +306,21 @@
 
 
 // —————————————————————————————————————————————————————————————————
-// menu
+// filter
 // —————————————————————————————————————————————————————————————————
 
-.filter__button {
-	padding-left: 0;
-
-	& + & {
-		margin-left: 0;
+.filter {
+	margin-left: -$integer-lg;
+	
+	&__button {
+		
+		&.active {
+			color: $secondary;
+		}
+		
+		& + & {
+			margin-left: 0;
+		}
 	}
 }
 

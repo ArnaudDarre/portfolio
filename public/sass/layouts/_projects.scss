@@ -170,3 +170,11 @@
         }
     }
 }
+
+#related-projects {
+
+    &.section {
+        min-height: auto;
+        padding-bottom: $integer-xxl;
+    }
+}
