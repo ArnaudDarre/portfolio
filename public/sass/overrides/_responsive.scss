@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+// —————————————————————————————————————————————————————————————————
+// RESPONSIVE
+// —————————————————————————————————————————————————————————————————
+
+
+@include responsive(max-width, $mobile-max) {
+
+	.row {
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
+	}
+	
+	[class*="col--"] {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+		width: 100% !important;
+	}
+	
+	[class*="coloffset--"] {
+		@include transform(none);
+		margin-left: 0 !important;
+		width: 100% !important;
+	}
+
+	.section {
+		padding-right: $integer-md*2;
+		padding-left: $integer-md*2;
+
+		.page--index & {			
+			padding-right: $integer-md*2 + $integer-xl;
+		}
+	}
+
+	.page--projects {
+
+		.project {
+			padding-right: $integer-md*2;
+		}
+	}
+}	

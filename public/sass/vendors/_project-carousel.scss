@@ -67,6 +67,10 @@
             height: 50vh; 
             width: 100%;
             opacity: 0.2;
+
+            @include responsive(max-width, $tablet-max) {
+                padding-left: $integer-md*2;
+            }
    
             &-inner {
                 @include background(50% 50%, cover);

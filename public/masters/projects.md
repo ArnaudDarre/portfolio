@@ -21,6 +21,7 @@ tags: # no more than three
   - Illustration
   - Logo Design
   - Motion Design
+  - Responsive Design
   - Storytelling
   - Web Design
   - Web Development

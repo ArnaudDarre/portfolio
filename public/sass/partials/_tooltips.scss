@@ -36,4 +36,26 @@
     @include responsive-mobile() {
         display: none !important;
     }
+    @include responsive(max-width, $tablet-max) {
+        display: none !important;
+    }
+}
+
+// tracking with element
+
+.tooltip {
+
+    &--tracking {
+        position: relative;
+
+        &:hover .tooltip__content {
+            display: block;
+            position: fixed;
+            overflow: hidden;
+        }
+    }
+
+    &__content {
+        display: none;
+    }
 }

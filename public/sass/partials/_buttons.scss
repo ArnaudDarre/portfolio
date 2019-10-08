@@ -311,7 +311,8 @@
 .button--scroll-top {
 	@include transition(bottom $transition, transform $transition);
 	will-change: bottom, transform;
-    position: fixed;
+	position: absolute;
+	right: $integer;
 	bottom: -$integer-xxl;
 	@include responsive-mobile() {
 		display: none !important;
@@ -322,6 +323,6 @@
 	}
 
 	&:hover {
-		@include transform(translateY(-$integer-sm));
+		@include transform(translateY(-$integer-xxs) scale(1.04));
 	}
 }

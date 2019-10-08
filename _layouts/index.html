@@ -84,7 +84,7 @@
                                     <p class="col--lg6 col--md9 col--12 project__body body--bold hide--mobile">{{ project.body }}</p>
                                 {% endif %}
                                 <div class="col--6 col--12 project__button">
-                                    <a href="{{ project.url }}" class="button button--secondary button--animate fas fa-chevron-right">
+                                    <a href="{{ project.url }}" class="button button--secondary button--animate fas fa-microscope">
                                         <p class="button__inner">Discover</p>
                                     </a>
                                 </div>
@@ -150,15 +150,21 @@
             <p class="section__header--mobile headline">Contact</p>
             <p class="section__subtitle title">Howdy stranger!</p>
             <h2 class="section__comment subtitle">Feel free to drop a line here…</h2>
-            <form action="https://app.99inbound.com/api/e/lSKxMMdS" method="POST" class="form">
+            <form action="https://formtoemail.com/user_forms.php" method="POST" class="form">
+                <input type="hidden" name="user_id" value="M0J8096TKC737WSLOOE2">
+                <input type="hidden" name="form_id" value="1">
                 <div class="row">
                     <div class="col--md5 col--12 form__group">
                         <label for="first_name" class="form__label">Name</label>
-                        <input type="text" name="first_name" id="first_name" class="form__input">
+                        <input type="text" name="first_name" id="first_name" class="form__input" required="required">
                     </div>
                     <div class="col--md5 col--12 form__group">
                         <label for="surname" class="form__label">Surname</label>
-                        <input type="text" name="surname" id="surname" class="form__input">
+                        <input type="text" name="surname" id="surname" class="form__input" required="required">
+                    </div>
+                    <div class="col--md10 col--12 form__group">
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" name="email" id="email" class="form__input" required="required">
                     </div>
                     <div class="col--md10 col--12 form__group">
                         <label for="message" class="form__label">Message</label>
@@ -176,9 +182,6 @@
         </div>
         <div class="block">
             <h2 class="section__comment subtitle">…or contact me via social media.</h2>
-            <a href="{{ site.github }}" title="Link to Github profile" target="_blank" class="button button--icon button--large button--secondary button--animate fas fa-plus">
-                <i class="button__inner fab fa-github"></i>
-            </a>
             <a href="{{ site.linkedin }}" title="Link to Linkedin profile" target="_blank" class="button button--icon button--large button--secondary button--animate fas fa-plus">
                 <i class="button__inner fab fa-linkedin"></i>
             </a>
@@ -197,7 +200,7 @@
 <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/scrollingletters.js"></script>
 <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/project-carousel.js"></script>
 <!-- scrollify -->
-<script>
+<!-- <script>
     if ($(window).width() > 767) {   
         $.scrollify({
             section : ".section",
@@ -208,6 +211,6 @@
     }
     else {  
     }; 
-</script>
+</script> -->
 
 {% include footer.html %}

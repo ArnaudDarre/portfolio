@@ -57,8 +57,8 @@ body {
 	@include display-flex();
 	@include flex-wrap(wrap);
 	@include calc(width, '100% + '$integer*2);
-	margin-left: -$integer;
 	margin-right: -$integer;
+	margin-left: -$integer;
 
 	&:after {
 		content: '';
@@ -295,7 +295,7 @@ body:before				{ z-index: 40; }
 		padding-bottom: $integer-xxxxl;
 
 		@include responsive(max-width, $tablet-max) {
-			padding-top: $integer-xxl;
+			padding-top: $integer-md*2;
 
 			.page--projects & {
 				padding-top: $integer-xxxxl;
@@ -371,6 +371,11 @@ body:before				{ z-index: 40; }
 	&__label {
 		padding-bottom: $integer;
 	}
+
+	&__icon {
+		font-size: 12rem;
+		color: rgba($secondary, 0.05);
+	}
 }
 
 
@@ -438,9 +443,15 @@ body:before				{ z-index: 40; }
 		@include transition(transform 0.4s ease);
 		width: $integer-xxl;
 		height: $integer-xxl;
+
 		@include responsive(max-width, $tablet-max) {
 			width: $integer-xl;
 			height: $integer-xl;
+		}
+
+		@include responsive(max-width, $mobile-max) {
+			width: $integer-md*2;
+			height: $integer-md*2;
 		}
 
 		@include hover-link {
@@ -451,43 +462,6 @@ body:before				{ z-index: 40; }
 			}
 		}
 	}
-
-	// &__button {
-	// }
-
-	// &__contact {
-	// }
-
-	// &__menu {
-	// 	@include calc(height, '100vh - '$integer*8);
-	// 	@include overflow-scroll();
-	// 	padding: 0  $col*2 $integer*4 $col*2;
-	// 	pointer-events: initial;
-	// 	@include responsive(max-width, $tablet-max) {
-	// 		padding: 0 $col $integer*6 $col;
-	// 	}
-	// }
-
-	// &.js-opened {
-	// 	@include transition(height $transition, background-color $transition);
-	// 	will-change: height, background-color;
-	// 	height: 100vh;
-	// 	background-color: $white;
-
-	// 	.header {
-
-	// 		&__bar {
-	// 			height: $integer*8;
-	// 		}
-	// 	}
-
-	// 	.button--menu {
-	
-	// 		&:before, &:after, .button__inner {
-	// 			background-color: $black;
-	// 		}
-	// 	}
-	// }
 }
 
 .sidebar {
@@ -499,9 +473,10 @@ body:before				{ z-index: 40; }
 	padding-top: $integer-lg*2;
 	padding-bottom: $integer-lg*2;
 	pointer-events: none;
+
 	@include responsive(max-width, $tablet-max) {
 		padding-top: $integer-md;
-		padding-bottom: $integer-md*2;
+		padding-bottom: $integer-xxxl;
 	}
 
 	* {
@@ -510,13 +485,26 @@ body:before				{ z-index: 40; }
 	
 	&--left {
 		left: $integer-lg*2;
+
 		@include responsive(max-width, $tablet-max) {
 			left: $integer-md;
 		}
+
+		.button {
+			
+			@include responsive(max-width, $mobile-max) {
+				margin-top: 0 !important;
+				margin-left: 0;
+			}
+		}	
 	}
 	
 	&--right {
+		@include flex-direction(column);
+		@include align-items(center);
+		@include justify-content(space-between);
 		right: $integer-lg*2;
+
 		@include responsive(max-width, $tablet-max) {
 			right: $integer-md;
 		}
@@ -556,5 +544,30 @@ body:before				{ z-index: 40; }
 	.button {
 		margin-top: $integer-lg;
 		@include align-self(flex-start);
+	}
+}
+
+
+
+// —————————————————————————————————————————————————————————————————
+// header
+// —————————————————————————————————————————————————————————————————
+
+.nav {
+
+	&--mobile {
+		pointer-events: none;
+		display: none;
+		
+		@include responsive-mobile {
+			@include display-flex();
+			@include flex-direction(column);
+			@include align-items(center);
+			pointer-events: initial;
+		}
+
+		.button {
+			margin-left: 0;
+		}
 	}
 }
