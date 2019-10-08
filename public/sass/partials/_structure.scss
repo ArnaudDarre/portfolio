@@ -295,10 +295,10 @@ body:before				{ z-index: 40; }
 		padding-bottom: $integer-xxxxl;
 
 		@include responsive(max-width, $tablet-max) {
-			padding-top: $integer-md*2;
-
-			.page--projects & {
-				padding-top: $integer-xxxxl;
+			padding-top: $integer-xxl;
+			
+			.page--index & {
+				padding-top: $integer-xl;
 			}
 		}
 	}

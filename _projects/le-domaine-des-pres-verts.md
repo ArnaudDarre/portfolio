@@ -7,7 +7,6 @@ color: '#dc9b64'
 title: le Domaine des Prés Verts
 subtitle: Prototype of a website
 body: Layout of the new website for Le Domaine des Prés Verts, a luxury guest house in Burgundy, France. Project carried out while working at Watapix.
-
 category: Digital
 
 # meta

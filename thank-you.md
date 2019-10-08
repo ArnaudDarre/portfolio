@@ -3,7 +3,7 @@ layout: default
 title: Thank you
 description: 
 
-title: Thank you for words!
+page_title: Thank you for words!
 subtitle: I will get back to you shortly.
 ---
 

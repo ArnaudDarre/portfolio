@@ -6,7 +6,6 @@ color: '#000000'
 # info
 title: Life Sketching
 subtitle: Collection of life sketches
-
 category: Drawings
 
 # meta

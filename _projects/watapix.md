@@ -7,7 +7,7 @@ color: '#00aec7'
 title: Watapix
 subtitle: Branding of a creative agency
 body: Design of the logo and the brand guidelines of Watapix, a multi-channel communication agency. Project carried out while working at Watapix.
-category: Identity
+category: Branding
 
 # meta
 client: Watapix
