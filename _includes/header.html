@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149677473-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-149677473-1');
+	</script>
+
 	<title>
 		{% if page.title %} 
 			{{ page.title }} | {{ site.title }}
@@ -14,6 +24,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="{{ site.description }} ">
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+	<!-- image for social sharing -->
+	<meta property="og:image" content="http://arnaud-darre.com/public/images/social-cover.jpg" />
 
 	<!-- FAVICONS -->
 	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.base-url }}/apple-touch-icon.png">
@@ -61,4 +73,3 @@
 <div class="page {% if page.layout == 'index' %}page--index{% endif %} {% if page.layout == 'projects' %}page--projects{% endif %}">
 
 {% include containers/menu.html %}
-	
