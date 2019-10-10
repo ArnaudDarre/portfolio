@@ -10,17 +10,20 @@
     <div class="section__content">
         <div class="coloffset--md3 coloffset--2 col--12 block">
             <div class="row">
-                <nav class="col--12 project__nav">
+                <nav class="col--5 project__nav">
                     {% if page.previous.url %}
-                        <a href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
+                        <button href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
                             <i class="button__inner fas fa-chevron-left"></i>
-                        </a>
+                        </button>
                     {% endif %}
                     {% if page.next.url %}
-                        <a href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
+                        <button href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
                             <i class="button__inner fas fa-chevron-right"></i>
-                        </a>
+                        </button>
                     {% endif %}
+                    <a href="{{ site.base-url }}/projects-list" class="button button--small button--secondary button--animate fas fa-list">
+                        <p class="button__inner">Project list</p>
+                    </a>
                 </nav>
             </div>
         </div>

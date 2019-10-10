@@ -493,7 +493,6 @@ body:before				{ z-index: 40; }
 		.button {
 			
 			@include responsive(max-width, $mobile-max) {
-				margin-top: 0 !important;
 				margin-left: 0;
 			}
 		}	
@@ -512,7 +511,6 @@ body:before				{ z-index: 40; }
 
 	.button {
 		@include align-self(flex-start);
-		margin-top: $integer;
 	}
 }
 

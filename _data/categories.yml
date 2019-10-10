@@ -1,11 +1,14 @@
-- title: Editorial
-  icon: book
+- title: Branding
+  icon: box
 
 - title: Digital
   icon: code
 
-- title: Branding
-  icon: box
+- title: Drawings
+  icon: pencil-ruler
+
+- title: Editorial
+  icon: book
 
 # - title: Typography
 #   icon: i-cursor
@@ -15,6 +18,3 @@
 
 - title: Motion
   icon: shapes
-
-- title: Drawings
-  icon: pencil-ruler
