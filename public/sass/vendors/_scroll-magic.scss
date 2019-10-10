@@ -86,7 +86,7 @@
             @include background-shape(-240vw, null, null, -90vw, 350vw, 350vw, $primary, null);
         }
         &--motion {
-            @include background-shape(-10vw, -80vw, null, null, 200vw, 200vw, $primary, null);
+            @include background-shape(-20vw, -50vw, null, null, 200vw, 200vw, $primary, null);
         }
     }
 

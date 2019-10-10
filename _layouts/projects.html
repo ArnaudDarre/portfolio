@@ -12,14 +12,14 @@
             <div class="row">
                 <nav class="col--5 project__nav">
                     {% if page.previous.url %}
-                        <button href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
+                        <a href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
                             <i class="button__inner fas fa-chevron-left"></i>
-                        </button>
+                        </a>
                     {% endif %}
                     {% if page.next.url %}
-                        <button href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
+                        <a href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
                             <i class="button__inner fas fa-chevron-right"></i>
-                        </button>
+                        </a>
                     {% endif %}
                     <a href="{{ site.base-url }}/projects-list" class="button button--small button--secondary button--animate fas fa-list">
                         <p class="button__inner">Project list</p>
