@@ -1,17 +1,19 @@
+{% assign type = include.type %} 
+{% assign link = include.link %} 
 {% assign size = include.size %}
 {% assign style = include.style %}
 {% assign theme = include.theme %}
-{% assign icon = include.sizes %}
-{% assign link = include.link %}
+{% assign animation = include.animation %}
+{% assign icon = include.icon %}
+{% assign title = include.title %}
+{% assign target = include.target %}
 {% assign text = include.text %}
-{% assign target-blank = include.target-blank %}
+{% assign icon_inner = include.icon_inner %}
 
-<a href="" title="Link to Behance profile" target="_blank" class="
-	{% if button-size == 'white' %}
-    {% elsif button-size == 'large' %} button--large
-	{% elsif button-size == 'small' %} button--small
-	{% endif %}
-
-	button button--icon button--stroke button--highlight button--animate fas fa-plus">
+<a 	href="{{ link }}" class="button{% if type == 'icon' %} button--icon{% endif %}{% if size %} button--{{ size }}{% endif %}{% if style %} button--{{ style }}{% endif %}{% if theme %} button--{{ theme }}{% endif %}{% if animation %} button--animate--{{ animation }} fas fab fa-{{ icon }}{% endif %}" title="{{ title }}" {% if target %} target="_{{ target }}" {% endif %}>
+	{% if type == 'text' %}
 	<p class="button__inner">{{ text }}</p>
+	{% elsif type == 'icon' %}
+	<i class="button__inner fas fab fa-{{ icon_inner }}"></i>
+	{% endif %}
 </a>

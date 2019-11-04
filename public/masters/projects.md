@@ -1,6 +1,5 @@
 ---
 layout: projects
-type: [book, identity, poster, typeface, video, website]
 featured: # add number here to feature the project on index
 color: # primary color of the project or client
 
@@ -17,6 +16,7 @@ website_title:
 tags: # no more than three
   - Brand Identity
   - Data Visualisation
+  - Design Research
   - Editorial Design
   - Illustration
   - Logo Design
