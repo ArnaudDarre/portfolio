@@ -5,6 +5,7 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: number
   name: featured
   label: featured
@@ -26,6 +27,16 @@ fields:
 - type: text
   name: client
   label: client
+- name: type
+  type: text
+  config:
+    required: false
+  label: type
+- name: video_id
+  type: text
+  config:
+    required: false
+  label: video id
 - type: text
   name: website_url
   label: website_url
