@@ -1,6 +1,6 @@
 ---
 layout: projects
-featured: 2
+featured: '2'
 color: turquoise
 
 # info
