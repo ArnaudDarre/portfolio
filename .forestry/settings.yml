@@ -9,7 +9,7 @@ sections:
   label: Data
   create: all
   match: "**/*"
-  new_doc_ext: ".yml"
+  new_doc_ext: yml
 - type: directory
   path: _includes
   label: Includes
@@ -27,7 +27,7 @@ sections:
   label: Projects
   create: all
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: jekyll-posts
   label: Posts
   create: all
