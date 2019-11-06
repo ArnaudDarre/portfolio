@@ -1,7 +1,9 @@
 ---
 layout: projects
-featured: "4"
-color: "#007bff"
+featured: '4'
+color: '#007bff'
+
+# info
 title: Applied Blockchain
 subtitle: Redesign of a website
 body: This project was part of the creation of the complete re-branding of Applied
@@ -9,6 +11,8 @@ body: This project was part of the creation of the complete re-branding of Appli
   alongside another designer, to create from scratch what would become the company's
   brand identity. One of the biggest part of that job was to rebrand the website.
 category: Digital
+
+# meta
 client: Applied Blockchain
 website_url: https://appliedblockchain.com/
 website_title: appliedblockchain.com

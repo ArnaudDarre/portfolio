@@ -63,8 +63,8 @@
                     </nav>
                 </div>
             </div>
-            {% assign ordered_projects = site.projects | sort: 'featured' %}
-            {% for project in ordered_projects %}
+            {% for project in site.projects %}
+            {% assign project = site.projects | sort: "featured" %}
                 {% if project.featured %}
                     <div class="project__item {% if project.featured == 1 %}project__item--current{% endif %} project__item--{{ project.title | slugify }}">
                         <div class="project">
