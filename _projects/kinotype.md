@@ -1,7 +1,7 @@
 ---
 layout: projects
 type: video
-featured: 1
+featured: '1'
 color: 
 
 # info

@@ -9,4 +9,11 @@
     &.section {
         min-height: auto;
     }
+
+    .section {
+
+        &__content {
+            min-height: 100vh;
+        }
+    }
 }

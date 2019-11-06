@@ -42,17 +42,20 @@
     </script>
 {% elsif page.layout == 'projects' %}
     <script>
+        var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--branding", duration: 1600})
+            .setTween(".background__square--branding", {xPercent: 80})
+            .addTo(controller);
         var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--digital", duration: 1600})
-            .setTween(".background__square--digital", {yPercent: -30, rotation: 90})
+            .setTween(".background__square--digital", {yPercent: -30})
+            .addTo(controller);
+        var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--drawings", duration: 1600})
+            .setTween(".background__circle--drawings", {scale: 0.2})
             .addTo(controller);
         var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--editorial", duration: 1600})
-            .setTween(".background__square--editorial", {xPercent: 20, yPercent: -30, rotation: 72})
+            .setTween(".background__square--editorial", {yPercent: -10})
             .addTo(controller);
-        var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--video", duration: 1600})
-            .setTween(".background__circle--video", {scale: 0.4, xPercent: 60, yPercent: -5})
-            .addTo(controller);
-        var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--identity", duration: 1600})
-            .setTween(".background__circle--identity", {scale: 0.8, xPercent: 60, yPercent: -40})
+        var scene = new ScrollMagic.Scene({triggerElement: ".background__trigger--motion", duration: 1600})
+            .setTween(".background__circle--motion", {scale: 0.4, xPercent: 60})
             // .addIndicators({name: " "}) // add indicators (requires plugin)
             .addTo(controller);
     </script>
