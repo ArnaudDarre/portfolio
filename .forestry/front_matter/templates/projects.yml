@@ -6,12 +6,6 @@ fields:
   name: layout
   label: layout
   hidden: true
-- type: number
-  name: featured
-  label: featured
-- type: text
-  name: color
-  label: color
 - type: text
   name: title
   label: title
@@ -24,6 +18,12 @@ fields:
 - type: text
   name: category
   label: category
+- type: text
+  name: color
+  label: color
+- type: number
+  name: featured
+  label: featured
 - type: text
   name: client
   label: client
