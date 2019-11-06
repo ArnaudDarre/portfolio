@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 {% include header.html %}
 
 <!-- <section id="projects" class="row section" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify }}/{{ page.title | slugify }}-cover.jpg)"> -->
@@ -11,15 +15,15 @@
         <div class="coloffset--md3 coloffset--2 col--12 block">
             <div class="row">
                 <nav class="col--5 project__nav">
-                    {% if page.previous.url %}
-                        <a href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
-                            <i class="button__inner fas fa-chevron-left"></i>
-                        </a>
+                  {% if page.previous.url %}
+                    <a href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
+                        <i class="button__inner fas fa-chevron-left"></i>
+                    </a>
                     {% endif %}
                     {% if page.next.url %}
-                        <a href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
-                            <i class="button__inner fas fa-chevron-right"></i>
-                        </a>
+                    <a href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
+                        <i class="button__inner fas fa-chevron-right"></i>
+                    </a>
                     {% endif %}
                     <a href="{{ site.base-url }}/projects-list" class="button button--small button--secondary button--animate fas fa-list">
                         <p class="button__inner">Project list</p>
@@ -31,35 +35,35 @@
             <div class="project">
                 <div class="row">
                     {% if page.category %}
-                        <p class="col--12 project__category label">{{ page.category }}</p>
+                    <p class="col--12 project__category label">{{ page.category }}</p>
                     {% endif %}
                     {% if page.title %}
-                        <h1 class="col--12 project__title section__subtitle title">{{ page.title }}</h1>
+                    <h1 class="col--12 project__title section__subtitle title">{{ page.title }}</h1>
                     {% endif %}
                     <div class="col--12">
                         <div class="row">
                             <div class="col--md6 col--12">
                                 {% if page.subtitle %}
-                                    <h2 class="project__subtitle lead">{{ page.subtitle }}</h2>
+                                <h2 class="project__subtitle lead">{{ page.subtitle }}</h2>
                                 {% endif %}
                                 {% if page.body %}
-                                    <p class="project__body body--bold">{{ page.body }}</p>
+                                <p class="project__body body--bold">{{ page.body }}</p>
                                 {% endif %}
                             </div>
                             <div class="col--md4 col--12 body--right project__meta">
                                 {% if page.client %}
-                                    <p class="label">Client</p>
-                                    <p class="body">{{ page.client }}</p>
+                                <p class="label">Client</p>
+                                <p class="body">{{ page.client }}</p>
                                 {% endif %}
                                 {% if page.website_url %}
-                                    <p class="label">Website</p>
-                                    <a href="{{ page.website_url }}" target="_blank" class="body">{{ page.website_title }}</a>
+                                <p class="label">Website</p>
+                                <a href="{{ page.website_url }}" target="_blank" class="body">{{ page.website_title }}</a>
                                 {% endif %}
                                 {% if page.tags %}
-                                    <p class="label">Tags</p>
-                                        {% for tag in page.tags %}
-                                            <p>{{ tag }}</p>
-                                        {% endfor %}
+                                <p class="label">Tags</p>
+                                    {% for tag in page.tags %}
+                                    <p>{{ tag }}</p>
+                                    {% endfor %}
                                 {% endif %}
                             </div>
                         </div>
@@ -68,11 +72,11 @@
             </div>
         </div>
         {% if page.video_id %}
-            <div class="coloffset--lg3 col--lg10 coloffset--md2 col--md12 coloffset--1 col--14 block project__block">
-                <div class="embed-container">
-                    <iframe src="https://player.vimeo.com/video/{{ page.video_id }}?color=00ffc4&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
+        <div class="coloffset--lg3 col--lg10 coloffset--md2 col--md12 coloffset--1 col--14 block project__block">
+            <div class="embed-container">
+                <iframe src="https://player.vimeo.com/video/{{ page.video_id }}?color=00ffc4&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
+        </div>
         {% endif %}
         {{ content }}
     </div>
@@ -86,37 +90,39 @@
             {% assign minCommonTags =  1 %}
             {% assign maxRelatedCounter = 0 %}
             {% for project in site.projects %}
-                {% assign sameTagCount = 0 %}
-                {% assign commonTags = '' %}
+            {% assign sameTagCount = 0 %}
+            {% assign commonTags = '' %}
 
-                {% for tag in project.tags %}
-                    {% if project.url != page.url %}
-                    {% if page.tags contains tag %}
-                        {% assign sameTagCount = sameTagCount | plus: 1 %}
-                        {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
-                        {% assign commonTags = commonTags | append: tagmarkup %}
-                    {% endif %}
-                    {% endif %}
-                {% endfor %}
+            {% for tag in project.tags %}
+            {% if project.url != page.url %}
+            {% if page.tags contains tag %}
+            {% assign sameTagCount = sameTagCount | plus: 1 %}
+            {% capture tagmarkup %} 
+            <span class="label label-default">{{ tag }}</span> 
+            {% endcapture %}
+            {% assign commonTags = commonTags | append: tagmarkup %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
 
-                {% if sameTagCount >= minCommonTags %}
-                    <div class="col--md6 col--12 card card--project">
-                        <div class="card__content z-index--2">
-                            <h2 class="card__title subtitle">{{ project.title }}</h2>
-                            <h3 class="card__title body--large body--bold">{{ project.subtitle }}</h3>
-                            <a href="{{ project.url }}" class="button button--small button--secondary button--animate fas fa-chevron-right">
-                                <p class="button__inner">Discover</p>
-                            </a>
-                        </div>
-                        <div class="project__image">
-                            <div class="project__image-inner background-cover" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é", "e" }}-cover.jpg)"></div>
-                        </div>
-                    </div>
-                    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-                    {% if maxRelatedCounter >= maxRelated %}
-                        {% break %}
-                    {% endif %}
-                {% endif %}
+            {% if sameTagCount >= minCommonTags %}
+            <div class="col--md6 col--12 card card--project">
+                <div class="card__content z-index--2">
+                    <h2 class="card__title subtitle">{{ project.title }}</h2>
+                    <h3 class="card__title body--large body--bold">{{ project.subtitle }}</h3>
+                    <a href="{{ project.url }}" class="button button--small button--secondary button--animate fas fa-chevron-right">
+                        <p class="button__inner">Discover</p>
+                    </a>
+                </div>
+                <div class="project__image">
+                    <div class="project__image-inner background-cover" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é", "e" }}-cover.jpg)"></div>
+                </div>
+            </div>
+            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+            {% if maxRelatedCounter >= maxRelated %}
+                {% break %}
+            {% endif %}
+            {% endif %}
 
             {% endfor %}
         </div>

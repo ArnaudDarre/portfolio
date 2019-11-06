@@ -1,6 +1,6 @@
 ---
 layout: projects
-featured: '4'
+featured: '1'
 color: '#007bff'
 
 # info

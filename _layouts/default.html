@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 {% include header.html %}
 
 <section id="thank-you" class="row section">
@@ -9,13 +13,13 @@
         <div class="row">
             <div class="block">
                 {% if page.page_title %}
-                    <h2 class="col--12 section__subtitle title">{{ page.page_title }}</h2>
+                <h2 class="col--12 section__subtitle title">{{ page.page_title }}</h2>
                 {% endif %}
                 {% if page.subtitle %}
-                    <p class="col--lg9 col--md10 col--12 section__comment subtitle">{{ page.subtitle }}</p>
+                <p class="col--lg9 col--md10 col--12 section__comment subtitle">{{ page.subtitle }}</p>
                 {% endif %}
                 {% if page.lead %}
-                    <p class="col--lg5 col--12 lead">{{ page.lead }}</p>
+                <p class="col--lg5 col--12 lead">{{ page.lead }}</p>
                 {% endif %}
             </div>
             {{ content }}
