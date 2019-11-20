@@ -11,7 +11,7 @@ body: Collection of ressources (mainly UI) coded during the development of the w
 category: Digital
 client: Personal project
 website_url: ''
-website_title: fada.arnaud-darre.com
+website_title: ''
 tags:
 - Web Design
 - Web Development
