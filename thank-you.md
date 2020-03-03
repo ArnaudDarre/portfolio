@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Thank you
+id: thank-you
 description: 
 
 page_title: Thank you for words!

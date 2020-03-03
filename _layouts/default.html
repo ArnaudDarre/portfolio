@@ -1,6 +1,7 @@
 {% include header.html %}
+{% assign id = include.id %} 
 
-<section id="thank-you" class="row section">
+<section {% if page.id %}id="{{ page.id }}" {% endif %}class="row section">
     <div class="section__background">
         <span class="background__circle background__circle--landing"></span>
         <span class="background__square background__square--landing"></span>
