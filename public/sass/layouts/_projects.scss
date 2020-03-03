@@ -68,6 +68,10 @@
                 }
             }
         }
+
+        .button--small {
+            margin-left: $integer-xl;
+        }
     }
 
     &__image {

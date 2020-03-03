@@ -38,11 +38,14 @@
             @include background-shape(500px, -200vh, null, null, 200vw, 200vw, $primary, null);
         }
         // projects
+        &--branding {
+            @include background-shape(-40vw, -90vw, null, null, 260vw, 200vw, $primary, -16deg);
+        }
         &--digital {
-            @include background-shape(-140vw, null, null, -140vw, 260vw, 200vw, $primary, 64deg);
+            @include background-shape(-120vw, null, null, -140vw, 260vw, 200vw, $primary, 64deg);
         }
         &--editorial {
-            @include background-shape(-170vw, -140vw, null, null, 260vw, 200vw, $primary, -16deg);
+            @include background-shape(-330vh, -100vw, null, null, 260vw, 200vw, $primary, 104deg);
         }
     }
 
@@ -79,11 +82,11 @@
             @include background-shape(-200vh, null, null, 160vw, 20vw, 20vw, $primary, null);
         }
         // projects
-        &--video {
-            @include background-shape(-120vw, null, null, -260vw, 260vw, 260vw, $primary, null);
+        &--drawings {
+            @include background-shape(-240vw, null, null, -90vw, 350vw, 350vw, $primary, null);
         }
-        &--identity {
-            @include background-shape(-10vw, -80vw, null, null, 200vw, 200vw, $primary, null);
+        &--motion {
+            @include background-shape(-20vw, -50vw, null, null, 200vw, 200vw, $primary, null);
         }
     }
 

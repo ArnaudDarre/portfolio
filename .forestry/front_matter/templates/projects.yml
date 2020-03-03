@@ -1,0 +1,48 @@
+---
+label: Projects
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+- type: text
+  name: title
+  label: title
+- type: text
+  name: subtitle
+  label: subtitle
+- type: textarea
+  name: body
+  label: body
+- type: text
+  name: category
+  label: category
+- type: text
+  name: color
+  label: color
+- type: number
+  name: featured
+  label: featured
+- type: text
+  name: client
+  label: client
+- name: type
+  type: text
+  config:
+    required: false
+  label: type
+- name: video_id
+  type: text
+  config:
+    required: false
+  label: video id
+- type: text
+  name: website_url
+  label: website_url
+- type: text
+  name: website_title
+  label: website_title
+- type: list
+  name: tags
+  label: tags

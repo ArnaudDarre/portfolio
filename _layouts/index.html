@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 {% include header.html %}
 
 <!-- scrollify -->
@@ -60,38 +64,38 @@
                     </nav>
                 </div>
             </div>
-            {% assign ordered_projects = site.projects | sort:"featured" %}
-            {% for project in ordered_projects %}
-                {% if project.featured %}
-                    <div class="project__item {% if project.featured == 1 %}project__item--current{% endif %} project__item--{{ project.title | slugify }}">
-                        <div class="project">
-                            <div class="row">
-                                <div class="coloffset--2 col--10">
-                                    <a href="{{ project.url }}" class="project__image">
-                                        <div class="project__image-inner" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
-                                    </a>
-                                </div>
-                                {% if project.category %}
-                                    <p class="col--12 project__category label">{{ project.category }}</p>
-                                {% endif %}
-                                {% if project.title %}
-                                    <h2 class="col--12 project__title section__subtitle title">{{ project.title }}</h2>
-                                {% endif %}
-                                {% if project.subtitle %}
-                                    <h3 class="col--12 project__subtitle lead">{{ project.subtitle }}</h3>
-                                {% endif %}
-                                {% if project.body %}
-                                    <p class="col--lg6 col--md9 col--12 project__body body--bold hide--mobile">{{ project.body }}</p>
-                                {% endif %}
-                                <div class="col--6 col--12 project__button">
-                                    <a href="{{ project.url }}" class="button button--secondary button--animate fas fa-microscope">
-                                        <p class="button__inner">Discover</p>
-                                    </a>
-                                </div>
-                            </div>
+            {% for project in site.projects %}
+            {% assign project = site.projects | sort: "featured" %}
+            {% if project.featured %}
+            <div class="project__item {% if project.featured == '1' %}project__item--current{% endif %} project__item--{{ project.title | slugify }}">
+                <div class="project">
+                    <div class="row">
+                        <div class="coloffset--2 col--10">
+                            <a href="{{ project.url }}" class="project__image">
+                                <div class="project__image-inner" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
+                            </a>
+                        </div>
+                        {% if project.category %}
+                        <p class="col--12 project__category label">{{ project.category }}</p>
+                        {% endif %}
+                        {% if project.title %}
+                        <h2 class="col--12 project__title section__subtitle title">{{ project.title }}</h2>
+                        {% endif %}
+                        {% if project.subtitle %}
+                        <h3 class="col--12 project__subtitle lead">{{ project.subtitle }}</h3>
+                        {% endif %}
+                        {% if project.body %}
+                        <p class="col--lg6 col--md9 col--12 project__body body--bold hide--mobile">{{ project.body }}</p>
+                        {% endif %}
+                        <div class="col--6 col--12 project__button">
+                            <a href="{{ project.url }}" class="button button--secondary button--animate fas fa-microscope">
+                                <p class="button__inner">Discover</p>
+                            </a>
                         </div>
                     </div>
-                {% endif %}
+                </div>
+            </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>

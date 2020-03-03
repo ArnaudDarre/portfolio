@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
+admin_path: ''
 webhook_url: 
 sections:
 - type: directory
@@ -9,7 +9,7 @@ sections:
   label: Data
   create: all
   match: "**/*"
-  new_doc_ext: ".yml"
+  new_doc_ext: yml
 - type: directory
   path: _includes
   label: Includes
@@ -27,12 +27,9 @@ sections:
   label: Projects
   create: all
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: jekyll-posts
   label: Posts
-  create: all
-- type: jekyll-pages
-  label: Pages
   create: all
 upload_dir: public
 public_path: "/public"

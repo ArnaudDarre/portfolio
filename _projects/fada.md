@@ -1,25 +1,21 @@
 ---
 layout: projects
-featured: 2
+featured: "3"
 color: turquoise
-
-# info
 title: Fada
 subtitle: CSS framework
-body: Collection of ressources (mainly UI) coded during the development of the web projects I worked on and brought together. This is an ongoing project and evolves as my skills get better. If you are interested in it, don't hesitate to contact me.
+body: Collection of ressources (mainly UI) coded during the development of the web
+  projects I worked on and brought together. This is an ongoing project and evolves
+  as my skills get better. If you are interested in it, don't hesitate to contact
+  me.
 category: Digital
-
-# meta
 client: Personal project
-website_url: http://fada.arnaud-darre.com/
-website_title: fada.arnaud-darre.com
-tags: # no more than three
-  - Web Design
-  - Web Development
-  - Design System
+tags:
+- Web Design
+- Web Development
+- Design System
 
 ---
-
 {% include components/project-cover.html %}
 
 {% include components/project-body.html 

@@ -1,8 +1,6 @@
 ---
 layout: projects
-type: video
-featured: 1
-color: 
+featured: '2'
 
 # info
 title: Kinotype
