@@ -30,7 +30,7 @@ collections:
 
 # internal path
 url: http://arnaud-darre.com
-resourceurl: /public
+resourceurl: /assets
 
 # compress vendor
 # http://jch.penibelst.de/
