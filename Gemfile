@@ -20,8 +20,6 @@ group :jekyll_plugins do
   gem 'jekyll-autoprefixer'
   gem 'html-proofer'
   gem 'jekyll-coffeescript'
-  gem "kramdown", ">= 2.3.0"
-  gem "nokogiri", ">= 1.10.8"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
