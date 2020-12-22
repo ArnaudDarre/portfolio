@@ -20,7 +20,7 @@
 	}
 	
 	[class*="coloffset--"] {
-		@include transform(none);
+		transform: none;
 		margin-left: 0 !important;
 		width: 100% !important;
 	}

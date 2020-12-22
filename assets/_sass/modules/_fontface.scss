@@ -23,8 +23,6 @@
 // black, heavy             900     $black
 // —————————————————————————————————————————————————————————————————
 
-
-
 // —————————————————————————————————————————————————————————————————
 // chivo (content)
 // —————————————————————————————————————————————————————————————————
@@ -44,8 +42,6 @@
 // black
 @include fontface('Chivo', chivo/chivo-black, $font-black, normal);
 @include fontface('Chivo', chivo/chivo-blackitalic, $font-black, italic);
-
-
 
 // —————————————————————————————————————————————————————————————————
 // roboto mono (code)

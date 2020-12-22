@@ -9,8 +9,6 @@
 // form
 // —————————————————————————————————————————————————————————————————
 
-
-
 // —————————————————————————————————————————————————————————————————
 // general
 // —————————————————————————————————————————————————————————————————
@@ -21,9 +19,7 @@ html, body {
 	line-height: 1.5;
 	font-weight: $font-regular;
 	color: $black;
-	/*-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: auto;*/
+
 	@include responsive(min-width, $desktop-xl) {
 		font-size: 20px;
 	}
@@ -33,18 +29,23 @@ html, body {
 	@include font-size(6.5, $font-black, normal);
 	line-height: 1;
 	text-transform: uppercase;
+
 	@include responsive-mobile() {
 		font-size: 4rem;
 	}
+
 	@include responsive(max-width, $desktop-max) {
 		font-size: 5rem;
 	}
+
 	@include responsive(max-width, $tablet-max) {
 		font-size: 4rem;
 	}
+
 	@include responsive(max-width, $mobile-max) {
 		font-size: 3rem;
 	}
+
 	@include responsive-mobile-landscape() {
 		display: none;
 	}
@@ -53,12 +54,15 @@ html, body {
 .title {
 	@include font-size(4, $font-black, normal);	
 	line-height: 1;
+
 	@include responsive-mobile() {
 		font-size: 3rem;
 	}
+
 	@include responsive(max-width, $tablet-max) {
 		font-size: 3rem;
 	}
+
 	@include responsive(max-width, $mobile-max) {
 		font-size: 2.5rem;
 	}
@@ -67,12 +71,15 @@ html, body {
 .subtitle {
 	@include font-size(2.5, $font-bold, normal);
 	line-height: 1;
+	
 	@include responsive-mobile() {
 		font-size: 2rem;
 	}
+
 	@include responsive(max-width, $tablet-max) {
 		font-size: 2rem;
 	}
+
 	@include responsive(max-width, $mobile-max) {
 		font-size: 1.8rem;
 	}
@@ -135,15 +142,13 @@ html, body {
 
 @for $i from 1 through 4 {
 	.col-text--#{$i} {
-		@include column-count($i);
-		@include column-gap(2rem);
+		column-count: $i;
+		column-gap: 2rem;
 		@include responsive(max-width, $tablet-max) {
-			@include column-count(1);
+			column-count: 1;
 		}
 	}
 }
-
-
 
 // —————————————————————————————————————————————————————————————————
 // buttons
@@ -196,8 +201,6 @@ html, body {
 		}
 	}
 }
-
-
 
 // —————————————————————————————————————————————————————————————————
 // form

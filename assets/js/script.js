@@ -9,8 +9,6 @@ $(document).ready(function() {
 // cookie bar accept
 // —————————————————————————————————————————————————————————————————
 
-
-
 // —————————————————————————————————————————————————————————————————
 // menu scroll animation
 // —————————————————————————————————————————————————————————————————
@@ -24,8 +22,6 @@ $(window).scroll(function() { //the scrolled element
 	}
 });
 
-
-
 // —————————————————————————————————————————————————————————————————
 // menu open animation
 // —————————————————————————————————————————————————————————————————
@@ -34,8 +30,6 @@ $('.button--menu').click(function(){
 	$('.header').toggleClass('js-opened');
 	$('body').toggleClass('js-freeze');
 });
-
-
 
 // —————————————————————————————————————————————————————————————————
 // back to top
@@ -55,8 +49,6 @@ btn.on('click', function(e) {
 	e.preventDefault();
 	$('html, body').animate({scrollTop:0}, '400');
 });
-
-
 
 // —————————————————————————————————————————————————————————————————
 // cookie bar accept
@@ -83,8 +75,6 @@ displayCookieBar()
 $(".cookie__button").click(function(){
 	$(".cookie").addClass("js-cookie-accepted");
 })
-
-
 
 // —————————————————————————————————————————————————————————————————
 

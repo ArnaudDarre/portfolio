@@ -4,8 +4,6 @@
 // PROJECT CAROUSEL
 // —————————————————————————————————————————————————————————————————
 
-
-
 .project--carousel {
 
     .project {
@@ -14,7 +12,7 @@
         }
 
         &__index {
-            @include display-flex();
+            display: flex;
 
             &-current {
                 padding-right: $integer-md;

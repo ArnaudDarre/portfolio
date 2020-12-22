@@ -14,14 +14,12 @@
 // footer
 // —————————————————————————————————————————————————————————————————
 
-
-
 // —————————————————————————————————————————————————————————————————
 // general
 // —————————————————————————————————————————————————————————————————
 
 * {
-	@include box-sizing(border-box);
+	box-sizing: border-box;
 	outline: none;
 }
 
@@ -39,6 +37,7 @@ body {
 		border: $integer-lg solid $white;
 		box-sizing: border-box;
 		pointer-events: none;
+
 		@include responsive(max-width, $tablet-max) {
 			border-width: $integer-md;
 		}
@@ -54,9 +53,9 @@ body {
 }
 
 .row {
-	@include display-flex();
-	@include flex-wrap(wrap);
 	@include calc(width, '100% + '$integer*2);
+	display: flex;
+	flex-wrap: wrap;
 	margin-right: -$integer;
 	margin-left: -$integer;
 
@@ -81,7 +80,7 @@ body {
 }
 
 [class*="coloffset--"] {
-	@include transform(translateX($integer));
+	transform: translateX($integer);
 }
 
 @for $i from 1 through 16 {
@@ -181,13 +180,13 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
 	-webkit-box-shadow: 0 0 0px 1000px $primary inset;
-	@include transition(background-color $transition);
+	transition: background-color $transition;
 }
 
 // prevent images from stretching with flex 
 
 img {
-	@include align-self(center);
+	align-self: center;
 	width: 100%;
 }
 
@@ -204,8 +203,6 @@ li {
 		padding-top: $integer/2 !important;
 	}
 }
-
-
 
 // —————————————————————————————————————————————————————————————————
 // responsive
@@ -226,58 +223,53 @@ li {
 	&--mobile { @include responsive(min-width, $mobile-min) { display: none !important; } }
 }
 
-
-
 // —————————————————————————————————————————————————————————————————
 // z-index
 // —————————————————————————————————————————————————————————————————
 
-.section__header 		{ z-index: 20; }
-.cookie				 	{ z-index: 30; }
+.section__header 	{ z-index: 20; }
+.cookie				 		{ z-index: 30; }
 body:before				{ z-index: 40; }
-.header 				{ z-index: 50; }
-.modal 					{ z-index: 60; }
+.header 					{ z-index: 50; }
+.modal 						{ z-index: 60; }
 
 @for $i from 0 through 9 {
 	.z-index--#{$i} { z-index: $i; }
 }
-
-
 
 // —————————————————————————————————————————————————————————————————
 // hover classes
 // —————————————————————————————————————————————————————————————————
 
 .hover-grayscale {
-	@include filter(grayscale(100%));
-	@include transition(filter, $transition);
+	filter: grayscale(100%);
+	transition: filter, $transition;
 	will-change: filter;
 	
 	@include hover-link {
-		@include filter(grayscale(0%));
+		filter: grayscale(0%);
 	}
 }
-
-
 
 // —————————————————————————————————————————————————————————————————
 // section
 // —————————————————————————————————————————————————————————————————
 
 .section {
-	@include display-flex();
+	display: flex;
 	position: relative;
 	min-height: 100vh;
 	
 	&__header {
-		@include transform(rotate(-90deg));
-		@include transform-origin(top left);
+		transform: rotate(-90deg);
+		transform-origin: top left;
 		position: fixed;
 		bottom: $integer-xl;
 		left: $integer-xl;
 
 		&--mobile {
 			margin-bottom: $integer-md;
+
 			@include responsive(min-width, $tablet-min) {
 				display: none;
 			}
@@ -285,9 +277,10 @@ body:before				{ z-index: 40; }
 	}
 	
 	&__title {
+
 		@include responsive(max-width, $tablet-max) {
 			display: none;
-        }
+		}
 	}
 	
 	&__content {
@@ -320,17 +313,17 @@ body:before				{ z-index: 40; }
 .section {
 
 	&--left {
-		@include align-items(flex-start);
+		align-items: flex-start;
 		text-align: left;
 	}
 
 	&--center {
-		@include align-items(center);
+		align-items: center;
 		text-align: center;
 	}
 
 	&--right {
-		@include align-items(flex-end);
+		align-items: flex-end;
 		text-align: right;
 	}
 }
@@ -344,14 +337,13 @@ body:before				{ z-index: 40; }
 	}
 }
 
-
-
 // —————————————————————————————————————————————————————————————————
 // containers
 // —————————————————————————————————————————————————————————————————
 
 .block {
 	padding-bottom: $integer-xxxl;
+
 	@include responsive(max-width, $mobile-max) {
 		padding-bottom: $integer-xl;
 	}
@@ -378,7 +370,6 @@ body:before				{ z-index: 40; }
 	}
 }
 
-
 .card {
 
 	&__content {
@@ -393,8 +384,6 @@ body:before				{ z-index: 40; }
 	}
 }
 
-
-
 // —————————————————————————————————————————————————————————————————
 // elements
 // —————————————————————————————————————————————————————————————————
@@ -403,9 +392,6 @@ body:before				{ z-index: 40; }
 
 .logo {
 	
-	&__item {
-	}
-
 	&__background {
 		fill: $white;
 	}
@@ -421,8 +407,6 @@ body:before				{ z-index: 40; }
 	height: 100%;
 }
 
-
-
 // —————————————————————————————————————————————————————————————————
 // header
 // —————————————————————————————————————————————————————————————————
@@ -430,17 +414,14 @@ body:before				{ z-index: 40; }
 .header {
 	pointer-events: none;
 	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-
-	&__bar {
-	}
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 
 	&__logo {
-		@include align-self(flex-start);
-		@include transition(transform 0.4s ease);
+		align-self: flex-start;
+		transition: transform 0.4s ease;
 		width: $integer-xxl;
 		height: $integer-xxl;
 
@@ -455,18 +436,18 @@ body:before				{ z-index: 40; }
 		}
 
 		@include hover-link {
-			@include transform(rotate(-225deg) translateY($integer-xxs) scale(1.08));
+			transform: rotate(-225deg) translateY($integer-xxs) scale(1.08);
 
 			.page--index & {
-				@include transform(rotate(225deg) translateY($integer-xxs) scale(1.08));
+				transform: rotate(225deg) translateY($integer-xxs) scale(1.08);
 			}
 		}
 	}
 }
 
 .sidebar {
-	@include display-flex();
-	@include justify-content(center);
+	display: flex;
+	justify-content: center;
 	position: fixed;
 	top: 0;
 	height: 100vh;
@@ -499,9 +480,9 @@ body:before				{ z-index: 40; }
 	}
 	
 	&--right {
-		@include flex-direction(column);
-		@include align-items(center);
-		@include justify-content(space-between);
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 		right: $integer-lg*2;
 
 		@include responsive(max-width, $tablet-max) {
@@ -510,11 +491,9 @@ body:before				{ z-index: 40; }
 	}
 
 	.button {
-		@include align-self(flex-start);
+		align-self: flex-start;
 	}
 }
-
-
 
 // —————————————————————————————————————————————————————————————————
 // footer
@@ -528,24 +507,16 @@ body:before				{ z-index: 40; }
 	color: $white;
 
 	&__item {
-		@include display-flex();
-		@include flex-direction(column);
-		@include justify-content(space-between);
-	}
-
-	&__logo {
-	}
-
-	&__title {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	.button {
 		margin-top: $integer-lg;
-		@include align-self(flex-start);
+		align-self: flex-start;
 	}
 }
-
-
 
 // —————————————————————————————————————————————————————————————————
 // header
@@ -558,9 +529,9 @@ body:before				{ z-index: 40; }
 		display: none;
 		
 		@include responsive-mobile {
-			@include display-flex();
-			@include flex-direction(column);
-			@include align-items(center);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			pointer-events: initial;
 		}
 

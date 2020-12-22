@@ -4,14 +4,10 @@ $(document).ready(function() {
 // BUTTONS
 // —————————————————————————————————————————————————————————————————
 
-
-
 // MENU BUTTON
 $(".button--menu").click(function(event) {
 	$('.button--menu').toggleClass("button--menu--open");
 });
-
-
 
 // —————————————————————————————————————————————————————————————————
 

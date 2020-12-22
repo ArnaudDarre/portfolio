@@ -8,8 +8,6 @@
 // button menu
 // —————————————————————————————————————————————————————————————————
 
-
-
 // —————————————————————————————————————————————————————————————————
 // general
 // —————————————————————————————————————————————————————————————————
@@ -20,26 +18,24 @@
 }
 
 @include keyframes(spin) {
-	100% { @include transform(rotate(360deg)); }
+	100% { transform: rotate(360deg); }
 }
 
 @include keyframes(spin-reverse) {
-	100% { @include transform(rotate(-360deg)); }
+	100% { transform: rotate(-360deg); }
 }
 
 @include keyframes(pulse) {
-	0% { 	@include box-shadow(0 0 0 0 rgba($secondary, 0.4)); }
-	70% { 	@include box-shadow(0 0 0 $integer rgba($secondary, 0)); }
-	100% { 	@include box-shadow(0 0 0 0 rgba($secondary, 0)); }
+	0% { 	box-shadow: 0 0 0 0 rgba($secondary, 0.4); }
+	70% { 	box-shadow: 0 0 0 $integer rgba($secondary, 0); }
+	100% { 	box-shadow: 0 0 0 0 rgba($secondary, 0); }
 }
 
 @include keyframes(pulse-lg) {
-	0% { 	@include box-shadow(0 0 0 0 rgba($secondary, 0.4)); }
-	70% { 	@include box-shadow(0 0 0 $integer-sm rgba($secondary, 0)); }
-	100% { 	@include box-shadow(0 0 0 0 rgba($secondary, 0)); }
+	0% { 	box-shadow: 0 0 0 0 rgba($secondary, 0.4); }
+	70% { 	box-shadow: 0 0 0 $integer-sm rgba($secondary, 0); }
+	100% { 	box-shadow: 0 0 0 0 rgba($secondary, 0); }
 }
-
-
 
 // —————————————————————————————————————————————————————————————————
 // scroll animation
@@ -47,12 +43,10 @@
 
 @include keyframes(slide) {
 	0% 		{ opacity: 0;
-			  @include transform(translateY(-30%)); }
+			  transform: translateY(-30%); }
 	100% 	{ opacity: 1;
-			  @include transform(translateY(0)); } 
+			  transform: translateY(0); } 
 }
-
-
 
 // —————————————————————————————————————————————————————————————————
 // button menu
@@ -69,13 +63,13 @@
 @include keyframes(button-menu-open-before) {
 	0% 		{ transform: translateY(10px); }
 	50% 	{ transform: translateY(0); 
-			  transform: rotate(0); }
+			  	transform: rotate(0); }
 	100% 	{ transform: rotate(45deg); }
 }
 @include keyframes(button-menu-open-after) {
 	0% 		{ transform: translateY(-10px); }
 	50% 	{ transform: translateY(0); 
-			  transform: rotate(0); }
+			  	transform: rotate(0); }
 	100% 	{ transform: rotate(-45deg); }
 }
 
@@ -83,12 +77,12 @@
 @include keyframes(button-menu-close-before) {
 	0% 		{ transform: rotate(45deg); }
 	50% 	{ transform: rotate(0); 
-			  transform: translateY(0); }
+			  	transform: translateY(0); }
 	100% 	{ transform: translateY(10px); }
 }
 @include keyframes(button-menu-close-after) {
 	0% 		{ transform: rotate(-45deg); }
 	50% 	{ transform: rotate(0); 
-			  transform: translateY(0); }
+			  	transform: translateY(0); }
 	100% 	{ transform: translateY(-10px); }
 }

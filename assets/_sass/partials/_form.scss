@@ -7,8 +7,6 @@
 // select
 // —————————————————————————————————————————————————————————————————
 
-
-
 // —————————————————————————————————————————————————————————————————
 // general
 // —————————————————————————————————————————————————————————————————
@@ -16,12 +14,9 @@
 .form {
 	width: 100%;
 
-	&__header {
-	}
-	
 	&__content {
-		@include display-flex();
-		@include flex-wrap(wrap);
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&__group {
@@ -37,16 +32,12 @@
 				&__label {
 					color: $black;
 				}
-
-				// &__input {
-				// 	border-color: $secondary;
-				// }
 			}
 		}
 	}
 
 	&__control {
-		@include display-flex();
+		display: flex;
 	}
 
 	&__textarea {
@@ -54,8 +45,8 @@
 	}
 
 	&__label {
-		@include transition(color $transition);
-		@include text-overflow(ellipsis);
+		transition: color $transition;
+		text-overflow: ellipsis;
 		will-change: color;
 		cursor: pointer;
 		display: block;
@@ -66,8 +57,8 @@
 	}
 
 	&__input {
-		@include transition(border $transition);
-		@include text-overflow(ellipsis);
+		transition: border $transition;
+		text-overflow: ellipsis;
 		will-change: border;
 		width: 100%;
 		background-color: transparent;
@@ -89,16 +80,14 @@
 	opacity: 1;
 }
 
-
-
 // —————————————————————————————————————————————————————————————————
 // select
 // —————————————————————————————————————————————————————————————————
 
 .select-hide {
 	opacity: 0;
-    position: absolute;
-    height: 0;
+	position: absolute;
+	height: 0;
 	padding: 0;
 	bottom: 0;
 }
@@ -113,9 +102,9 @@
 
 	&:after {
 		@include font-awesome("\f078", 0, $integer, auto, auto, $primary);
-		@include transition(color $transition);
-		@include display-flex();
-		@include align-items(center);
+		transition: color $transition;
+		display: flex;
+		align-items: center;
 		will-change: color;
 		height: 100%;
 		font-size: 1.2rem;
@@ -136,7 +125,7 @@
 		border: $integer-xs solid $black;
 
 		li {
-			@include transition(color $transition);
+			transition: color $transition;
 			will-change: color;
 			margin: 0;
 			padding: $integer $integer !important;

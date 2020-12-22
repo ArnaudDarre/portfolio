@@ -32,6 +32,10 @@ collections:
 url: http://arnaud-darre.com
 resourceurl: /assets
 
+# PLUGINS
+plugins:
+  - jekyll-autoprefixer
+  - jekyll-coffeescript
 # compress vendor
 # http://jch.penibelst.de/
 compress_html:
@@ -43,6 +47,14 @@ compress_html:
   blanklines: true
   profile: false
   startings: []
+# autoprefixer
+autoprefixer:
+  browsers:
+  - last 10 versions
+# sass
+sass:
+  sass_dir: assets/_sass
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -50,9 +62,11 @@ compress_html:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - _backup/
   - node_modules
-  - public/sass
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - assets/masters/
+  - .sass-cache

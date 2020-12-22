@@ -8,8 +8,6 @@ $(document).ready(function() {
 // custom file upload
 // —————————————————————————————————————————————————————————————————
 
-
-
 // —————————————————————————————————————————————————————————————————
 // change style on focus
 // —————————————————————————————————————————————————————————————————
@@ -20,8 +18,6 @@ $(".form__input").focus(function() {
 $(".form__input").focusout(function() {
 	$(this).closest(".form__group").removeClass('focused');
 });
-
-
 
 // —————————————————————————————————————————————————————————————————
 // custom select
@@ -89,8 +85,6 @@ $('.form__dropdown').bind('mousewheel DOMMouseScroll', function(e) {
         $(this).scrollTop(scrollTo + $(this).scrollTop());
     }
 });
-
-
 
 // —————————————————————————————————————————————————————————————————
 // custom file upload
@@ -223,8 +217,6 @@ $('.form__dropdown').bind('mousewheel DOMMouseScroll', function(e) {
 	}(jQuery));
 
 	$('input[type=file]').customFile();
-
-
 
 // —————————————————————————————————————————————————————————————————
 
