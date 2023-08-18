@@ -4,17 +4,17 @@
   icon: book
 
 - title: Web Design
-  body: Design and prototyping of websites and mobile apps, from showcase websites to complex management tools.
+  body: Design and prototyping of websites and mobile apps, from wireframes to final designs.
   project: Applied Blockchain
   icon: globe
 
 - title: Front-end Development
-  body: Proficient in the major static front-end tools (HTML, Sass) and static frameworks (Jekyll).
+  body: Proficient in HTML, CSS/SASS, Javascript and React.
   project: Fada
   icon: code
 
-- title: Brand Identity
-  body: Logo, identity and style guide, on multiple communication mediums, and management of the evolution of that brand .
+- title: Branding & design systems
+  body: Logo, identity and style guide, on multiple communication mediums, and management of the evolution of that brand.
   project: Watapix
   icon: box
 
