@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 // init Isotope
 var $grid = $('.grid').isotope({
-    // options
+    layoutMode: 'fitRows'
   });
   // filter items on button click
   $('.filter-button-group').on( 'click', 'a', function() {

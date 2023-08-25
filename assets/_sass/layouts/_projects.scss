@@ -13,6 +13,7 @@
   }
 
   @include responsive(max-width, $tablet-max) {
+
     .body--right {
       text-align: left;
     }
@@ -21,19 +22,15 @@
 
 .card--project {
   min-height: auto;
-  padding-bottom: $integer-xxl;
+  padding-bottom: $integer-lg;
 
   .project__image {
-    position: absolute;
-    top: $integer-lg;
-    right: $integer-xl;
-    bottom: 0;
-    width: 65%;
-
-    @include responsive(max-width, $mobile-max) {
-      right: 0;
-      width: 80%;
-    }
+    width: 100%;
+    height: auto;
+    padding-bottom: 66.66%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
   }
 }
 
@@ -73,10 +70,6 @@
     .button--small {
       margin-left: $integer-xl;
     }
-  }
-
-  &__image {
-    opacity: 0.2;
   }
 
   &__button {
