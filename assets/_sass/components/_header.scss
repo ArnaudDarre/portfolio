@@ -12,12 +12,12 @@
     width: $integer-xxl;
     height: $integer-xxl;
 
-    @include responsive(max-width, $tablet-max) {
+    @include responsive(down, tablet) {
       width: $integer-xl;
       height: $integer-xl;
     }
 
-    @include responsive(max-width, $mobile-max) {
+    @include responsive(down, mobile) {
       width: $integer-md*2;
       height: $integer-md*2;
     }

@@ -5,7 +5,7 @@ html, body {
 	font-weight: $font-regular;
 	color: $black;
 
-	@include responsive(min-width, $desktop-xl) {
+	@include responsive(up, desktop-lg) {
 		font-size: 20px;
 	}
 }
@@ -16,39 +16,39 @@ html, body {
 	text-transform: uppercase;
 
 	@include responsive-mobile() { font-size: 4rem; }
-	@include responsive(max-width, $desktop-max) { font-size: 4.5rem; }
-	@include responsive(max-width, $tablet-max) { font-size: 4rem; }
-	@include responsive(max-width, $mobile-max) { font-size: 3rem; }
+	@include responsive(down, laptop) { font-size: 4.5rem; }
+	@include responsive(down, tablet) { font-size: 4rem; }
+	@include responsive(down, mobile) { font-size: 3rem; }
 	@include responsive-mobile-landscape() { display: none; }
 }
 
 .h2, %h2 {
 	@include font-size(4, $font-black, normal);	
-	line-height: 1;
+	line-height: 1.25;
 
 	@include responsive-mobile() { font-size: 3rem; }
-	@include responsive(max-width, $tablet-max) { font-size: 3rem; }
-	@include responsive(max-width, $mobile-max) { font-size: 2.5rem; }
+	@include responsive(down, tablet) { font-size: 3rem; }
+	@include responsive(down, mobile) { font-size: 2.5rem; }
 }
 
 .h3, %h3 {
 	@include font-size(2.5, $font-bold, normal);
-	line-height: 1;
+	line-height: 1.25;
 
 	@include responsive-mobile() { font-size: 2rem; }
-	@include responsive(max-width, $tablet-max) { font-size: 2rem; }
-	@include responsive(max-width, $mobile-max) { font-size: 1.8rem; }
+	@include responsive(down, tablet) { font-size: 2rem; }
+	@include responsive(down, mobile) { font-size: 1.8rem; }
 }
 
 .h4, %h4 {
 	@include font-size(1.5, $font-black, normal);
-	line-height: 1;
+	line-height: 1.25;
 	text-transform: uppercase;
 }
 
 .h5, %h5 {
 	@include font-size(1.5, $font-bold, normal);
-	line-height: 1;
+	line-height: 1.25;
 }
 
 .quote, %quote {
@@ -62,13 +62,9 @@ html, body {
 	}
 }	
 
-.subtitle, %subtitle { font-size: 1.25rem; }
-
-.caption, %caption { 
-	font-size: 0.75rem;
-	font-weight: $font-bold;
-	color: $secondary;
-}
+.subtitle, %subtitle { @include font-size(1.25); }
+.body, %body { @include font-size(1); }
+.caption, %caption { @include font-size(0.75, $font-bold); color: $secondary; }
 
 // overrides
 

@@ -1,85 +1,101 @@
+// —————————————————————————————————————————————————————————————————
+// elements
+// alignement
+// colour
+// overrides
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
 .section {
   display: flex;
   position: relative;
   min-height: 100vh;
 
-  &__header {
+  &__container {
+    padding-top: $spacing*2;
+    padding-right: $spacing*3;
+    padding-bottom: $spacing*2;
+    padding-left: $spacing*3;
+    width: 100%;
+  }
+
+  &__label {
     transform: rotate(-90deg);
     transform-origin: top left;
     position: fixed;
-    bottom: $integer-xl;
+    bottom: $spacing;
     left: $integer-xl;
 
-    &--mobile {
-      margin-bottom: $integer-md;
-
-      @include responsive(min-width, $tablet-min) {
-        display: none;
-      }
-    }
-  }
-
-  &__title {
-
-    @include responsive(max-width, $tablet-max) {
+    @include responsive(down, tablet) {
       display: none;
     }
   }
 
-  &__content {
-    padding-top: $integer-xxxxl;
-    padding-right: $integer-xxxl*2;
-    padding-bottom: $integer-xxxxl;
-    padding-left: $integer-xxxl*2;
-    width: 100%;
-
-    @include responsive(max-width, $tablet-max) {
-      padding-top: $integer-xxl;
-
-      .page--index & {
-        padding-top: $integer-xl;
-      }
+  &__header {
+    
+    & + .section__content {
+      margin-top: $spacing*2;
     }
   }
 
-  &__comment {
-    margin-bottom: $integer-xl;
+  &__title {
+    margin-bottom: $spacing*2;
+
+    @include responsive(up, tablet) {
+      display: none;
+    }
+
+    @include responsive(down, tablet) {
+ 
+      & + .section__subtitle { margin-top: $spacing; }
+      & + .section__lead { margin-top: $spacing; }
+    }
   }
 
   &__subtitle {
-    margin-bottom: $integer-xxxl;
 
-    @include responsive(max-width, $tablet-max) {
-      margin-bottom: $integer-lg;
-    }
+    & + & { margin-top: $spacing*0.5; }
+    & + .section__lead { margin-top: $spacing; }
+  }
+
+  &__lead {
+    max-width: $spacing*15;
   }
 }
 
+// —————————————————————————————————————————————————————————————————
 // alignement
+// —————————————————————————————————————————————————————————————————
 
 .section {
 
-  &--left {
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  &--center {
-    align-items: center;
-    text-align: center;
-  }
-
-  &--right {
-    align-items: flex-end;
-    text-align: right;
-  }
+  &--left { align-items: flex-start; text-align: left; }
+  &--center { align-items: center; text-align: center; }
+  &--right { align-items: flex-end; text-align: right; }
 }
 
-// colour variant
+// —————————————————————————————————————————————————————————————————
+// colour
+// —————————————————————————————————————————————————————————————————
 
 .section {
 
   &--primary {
     background-color: $primary;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// overrides
+// —————————————————————————————————————————————————————————————————
+
+#landing {
+
+  .section__container {
+    padding-top: $spacing*3;
+    padding-bottom: $spacing;
   }
 }

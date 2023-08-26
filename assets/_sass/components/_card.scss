@@ -1,5 +1,7 @@
 // —————————————————————————————————————————————————————————————————
 // elements
+// size
+// transparent
 // variants
 // —————————————————————————————————————————————————————————————————
 
@@ -8,27 +10,101 @@
 // —————————————————————————————————————————————————————————————————
 
 .card {
-  padding-top: $integer-xl;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__icon {
+    font-size: 12rem;
+    color: rgba($secondary, 0.05);
+  }
+
+  &__image {
+    border-radius: $spacing;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
   &__content {
     position: relative;
   }
 
-  &__title {
-    padding-bottom: $integer;
+  &__actions {
+    margin-top: auto; // when grid with multiple cards, aligns the buttons vertically at the bottom of the card
   }
+}
 
-  &__body {
-    padding-bottom: $integer-md;
-  }
+// —————————————————————————————————————————————————————————————————
+// size
+// —————————————————————————————————————————————————————————————————
 
-  &__label {
-    padding-bottom: $integer;
-  }
+@mixin size($proportion, $size) {
 
-  &__icon {
-    font-size: 12rem;
-    color: rgba($secondary, 0.05);
+  .card {
+
+		&__media,
+		&__header,
+		&__content,
+		&__actions {
+			padding: $size $size 0 $size;
+
+			&:last-child {
+				padding-bottom: $size;
+			}
+		}
+
+		&__image {
+			border-radius: $size/3;
+		}
+
+		&__label {
+
+			& + .card__title {
+				margin-top: $size/3;
+			}
+		}
+	
+		&__title,
+		&__subtitle {
+	
+			& + .card__subtitle {
+				margin-top: $size/2;
+			}
+		}
+	}
+}
+
+.card {
+
+	@include size(md, $integer*3); 
+	&--lg { @include size(lg, $integer*4); }
+	&--sm { @include size(sm, $integer*2); }
+}
+
+// —————————————————————————————————————————————————————————————————
+// transparent
+// —————————————————————————————————————————————————————————————————
+
+.card--transparent {
+
+  .card {
+
+    &__media,
+    &__header,
+    &__content,
+    &__actions {
+      padding-right: 0;
+      padding-left: 0;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
   }
 }
 
@@ -43,6 +119,9 @@
   }
 
   &--skills {
-    padding-right: $col;
+
+    .card__subtitle {
+      max-width: $spacing*10;
+    }
   }
 }

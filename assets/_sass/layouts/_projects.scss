@@ -6,7 +6,7 @@
     background-color: rgba($white, 0.8);
   }
 
-  @include responsive(max-width, $tablet-max) {
+  @include responsive(down, tablet) {
 
     .body--right {
       text-align: left;
@@ -41,19 +41,11 @@
     &-item {
 
       &--prev {
-        margin-right: $integer-xl;
-
-        @include responsive(max-width, $mobile-max) {
-          margin-right: $integer-md;
-        }
+        margin-right: $spacing*0.5;
       }
 
       &--next {
-        margin-left: $integer-xl;
-
-        @include responsive(max-width, $mobile-max) {
-          margin-left: $integer-md;
-        }
+        margin-left: $spacing*0.5;
 
         &:first-child {
           margin-left: 0;
@@ -62,19 +54,19 @@
     }
 
     .button--small {
-      margin-left: $integer-xl;
+      margin-left: $spacing*0.5;
     }
   }
 
   &__button {
     text-align: right;
 
-    @include responsive(max-width, $desktop-max) {
+    @include responsive(down, laptop) {
       text-align: left;
       margin-top: $integer-md;
     }
 
-    @include responsive(max-width, $mobile-max) {
+    @include responsive(down, mobile) {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -91,7 +83,7 @@
 
   &__meta {
 
-    @include responsive(max-width, $tablet-max) {
+    @include responsive(down, tablet) {
       margin-top: $integer-md;
     }
 
@@ -125,7 +117,7 @@
       margin-bottom: 0;
     }
 
-    @include responsive(min-width, $mobile-min) {
+    @include responsive(up, mobile) {
 
       &:nth-child(3) {
         margin-bottom: 0;

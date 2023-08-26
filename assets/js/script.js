@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
 // —————————————————————————————————————————————————————————————————
-// SCRIPT
-// —————————————————————————————————————————————————————————————————
 // menu scroll animation
 // menu open animation
 // back to top

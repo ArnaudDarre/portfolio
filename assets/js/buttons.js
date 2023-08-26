@@ -1,10 +1,9 @@
 $(document).ready(function() {
 
 // —————————————————————————————————————————————————————————————————
-// BUTTONS
+// menu button
 // —————————————————————————————————————————————————————————————————
 
-// MENU BUTTON
 $(".button--menu").click(function(event) {
 	$('.button--menu').toggleClass("button--menu--open");
 });

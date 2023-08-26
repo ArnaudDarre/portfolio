@@ -21,9 +21,9 @@ layout: compress
             </a>
             {% endfor %}
         </div>
-        <div class="grid row">
+        <div class="js-grid grid">
             {% for project in site.projects %}
-            <div class="col--lg4 col--md6 col--12 card card--project {{ project.category | slugify }}">
+            <div class="grid__item grid__item--lg4 grid__item--md6 card card--project {{ project.category | slugify }}">
                 <div class="project__image background-cover" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é", "e" }}-cover.jpg)"></div>
                 <div class="card__content z-index--2">
                     <h2 class="card__title h5">{{ project.title }}</h2>

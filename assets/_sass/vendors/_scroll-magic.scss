@@ -1,7 +1,3 @@
-// —————————————————————————————————————————————————————————————————
-// SCROLL-MAGIC
-// —————————————————————————————————————————————————————————————————
-
 .background {
 
   &__square {
@@ -12,7 +8,7 @@
     &--landing {
       @include background-shape(null, -50vh, -66.67vh, null, 100vh, 100vh, $primary, null);
 
-      @include responsive(max-width, $tablet-max) {
+      @include responsive(down, tablet) {
         right: -50vw;
         bottom: -66.67vw;
         width: 100vw;
@@ -50,7 +46,7 @@
     &--landing {
       @include background-shape(-50vh, null, null, -50vh, 100vh, 100vh, $primary, null);
 
-      @include responsive(max-width, $tablet-max) {
+      @include responsive(down, tablet) {
         top: -50vw;
         left: -50vw;
         width: 100vw;

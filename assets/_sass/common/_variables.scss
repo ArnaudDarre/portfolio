@@ -42,18 +42,20 @@ $twitter: #1da1f2;
 
 $col: 100%/12;
 
-$integer: 0.5rem;         // 8px
+$integer: 0.5rem;
 
-$integer-xxs: $integer/8;     // 1px
-$integer-xs: $integer/4;     // 2px 
-$integer-sm: $integer/2;     // 4px
+$spacing: $integer*6;
 
-$integer-md: $integer*2;     // 16px
-$integer-lg: $integer*3;     // 24px
-$integer-xl: $integer*5;     // 40px
-$integer-xxl: $integer*7;     // 56px
-$integer-xxxl: $integer*10;    // 80px
-$integer-xxxxl: $integer*15;    // 120px
+$integer-xxs: $integer/8;
+$integer-xs: $integer/4;
+$integer-sm: $integer/2;
+
+$integer-md: $integer*2;
+$integer-lg: $integer*3;
+$integer-xl: $integer*5;
+$integer-xxl: $integer*7;
+$integer-xxxl: $integer*10;
+$integer-xxxxl: $integer*15;
 
 $transition: 0.4s ease 0s;
 
@@ -84,19 +86,20 @@ $font-black: 900;
 // anchor points
 // —————————————————————————————————————————————————————————————————
 
-$desktop-xl: 1800px;
+$desktop-lg-up: 1800px;
+$desktop-lg-down: 1879.98px;
 
-$desktop-lg-min: 1300px;
-$desktop-lg-max: 1299px;
+$desktop-up: 1280px;
+$desktop-down: 1279.98px;
 
-$desktop-min: 1024px;
-$desktop-max: 1023px;
+$laptop-up: 1024px;
+$laptop-down: 1023.98px;
 
-$tablet-min: 768px;
-$tablet-max: 767px;
+$tablet-up: 768px;
+$tablet-down: 767.98px;
 
-$mobile-min: 576px;
-$mobile-max: 575px;
+$mobile-up: 568px;
+$mobile-down: 567.98px;
 
-$mobile-sm-min: 350px;
-$mobile-sm-max: 349px;
+$mobile-sm-up: 350px;
+$mobile-sm-down: 349.98px;

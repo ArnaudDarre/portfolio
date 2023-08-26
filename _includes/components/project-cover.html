@@ -1,6 +1,6 @@
 {% assign size = include.size %}
 {% assign suffix = include.suffix %}
 
-<div class="col--16 block project__block">
+<div class="col--16 project__block">
     <div class="project__mockup {% if size == 'large' %}project__mockup--large{% endif %}" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-cover{% if suffix %}-{{ suffix }}{% endif %}.jpg)"></div>
 </div>

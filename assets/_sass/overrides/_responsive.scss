@@ -1,4 +1,4 @@
-@include responsive(max-width, $mobile-max) {
+@include responsive(down, mobile) {
 
 	.row {
 		margin-right: 0;

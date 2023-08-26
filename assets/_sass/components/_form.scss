@@ -1,5 +1,6 @@
 // —————————————————————————————————————————————————————————————————
 // general
+// focused
 // select
 // —————————————————————————————————————————————————————————————————
 
@@ -15,23 +16,6 @@
 		flex-wrap: wrap;
 	}
 
-	&__group {
-		position: relative;
-		width: 100%;
-		margin-bottom: $integer-md;
-		text-align: left;
-
-		&.focused {
-
-			.form {
-
-				&__label {
-					color: $black;
-				}
-			}
-		}
-	}
-
 	&__control {
 		display: flex;
 	}
@@ -41,7 +25,6 @@
 	}
 
 	&__label {
-		font-family: $font;
 		@extend %caption;
 		transition: color $transition;
 		text-overflow: ellipsis;
@@ -52,18 +35,20 @@
 		white-space: nowrap;
 		position: relative;
 		padding-bottom: $integer-sm;
+		padding-left: $integer;
 	}
 
 	&__input {
 		@include font-size(1, $font-regular, normal);
 		font-family: $font;
-		transition: border $transition;
+		transition: border-color $transition;
 		text-overflow: ellipsis;
-		will-change: border;
+		will-change: border-color;
 		width: 100%;
-		background-color: transparent;
-		padding-bottom: $integer;
-		border-bottom: 2px solid $black;
+		background-color: white;
+    border: $integer solid #00ffc4;
+    border-radius: $integer*2 !important;
+    padding: $integer;
 	}
 
 	&__button {
@@ -78,6 +63,20 @@
 @include placeholder {
 	color: $medium-grey;
 	opacity: 1;
+}
+
+// —————————————————————————————————————————————————————————————————
+// focused
+// —————————————————————————————————————————————————————————————————
+
+.form__group.focused {
+
+	.form {
+
+		&__input {
+			border-color: $secondary;
+		}
+	}
 }
 
 // —————————————————————————————————————————————————————————————————

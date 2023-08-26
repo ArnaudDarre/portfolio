@@ -135,7 +135,7 @@ select[multiple] {
 textarea {
 	min-height: 40px;
 	overflow: auto;
-	resize: none;
+	resize: vertical;
 	width: 100%;
 }
 

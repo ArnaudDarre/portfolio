@@ -4,170 +4,182 @@ layout: compress
 
 {% include header.html %}
 
-<!-- scrollify -->
-<!-- <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/scrollify/jquery.scrollify.min.js"></script>
-<script>$(function() { $.scrollify({ section : ".section", }); });</script> -->
-
 <!-- landing -->
-<section id="landing" class="row section js-scrolling-letters__section">
+<section id="landing" class="section js-scrolling-letters__section">
   <div class="section__background">
     <span class="background__trigger background__trigger--landing"></span>
     <span class="background__circle background__circle--landing"></span>
     <span class="background__square background__square--landing"></span>
   </div>
-  <div class="section__header">
-    <h1 class="section__title h1 js-scrolling-letters__text">Arnaud Darré</h1>
+  <div class="section__label">
+    <h1 class="h1 js-scrolling-letters__text">Arnaud Darré</h1>
   </div>
-  <div class="section__content">
-    <div class="row">
-      <p class="col--12 section__header--mobile h1">Arnaud Darré</p>
-      <h2 class="col--md12 col--12 section__subtitle h2">Graphic & Web Designer</h2>
-      <p class="col--md9 col--12 h3">Discover my <a href="#portfolio" class="js-button-anchor button--underline">work</a>, get to <a href="#about" class="js-button-anchor button--underline">know me</a> and <a href="#contact" class="js-button-anchor button--underline">contact</a> me for a chat!</p>
+  <div class="section__container grid grid--column grid--jcSpaceBetween">
+    <div class="section__header">
+      <p class="section__title h1">Arnaud Darré</p>
+      <h2 class="section__subtitle h2">Graphic & Web Designer</h2>
+      <div class="section__lead">
+        <p class="h3">Scroll down to discover my <a href="#portfolio" class="js-button-anchor button--underline">work</a>, get to <a href="#about" class="js-button-anchor button--underline">know me</a> and <a href="#contact" class="js-button-anchor button--underline">contact</a> me!</p>
+      </div>
     </div>
-    <div class="row">
-      <p class="col--lg5 col--md9 col--12 section__comment body">London-based designer with a 10 years experience working for web agencies and digital consultancies in France and the UK. I specialise in Brand Identity and UI/UX Design.</p>
-      <p class="coloffset--lg3 col--lg4 col--md9 col--12 section__comment h5">Available for work</p>
+    <div class="section__content">
+      <div class="grid grid__item grid--spacing4 grid--aiBaseline grid--jcSpaceBetween">
+        <p class="grid__item grid__item--lg6 grid__item--md9 body">London-based designer with 10 years of experience working for web agencies and digital consultancies in France and the UK. I specialise in Brand Identity & Design Systems and UI/UX Design.</p>
+        <p class="grid__item grid__item--lg6 grid__item--md9 h5 body--right">Available for work</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- portfolio -->
-<section id="portfolio" class="row section js-scrolling-letters__section">
+<section id="portfolio" class="section js-scrolling-letters__section">
   <div class="section__background">
     <span class="background__trigger background__trigger--portfolio"></span>
   </div>
-  <div class="section__header">
-    <h1 class="section__title h1 js-scrolling-letters__text">Portfolio</h1>
+  <div class="section__label">
+    <h1 class="h1 js-scrolling-letters__text">Portfolio</h1>
   </div>
-  <div class="section__content">
-    <div class="project--carousel">
-      <p class="section__header--mobile h1">Portfolio</p>
-      <div class="block">
-        <div class="row">
-          <p class="col--lg6 col--md9 col--12 section__comment h5">Browse through some crunchy bites or <a href="{{ site.base-url }}/projects-list" class="button--underline">check the entire collection</a>.</p>
-          <nav class="col--12 project__nav">
-            <button class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
-              <i class="button__inner fas fa-chevron-left"></i>
-            </button>
-            <div class="project__index">
-              <span class="project__index-current">
-                <span class="project__index-inner caption">01</span>
-              </span>
-              <span class="project__index-total caption">04</span>
+  <div class="section__container">
+    <div class="js-carousel carousel">
+      <div class="section__header">
+        <p class="section__title h1">Portfolio</p>
+        <div class="section__subtitle">
+          <div class="grid grid--row grid--jcSpaceBetween">
+            <div class="grid__item">
+              <p class="h5">Browse through some crunchy bites or <a href="{{ site.base-url }}/projects-list" class="button--underline">check the entire collection</a>.</p>
             </div>
-            <button class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
-              <i class="button__inner fas fa-chevron-right"></i>
-            </button>
-          </nav>
+            <div class="grid__item grid--aiEnd">
+              <nav class="project__nav">
+                <button class="project__nav-item project__nav-item--prev button button--icon button--secondary button--animate fas fa-chevron-left">
+                  <i class="button__inner fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel__index">
+                  <span class="carousel__indexCurrent">
+                    <span class="carousel__indexInner caption">01</span>
+                  </span>
+                  <span class="carousel__indexTotal caption">04</span>
+                </div>
+                <button class="project__nav-item project__nav-item--next button button--icon button--secondary button--animate fas fa-chevron-right">
+                  <i class="button__inner fas fa-chevron-right"></i>
+                </button>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
-      {% for project in site.projects %}
-      {% assign project = site.projects | sort: "featured" %}
-      {% if project.featured %}
-      <div class="project__item {% if project.featured == '1' %}project__item--current{% endif %} project__item--{{ project.title | slugify }}">
-        <div class="project">
-          <div class="row">
-            <div class="coloffset--2 col--10">
-              <a href="{{ project.url }}" class="project__image">
-                <div class="project__image-inner" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
-              </a>
+      <div class="section__content carousel__wrapper">
+        {% for project in site.projects %}
+        {% assign project = site.projects | sort: "featured" %}
+        {% if project.featured %}
+        <div class="carousel__item {% if project.featured == '1' %}carousel__item--current{% endif %} carousel__item--{{ project.title | slugify }}">
+          <a href="{{ project.url }}" class="carousel__image">
+            <div class="carousel__imageInner" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
+          </a>
+          <div class="carousel__content card card--lg card--transparent">
+            <div class="card__header">
+              {% if project.category %}
+              <p class="carousel__category card__label caption">{{ project.category }}</p>
+              {% endif %}
+              <h2 class="carousel__title card__title h2">{{ project.title }}</h2>
+              {% if project.subtitle %}
+              <h3 class="carousel__subtitle card__subtitle h5">{{ project.subtitle }}</h3>
+              {% endif %}
             </div>
-            {% if project.category %}
-            <p class="col--12 project__category caption">{{ project.category }}</p>
-            {% endif %}
-            {% if project.title %}
-            <h2 class="col--12 project__title section__subtitle h2">{{ project.title }}</h2>
-            {% endif %}
-            {% if project.subtitle %}
-            <h3 class="col--12 project__subtitle h5">{{ project.subtitle }}</h3>
-            {% endif %}
             {% if project.body %}
-            <p class="col--lg6 col--md9 col--12 project__body body--bold hide--mobile">{{ project.body }}</p>
+            <div class="card__content">
+              <p class="carousel__body body--bold hide--mobile">{{ project.body }}</p>
+            </div>
             {% endif %}
-            <div class="col--6 col--12 project__button">
+            <div class="card__actions carousel__button">
               <a href="{{ project.url }}" class="button button--secondary button--animate fas fa-microscope">
                 <p class="button__inner">Discover</p>
               </a>
             </div>
           </div>
         </div>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- about -->
-<section id="about" class="row section js-scrolling-letters__section">
-  <div class="section__background">
-    <span class="background__trigger background__trigger--about"></span>
-    <span class="background__circle background__circle--about"></span>
-    <span class="background__circle background__circle--about-small"></span>
-  </div>
-  <div class="section__header">
-    <h1 class="section__title h1 js-scrolling-letters__text">About</h1>
-  </div>
-  <div class="section__content">
-    <div class="block">
-      <p class="section__header--mobile h1">About</p>
-      <div class="row">
-        <h2 class="col--12 section__comment h5">How I approach design:</h2>
-        <p class="col--12 section__subtitle h2">Let's draw something together!</p>
-        <p class="col--md8 col--12 body">Graphic design, wether for print or digital medium, are not so different from a drawing composition. It all has to do with the use of breathing space around elements, colours, hierarchy and contrast.</p>
-        <p class="col--md8 col--12 body">This is why each design should start with a pen and paper. This playful but effective method enhances creativity by shortening the gap between the brain and the design tool, your hand.</p>
-      </div>
-    </div>
-    <div class="">
-      <h2 class="h5">What I like doing:</h2>
-      <div class="row">
-        {% for skill in site.data.skills %}
-        <div class="col--lg6 col--12 card card--skills">
-          <h3 class="card__title h4">{{ skill.title }}</h3>
-          <p class="card__body body">{{ skill.body }}</p>
-          <p class="card__label caption">Project</p>
-          <a href="{{ site.base-url }}/projects/{{ skill.project | slugify }}" class="body button--underline">{{ skill.project }}</a>
-        </div>
+        {% endif %}
         {% endfor %}
       </div>
     </div>
   </div>
 </section>
 
+<!-- about -->
+<section id="about" class="section js-scrolling-letters__section">
+  <div class="section__background">
+    <span class="background__trigger background__trigger--about"></span>
+    <span class="background__circle background__circle--about"></span>
+    <span class="background__circle background__circle--about-small"></span>
+  </div>
+  <div class="section__label">
+    <h1 class="h1 js-scrolling-letters__text">About</h1>
+  </div>
+  <div class="section__container">
+    <div class="section__header">
+      <p class="section__title h1">About</p>
+      <h2 class="section__subtitle h5">How I approach design:</h2>
+      <p class="section__subtitle h2">Let's draw something together!</p>
+      <div class="section__lead">
+        <p class="body">Graphic design, wether for print or digital medium, are not so different from a drawing composition. It all has to do with the use of breathing space around elements, colours, hierarchy and contrast.</p>
+        <p class="body">This is why each design should start with a pen and paper. This playful but effective method enhances creativity by shortening the gap between the brain and the design tool, your hand.</p>
+      </div>
+    </div>
+    <div class="section__content">
+      <h2 class="section__subtitle h5">What I like doing:</h2>
+      <div class="section__subtitle">
+        <div class="grid grid--spacing6">
+          {% for skill in site.data.skills %}
+          <div class="grid__item grid__item--lg6">
+            <div class="card card--sm card--transparent card--skills">
+              <div class="card__header">
+                <h3 class="card__title h4">{{ skill.title }}</h3>
+                <p class="card__subtitle">{{ skill.body }}</p>
+              </div>
+              <div class="card__content">
+                <p class="caption">Project</p>
+                <a href="{{ site.base-url }}/projects/{{ skill.project | slugify }}" class="body button--underline">{{ skill.project }}</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- contact -->
-<section id="contact" class="row section js-scrolling-letters__section">
+<section id="contact" class="section js-scrolling-letters__section">
   <div class="section__background">
     <span class="background__trigger background__trigger--contact"></span>
     <span class="background__square background__square--contact"></span>
   </div>
-  <div class="section__header">
-    <h1 class="section__title h1 js-scrolling-letters__text">Contact</h1>
+  <div class="section__label">
+    <h1 class="h1 js-scrolling-letters__text">Contact</h1>
   </div>
-  <div class="section__content">
-    <div class="block">
-      <p class="section__header--mobile h1">Contact</p>
-      <div class="row">
-        <div class="col--lg8">
-          <h2 class="section__comment h5">Feel free to drop me a line of you're interested, or if you simply want to have a chat</h2>
-        </div>
-      </div>
+  <div class="section__container">
+    <div class="section__header">
+      <p class="section__title h1">Contact</p>
+      <h2 class="section__lead h5">Feel free to drop me a line of you're interested, or if you simply want to have a chat</h2>
+    </div>
+    <div class="section__content">
       <form name="contact" method="POST" data-netlify="true" action="/thank-you">
-        <div class="row">
-          <div class="col--md5 col--12 form__group">
+        <div class="grid grid--spacing2">
+          <div class="grid__item grid__item--md5 form__group">
             <label for="first_name" class="form__label">Name</label>
             <input type="text" name="first_name" id="first_name" class="form__input" required="required">
           </div>
-          <div class="col--md5 col--12 form__group">
+          <div class="grid__item grid__item--md5 form__group">
             <label for="surname" class="form__label">Surname</label>
             <input type="text" name="surname" id="surname" class="form__input" required="required">
           </div>
-          <div class="col--md10 col--12 form__group">
+          <div class="grid__item grid__item--md10 form__group">
             <label for="email" class="form__label">Email</label>
             <input type="email" name="email" id="email" class="form__input" required="required">
           </div>
-          <div class="col--md10 col--12 form__group">
+          <div class="grid__item grid__item--md10 form__group">
             <label for="message" class="form__label">Message</label>
-            <textarea name="message" id="message" class="form__input" rows="4"></textarea>
+            <textarea name="message" id="message" class="form__input" rows="6"></textarea>
           </div>
         </div>
         <!-- prevent spam entries -->
@@ -189,18 +201,5 @@ layout: compress
 <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/anime.min.js"></script>
 <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/scrollingletters.js"></script>
 <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/project-carousel.js"></script>
-<!-- scrollify -->
-<!-- <script>
-  if ($(window).width() > 767) {   
-    $.scrollify({
-      section : ".section",
-      easing: "easeInOutQuad",
-      scrollSpeed: 1200,
-      updateHash: false
-    });
-  }
-  else {  
-  }; 
-</script> -->
 
 {% include footer.html %}

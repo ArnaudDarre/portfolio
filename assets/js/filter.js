@@ -1,11 +1,7 @@
 $(document).ready(function() {
 
-// —————————————————————————————————————————————————————————————————
-// FILTER (FOR BLOG POSTS)
-// —————————————————————————————————————————————————————————————————
-
 // init Isotope
-var $grid = $('.grid').isotope({
+var $grid = $('.js-grid').isotope({
     layoutMode: 'fitRows'
   });
   // filter items on button click
@@ -17,7 +13,5 @@ var $grid = $('.grid').isotope({
       $('.button-group a.button').removeClass('active');
       $(this).addClass('active');
   });
-
-// —————————————————————————————————————————————————————————————————
 
 });

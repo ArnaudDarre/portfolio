@@ -74,10 +74,29 @@
 // media queries
 // —————————————————————————————————————————————————————————————————
 
-@mixin responsive($value, $break) {
-	@media ($value: $break) {
-		@content;
-	}
+@mixin responsive($value, $breakpoint) {
+  @if $value == up {
+    $value: min-width;
+    @if $breakpoint == desktop-lg { $breakpoint: $desktop-lg-up; } 
+    @else if $breakpoint == desktop { $breakpoint: $laptop-up; } 
+    @else if $breakpoint == laptop { $breakpoint: $laptop-up; } 
+    @else if $breakpoint == tablet { $breakpoint: $tablet-up; } 
+    @else if $breakpoint == mobile { $breakpoint: $mobile-up; } 
+    @else if $breakpoint == mobile-sm { $breakpoint: $mobile-sm-up; }
+
+  } @else if $value == down {
+    $value: max-width;
+    @if $breakpoint == desktop-lg { $breakpoint: $desktop-lg-down; } 
+    @else if $breakpoint == desktop { $breakpoint: $laptop-down; } 
+    @else if $breakpoint == laptop { $breakpoint: $laptop-down; } 
+    @else if $breakpoint == tablet { $breakpoint: $tablet-down; } 
+    @else if $breakpoint == mobile { $breakpoint: $mobile-down; } 
+    @else if $breakpoint == mobile-sm { $breakpoint: $mobile-sm-down; }
+  }
+
+  @media ($value: $breakpoint) {
+    @content;
+  }
 }
 
 @mixin responsive-mobile() {
@@ -87,7 +106,7 @@
 }
 
 @mixin responsive-mobile-landscape {
-	@media only screen and (max-device-width: $desktop-max) and (orientation: landscape) {
+	@media only screen and (max-device-width: $laptop-down) and (orientation: landscape) {
 		@content;
 	}
 }
@@ -107,7 +126,7 @@
 	}
 }
 
-@mixin font-size($font-size, $font-weight, $font-style) {
+@mixin font-size($font-size, $font-weight: $font-regular, $font-style: normal) {
 	font-size: $font-size + rem;
 	letter-spacing: $font-size*.02 + rem;
 	font-weight: $font-weight;

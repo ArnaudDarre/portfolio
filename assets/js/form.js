@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
 // —————————————————————————————————————————————————————————————————
-// FORM
-// —————————————————————————————————————————————————————————————————
 // change style on focus
 // custom select
 // custom file upload

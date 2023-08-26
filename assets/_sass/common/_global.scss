@@ -29,7 +29,7 @@ body {
 		box-sizing: border-box;
 		pointer-events: none;
 
-		@include responsive(max-width, $tablet-max) {
+		@include responsive(down, tablet) {
 			border-width: $integer-md;
 		}
 	}
@@ -86,7 +86,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-	-webkit-box-shadow: 0 0 0px 1000px $primary inset;
+	-webkit-box-shadow: 0 0 0px 1000px rgba($primary, 0.1) inset;
 	transition: background-color $transition;
 }
 
@@ -117,48 +117,59 @@ li {
 
 // margins & paddings
 
-.no-margin {
-	margin: 0 !important;
+.m-05 { margin: $integer*0.5 !important; }
+.mt-05 { margin-top: $integer*0.5 !important; }
+.mr-05 { margin-right: $integer*0.5 !important; }
+.mb-05 { margin-bottom: $integer*0.5 !important; }
+.ml-05 { margin-left: $integer*0.5 !important; }
 
-	&--top { margin-top: 0 !important; }
-	&--right { margin-right: 0 !important; }
-	&--bottom { margin-bottom: 0 !important; }
-	&--left { margin-left: 0 !important; }
-}
+.p-05 { padding: $integer*0.5 !important; }
+.pt-05 { padding-top: $integer*0.5 !important; }
+.pr-05 { padding-right: $integer*0.5 !important; }
+.pb-05 { padding-bottom: $integer*0.5 !important; }
+.pl-05 { padding-left: $integer*0.5 !important; }
 
-.no-padding {
-	padding: 0 !important;
+@for $i from 0 through 20 {
 
-	&--top { padding-top: 0 !important; }
-	&--right { padding-right: 0 !important; }
-	&--bottom { padding-bottom: 0 !important; }
-	&--left { padding-left: 0 !important; }
+  .m-#{$i} { margin: $i*$integer !important; }
+  .mt-#{$i} { margin-top: $i*$integer !important; }
+  .mr-#{$i} { margin-right: $i*$integer !important; }
+  .mb-#{$i} { margin-bottom: $i*$integer !important; }
+  .ml-#{$i} { margin-left: $i*$integer !important; }
+
+  .p-#{$i} { padding: $i*$integer !important; }
+  .pt-#{$i} { padding-top: $i*$integer !important; }
+  .pr-#{$i} { padding-right: $i*$integer !important; }
+  .pb-#{$i} { padding-bottom: $i*$integer !important; }
+  .pl-#{$i} { padding-left: $i*$integer !important; }
 }
 
 // responsive
 
 .hide {
 	
-	&--desktop { @include responsive(max-width, $desktop-max) { display: none !important; } }
-	&--tablet { @include responsive(max-width, $tablet-max) { display: none !important; } }
-	&--mobile { @include responsive(max-width, $mobile-max) { display: none !important; } }
+	&--desktop { @include responsive(down, laptop) { display: none !important; } }
+	&--tablet { @include responsive(down, tablet) { display: none !important; } }
+	&--mobile { @include responsive(down, mobile) { display: none !important; } }
 	&--touch { @include responsive-mobile() { display: none !important; } }
 }
 
 .show {
 
-	&--desktop { @include responsive(min-width, $desktop-min) { display: none !important; } }
-	&--tablet { @include responsive(min-width, $tablet-min) { display: none !important; } }
-	&--mobile { @include responsive(min-width, $mobile-min) { display: none !important; } }
+	&--desktop { @include responsive(up, laptop) { display: none !important; } }
+	&--tablet { @include responsive(up, tablet) { display: none !important; } }
+	&--mobile { @include responsive(up, mobile) { display: none !important; } }
 }
 
 // z-index
 
-.section__header 	{ z-index: 20; }
-.cookie				 		{ z-index: 30; }
-body:before				{ z-index: 40; }
-.header 					{ z-index: 50; }
-.modal 						{ z-index: 60; }
+.carousel__image { z-index: -1; }
+.section__header { z-index: 20; }
+.section__container { z-index: 20; }
+.cookie { z-index: 30; }
+body:before { z-index: 40; }
+.header { z-index: 50; }
+.modal { z-index: 60; }
 
 @for $i from 0 through 9 {
 	.z-index--#{$i} { z-index: $i; }
@@ -182,18 +193,6 @@ body:before				{ z-index: 40; }
 	@include background(50% 50%, cover);
 	width: 100%;
 	height: 100%;
-}
-
-// —————————————————————————————————————————————————————————————————
-// containers
-// —————————————————————————————————————————————————————————————————
-
-.block {
-	padding-bottom: $integer-xxxl;
-
-	@include responsive(max-width, $mobile-max) {
-		padding-bottom: $integer-xl;
-	}
 }
 
 // —————————————————————————————————————————————————————————————————
