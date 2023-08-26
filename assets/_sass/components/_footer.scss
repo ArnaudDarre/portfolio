@@ -1,0 +1,18 @@
+.footer {
+  position: relative;
+  padding-top: $integer-xxxxl;
+  padding-bottom: $integer-xxxxl;
+  background-color: $secondary;
+  color: $white;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .button {
+    margin-top: $integer-lg;
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,212 @@
+// —————————————————————————————————————————————————————————————————
+// general
+// misc
+// containers
+// logo
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// general
+// —————————————————————————————————————————————————————————————————
+
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	
+	&:before {
+		@include pseudo-element('', 0, 0, 0, 0, auto, auto);
+		position: fixed;
+		border: $integer-lg solid $white;
+		box-sizing: border-box;
+		pointer-events: none;
+
+		@include responsive(max-width, $tablet-max) {
+			border-width: $integer-md;
+		}
+	}
+	
+	&.js-freeze {
+		overflow: hidden;
+	}
+}
+
+.page {
+	overflow: hidden;
+}
+
+// embed responsively
+
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%; 
+
+	iframe, object, embed { 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+}        
+
+// text selection
+::-moz-selection {
+	background: $secondary;
+	color: $white;
+}
+::selection {
+	background: $secondary;
+	color: $white;
+}
+::-moz-selection {
+	background: $secondary;
+	color: $white;
+}
+
+// remove autocomplete from webkit browsers
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0px 1000px $primary inset;
+	transition: background-color $transition;
+}
+
+// prevent images from stretching with flex 
+
+img {
+	align-self: center;
+	width: 100%;
+}
+
+// lists
+
+ul {
+	list-style: disc;
+}
+
+li {
+	margin-left: 18px;
+
+	& + & {
+		padding-top: $integer/2 !important;
+	}
+}
+
+// —————————————————————————————————————————————————————————————————
+// misc
+// —————————————————————————————————————————————————————————————————
+
+// margins & paddings
+
+.no-margin {
+	margin: 0 !important;
+
+	&--top { margin-top: 0 !important; }
+	&--right { margin-right: 0 !important; }
+	&--bottom { margin-bottom: 0 !important; }
+	&--left { margin-left: 0 !important; }
+}
+
+.no-padding {
+	padding: 0 !important;
+
+	&--top { padding-top: 0 !important; }
+	&--right { padding-right: 0 !important; }
+	&--bottom { padding-bottom: 0 !important; }
+	&--left { padding-left: 0 !important; }
+}
+
+// responsive
+
+.hide {
+	
+	&--desktop { @include responsive(max-width, $desktop-max) { display: none !important; } }
+	&--tablet { @include responsive(max-width, $tablet-max) { display: none !important; } }
+	&--mobile { @include responsive(max-width, $mobile-max) { display: none !important; } }
+	&--touch { @include responsive-mobile() { display: none !important; } }
+}
+
+.show {
+
+	&--desktop { @include responsive(min-width, $desktop-min) { display: none !important; } }
+	&--tablet { @include responsive(min-width, $tablet-min) { display: none !important; } }
+	&--mobile { @include responsive(min-width, $mobile-min) { display: none !important; } }
+}
+
+// z-index
+
+.section__header 	{ z-index: 20; }
+.cookie				 		{ z-index: 30; }
+body:before				{ z-index: 40; }
+.header 					{ z-index: 50; }
+.modal 						{ z-index: 60; }
+
+@for $i from 0 through 9 {
+	.z-index--#{$i} { z-index: $i; }
+}
+
+// hover classes
+
+.hover-grayscale {
+	filter: grayscale(100%);
+	transition: filter, $transition;
+	will-change: filter;
+	
+	@include hover-link {
+		filter: grayscale(0%);
+	}
+}
+
+// background
+
+.background-cover {
+	@include background(50% 50%, cover);
+	width: 100%;
+	height: 100%;
+}
+
+// —————————————————————————————————————————————————————————————————
+// containers
+// —————————————————————————————————————————————————————————————————
+
+.block {
+	padding-bottom: $integer-xxxl;
+
+	@include responsive(max-width, $mobile-max) {
+		padding-bottom: $integer-xl;
+	}
+}
+
+// —————————————————————————————————————————————————————————————————
+// logo
+// —————————————————————————————————————————————————————————————————
+
+.logo {
+	
+	&__background {
+		fill: $white;
+	}
+
+	&__icon {
+		fill: $black;
+	}
+}

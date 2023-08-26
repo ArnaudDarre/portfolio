@@ -12,60 +12,56 @@ layout: compress
         <span class="background__square background__square--{{ page.category | downcase }}"></span>
     </div>
     <div class="section__content">
-        <div class="coloffset--md3 coloffset--2 col--12 block">
-            <div class="row">
-                <nav class="col--5 project__nav">
-                  {% if page.previous.url %}
-                    <a href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
-                        <i class="button__inner fas fa-chevron-left"></i>
-                    </a>
-                    {% endif %}
-                    {% if page.next.url %}
-                    <a href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
-                        <i class="button__inner fas fa-chevron-right"></i>
-                    </a>
-                    {% endif %}
-                    <a href="{{ site.base-url }}/projects-list" class="button button--small button--secondary button--animate fas fa-list">
-                        <p class="button__inner">Project list</p>
-                    </a>
-                </nav>
-            </div>
+        <div class="row">
+            <nav class="project__nav">
+                {% if page.previous.url %}
+                <a href="{{ page.previous.url }}" class="project__nav-item project__nav-item--prev button button--icon button--large button--secondary button--animate fas fa-chevron-left">
+                    <i class="button__inner fas fa-chevron-left"></i>
+                </a>
+                {% endif %}
+                {% if page.next.url %}
+                <a href="{{ page.next.url }}" class="project__nav-item project__nav-item--next button button--icon button--large button--secondary button--animate fas fa-chevron-right">
+                    <i class="button__inner fas fa-chevron-right"></i>
+                </a>
+                {% endif %}
+                <a href="{{ site.base-url }}/projects-list" class="button button--small button--secondary button--animate fas fa-list">
+                    <p class="button__inner">Project list</p>
+                </a>
+            </nav>
         </div>
-        <div class="coloffset--md3 coloffset--2 col--12 block project__item">
-            <div class="project">
-                <div class="row">
-                    {% if page.category %}
-                    <p class="col--12 project__category label">{{ page.category }}</p>
-                    {% endif %}
-                    {% if page.title %}
-                    <h1 class="col--12 project__title section__subtitle title">{{ page.title }}</h1>
-                    {% endif %}
-                    <div class="col--12">
-                        <div class="row">
-                            <div class="col--md6 col--12">
-                                {% if page.subtitle %}
-                                <h2 class="project__subtitle lead">{{ page.subtitle }}</h2>
-                                {% endif %}
-                                {% if page.body %}
-                                <p class="project__body body--bold">{{ page.body }}</p>
-                                {% endif %}
-                            </div>
-                            <div class="col--md4 col--12 body--right project__meta">
-                                {% if page.client %}
-                                <p class="label">Client</p>
-                                <p class="body">{{ page.client }}</p>
-                                {% endif %}
-                                {% if page.website_url %}
-                                <p class="label">Website</p>
-                                <a href="{{ page.website_url }}" target="_blank" class="body">{{ page.website_title }}</a>
-                                {% endif %}
-                                {% if page.tags %}
-                                <p class="label">Tags</p>
-                                    {% for tag in page.tags %}
-                                    <p>{{ tag }}</p>
-                                    {% endfor %}
-                                {% endif %}
-                            </div>
+        <div class="project">
+            <div class="row">
+                {% if page.category %}
+                <p class="col--12 project__category label">{{ page.category }}</p>
+                {% endif %}
+                {% if page.title %}
+                <h1 class="col--12 project__title section__subtitle title">{{ page.title }}</h1>
+                {% endif %}
+                <div class="col--12">
+                    <div class="row">
+                        <div class="col--md8">
+                            {% if page.subtitle %}
+                            <h2 class="project__subtitle lead">{{ page.subtitle }}</h2>
+                            {% endif %}
+                            {% if page.body %}
+                            <p class="project__body body--bold">{{ page.body }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="col--md4 body--right project__meta">
+                            {% if page.client %}
+                            <p class="label">Client</p>
+                            <p class="body">{{ page.client }}</p>
+                            {% endif %}
+                            {% if page.website_url %}
+                            <p class="label">Website</p>
+                            <a href="{{ page.website_url }}" target="_blank" class="body">{{ page.website_title }}</a>
+                            {% endif %}
+                            {% if page.tags %}
+                            <p class="label">Tags</p>
+                                {% for tag in page.tags %}
+                                <p>{{ tag }}</p>
+                                {% endfor %}
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -82,8 +78,8 @@ layout: compress
     </div>
 </section>    
 
-<section id="related-projects" class="row section section--primary">
-    <div class="coloffset--2 col--12 section__content">
+<section id="related-projects" class="section section--primary">
+    <div class="section__content">
         <h1 class="lead">Related projects</h1>
         <div class="row">              
             {% assign maxRelated = 2 %} 

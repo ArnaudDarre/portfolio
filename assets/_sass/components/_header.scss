@@ -1,0 +1,33 @@
+.header {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  &__logo {
+    align-self: flex-start;
+    transition: transform 0.4s ease;
+    width: $integer-xxl;
+    height: $integer-xxl;
+
+    @include responsive(max-width, $tablet-max) {
+      width: $integer-xl;
+      height: $integer-xl;
+    }
+
+    @include responsive(max-width, $mobile-max) {
+      width: $integer-md*2;
+      height: $integer-md*2;
+    }
+
+    @include hover-link {
+      transform: rotate(-225deg) translateY($integer-xxs) scale(1.08);
+
+      .page--index & {
+        transform: rotate(225deg) translateY($integer-xxs) scale(1.08);
+      }
+    }
+  }
+}

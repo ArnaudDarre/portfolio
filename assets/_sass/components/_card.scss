@@ -1,0 +1,48 @@
+// —————————————————————————————————————————————————————————————————
+// elements
+// variants
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.card {
+  padding-top: $integer-xl;
+
+  &__content {
+    position: relative;
+  }
+
+  &__title {
+    padding-bottom: $integer;
+  }
+
+  &__body {
+    padding-bottom: $integer-md;
+  }
+
+  &__label {
+    padding-bottom: $integer;
+  }
+
+  &__icon {
+    font-size: 12rem;
+    color: rgba($secondary, 0.05);
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// variants
+// —————————————————————————————————————————————————————————————————
+
+.card {
+
+  &--project {
+    padding-bottom: $integer-xxl;
+  }
+
+  &--skills {
+    padding-right: $col;
+  }
+}

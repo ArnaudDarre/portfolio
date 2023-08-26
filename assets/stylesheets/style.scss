@@ -1,28 +1,35 @@
 ---
 ---
 
-@import 
-// MODULES
-	"modules/_reset",
-	"modules/_variables",
-	"modules/_mixins",
-	"modules/_animations",
-	"modules/_fontface",
-	// PARTIALS
-	"partials/_anchor",
-	"partials/_buttons",
-	"partials/_form",
-	"partials/_structure",
-	"partials/_typography",
-	// PAGES
+@import
+
+	"common/_reset",
+	"common/_variables",
+	"common/_mixins",
+	"common/_animations",
+	"common/_fontface",
+	"common/_global",
+
+	"components/_anchor",
+	"components/_buttons",
+	"components/_card",
+	"components/_footer",
+	"components/_form",
+	"components/_grid",
+	"components/_header",
+	"components/_nav",
+	"components/_section",
+	"components/_sidebar",
+	"components/_typography",
+
 	"layouts/_index",
 	"layouts/_project-list",
 	"layouts/_projects",
-	// VENDORS
+
 	"vendors/_project-carousel",
 	"vendors/_scroll-magic",
 	"vendors/_scrolling-letters",
-	// OVERRIDES
+
 	"overrides/_ie",
 	"overrides/_responsive"
 ;

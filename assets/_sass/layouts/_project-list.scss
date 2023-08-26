@@ -1,23 +1,17 @@
-@charset "UTF-8";
-
-// —————————————————————————————————————————————————————————————————
-// PROJECT LIST
-// —————————————————————————————————————————————————————————————————
-
 #projects-list {
 
-    &.section {
-        min-height: auto;
-    }
+  &.section {
+    min-height: auto;
+  }
 
-    .section {
+  .section {
 
-        &__content {
-            min-height: 100vh;
-        }
+    &__content {
+      min-height: 100vh;
     }
+  }
 
-    .card--project {
-        padding-top: 0;
-    }
+  .card--project {
+    padding-top: 0;
+  }
 }
