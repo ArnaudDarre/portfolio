@@ -19,11 +19,11 @@
     color: rgba($secondary, 0.05);
   }
 
-  &__image {
+  &__mediaInner {
     border-radius: $spacing;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    padding-bottom: 66.66%;
+    border-radius: $integer;
+    overflow: hidden;
   }
 
   &__content {
@@ -115,7 +115,7 @@
 .card {
 
   &--project {
-    padding-bottom: $integer-xxl;
+    padding-bottom: $spacing*0.5;
   }
 
   &--skills {

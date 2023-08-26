@@ -14,20 +14,6 @@
   }
 }
 
-.card--project {
-  min-height: auto;
-  padding-bottom: $integer-lg;
-
-  .project__image {
-    width: 100%;
-    height: auto;
-    padding-bottom: 66.66%;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    margin-bottom: 1rem;
-  }
-}
-
 .project {
 
   &__block {

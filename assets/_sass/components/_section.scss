@@ -42,17 +42,9 @@
   }
 
   &__title {
-    margin-bottom: $spacing*2;
 
-    @include responsive(up, tablet) {
-      display: none;
-    }
-
-    @include responsive(down, tablet) {
- 
-      & + .section__subtitle { margin-top: $spacing; }
-      & + .section__lead { margin-top: $spacing; }
-    }
+    & + .section__subtitle { margin-top: $spacing; }
+    & + .section__lead { margin-top: $spacing; }
   }
 
   &__subtitle {
@@ -91,6 +83,25 @@
 // —————————————————————————————————————————————————————————————————
 // overrides
 // —————————————————————————————————————————————————————————————————
+
+.page--index {
+
+  .section {
+
+    &__title {
+      
+      @include responsive(up, tablet) {
+        display: none;
+      }
+
+      @include responsive(up, tablet) {
+ 
+        & + .section__subtitle { margin-top: 0; }
+        & + .section__lead { margin-top: 0; }
+      }
+    }
+  }
+}
 
 #landing {
 

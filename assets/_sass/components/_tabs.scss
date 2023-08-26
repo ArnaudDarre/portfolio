@@ -1,0 +1,63 @@
+// —————————————————————————————————————————————————————————————————
+// elements
+// active
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.tabs__triggers,
+.tab {
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: $integer;
+    width: 100%;
+    background-color: $primary;
+    border-radius: $integer;
+  }
+}
+
+.tabs {
+  
+  &__triggers {
+    position: relative;
+    display: flex;
+    margin-bottom: $spacing;
+
+    &:after {
+      z-index: -1;
+      bottom: 0;
+    }
+  }
+}
+
+.tab {
+  cursor: pointer;
+  position: relative;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+  padding: 0 $integer*2 $integer $integer*2;
+  border-bottom: $integer solid $primary;
+
+  &:after {
+    transition: background-color $transition;
+    will-change: background-color;
+    z-index: 0;
+    bottom: -$integer;
+    left: 0;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// active
+// —————————————————————————————————————————————————————————————————
+
+.tab--active {
+
+  &:after {
+    background-color: $secondary;
+  }
+}
