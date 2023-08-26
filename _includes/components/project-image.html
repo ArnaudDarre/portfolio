@@ -6,10 +6,10 @@
 <div class="{% if size == 'cover' %}col--12{% elsif size == 'thumbnail' %}coloffset--md5 col--md6 coloffset--1 col--14{% else %}coloffset--md3 col--md10 coloffset--1 col--14{% endif %} block project__block">
     {% if pdf %}
         <a href="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}{% if suffix %}-{{ suffix }}{% endif %}.pdf" target="_blank" class="project__pdf">
-            <p class="z-index--2 body--large">Click on the image to view the {{ suffix }}</p>
+            <p class="z-index--2 subtitle">Click on the image to view the {{ suffix }}</p>
             {% endif %}
             <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}{% if suffix %}-{{ suffix }}{% endif %}.jpg" alt="{{ page.title }} {% assign suffix = include.suffix %} thumbnail" class="">
-            <p class="project__legend label">{{ legend }}</p>
+            <p class="project__legend caption">{{ legend }}</p>
             {% if pdf %}
         </a>
     {% endif %}

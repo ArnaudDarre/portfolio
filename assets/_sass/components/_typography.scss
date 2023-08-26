@@ -1,14 +1,3 @@
-// —————————————————————————————————————————————————————————————————
-// general
-// chat
-// buttons
-// form
-// —————————————————————————————————————————————————————————————————
-
-// —————————————————————————————————————————————————————————————————
-// general
-// —————————————————————————————————————————————————————————————————
-
 html, body {
 	font-family: $font;
 	font-size: 16px;
@@ -21,78 +10,48 @@ html, body {
 	}
 }
 
-.headline {
+.h1, %h1 {
 	@include font-size(5, $font-black, normal);
 	line-height: 1;
 	text-transform: uppercase;
 
-	@include responsive-mobile() {
-		font-size: 4rem;
-	}
-
-	@include responsive(max-width, $desktop-max) {
-		font-size: 4.5rem;
-	}
-
-	@include responsive(max-width, $tablet-max) {
-		font-size: 4rem;
-	}
-
-	@include responsive(max-width, $mobile-max) {
-		font-size: 3rem;
-	}
-
-	@include responsive-mobile-landscape() {
-		display: none;
-	}
+	@include responsive-mobile() { font-size: 4rem; }
+	@include responsive(max-width, $desktop-max) { font-size: 4.5rem; }
+	@include responsive(max-width, $tablet-max) { font-size: 4rem; }
+	@include responsive(max-width, $mobile-max) { font-size: 3rem; }
+	@include responsive-mobile-landscape() { display: none; }
 }
 
-.title {
+.h2, %h2 {
 	@include font-size(4, $font-black, normal);	
 	line-height: 1;
 
-	@include responsive-mobile() {
-		font-size: 3rem;
-	}
-
-	@include responsive(max-width, $tablet-max) {
-		font-size: 3rem;
-	}
-
-	@include responsive(max-width, $mobile-max) {
-		font-size: 2.5rem;
-	}
+	@include responsive-mobile() { font-size: 3rem; }
+	@include responsive(max-width, $tablet-max) { font-size: 3rem; }
+	@include responsive(max-width, $mobile-max) { font-size: 2.5rem; }
 }
 
-.subtitle {
+.h3, %h3 {
 	@include font-size(2.5, $font-bold, normal);
 	line-height: 1;
-	
-	@include responsive-mobile() {
-		font-size: 2rem;
-	}
 
-	@include responsive(max-width, $tablet-max) {
-		font-size: 2rem;
-	}
-
-	@include responsive(max-width, $mobile-max) {
-		font-size: 1.8rem;
-	}
+	@include responsive-mobile() { font-size: 2rem; }
+	@include responsive(max-width, $tablet-max) { font-size: 2rem; }
+	@include responsive(max-width, $mobile-max) { font-size: 1.8rem; }
 }
 
-.subhead {
+.h4, %h4 {
 	@include font-size(1.5, $font-black, normal);
 	line-height: 1;
 	text-transform: uppercase;
 }
 
-.lead {
+.h5, %h5 {
 	@include font-size(1.5, $font-bold, normal);
 	line-height: 1;
 }
 
-.quote {
+.quote, %quote {
 	@include font-size(1.5, $font-regular, normal);
 
 	&:before {
@@ -103,26 +62,21 @@ html, body {
 	}
 }	
 
-// overides
+.subtitle, %subtitle { font-size: 1.25rem; }
 
-.body {
-
-	&--large { font-size: 1.25rem; }
-	&--small { font-size: 0.75rem; }
-
-	&--bold { font-weight: $font-bold; }
-
-	&--italic { font-style: italic; }
-	&--underline { text-decoration: underline; }
+.caption, %caption { 
+	font-size: 0.75rem;
+	font-weight: $font-bold;
+	color: $secondary;
 }
 
-// spacing between paragraphs
+// overrides
 
 .body {
 
-	& + & { padding-top: $integer; }
-	&--large { & + & { padding-top: $integer*2; }}
-	&--small { & + & { padding-top: $integer*0.5; }}
+	&--bold { font-weight: $font-bold; }
+	&--italic { font-style: italic; }
+	&--underline { text-decoration: underline; }
 }
 
 // alignement
@@ -132,88 +86,4 @@ html, body {
 	&--left { text-align: left; }
 	&--center { text-align: center; }
 	&--right { text-align: right; }
-}
-
-// col text
-
-@for $i from 1 through 4 {
-	.col-text--#{$i} {
-		column-count: $i;
-		column-gap: 2rem;
-		@include responsive(max-width, $tablet-max) {
-			column-count: 1;
-		}
-	}
-}
-
-// —————————————————————————————————————————————————————————————————
-// buttons
-// —————————————————————————————————————————————————————————————————
-
-.button {
-	@include font-size(1, $font-black, normal);
-	font-family: $font;
-	letter-spacing: 0.05rem;
-	line-height: 1;
-
-	&--text {
-		font-weight: $font-regular;
-		letter-spacing: 0;
-	}
-
-	&.button--large {
-		@include font-size(1.5, $font-black, normal);
-		letter-spacing: 0.08rem;
-	}
-
-	&.button--small {
-		@include font-size(0.75, $font-black, normal);
-		letter-spacing: 0.04rem;
-		line-height: 1.5;
-	}
-}
-
-.button__inner {
-	font-family: $font;
-}
-
-.button--icon {
-	font-size: 1rem !important;
-	font-weight: 100;
-
-	&.button--large {
-		font-size: 1.5rem !important;
-
-		.fab {
-			font-weight: 100;
-		}
-	}
-
-	&.button--small {
-		font-size: 0.75rem !important;
-
-		.fab {
-			font-weight: 100;
-		}
-	}
-}
-
-// —————————————————————————————————————————————————————————————————
-// form
-// —————————————————————————————————————————————————————————————————
-
-.form__label, .form__input {
-	font-family: $font;
-}
-
-.label, .form__label {
-	@include font-size(0.75, $font-bold, normal);
-	color: $secondary;
-}
-
-.form {
-
-	&__input, .form__dropdown li {
-		@include font-size(1, $font-regular, normal);
-	}
 }

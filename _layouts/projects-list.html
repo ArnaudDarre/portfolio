@@ -10,7 +10,7 @@ layout: compress
         <span class="background__square background__square--landing"></span>
     </div>
     <div class="section__content">
-        <h1 class="section__subtitle title">Projects</h1>
+        <h1 class="section__subtitle h2">Projects</h1>
         <div class="section__comment button-group filter filter-button-group">
             <a class="filter__button button button--animate fas fa-infinity active" data-filter="*">
                 <p class="button__inner">All</p>
@@ -26,7 +26,7 @@ layout: compress
             <div class="col--lg4 col--md6 col--12 card card--project {{ project.category | slugify }}">
                 <div class="project__image background-cover" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é", "e" }}-cover.jpg)"></div>
                 <div class="card__content z-index--2">
-                    <h2 class="card__title lead">{{ project.title }}</h2>
+                    <h2 class="card__title h5">{{ project.title }}</h2>
                     <p class="card__title body--bold">{{ project.subtitle }}</p>
                     <a href="{{ project.url }}" class="button button--small button--secondary button--animate fas fa-chevron-right">
                         <p class="button__inner">Discover</p>

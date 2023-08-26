@@ -32,16 +32,16 @@ layout: compress
         <div class="project">
             <div class="row">
                 {% if page.category %}
-                <p class="col--12 project__category label">{{ page.category }}</p>
+                <p class="col--12 project__category caption">{{ page.category }}</p>
                 {% endif %}
                 {% if page.title %}
-                <h1 class="col--12 project__title section__subtitle title">{{ page.title }}</h1>
+                <h1 class="col--12 project__title section__subtitle h2">{{ page.title }}</h1>
                 {% endif %}
                 <div class="col--12">
                     <div class="row">
                         <div class="col--md8">
                             {% if page.subtitle %}
-                            <h2 class="project__subtitle lead">{{ page.subtitle }}</h2>
+                            <h2 class="project__subtitle h5">{{ page.subtitle }}</h2>
                             {% endif %}
                             {% if page.body %}
                             <p class="project__body body--bold">{{ page.body }}</p>
@@ -49,15 +49,15 @@ layout: compress
                         </div>
                         <div class="col--md4 body--right project__meta">
                             {% if page.client %}
-                            <p class="label">Client</p>
+                            <p class="caption">Client</p>
                             <p class="body">{{ page.client }}</p>
                             {% endif %}
                             {% if page.website_url %}
-                            <p class="label">Website</p>
+                            <p class="caption">Website</p>
                             <a href="{{ page.website_url }}" target="_blank" class="body">{{ page.website_title }}</a>
                             {% endif %}
                             {% if page.tags %}
-                            <p class="label">Tags</p>
+                            <p class="caption">Tags</p>
                                 {% for tag in page.tags %}
                                 <p>{{ tag }}</p>
                                 {% endfor %}
@@ -80,7 +80,7 @@ layout: compress
 
 <section id="related-projects" class="section section--primary">
     <div class="section__content">
-        <h1 class="lead">Related projects</h1>
+        <h1 class="h5">Related projects</h1>
         <div class="row">              
             {% assign maxRelated = 2 %} 
             {% assign minCommonTags =  1 %}
@@ -94,7 +94,7 @@ layout: compress
             {% if page.tags contains tag %}
             {% assign sameTagCount = sameTagCount | plus: 1 %}
             {% capture tagmarkup %} 
-            <span class="label label-default">{{ tag }}</span> 
+            <span class="caption">{{ tag }}</span> 
             {% endcapture %}
             {% assign commonTags = commonTags | append: tagmarkup %}
             {% endif %}
@@ -105,8 +105,8 @@ layout: compress
             <div class="col--md6 col--12 card card--project">
                 <div class="project__image background-cover" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é", "e" }}-cover.jpg)"></div>
                 <div class="card__content z-index--2">
-                    <h2 class="card__title subtitle">{{ project.title }}</h2>
-                    <h3 class="card__title body--large body--bold">{{ project.subtitle }}</h3>
+                    <h2 class="card__title h3">{{ project.title }}</h2>
+                    <h3 class="card__title subtitle body--bold">{{ project.subtitle }}</h3>
                     <a href="{{ project.url }}" class="button button--small button--secondary button--animate fas fa-chevron-right">
                         <p class="button__inner">Discover</p>
                     </a>

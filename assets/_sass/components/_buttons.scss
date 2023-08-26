@@ -13,10 +13,59 @@
 // general
 // —————————————————————————————————————————————————————————————————
 
+
+.button {
+	@include font-size(1, $font-black, normal);
+	font-family: $font;
+	letter-spacing: 0.05rem;
+	line-height: 1;
+
+	&--text {
+		font-weight: $font-regular;
+		letter-spacing: 0;
+	}
+
+	&.button--large {
+		@include font-size(1.5, $font-black, normal);
+		letter-spacing: 0.08rem;
+	}
+
+	&.button--small {
+		@include font-size(0.75, $font-black, normal);
+		letter-spacing: 0.04rem;
+		line-height: 1.5;
+	}
+}
+
+.button__inner {
+	font-family: $font;
+}
+
+.button--icon {
+	font-size: 1rem !important;
+	font-weight: 100;
+
+	&.button--large {
+		font-size: 1.5rem !important;
+
+		.fab {
+			font-weight: 100;
+		}
+	}
+
+	&.button--small {
+		font-size: 0.75rem !important;
+
+		.fab {
+			font-weight: 100;
+		}
+	}
+}
+
 .button {
 	transition: background-color $transition, transform $transition;
 	border-radius: 100px;
-	display: inline-flex !important;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	align-self: center;

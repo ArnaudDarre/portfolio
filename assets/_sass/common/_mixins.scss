@@ -112,6 +112,10 @@
 	letter-spacing: $font-size*.02 + rem;
 	font-weight: $font-weight;
 	font-style: $font-style;
+
+	& + & {
+		margin-top: 0.75em;
+	}
 }
 
 @mixin font-awesome($fa, $top, $right, $bottom, $left, $color) {
