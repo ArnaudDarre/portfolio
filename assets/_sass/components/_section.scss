@@ -110,3 +110,10 @@
     padding-bottom: $spacing;
   }
 }
+
+.page--projects-list {
+
+  .section__lead {
+    max-width: unset;
+  }
+}

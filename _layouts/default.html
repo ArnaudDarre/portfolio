@@ -5,27 +5,27 @@ layout: compress
 {% include header.html %}
 {% assign id = include.id %} 
 
-<section {% if page.id %}id="{{ page.id }}" {% endif %}class="row section">
-    <div class="section__background">
-        <span class="background__circle background__circle--landing"></span>
-        <span class="background__square background__square--landing"></span>
+<section {% if page.id %}id="{{ page.id }}" {% endif %}class="section">
+  <div class="section__background">
+    <span class="background__circle background__circle--landing"></span>
+    <span class="background__square background__square--landing"></span>
+  </div>
+  <div class="section__container">
+    <div class="section__header">
+      {% if page.page_title %}
+      <h2 class="section__title h2">{{ page.page_title }}</h2>
+      {% endif %}
+      {% if page.subtitle %}
+      <p class="section__subtitle h3">{{ page.subtitle }}</p>
+      {% endif %}
+      {% if page.lead %}
+      <p class="section__lead h5">{{ page.lead }}</p>
+      {% endif %}
     </div>
     <div class="section__content">
-        <div class="row">
-            <div class="">
-                {% if page.page_title %}
-                <h2 class="col--12 section__subtitle h2">{{ page.page_title }}</h2>
-                {% endif %}
-                {% if page.subtitle %}
-                <p class="col--lg9 col--md10 col--12 section__comment h3">{{ page.subtitle }}</p>
-                {% endif %}
-                {% if page.lead %}
-                <p class="col--lg5 col--12 h5">{{ page.lead }}</p>
-                {% endif %}
-            </div>
-            {{ content }}
-        </div>
+      {{ content }}
     </div>
+  </div>
 </section>
 
 {% include footer.html %}

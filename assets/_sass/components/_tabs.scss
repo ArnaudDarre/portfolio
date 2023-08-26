@@ -7,7 +7,7 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
-.tabs__triggers,
+.tabs,
 .tab {
 
   &:after {
@@ -21,16 +21,12 @@
 }
 
 .tabs {
-  
-  &__triggers {
-    position: relative;
-    display: flex;
-    margin-bottom: $spacing;
+  position: relative;
+  display: flex;
 
-    &:after {
-      z-index: -1;
-      bottom: 0;
-    }
+  &:after {
+    z-index: -1;
+    bottom: 0;
   }
 }
 
