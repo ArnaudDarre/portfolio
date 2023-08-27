@@ -34,7 +34,7 @@
 		overflow: hidden;
 		white-space: nowrap;
 		position: relative;
-		padding-bottom: $integer-sm;
+		padding-bottom: $integer*0.5;
 		padding-left: $integer;
 	}
 
@@ -52,7 +52,7 @@
 	}
 
 	&__button {
-		margin-top: $integer-md;
+		margin-top: $integer*2;
 	}
 	
 	&__footer {
@@ -111,17 +111,17 @@
 	}
 
 	.form__dropdown {
-		@include calc(top, '100% -' $integer-xs);
+		@include calc(top, '100% -' $integer*0.25);
 		display: none;
 		position: absolute;
 		right: 0;
 		left: 0;
-		max-height: $integer-xxxxl;
+		max-height: $spacing*2;
 		overflow: scroll;
 		z-index: 2;
 		background-color: $primary;
 		margin-left: 0;
-		border: $integer-xs solid $black;
+		border: $integer*0.25 solid $black;
 
 		li {
 			@include font-size(1, $font-regular, normal);
@@ -140,7 +140,7 @@
 			}
 
 			& + li {
-				border-top: $integer-xs solid $black;
+				border-top: $integer*0.25 solid $black;
 			}
 
 			&:hover {

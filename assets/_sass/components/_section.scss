@@ -29,7 +29,7 @@
     transform-origin: top left;
     position: fixed;
     bottom: $spacing;
-    left: $integer-xl;
+    left: $integer*5;
 
     @include responsive(down, tablet) {
       display: none;

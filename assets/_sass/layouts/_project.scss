@@ -20,7 +20,7 @@
   }
 
   &__label { margin-bottom: $integer*0.25; }
-  &__legend { margin-top: $integer-md; }
+  &__legend { margin-top: $integer*2; }
 
   &__fullWidth {
     margin-right: -$spacing*3;
@@ -62,7 +62,7 @@
       transition: opacity 0.4s ease;
       will-change: opacity;
       opacity: 1;
-      border: $integer-sm solid $medium-grey;
+      border: $integer*0.5 solid $medium-grey;
     }
 
     @include hover {
@@ -77,7 +77,6 @@
 
   &.section {
     min-height: auto;
-    padding-bottom: $integer-xxl;
   }
 }
 

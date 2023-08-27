@@ -142,17 +142,17 @@
 	will-change: bottom, transform;
 	position: absolute;
 	right: $integer;
-	bottom: -$integer-xxl;
+	bottom: -$spacing;
 	@include responsive-mobile() {
 		display: none !important;
 	}
 
 	&.js-show {
-		bottom: $integer-lg*2;
+		bottom: $integer*3*2;
 	}
 
 	&:hover {
-		transform: translateY(-$integer-xxs) scale(1.04);
+		transform: translateY(-$integer*0.125) scale(1.04);
 	}
 }
 

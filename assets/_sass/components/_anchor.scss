@@ -1,7 +1,7 @@
 .anchor {
   display: flex;
   justify-content: center;
-  margin-top: $integer-xl;
+  margin-top: $spacing;
 	pointer-events: initial;
 
   // use if you want to draw a line between the dots
@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     // background-color: $secondary;
-    // width: $integer-xs;
+    // width: $integer*0.25;
   }
   
   &__item {

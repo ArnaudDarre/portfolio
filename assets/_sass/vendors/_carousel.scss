@@ -31,8 +31,9 @@
       position: relative;
       margin: 0 0 0 $spacing*0.5;
       padding-left: $integer;
+
       @include responsive(down, mobile) {
-        margin-left: $integer-xl;
+        margin-left: $spacing;
       }
 
       &:after {
@@ -40,7 +41,7 @@
         background: $secondary;
 
         @include responsive(down, mobile) {
-          width: $integer-xl;
+          width: $spacing;
         }
       }
     }
@@ -57,7 +58,7 @@
     border-radius: $integer*2;
 
     @include responsive(down, tablet) {
-      padding-left: $integer-md*2;
+      padding-left: $integer*2*2;
     }
   
     &Inner {

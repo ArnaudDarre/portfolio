@@ -9,24 +9,24 @@
   &__logo {
     align-self: flex-start;
     transition: transform 0.4s ease;
-    width: $integer-xxl;
-    height: $integer-xxl;
+    width: $spacing;
+    height: $spacing;
 
     @include responsive(down, tablet) {
-      width: $integer-xl;
-      height: $integer-xl;
+      width: $integer*4;
+      height: $integer*4;
     }
 
     @include responsive(down, mobile) {
-      width: $integer-md*2;
-      height: $integer-md*2;
+      width: $integer*2*2;
+      height: $integer*2*2;
     }
 
     @include hover {
-      transform: rotate(-225deg) translateY($integer-xxs) scale(1.08);
+      transform: rotate(-225deg) translateY($integer*0.125) scale(1.08);
 
       .page--index & {
-        transform: rotate(225deg) translateY($integer-xxs) scale(1.08);
+        transform: rotate(225deg) translateY($integer*0.125) scale(1.08);
       }
     }
   }

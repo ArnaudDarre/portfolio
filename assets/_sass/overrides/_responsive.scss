@@ -19,18 +19,14 @@
 	}
 
 	.section {
-		padding-right: $integer-md*2;
-		padding-left: $integer-md*2;
-
-		.page--index & {			
-			padding-right: $integer-md*2 + $integer-xl;
-		}
+		padding-right: $integer*2*2;
+		padding-left: $integer*2*2;
 	}
 
 	.page--projects {
 
 		.project {
-			padding-right: $integer-md*2;
+			padding-right: $integer*2*2;
 		}
 	}
 }	

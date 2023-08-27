@@ -29,7 +29,7 @@
 
 @include keyframes(pulse-lg) {
 	0% { 	box-shadow: 0 0 0 0 rgba($secondary, 0.4); }
-	70% { 	box-shadow: 0 0 0 $integer-sm rgba($secondary, 0); }
+	70% { 	box-shadow: 0 0 0 $integer*0.5 rgba($secondary, 0); }
 	100% { 	box-shadow: 0 0 0 0 rgba($secondary, 0); }
 }
 
