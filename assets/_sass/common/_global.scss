@@ -210,12 +210,11 @@ body:before { z-index: 40; }
 // —————————————————————————————————————————————————————————————————
 
 .logo {
-	
-	&__background {
-		fill: $white;
-	}
+	display: flex;
+	width: $spacing;
+	height: $spacing;
+	border-radius: 50%;
 
-	&__icon {
-		fill: $black;
-	}
+	&__background { fill: $primary; }
+	&__icon { fill: $black; }
 }

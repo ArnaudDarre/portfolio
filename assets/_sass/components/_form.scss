@@ -46,7 +46,7 @@
 		will-change: border-color;
 		width: 100%;
 		background-color: white;
-    border: $integer solid #00ffc4;
+    border: $integer solid $primary;
     border-radius: $integer*2 !important;
     padding: $integer;
 	}
