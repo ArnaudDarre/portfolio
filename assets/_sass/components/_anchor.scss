@@ -32,12 +32,8 @@
       animation: pulse 1s infinite;
     }
 
-    .js-dot-active & {
+    &--active {
       transform: scale(2);
-
-      @include hover {
-        animation: pulse-lg 1s infinite;
-      }
     }
   }
 }

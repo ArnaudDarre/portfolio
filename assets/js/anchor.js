@@ -58,16 +58,16 @@ $(window).scroll(function(){
         var divPos = $(theID).offset().top; 
         var divHeight = $(theID).height(); 
         if (windowPos >= divPos - 200 && windowPos < (divPos - 200 + divHeight)) {
-            $(".anchor a[href='" + theID + "']").addClass("js-dot-active");
+            $(".anchor a[href='" + theID + "']").addClass("anchor__dot--active");
         } else {
-            $(".anchor a[href='" + theID + "']").removeClass("js-dot-active");
+            $(".anchor a[href='" + theID + "']").removeClass("anchor__dot--active");
         }
     }
     if(windowPos + windowHeight == docHeight) {
-        if (!$(".anchor__item:last-child a").hasClass("js-dot-active")) {
-            var navActiveCurrent = $(".js-dot-active").attr("href");
-            $("a[href='" + navActiveCurrent + "']").removeClass("js-dot-active");
-            $(".anchor__item:last-child a").addClass("js-dot-active");
+        if (!$(".anchor__item:last-child a").hasClass("anchor__dot--active")) {
+            var navActiveCurrent = $(".anchor__dot--active").attr("href");
+            $("a[href='" + navActiveCurrent + "']").removeClass("anchor__dot--active");
+            $(".anchor__item:last-child a").addClass("anchor__dot--active");
         }
     }
 });
