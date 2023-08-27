@@ -15,21 +15,22 @@ layout: compress
       <nav class="project__nav">
         {% if page.previous.url %}
         <div>
-          <a href="{{ page.previous.url }}" class="button button--icon button--secondary button--animate fas fa-chevron-left">
-            <i class="button__inner fas fa-chevron-left"></i>
+          <a href="{{ page.previous.url }}" class="button button--md button--icon button--secondary">
+            {% svg /assets/icons/chevron-left.svg %}
           </a>
         </div>
         {% endif %}
         {% if page.next.url %}
         <div>
-          <a href="{{ page.next.url }}" class="button button--icon button--secondary button--animate fas fa-chevron-right">
-            <i class="button__inner fas fa-chevron-right"></i>
+          <a href="{{ page.next.url }}" class="button button--md button--icon button--secondary">
+            {% svg /assets/icons/chevron-right.svg %}
           </a>
         </div>
         {% endif %}
         <div>
-          <a href="{% link projects.html %}" class="button button--small button--secondary button--animate fas fa-list">
-            <p class="button__inner">Project list</p>
+          <a href="{% link projects.html %}" class="button button--sm button--secondary button--animate">
+            <p class="button__inner">Go to project list</p>
+            {% svg /assets/icons/list.svg %}
           </a>
         </div>
       </nav>
@@ -61,13 +62,13 @@ layout: compress
               {% if page.client %}
               <div class="grid__item grid__item--lg4">
                 <p class="project__label caption">Client</p>
-                <p class="body">{{ page.client }}</p>
+                <p>{{ page.client }}</p>
               </div>
               {% endif %}
               {% if page.website_url %}
               <div class="grid__item grid__item--lg4">
                 <p class="project__label caption">Website</p>
-                <a href="{{ page.website_url }}" target="_blank" class="body">{{ page.website_title }}</a>
+                <a href="{{ page.website_url }}" target="_blank" class="link">{{ page.website_title }}</a>
               </div>
               {% endif %}
             </div>
@@ -129,8 +130,9 @@ layout: compress
               </div>
               {% endif %}
               <div class="card__actions">
-                <a href="{{ project.url }}" class="button button--small button--secondary button--animate fas fa-chevron-right">
+                <a href="{{ project.url }}" class="button button--sm button--secondary button--animate">
                   <p class="button__inner">Discover</p>
+                  {% svg /assets/icons/chevron-right.svg %}
                 </a>
               </div>
             </div>

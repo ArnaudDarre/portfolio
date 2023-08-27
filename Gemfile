@@ -20,6 +20,7 @@ group :jekyll_plugins do
   gem 'jekyll-autoprefixer'
   gem 'html-proofer'
   gem 'jekyll-coffeescript'
+  gem "jekyll-inline-svg"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

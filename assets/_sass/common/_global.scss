@@ -169,6 +169,7 @@ li {
 .section__container { z-index: 20; }
 .cookie { z-index: 30; }
 body:before { z-index: 40; }
+.section__label { z-index: 45; }
 .header { z-index: 50; }
 .modal { z-index: 60; }
 
@@ -183,7 +184,7 @@ body:before { z-index: 40; }
 	transition: filter, $transition;
 	will-change: filter;
 	
-	@include hover-link {
+	@include hover {
 		filter: grayscale(0%);
 	}
 }

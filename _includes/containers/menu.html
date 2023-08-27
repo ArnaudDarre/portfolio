@@ -1,59 +1,50 @@
 <header class="header">
-    <div class="row">
-        <div class="sidebar sidebar--left">
-            {% if page.layout != 'index' %}
-                <a href="{% link index.html %}" class="button button--icon button--large button--secondary button--animate fas fa-chevron-left hide--tablet">
-                    <i class="button__inner fas fa-home"></i>
-                </a>
-                <a href="{% link index.html %}" class="button button--icon button--small button--secondary button--animate fas fa-chevron-left show--tablet">
-                    <i class="button__inner fas fa-home"></i>
-                </a>
-            {% endif %}
-        </div>
-        <div class="sidebar sidebar--right">
-            <div class="">
-                <a {% if page.layout == 'index' %}href="#landing" class="js-button-anchor"{% else %}href="{% link index.html %}"{% endif %}>
-                    <img src="{{ site.base-url }}{{ site.resourceurl }}/images/logo.png" alt="Logo" class="header__logo">
-                </a>
-                <!-- <button class="button button--icon button--large button--secondary">
-                    <i class="button__inner fas fa-bars"></i>
-                </button> -->
-                {% if page.layout == 'index' %}
-                <div class="anchor">
-                    <div class="anchor__container">
-                        <div class="anchor__item">
-                            <a href="#landing" class="js-dot-active">
-                                <span class="anchor__dot"></span>
-                            </a>
-                        </div>
-                        <div class="anchor__item">
-                            <a href="#portfolio" class="">
-                                <span class="anchor__dot"></span>
-                            </a>
-                        </div>
-                        <div class="anchor__item">
-                            <a href="#about" class="">
-                                <span class="anchor__dot"></span>
-                            </a>
-                        </div>
-                        <div class="anchor__item">
-                            <a href="#contact" class="">
-                                <span class="anchor__dot"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
-            </div>
-            <!-- <div class="nav nav--mobile">
-                <button class="button button--icon button--small button--secondary button--animate fas fa-chevron-up">
-                    <i class="button__inner fas fa-chevron-up"></i>
-                </button>
-                <button class="button button--icon button--small button--secondary button--animate fas fa-chevron-down">
-                    <i class="button__inner fas fa-chevron-down"></i>
-                </button>
-            </div> -->
-            <a class="button--scroll-top button button--icon button--secondary fas fa-chevron-up"></a>
-        </div>
+  <div class="row">
+    <div class="sidebar sidebar--left">
+      {% if page.layout != 'index' %}
+      <a href="{% link index.html %}" class="button button--md button--icon button--lg button--secondary hide--tablet">
+        {% svg /assets/icons/home.svg %}
+      </a>
+      <a href="{% link index.html %}" class="button button--md button--icon button--sm button--secondary show--tablet">
+        {% svg /assets/icons/home.svg %}
+      </a>
+      {% endif %}
     </div>
+    <div class="sidebar sidebar--right">
+      <div class="">
+        <a {% if page.layout == 'index' %}href="#landing" class="js-button-anchor"{% else %}href="{% link index.html %}"{% endif %}>
+          <img src="{{ site.base-url }}{{ site.resourceurl }}/images/logo.png" alt="Logo" class="header__logo">
+        </a>
+        {% if page.layout == 'index' %}
+        <div class="anchor">
+          <div class="anchor__container">
+            <div class="anchor__item">
+              <a href="#landing" class="js-dot-active">
+                <span class="anchor__dot"></span>
+              </a>
+            </div>
+            <div class="anchor__item">
+              <a href="#portfolio" class="">
+                <span class="anchor__dot"></span>
+              </a>
+            </div>
+            <div class="anchor__item">
+              <a href="#about" class="">
+                <span class="anchor__dot"></span>
+              </a>
+            </div>
+            <div class="anchor__item">
+              <a href="#contact" class="">
+                <span class="anchor__dot"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      <a class="button--scroll-top button button--md button--icon button--secondary">
+        {% svg /assets/icons/chevron-up.svg %}
+      </a>
+    </div>
+  </div>
 </header>

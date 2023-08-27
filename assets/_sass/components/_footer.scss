@@ -1,9 +1,15 @@
 .footer {
   position: relative;
-  padding-top: $integer-xxxxl;
-  padding-bottom: $integer-xxxxl;
-  background-color: $secondary;
-  color: $white;
+  background-color: $white;
+  
+  &.section {
+    min-height: unset;
+  }
+  
+  .section__container {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+  }
 
   &__item {
     display: flex;

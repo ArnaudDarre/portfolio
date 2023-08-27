@@ -65,7 +65,7 @@
       border: $integer-sm solid $medium-grey;
     }
 
-    @include hover-link {
+    @include hover {
 
       p { opacity: 1; }
       img { opacity: 0.3; }

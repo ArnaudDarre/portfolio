@@ -34,7 +34,7 @@
 	height: $height;
 }
 
-@mixin hover-link {
+@mixin hover {
 	&:hover, &:active, &:focus {
 		@content;
 	}
@@ -183,24 +183,20 @@
 		.#{$prefix}#{nth($i, 1)} {
 			background-color: nth($i, 2);
 			color: nth($i, 3);
+
+			svg {
+				stroke: nth($i, 3);
+			}
+
 			&-lighten {
 				background-color: lighten(nth($i, 2), 15%);
 				color: nth($i, 3);
 			}
+
 			&-darken {
 				background-color: darken(nth($i, 2), 15%);
 				color: nth($i, 3);
 			}
-		}
-	}
-}
-
-@mixin button-stroke-color($prefix, $colors...) {
-	@each $i in $colors {
-		.#{$prefix}#{nth($i, 1)} {
-			background-color: transparent;
-			border: 2px solid nth($i, 2);
-			color: nth($i, 3);
 		}
 	}
 }

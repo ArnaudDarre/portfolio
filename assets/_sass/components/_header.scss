@@ -22,7 +22,7 @@
       height: $integer-md*2;
     }
 
-    @include hover-link {
+    @include hover {
       transform: rotate(-225deg) translateY($integer-xxs) scale(1.08);
 
       .page--index & {

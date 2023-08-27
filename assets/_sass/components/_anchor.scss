@@ -16,7 +16,7 @@
   &__item {
 
     & + & {
-      margin-top: 40px;
+      margin-top: $spacing*0.5;
     }
   }
   
@@ -28,14 +28,14 @@
     height: $integer;
     display: block;
 
-    @include hover-link {
+    @include hover {
       animation: pulse 1s infinite;
     }
 
     .js-dot-active & {
       transform: scale(2);
 
-      @include hover-link {
+      @include hover {
         animation: pulse-lg 1s infinite;
       }
     }

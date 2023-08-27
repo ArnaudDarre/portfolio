@@ -37,6 +37,10 @@ resourceurl: /assets
 plugins:
   - jekyll-autoprefixer
   - jekyll-coffeescript
+  - jekyll-inline-svg
+# jekyll-inline-svg
+svg:
+  optimize: true
 # compress vendor
 # http://jch.penibelst.de/
 compress_html:

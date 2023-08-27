@@ -53,6 +53,9 @@ GEM
       coffee-script-source (~> 1.12)
     jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
+    jekyll-inline-svg (1.1.4)
+      jekyll (>= 3.3, < 5.0)
+      svg_optimizer (~> 0.2.5)
     jekyll-sass-converter (2.1.0)
       sassc (> 2.0.1, < 3.0)
     jekyll-watch (2.2.1)
@@ -86,6 +89,8 @@ GEM
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
+    svg_optimizer (0.2.6)
+      nokogiri
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
@@ -107,6 +112,7 @@ DEPENDENCIES
   jekyll-autoprefixer
   jekyll-coffeescript
   jekyll-feed (~> 0.6)
+  jekyll-inline-svg
   tzinfo (~> 1.2)
   tzinfo-data
 

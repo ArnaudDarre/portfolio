@@ -18,7 +18,7 @@ title: Arnaud Darré
       <p class="section__title h1">Arnaud Darré</p>
       <h2 class="section__subtitle h2">Graphic & Web Designer</h2>
       <div class="section__lead">
-        <p class="h3">Scroll down to discover my <a href="#portfolio" class="js-button-anchor button--underline">work</a>, get to <a href="#about" class="js-button-anchor button--underline">know me</a> and <a href="#contact" class="js-button-anchor button--underline">contact</a> me!</p>
+        <p class="h3">Scroll down to discover my <a href="#portfolio" class="js-button-anchor link">work</a>, get to <a href="#about" class="js-button-anchor link">know me</a> and <a href="#contact" class="js-button-anchor link">contact</a> me!</p>
       </div>
     </div>
     <div class="section__content">
@@ -45,13 +45,13 @@ title: Arnaud Darré
         <div class="section__subtitle">
           <div class="grid grid--row grid--jcSpaceBetween">
             <div class="grid__item">
-              <p class="h5">Browse through some crunchy bites or <a href="{% link projects.html %}" class="button--underline">check the entire collection</a>.</p>
+              <p class="h5">Browse through some crunchy bites or <a href="{% link projects.html %}" class="link">check the entire collection</a>.</p>
             </div>
             <div class="grid__item grid--aiEnd">
               <nav class="project__nav">
                 <div>
-                  <button class="js-carousel-prev button button--icon button--secondary button--animate fas fa-chevron-left">
-                    <i class="button__inner fas fa-chevron-left"></i>
+                  <button class="js-carousel-prev button button--md button--icon button--secondary">
+                    {% svg /assets/icons/chevron-left.svg %}
                   </button>
                 </div>
                 <div class="carousel__index">
@@ -61,8 +61,8 @@ title: Arnaud Darré
                   <span class="carousel__indexTotal caption">04</span>
                 </div>
                 <div>
-                  <button class="js-carousel-next button button--icon button--secondary button--animate fas fa-chevron-right">
-                    <i class="button__inner fas fa-chevron-right"></i>
+                  <button class="js-carousel-next button button--md button--icon button--secondary">
+                    {% svg /assets/icons/chevron-right.svg %}
                   </button>
                 </div>
               </nav>
@@ -94,8 +94,9 @@ title: Arnaud Darré
             </div>
             {% endif %}
             <div class="card__actions carousel__button">
-              <a href="{{ project.url }}" class="button button--secondary button--animate fas fa-microscope">
+              <a href="{{ project.url }}" class="button button--md button--secondary button--animate">
                 <p class="button__inner">Discover</p>
+                {% svg /assets/icons/chevron-right.svg %}
               </a>
             </div>
           </div>
@@ -140,7 +141,7 @@ title: Arnaud Darré
               </div>
               <div class="card__content">
                 <p class="caption">Project</p>
-                <a href="{{ site.base-url }}/projects/{{ skill.project | slugify }}" class="body button--underline">{{ skill.project }}</a>
+                <a href="{{ site.base-url }}/projects/{{ skill.project | slugify }}" class="link">{{ skill.project }}</a>
               </div>
             </div>
           </div>
@@ -189,8 +190,9 @@ title: Arnaud Darré
         <div style="position: absolute; left: -5000px;">
           <input type="checkbox" name="grass_fed_red_waved_profit" value="1" tabindex="-1" autocomplete="no">
         </div>
-        <button type="submit" class="form__button button button--secondary button--animate fas fa-paper-plane">
+        <button type="submit" class="form__button button button--md button--secondary button--animate">
           <p class="button__inner">Send</p>
+          {% svg /assets/icons/send.svg %}
         </button>
       </form>
     </div>
