@@ -119,7 +119,7 @@
       opacity: 0;
     }
 
-    .carousel__title, {
+    .carousel__title {
 
       @include responsive(down, tablet) {
         opacity: 0;
