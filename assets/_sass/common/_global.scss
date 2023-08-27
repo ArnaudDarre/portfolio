@@ -25,12 +25,12 @@ body {
 	&:before {
 		@include pseudo-element('', 0, 0, 0, 0, auto, auto);
 		position: fixed;
-		border: $integer-lg solid $white;
+		border: $spacing*0.5 solid $white;
 		box-sizing: border-box;
 		pointer-events: none;
 
 		@include responsive(down, tablet) {
-			border-width: $integer-md;
+			border-width: $spacing*0.25;
 		}
 	}
 	
@@ -50,7 +50,8 @@ body {
 	padding-bottom: 56.25%; 
 	height: 0; 
 	overflow: hidden; 
-	max-width: 100%; 
+	max-width: 100%;
+	border-radius: $integer*2;
 
 	iframe, object, embed { 
 		position: absolute; 

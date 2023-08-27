@@ -17,7 +17,7 @@ tags:
 ---
 
 {% include components/project-image.html 
-  size='thumbnail'
+  size='sm'
   pdf='true'
   suffix='guidelines'
 %}

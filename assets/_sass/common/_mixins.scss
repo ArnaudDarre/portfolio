@@ -126,11 +126,12 @@
 	}
 }
 
-@mixin font-size($font-size, $font-weight: $font-regular, $font-style: normal) {
+@mixin font-size($font-size, $font-weight: $font-regular, $font-style: normal, $line-height: 1.5) {
 	font-size: $font-size + rem;
 	letter-spacing: $font-size*.02 + rem;
 	font-weight: $font-weight;
 	font-style: $font-style;
+	line-height: $line-height;
 
 	& + & {
 		margin-top: 0.75em;

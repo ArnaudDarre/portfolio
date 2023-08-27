@@ -152,8 +152,8 @@
 			// DOM elements.
 			this.DOM.pagination = this.DOM.el.querySelector('.carousel__index .carousel__indexInner');
 			this.DOM.navigation = this.DOM.el.querySelector('.project__nav');
-			this.DOM.navigation.prevCtrl = this.DOM.navigation.querySelector('button.project__nav-item--prev');
-			this.DOM.navigation.nextCtrl = this.DOM.navigation.querySelector('button.project__nav-item--next');
+			this.DOM.navigation.prevCtrl = this.DOM.navigation.querySelector('button.js-carousel-prev');
+			this.DOM.navigation.nextCtrl = this.DOM.navigation.querySelector('button.js-carousel-next');
 					this.DOM.entries = Array.from(this.DOM.el.querySelectorAll('.carousel__item'), entry => new Entry(entry));
 			this.entriesTotal = this.DOM.entries.length;
 			this.currentPos = 0;

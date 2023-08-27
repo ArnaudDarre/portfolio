@@ -15,6 +15,7 @@ tags:
 - Web Development
 
 ---
+
 {% include components/project-cover.html %}
 
 {% include components/project-body.html

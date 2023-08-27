@@ -19,7 +19,7 @@ tags: # no more than three
 ---
 
 {% include components/project-image.html 
-  size='thumbnail'
+  size='sm'
   pdf='true'
   suffix='book'
 %}
@@ -45,7 +45,7 @@ tags: # no more than three
 %}
 
 {% include components/project-image.html 
-  size='cover'
+  size='lg'
   suffix='timeline'
 %}
 

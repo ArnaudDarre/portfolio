@@ -28,10 +28,12 @@ tags: # no more than three
 %}
 
 {% include components/project-image.html 
+  size='md'
   suffix='19'
 %}
 
 {% include components/project-image.html 
+  size='md'
   suffix='21'
 %}
 

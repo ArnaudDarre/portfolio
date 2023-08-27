@@ -23,8 +23,7 @@ html, body {
 }
 
 .h2, %h2 {
-	@include font-size(4, $font-black, normal);	
-	line-height: 1.25;
+	@include font-size(4, $font-black, normal, 1.25);
 
 	@include responsive-mobile() { font-size: 3rem; }
 	@include responsive(down, tablet) { font-size: 3rem; }
@@ -32,8 +31,7 @@ html, body {
 }
 
 .h3, %h3 {
-	@include font-size(2.5, $font-bold, normal);
-	line-height: 1.25;
+	@include font-size(2.5, $font-bold, normal, 1.25);
 
 	@include responsive-mobile() { font-size: 2rem; }
 	@include responsive(down, tablet) { font-size: 2rem; }
@@ -41,24 +39,23 @@ html, body {
 }
 
 .h4, %h4 {
-	@include font-size(1.5, $font-black, normal);
-	line-height: 1.25;
+	@include font-size(1.5, $font-black, normal, 1.25);
 	text-transform: uppercase;
 }
 
 .h5, %h5 {
-	@include font-size(1.5, $font-bold, normal);
-	line-height: 1.25;
+	@include font-size(1.5, $font-bold, normal, 1.25);
 }
 
 .quote, %quote {
 	@include font-size(1.5, $font-regular, normal);
+	position: relative;
 
 	&:before {
-		@include pseudo-element('”', -$integer-xxxl, auto, auto, -$integer-xl, auto, auto);
+		@include pseudo-element('”', -$spacing*3, auto, auto, -$integer-xl, auto, auto);
 		z-index: -1;
 		font-size: 20rem;
-		color: $medium-grey;
+		color: rgba($secondary, 0.2);
 	}
 }	
 

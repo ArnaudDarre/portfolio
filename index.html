@@ -49,18 +49,22 @@ title: Arnaud Darré
             </div>
             <div class="grid__item grid--aiEnd">
               <nav class="project__nav">
-                <button class="project__nav-item project__nav-item--prev button button--icon button--secondary button--animate fas fa-chevron-left">
-                  <i class="button__inner fas fa-chevron-left"></i>
-                </button>
+                <div>
+                  <button class="js-carousel-prev button button--icon button--secondary button--animate fas fa-chevron-left">
+                    <i class="button__inner fas fa-chevron-left"></i>
+                  </button>
+                </div>
                 <div class="carousel__index">
                   <span class="carousel__indexCurrent">
                     <span class="carousel__indexInner caption">01</span>
                   </span>
                   <span class="carousel__indexTotal caption">04</span>
                 </div>
-                <button class="project__nav-item project__nav-item--next button button--icon button--secondary button--animate fas fa-chevron-right">
-                  <i class="button__inner fas fa-chevron-right"></i>
-                </button>
+                <div>
+                  <button class="js-carousel-next button button--icon button--secondary button--animate fas fa-chevron-right">
+                    <i class="button__inner fas fa-chevron-right"></i>
+                  </button>
+                </div>
               </nav>
             </div>
           </div>
@@ -81,7 +85,7 @@ title: Arnaud Darré
               {% endif %}
               <h2 class="carousel__title card__title h2">{{ project.title }}</h2>
               {% if project.subtitle %}
-              <h3 class="carousel__subtitle card__subtitle h5">{{ project.subtitle }}</h3>
+              <p class="carousel__subtitle card__subtitle h5">{{ project.subtitle }}</p>
               {% endif %}
             </div>
             {% if project.body %}

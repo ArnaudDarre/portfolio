@@ -1,0 +1,95 @@
+// —————————————————————————————————————————————————————————————————
+// elements
+// overrides
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// overrides
+// —————————————————————————————————————————————————————————————————
+
+.project {
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin: -$integer;
+
+    > * {
+      padding: $integer;
+    }
+  }
+
+  &__label { margin-bottom: $integer*0.25; }
+  &__legend { margin-top: $integer-md; }
+
+  &__fullWidth {
+    margin-right: -$spacing*3;
+    margin-left: -$spacing*3;
+  }
+
+  &__cover {
+    @include background(center center, cover);
+    height: 75vh;
+
+    &--large {
+      height: 200vh;
+    }
+  }
+
+  &__body {
+    max-width: $spacing*15;
+  }
+
+  &__poster { border-radius: $integer; }
+  &__grid img { border-radius: $integer*2; }
+  &__pdf img { border-radius: $integer; }
+  &__image img { border-radius: $integer; }
+
+  &__pdf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      transition: opacity 0.4s ease;
+      will-change: opacity;
+      position: absolute;
+      opacity: 0;
+      text-align: center;
+    }
+
+    img {
+      transition: opacity 0.4s ease;
+      will-change: opacity;
+      opacity: 1;
+      border: $integer-sm solid $medium-grey;
+    }
+
+    @include hover-link {
+
+      p { opacity: 1; }
+      img { opacity: 0.3; }
+    }
+  }
+}
+
+#related-projects {
+
+  &.section {
+    min-height: auto;
+    padding-bottom: $integer-xxl;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// overrides
+// —————————————————————————————————————————————————————————————————
+
+.page--project {
+
+  .project__nav {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+}

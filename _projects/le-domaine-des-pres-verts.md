@@ -16,24 +16,29 @@ tags: # no more than three
 
 ---
 
-{% include components/project-image.html 
+{% include components/project-image.html
+  size='md'
   suffix='home'
 %}
 
 {% include components/project-cover.html %}
 
-{% include components/project-image.html 
+{% include components/project-image.html
+  size='md'
   suffix='menu'
 %}
 
 {% include components/project-image.html 
+  size='md'
   suffix='room'
 %}
 
 {% include components/project-image.html 
+  size='md'
   suffix='room-2'
 %}
 
 {% include components/project-image.html 
+  size='md'
   suffix='footer'
 %}
