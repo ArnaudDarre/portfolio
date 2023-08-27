@@ -18,15 +18,16 @@ spotify: https://open.spotify.com/user/117157101?si=rvwOIUyNR72RwV6RagJOFg
 
 # Additional settings
 timezone: Europe/London
+permalink: /:title
 
 # permalinks config
 collections:
   projects:
     output: true
-    permalink: /projects/:path/
+    permalink: /projects/:path
   posts:
     output: true
-    permalink: /:title/
+    permalink: /:title
 
 # internal path
 url: http://arnaud-darre.com

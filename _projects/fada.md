@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: project
 featured: "3"
 color: turquoise
 title: Fada

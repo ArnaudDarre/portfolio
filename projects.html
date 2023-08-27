@@ -1,10 +1,10 @@
 ---
-layout: compress
+layout: projects
+title: Projects
+description: Browse through my entire collection of projects
 ---
 
-{% include header.html %}
-
-<section id="projects-list" class="section">
+<section class="section">
   <div class="section__background">
     <span class="background__circle background__circle--landing"></span>
     <span class="background__square background__square--landing"></span>
@@ -15,8 +15,7 @@ layout: compress
       <div class="section__subtitle tabs js-filter-buttons">
         <a class="tab tab--active" data-filter="*">All</a>
         {% for category in site.data.categories %}
-        <a class="tab"
-          data-filter=".{{ category.title | slugify }}">{{ category.title }}</a>
+        <a class="tab" data-filter=".{{ category.title | slugify }}">{{ category.title }}</a>
         {% endfor %}
       </div>
       <div class="section__lead js-grid grid grid--spacing3">
@@ -24,17 +23,21 @@ layout: compress
         <div class="grid__item grid__item--lg4 grid__item--md6 {{ project.category | slugify }}">
           <div class="card card--sm card--transparent card--project">
             <div class="card__media">
-              <div class="card__mediaInner background-cover" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é", "e" }}-cover.jpg)"></div>
+              <div class="card__mediaInner background-cover"
+                style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é" , "e" }}-cover.jpg)"></div>
             </div>
             <div class="card__header">
               <h2 class="card__title h5">{{ project.title }}</h2>
               <p class="card__subtitle body--bold">{{ project.subtitle }}</p>
             </div>
+            {% if project.body %}
             <div class="card__content">
               <p>{{ project.body | truncatewords: 15 }}</p>
             </div>
+            {% endif %}
             <div class="card__actions">
-              <a href="{{ project.url }}" class="button button--small button--secondary button--animate fas fa-chevron-right">
+              <a href="{{ project.url }}"
+                class="button button--small button--secondary button--animate fas fa-chevron-right">
                 <p class="button__inner">Discover</p>
               </a>
             </div>
@@ -45,5 +48,3 @@ layout: compress
     </div>
   </div>
 </section>
-  
-{% include footer.html %}

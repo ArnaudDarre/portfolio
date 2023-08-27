@@ -10,7 +10,7 @@
 {% assign text = include.text %}
 {% assign icon_inner = include.icon_inner %}
 
-<a 	href="{{ link }}" class="button{% if type == 'icon' %} button--icon{% endif %}{% if size %} button--{{ size }}{% endif %}{% if style %} button--{{ style }}{% endif %}{% if theme %} button--{{ theme }}{% endif %}{% if animation %} button--animate--{{ animation }} fas fab fa-{{ icon }}{% endif %}" title="{{ title }}" {% if target %} target="_{{ target }}" {% endif %}>
+<a href="{{ link }}" class="button{% if type == 'icon' %} button--icon{% endif %}{% if size %} button--{{ size }}{% endif %}{% if style %} button--{{ style }}{% endif %}{% if theme %} button--{{ theme }}{% endif %}{% if animation %} button--animate--{{ animation }} fas fab fa-{{ icon }}{% endif %}" title="{{ title }}" {% if target %} target="_{{ target }}" {% endif %}>
 	{% if type == 'text' %}
 	<p class="button__inner">{{ text }}</p>
 	{% elsif type == 'icon' %}

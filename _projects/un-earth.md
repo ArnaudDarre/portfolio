@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: project
 featured: '4'
 color: '#d6a881'
 

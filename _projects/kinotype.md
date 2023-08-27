@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: project
 featured: '2'
 
 # info

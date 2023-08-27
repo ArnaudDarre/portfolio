@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: project
 featured: "1"
 color: "#007bff"
 title: Applied Blockchain

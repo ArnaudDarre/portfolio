@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: project
 color: '#be181f'
 
 # info

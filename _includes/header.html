@@ -67,7 +67,8 @@
 
 </head>
 
-<body>		
-<div class="page{% if page.layout == 'index' %} page--index{% endif %}{% if page.layout == 'projects-list' %} page--projects-list{% endif %}{% if page.layout == 'projects' %} page--projects{% endif %}">
+<body>
+
+<div class="page{% if page.layout == 'index' %} page--index{% else %} page--{{ page.title | downcase | replace: " ", "-" }}{% endif %}">
 
 {% include containers/menu.html %}

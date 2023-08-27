@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: project
 featured: # add number here to feature the project on index
 color: # primary color of the project or client
 
