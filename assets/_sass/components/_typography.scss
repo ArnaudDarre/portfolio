@@ -68,6 +68,8 @@ html, body {
 .body {
 
 	&--bold { font-weight: $font-bold; }
+	&--regular { font-weight: $font-regular; }
+	&--light { font-weight: $font-light; }
 	&--italic { font-style: italic; }
 	&--underline { text-decoration: underline; }
 }

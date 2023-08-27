@@ -7,8 +7,8 @@
   }
   
   .section__container {
-    padding-top: $spacing;
-    padding-bottom: $spacing;
+    padding-top: $spacing !important;
+    padding-bottom: $spacing !important;
   }
 
   &__item {

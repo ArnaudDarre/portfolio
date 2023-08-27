@@ -78,7 +78,7 @@
   @if $value == up {
     $value: min-width;
     @if $breakpoint == desktop-lg { $breakpoint: $desktop-lg-up; } 
-    @else if $breakpoint == desktop { $breakpoint: $laptop-up; } 
+    @else if $breakpoint == desktop { $breakpoint: $desktop-up; } 
     @else if $breakpoint == laptop { $breakpoint: $laptop-up; } 
     @else if $breakpoint == tablet { $breakpoint: $tablet-up; } 
     @else if $breakpoint == mobile { $breakpoint: $mobile-up; } 
@@ -87,7 +87,7 @@
   } @else if $value == down {
     $value: max-width;
     @if $breakpoint == desktop-lg { $breakpoint: $desktop-lg-down; } 
-    @else if $breakpoint == desktop { $breakpoint: $laptop-down; } 
+    @else if $breakpoint == desktop { $breakpoint: $desktop-down; } 
     @else if $breakpoint == laptop { $breakpoint: $laptop-down; } 
     @else if $breakpoint == tablet { $breakpoint: $tablet-down; } 
     @else if $breakpoint == mobile { $breakpoint: $mobile-down; } 

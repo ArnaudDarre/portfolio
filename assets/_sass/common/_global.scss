@@ -28,10 +28,6 @@ body {
 		border: $spacing*0.5 solid $white;
 		box-sizing: border-box;
 		pointer-events: none;
-
-		@include responsive(down, tablet) {
-			border-width: $spacing*0.25;
-		}
 	}
 	
 	&.js-freeze {
@@ -157,7 +153,8 @@ button, a {
 
 .hide {
 	
-	&--desktop { @include responsive(down, laptop) { display: none !important; } }
+	&--desktop { @include responsive(down, desktop) { display: none !important; } }
+	&--laptop { @include responsive(down, laptop) { display: none !important; } }
 	&--tablet { @include responsive(down, tablet) { display: none !important; } }
 	&--mobile { @include responsive(down, mobile) { display: none !important; } }
 	&--touch { @include responsive-mobile() { display: none !important; } }
@@ -165,7 +162,8 @@ button, a {
 
 .show {
 
-	&--desktop { @include responsive(up, laptop) { display: none !important; } }
+	&--desktop { @include responsive(up, desktop) { display: none !important; } }
+	&--laptop { @include responsive(up, laptop) { display: none !important; } }
 	&--tablet { @include responsive(up, tablet) { display: none !important; } }
 	&--mobile { @include responsive(up, mobile) { display: none !important; } }
 }

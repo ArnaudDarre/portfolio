@@ -15,16 +15,12 @@ layout: compress
       <nav class="project__nav">
         {% if page.previous.url %}
         <div>
-          <a href="{{ page.previous.url }}" class="button button--md button--icon button--secondary">
-            {% svg /assets/icons/chevron-left.svg %}
-          </a>
+          <a href="{{ page.previous.url }}" class="button button--md button--icon button--secondary">{% svg /assets/icons/chevron-left.svg %}</a>
         </div>
         {% endif %}
         {% if page.next.url %}
         <div>
-          <a href="{{ page.next.url }}" class="button button--md button--icon button--secondary">
-            {% svg /assets/icons/chevron-right.svg %}
-          </a>
+          <a href="{{ page.next.url }}" class="button button--md button--icon button--secondary">{% svg /assets/icons/chevron-right.svg %}</a>
         </div>
         {% endif %}
         <div>
@@ -46,13 +42,13 @@ layout: compress
         </div>
         {% if page.body %}
         <div class="card__content">
-          <div class="grid grid--spacing6 grid--aiBaseline">
+          <div class="grid grid--spacing3 grid--aiBaseline">
             <div class="grid__item grid__item--lg6">
               <p class="">{{ page.body }}</p>
             </div>
             <div class="grid__item grid__item--lg6 grid grid grid--spacing2">
               {% if page.tags %}
-              <div class="grid__item grid__item--lg4">
+              <div class="grid__item grid__item--sm4">
                 <p class="project__label caption">Tags</p>
                 {% for tag in page.tags %}
                 <p>{{ tag }}</p>
@@ -60,13 +56,13 @@ layout: compress
               </div>
               {% endif %}
               {% if page.client %}
-              <div class="grid__item grid__item--lg4">
+              <div class="grid__item grid__item--sm4">
                 <p class="project__label caption">Client</p>
                 <p>{{ page.client }}</p>
               </div>
               {% endif %}
               {% if page.website_url %}
-              <div class="grid__item grid__item--lg4">
+              <div class="grid__item grid__item--sm4">
                 <p class="project__label caption">Website</p>
                 <a href="{{ page.website_url }}" target="_blank" class="link">{{ page.website_title }}</a>
               </div>

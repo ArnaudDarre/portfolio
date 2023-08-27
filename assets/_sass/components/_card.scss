@@ -115,7 +115,10 @@
 .card {
 
   &--project {
-    padding-bottom: $spacing*0.5;
+
+    @include responsive(up, tablet) {
+      padding-bottom: $spacing*0.5;
+    }
   }
 
   &--skills {

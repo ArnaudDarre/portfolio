@@ -57,10 +57,14 @@
     bottom: -$spacing;
     border-radius: $integer*2;
 
+    @include responsive(down, desktop) { left: $spacing*8; }
+    @include responsive(down, laptop) { left: $spacing*6; right: 0; }
     @include responsive(down, tablet) {
-      padding-left: $integer*2*2;
+      left: -1rem;
+      right: -1rem;
+      border-radius: 0;
     }
-  
+
     &Inner {
       @include background(50% 50%, cover);
       width: 100%;
@@ -74,19 +78,25 @@
 
   &__category, &__title, &__subtitle, &__body {
     pointer-events: none;
+
+    @include responsive(down, tablet) {
+      background-color: $white;
+      padding: $integer;
+    }
   }
-    
+
   &__category, &__subtitle, &__body {
     overflow: hidden !important;
     position: relative;
+    display: inline-block;
   }
 
   &__subtitle, &__body {
-
-    @include responsive(up, tablet) {
-      width: $spacing*10;
-      padding-right: $spacing;
-    }
+    width: $spacing*10;
+    padding-right: $spacing;
+    
+    @include responsive(down, desktop) { width: $spacing*8; }
+    @include responsive(down, laptop) { width: $spacing*6; }
   }
 
   &__title {
@@ -107,6 +117,13 @@
     .carousel__button,
     .carousel__imageInner {
       opacity: 0;
+    }
+
+    .carousel__title, {
+
+      @include responsive(down, tablet) {
+        opacity: 0;
+      }
     }
   }
 }

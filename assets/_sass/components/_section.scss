@@ -31,7 +31,7 @@
     bottom: $spacing;
     left: $integer*5;
 
-    @include responsive(down, tablet) {
+    @include responsive(down, laptop) {
       display: none;
     }
   }
@@ -46,7 +46,7 @@
 
   &__title {
 
-    & + .section__subtitle { margin-top: $spacing; }
+    & + .section__subtitle { margin-top: $spacing*0.5; }
     & + .section__lead { margin-top: $spacing; }
   }
 
@@ -98,13 +98,17 @@
 
   .section {
 
+    &__header {
+
+      @include responsive(down, tablet) {
+        padding-right: $integer*8;
+      }
+    }
+
     &__title {
       
-      @include responsive(up, tablet) {
+      @include responsive(up, laptop) {
         display: none;
-      }
-
-      @include responsive(up, tablet) {
  
         & + .section__subtitle { margin-top: 0; }
         & + .section__lead { margin-top: 0; }
@@ -115,9 +119,22 @@
 
 #landing {
 
-  .section__container {
-    padding-top: $spacing*3;
-    padding-bottom: $spacing;
+  .section {
+
+    &__container {
+      padding-top: $spacing*3;
+      padding-bottom: $spacing;
+    }
+  }
+}
+
+#portfolio {
+
+  .section__subtitle .grid--aiEnd {
+
+    @include responsive(down, laptop) {
+      align-items: flex-start !important;
+    }
   }
 }
 

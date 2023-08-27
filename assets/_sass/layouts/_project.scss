@@ -12,10 +12,10 @@
   &__nav {
     display: flex;
     align-items: center;
-    margin: -$integer;
+    margin: -$integer*0.5;
 
     > * {
-      padding: $integer;
+      padding: $integer*0.5;
     }
   }
 
@@ -88,6 +88,7 @@
 
   .project__nav {
     position: absolute;
+    top: -$integer*5;
     right: 0;
     z-index: 1;
   }
