@@ -1,5 +1,6 @@
 ---
 layout: project
+featured: 5
 color: '#231d1f'
 
 # info

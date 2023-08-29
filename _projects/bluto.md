@@ -1,6 +1,6 @@
 ---
 layout: project
-featured: "1"
+featured: 1
 
 # info
 title: Bluto

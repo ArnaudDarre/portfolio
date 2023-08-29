@@ -58,7 +58,13 @@ title: Arnaud Darré
                   <span class="carousel__indexCurrent">
                     <span class="carousel__indexInner caption">01</span>
                   </span>
-                  <span class="carousel__indexTotal caption">04</span>
+                  {% assign total = 0 %}
+                  {% for project in site.projects %}
+                  {% if project.featured != null  %}
+                  {% assign total = total | plus: 1 %}
+                  {% endif %}
+                  {% endfor %}
+                  <span class="carousel__indexTotal caption">0{{ total }}</span>
                 </div>
                 <div>
                   <button class="js-carousel-next button button--md button--icon button--secondary">
@@ -71,10 +77,10 @@ title: Arnaud Darré
         </div>
       </div>
       <div class="section__content carousel__wrapper">
-        {% for project in site.projects %}
-        {% assign project = site.projects | sort: "featured" %}
+        {% assign sorted = site.projects | sort: 'featured' %}
+        {% for project in sorted %}
         {% if project.featured %}
-        <div class="carousel__item {% if project.featured == '1' %}carousel__item--current{% endif %} carousel__item--{{ project.title | slugify }}">
+        <div class="carousel__item {% if project.featured == 1 %}carousel__item--current{% endif %} carousel__item--{{ project.title | slugify }}">
           <a href="{{ project.url }}" class="carousel__image">
             <div class="carousel__imageInner" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
           </a>
