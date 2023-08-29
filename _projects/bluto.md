@@ -14,6 +14,7 @@ website_url: https://www.bluto.co.uk/
 website_title: bluto.co.uk
 tags:
 - Brand Identity
+- Design system
 - Wireframing
 - Web Design
 - Web Development
@@ -28,37 +29,34 @@ tags:
   legend='Logo research'
 %}
 
+I was able to bring everything I had learned so far on my previous roles and use it for a project I cared about deeply and I had started myself. I combined my skills in branding, design systems implentation and UI/UX design to create from scratch a platform that people would acutally use.
+
 {% include components/project-image.html
   size='md'
   file_name='mockup-home'
-  file_extension='png'
   legend='Mockup for the homepage'
 %}
 
 {% include components/project-image.html
   size='md'
   file_name='mockup-category'
-  file_extension='png'
   legend='Mockup for a product category page'
 %}
 
 {% include components/project-image.html
   size='md'
   file_name='mockup-product'
-  file_extension='png'
   legend='Mockup for a product page'
 %}
 
 {% include components/project-image.html
   size='md'
   file_name='mockup-dashboard'
-  file_extension='png'
   legend='Mockup for the user dashboard'
 %}
 
 {% include components/project-image.html
   size='md'
   file_name='mockup-orders'
-  file_extension='png'
   legend='Mockup for the order history page'
 %}
