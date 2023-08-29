@@ -18,27 +18,27 @@ tags: # no more than three
 
 {% include components/project-image.html
   size='md'
-  suffix='home'
+  file_name='home'
 %}
 
 {% include components/project-cover.html %}
 
 {% include components/project-image.html
   size='md'
-  suffix='menu'
+  file_name='menu'
 %}
 
 {% include components/project-image.html 
   size='md'
-  suffix='room'
+  file_name='room'
 %}
 
 {% include components/project-image.html 
   size='md'
-  suffix='room-2'
+  file_name='room-2'
 %}
 
 {% include components/project-image.html 
   size='md'
-  suffix='footer'
+  file_name='footer'
 %}

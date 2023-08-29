@@ -1,15 +1,13 @@
 ---
 layout: project
-featured: # add number here to feature the project on index
+featured: # add a number here to feature the project on index
 color: # primary color of the project or client
 
-# info
 title: 
 subtitle: 
 body: 
 category: [Digital, Drawing, Editorial, Identity, Posters, Typography, Video]
 
-# meta
 client: 
 website_url: 
 website_title: 
@@ -27,7 +25,15 @@ tags: # no more than three
   - Web Development
   - Wordpress
 
-# content
-video_id: # vimeo video id
-
+video_id: # vimeo video id if relevant
 ---
+
+{% include components/project-cover.html %}
+
+{% include components/project-body.html %}
+
+{% include components/project-grid.html %}
+
+{% include components/project-image.html %}
+
+{% include components/project-poster.html %}

@@ -19,22 +19,20 @@ tags:
 
 ---
 
-{% include components/project-image.html 
-  size='sm'
-  pdf='true'
-  suffix='guidelines'
+{% include components/project-pdf.html 
+  file_name='guidelines'
 %}
 
 {% include components/project-cover.html %}
 
 {% include components/project-image.html 
-  suffix='mockup-identity'
+  file_name='mockup-identity'
   legend='Stationery'
 %}
 
 {% include components/project-grid.html %}
 
 {% include components/project-image.html 
-  suffix='mockup-research'
+  file_name='mockup-research'
   legend='First research for the logo'
 %}

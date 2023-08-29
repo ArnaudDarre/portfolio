@@ -16,7 +16,7 @@ tags: # no more than three
 ---
 
 {% include components/project-image.html 
-  suffix='3'
+  file_name='3'
 %}
 
 {% include components/project-body.html
@@ -29,11 +29,11 @@ tags: # no more than three
 
 {% include components/project-image.html 
   size='md'
-  suffix='19'
+  file_name='19'
 %}
 
 {% include components/project-image.html 
   size='md'
-  suffix='21'
+  file_name='21'
 %}
 

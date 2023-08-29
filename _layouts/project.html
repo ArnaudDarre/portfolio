@@ -40,12 +40,15 @@ layout: compress
           <p class="card__subtitle h5">{{ page.subtitle }}</p>
           {% endif %}
         </div>
-        {% if page.body %}
+        {% if page.body or page.tags or page.client or page.website_url %}
         <div class="card__content">
           <div class="grid grid--spacing3 grid--aiBaseline">
+            {% if page.body %}
             <div class="grid__item grid__item--lg6">
               <p class="">{{ page.body }}</p>
             </div>
+            {% endif %}
+            {% if page.tags or page.client or page.website_url %}
             <div class="grid__item grid__item--lg6 grid grid grid--spacing2">
               {% if page.tags %}
               <div class="grid__item grid__item--sm4">
@@ -64,10 +67,11 @@ layout: compress
               {% if page.website_url %}
               <div class="grid__item grid__item--sm4">
                 <p class="project__label caption">Website</p>
-                <a href="{{ page.website_url }}" target="_blank" class="link">{{ page.website_title }}</a>
+                <a href="{{ page.website_url }}" target="_blank" rel="external" class="link">{{ page.website_title }}</a>
               </div>
               {% endif %}
             </div>
+            {% endif %}
           </div>
         </div>
         {% endif %}

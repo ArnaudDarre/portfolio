@@ -1,6 +1,6 @@
 ---
 layout: project
-featured: '4'
+featured: '5'
 color: '#d6a881'
 
 # info
@@ -18,10 +18,8 @@ tags: # no more than three
 
 ---
 
-{% include components/project-image.html 
-  size='sm'
-  pdf='true'
-  suffix='book'
+{% include components/project-pdf.html 
+  file_name='book'
 %}
 
 {% include components/project-body.html 
@@ -36,7 +34,7 @@ tags: # no more than three
 %}
 
 {% include components/project-grid.html 
-  suffix='illustrations'
+  file_name='illustrations'
   legend='Thumbnails of the illustrations'
 %}
 
@@ -46,11 +44,10 @@ tags: # no more than three
 
 {% include components/project-image.html 
   size='lg'
-  suffix='timeline'
+  file_name='timeline'
 %}
 
 {% include components/project-grid.html 
-  suffix='timeline'
+  file_name='timeline'
   legend='Thumbnails from the timeline'
 %}
-

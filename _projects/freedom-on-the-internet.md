@@ -15,10 +15,8 @@ tags: # no more than three
 
 ---
 
-{% include components/project-image.html 
-  size='sm'
-  pdf='true'
-  suffix='book'
+{% include components/project-pdf.html 
+  file_name='book'
 %}
 
 {% include components/project-cover.html %}

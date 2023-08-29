@@ -16,23 +16,21 @@ tags:
 
 ---
 
-{% include components/project-image.html 
-  size='sm'
-  pdf='true'
-  suffix='guidelines'
+{% include components/project-pdf.html 
+  file_name='guidelines'
 %}
 
 {% include components/project-cover.html %}
 
 {% include components/project-image.html 
-  suffix='mockup-stationnery'
+  file_name='mockup-stationnery'
   legend='Stationery'
 %}
 
 {% include components/project-poster.html 
-  suffix='1'
+  file_name='1'
 %}
 
 {% include components/project-poster.html 
-  suffix='2'
+  file_name='2'
 %}

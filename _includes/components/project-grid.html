@@ -1,12 +1,12 @@
-{% assign suffix = include.suffix %}
+{% assign file_name = include.file_name %}
 {% assign legend = include.legend %}
 
 <div class="section__content project__grid">
   <div class="grid grid--spacing2">
-    <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-grid{% if suffix %}-{{ suffix }}{% endif %}-1.jpg" alt="{{ page.title }} {% assign suffix = include.suffix %} thumbnail" class=" grid__item grid__item--md6">
-    <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-grid{% if suffix %}-{{ suffix }}{% endif %}-2.jpg" alt="{{ page.title }} {% assign suffix = include.suffix %} thumbnail" class=" grid__item grid__item--md6">
-    <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-grid{% if suffix %}-{{ suffix }}{% endif %}-3.jpg" alt="{{ page.title }} {% assign suffix = include.suffix %} thumbnail" class=" grid__item grid__item--md6">
-    <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-grid{% if suffix %}-{{ suffix }}{% endif %}-4.jpg" alt="{{ page.title }} {% assign suffix = include.suffix %} thumbnail" class=" grid__item grid__item--md6">
+    <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-grid{% if file_name %}-{{ file_name }}{% endif %}-1.jpg" alt="{{ page.title }} {% assign file_name = include.file_name %} thumbnail" class=" grid__item grid__item--md6">
+    <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-grid{% if file_name %}-{{ file_name }}{% endif %}-2.jpg" alt="{{ page.title }} {% assign file_name = include.file_name %} thumbnail" class=" grid__item grid__item--md6">
+    <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-grid{% if file_name %}-{{ file_name }}{% endif %}-3.jpg" alt="{{ page.title }} {% assign file_name = include.file_name %} thumbnail" class=" grid__item grid__item--md6">
+    <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-grid{% if file_name %}-{{ file_name }}{% endif %}-4.jpg" alt="{{ page.title }} {% assign file_name = include.file_name %} thumbnail" class=" grid__item grid__item--md6">
     <p class="grid__item caption">{{ legend }}</p>
   </div>
 </div>
