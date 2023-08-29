@@ -1,0 +1,144 @@
+// ——————————————————————————————————————————————————
+// general
+// misc
+// ——————————————————————————————————————————————————
+
+// ——————————————————————————————————————————————————
+// general
+// ——————————————————————————————————————————————————
+
+.editor, %editor {
+
+  h2, h3,
+  p,
+  ol, ul,
+  a,
+  blockquote {
+    text-align: left;
+    max-width: 800px;
+  }
+
+  h2 { @extend %h4; }
+  h3 { @extend %h5; }
+  blockquote { @extend %h6; }
+  p:not(.caption), ol, ul, a { @extend %subtitle; }
+
+  h2,
+  h3 {
+    color: $secondary;
+  }
+
+  h2 {
+
+    &:not(:first-child) { margin-top: $integer*4; }
+    &:not(:last-child) { margin-bottom: $integer*2.5; }
+  }
+
+  h3 {
+
+    &:not(:first-child) { margin-top: $integer*4; }
+    &:not(:last-child) { margin-bottom: $integer*2; }
+  }
+
+  p,
+  ol,
+  ul {
+
+    &:not(:first-child) { margin-top: $integer*1.5; }
+  }
+
+  ol,
+  ul {
+    margin-left: $integer*4;
+  }
+
+  ol { list-style: decimal; }
+  ul { list-style: disc; }
+
+  li + li {
+    margin-top: $integer/2;
+  }
+
+  li {
+
+    > ul {
+      margin-top: 0.25rem !important;
+    }
+
+    &:not(:last-child) {
+
+      > ul {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  a:not(.button) {
+    transition: color $transition, background-color $transition;
+    will-change: color, background-color;
+    text-decoration: underline;
+    font-weight: $font-bold;
+    color: $primary;
+    
+    @include hover {
+      color: $primary;
+      text-decoration: none;
+    }
+
+    &.button {
+      display: inline-flex;
+    }
+  }
+
+  a.link:hover {
+    text-decoration: none;
+  }
+
+  strong {
+    font-weight: $font-bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  blockquote {
+    position: relative;
+    
+    &:before {
+      @include pseudo-element('”', -$spacing*2, auto, auto, -$spacing, auto, auto);
+      z-index: -1;
+      font-size: 20rem;
+      color: rgba($secondary, 0.1);
+    }
+    
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+    
+    p:not(.caption) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// ——————————————————————————————————————————————————
+// misc
+// ——————————————————————————————————————————————————
+
+.editor {
+
+  .section__content {
+
+    + h2, + h3, + p, + ol, + ul, + a, + blockquote {
+      margin-top: $spacing*2 !important;
+    }
+  }
+
+  h2, h3, p, ol, ul, a, blockquote {
+
+    & + .section__content {
+      margin-top: $spacing*2;
+    }
+  }
+}

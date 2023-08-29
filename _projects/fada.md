@@ -23,6 +23,4 @@ tags:
 
 {% include components/project-cover.html %}
 
-{% include components/project-body.html 
-  quote='Having learned web development on my own, it was important for me to keep track of everything I was building. This is how this project came to life.'
-%}
+> Having learned web development on my own, it was important for me to keep track of everything I was building. This is how this project came to life.

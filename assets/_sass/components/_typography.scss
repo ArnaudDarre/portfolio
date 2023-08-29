@@ -47,19 +47,11 @@ html, body {
 	@include font-size(1.5, $font-bold, normal, 1.25);
 }
 
-.quote, %quote {
-	@include font-size(1.5, $font-regular, normal);
-	position: relative;
+.h6, %h6 {
+	@include font-size(1.25, $font-bold, normal, 1.25);
+}
 
-	&:before {
-		@include pseudo-element('”', -$spacing*3, auto, auto, -$spacing, auto, auto);
-		z-index: -1;
-		font-size: 20rem;
-		color: rgba($secondary, 0.2);
-	}
-}	
-
-.subtitle, %subtitle { @include font-size(1.25); }
+.subtitle, %subtitle { @include font-size(1.125); }
 .body, %body { @include font-size(1); }
 .caption, %caption { @include font-size(0.75, $font-bold); color: $secondary; }
 

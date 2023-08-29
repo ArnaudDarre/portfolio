@@ -30,7 +30,7 @@ video_id: # vimeo video id if relevant
 
 {% include components/project-cover.html %}
 
-{% include components/project-body.html %}
+{% include components/project-pdf.html %}
 
 {% include components/project-grid.html %}
 

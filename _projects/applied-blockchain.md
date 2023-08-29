@@ -22,9 +22,7 @@ tags:
 
 {% include components/project-cover.html %}
 
-{% include components/project-body.html
-  body-1='This project was conducted in-house. The design has been created in collaboration with the second in-house designer and the developement autonomously, from scratch. We used Sketch in InVision for design and collaboration, and coded the website in HTML, SCSS and Javascript using static site generator Jekyll.'
-%}
+This project was conducted in-house. The design has been created in collaboration with the second in-house designer and the developement autonomously, from scratch. We used Sketch in InVision for design and collaboration, and coded the website in HTML, SCSS and Javascript using static site generator Jekyll.
 
 {% include components/project-image.html
   file_name='mockup-compare-join'
