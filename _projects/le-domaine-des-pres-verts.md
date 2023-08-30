@@ -16,12 +16,12 @@ tags: # no more than three
 
 ---
 
+{% include components/project-cover.html %}
+
 {% include components/project-image.html
   size='md'
   file_name='home'
 %}
-
-{% include components/project-cover.html %}
 
 {% include components/project-image.html
   size='md'

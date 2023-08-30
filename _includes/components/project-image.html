@@ -8,7 +8,7 @@
     <picture>
       <source srcset="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}{% if file_name %}-{{ file_name }}{% endif %}.webp" type="image/webp">
       <source srcset="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" type="image/jpeg">
-      <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}{% if file_name %}-{{ file_name }}{% endif %}.jpg" alt="{{ page.title }} {{ file_name }} thumbnail">
+      <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}{% if file_name %}-{{ file_name }}{% endif %}.jpg" alt="{{ page.title }} {{ file_name }}">
     </picture>
     <p class="project__legend caption">{{ legend }}</p>
   </div>
