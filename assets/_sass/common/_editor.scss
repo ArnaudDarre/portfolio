@@ -131,14 +131,14 @@
   .section__content {
 
     + h2, + h3, + p, + ol, + ul, + a, + blockquote {
-      margin-top: $spacing*2 !important;
+      margin-top: $spacing*1.5 !important;
     }
   }
 
   h2, h3, p, ol, ul, a, blockquote {
 
     & + .section__content {
-      margin-top: $spacing*2;
+      margin-top: $spacing*1.5;
     }
   }
 }
