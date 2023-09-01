@@ -1,6 +1,7 @@
 ---
 layout: project
 featured: 1
+color: "#C6882C"
 
 # info
 title: Bluto
