@@ -11,8 +11,9 @@ category: Branding
 
 # meta
 client: Bluto
-website_url: https://www.bluto.co.uk/
-website_title: bluto.co.uk
+website:
+  url: https://www.bluto.co.uk/
+  label: Visit website
 tags:
 - Brand Identity
 - Design system

@@ -65,6 +65,8 @@ $spacing-mobile: $integer*1.5;
 
 	.section:first-of-type .section__container {
 		padding-top: $spacing-tablet*8;
+
+		+ .section__container { padding-top: 0; }
 	}
 
 	.page--project .project__nav {
@@ -77,6 +79,8 @@ $spacing-mobile: $integer*1.5;
 
 	.section:first-of-type .section__container {
 		padding-top: $integer*10;
+
+		+ .section__container { padding-top: 0; }
 	}
 
 	.page--project .project__nav {

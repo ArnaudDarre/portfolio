@@ -10,8 +10,9 @@ category: Branding
 
 # meta
 client: Watapix
-website_url: http://www.watapix.com/
-website_title: watapix.com
+website:
+  url: http://www.watapix.com/
+  label: Visit websiste
 tags: 
   - Brand Identity
   - Logo Design

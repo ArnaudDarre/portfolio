@@ -11,8 +11,9 @@ category: Digital
 
 # meta
 client: Personal project
-website_url: https://shroomio.arnaud-darre.com/
-website_title: shroomio.arnaud-darre.com
+website:
+  url: https://shroomio.arnaud-darre.com/
+  label: Visit Storybook
 tags:
 - React
 - Web Developmentv  

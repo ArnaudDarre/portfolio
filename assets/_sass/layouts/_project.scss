@@ -19,6 +19,13 @@
     }
   }
 
+  &__body {
+
+    @include responsive(up, mobile) {
+      padding-right: $spacing;
+    }
+  }
+
   &__label { margin-bottom: $integer*0.25; }
   &__legend { margin-top: $integer*2; }
 
@@ -36,7 +43,7 @@
     }
   }
 
-  &__body {
+  &__poster {
     max-width: $spacing*15;
   }
 

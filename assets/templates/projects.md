@@ -9,8 +9,10 @@ body:
 category: [Digital, Drawing, Editorial, Identity, Posters, Typography, Video]
 
 client: 
-website_url: 
-website_title: 
+website:
+  url: 
+  label: 
+website_label: 
 tags: # no more than three
   - Brand Identity
   - Data Visualisation

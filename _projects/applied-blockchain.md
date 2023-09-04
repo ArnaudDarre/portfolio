@@ -11,8 +11,9 @@ category: Digital
 
 # meta
 client: Applied Blockchain
-website_url: https://appliedblockchain.com/
-website_title: appliedblockchain.com
+website:
+  url: https://appliedblockchain.com/
+  label: Visit website
 tags:
 - Brand Identity
 - Web Design
