@@ -30,6 +30,8 @@ git checkout main &&
   git checkout develop
 ```
 
+Deployment is automated with Netlify. The production environment is deployed automatically when the branch `main` is pushed.
+
 | Environment | Branch | URL |
 | --- | --- | --- |
 | Staging | develop | |
