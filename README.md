@@ -2,7 +2,9 @@
 
 Online portfolio presenting my projects, skills & training.
 
-## Getting started
+## Run and deploy
+
+### Run the website locally
 
 - Install [Jekyll](https://jekyllrb.com/)
 
@@ -16,6 +18,22 @@ jekyll serve
 ```
 
 > Local URL: [localhost:4000](http://localhost:4000)
+
+### Deployment
+
+On branch develop
+
+```
+git checkout main &&
+  git pull origin develop &&
+  git push &&
+  git checkout develop
+```
+
+| Environment | Branch | URL |
+| --- | --- | --- |
+| Staging | develop | |
+| Production | main | [arnaud-darre.com](https://arnaud-darre.com/) |
 
 ## Dependencies & Methodologies
 
