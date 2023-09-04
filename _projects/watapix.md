@@ -1,6 +1,7 @@
 ---
 layout: project
 color: '#00aec7'
+order: 6
 
 # info
 title: Watapix

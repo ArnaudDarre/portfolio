@@ -1,6 +1,7 @@
 ---
 layout: project
 color: '#000000'
+order: 7
 
 # info
 title: Life Sketching

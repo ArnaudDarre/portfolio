@@ -1,7 +1,8 @@
 ---
 layout: project
-featured: 2
+featured: true
 color: "#00FFC4"
+order: 2
 
 # info
 title: Shroomio

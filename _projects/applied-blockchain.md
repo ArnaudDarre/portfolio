@@ -1,7 +1,8 @@
 ---
 layout: project
-featured: 3
+featured: true
 color: "#007bff"
+order: 3
 
 # info
 title: Applied Blockchain

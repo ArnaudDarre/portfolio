@@ -1,6 +1,6 @@
 ---
 layout: project
-featured: # add a number here to feature the project on index
+featured: true
 color: # primary color of the project or client
 
 title: 

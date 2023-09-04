@@ -1,6 +1,7 @@
 ---
 layout: project
 color: '#be181f'
+order: 8
 
 # info
 title: Museum

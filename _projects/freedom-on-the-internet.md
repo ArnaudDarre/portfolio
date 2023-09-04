@@ -1,6 +1,7 @@
 ---
 layout: project
 color: '#231d1f'
+order: 9
 
 # info
 title: Freedom on the Internet

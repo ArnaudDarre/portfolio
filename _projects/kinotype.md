@@ -1,6 +1,7 @@
 ---
 layout: project
-featured: 4
+featured: true
+order: 4
 
 # info
 title: Kinotype

@@ -1,6 +1,7 @@
 ---
 layout: project
 color: '#dc9b64'
+order: 5
 
 # info
 title: le Domaine des Prés Verts

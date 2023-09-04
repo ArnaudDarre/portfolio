@@ -77,10 +77,10 @@ title: Arnaud Darré
         </div>
       </div>
       <div class="section__content carousel__wrapper">
-        {% assign sorted = site.projects | sort: 'featured' %}
+        {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
-        {% if project.featured %}
-        <div class="carousel__item {% if project.featured == 1 %}carousel__item--current{% endif %} carousel__item--{{ project.title | slugify }}">
+        {% if project.featured == true %}
+        <div class="carousel__item {% if forloop.first %}carousel__item--current{% endif %} carousel__item--{{ project.title | slugify }}">
           <a href="{{ project.url }}" class="carousel__image">
             <div class="carousel__imageInner" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
           </a>

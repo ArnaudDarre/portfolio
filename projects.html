@@ -19,7 +19,8 @@ description: Browse through my entire collection of projects
         {% endfor %}
       </div>
       <div class="section__lead js-grid grid grid--spacing3">
-        {% for project in site.projects %}
+        {% assign sorted = site.projects | sort: 'order' %}
+        {% for project in sorted %}
         <div class="grid__item grid__item--lg4 grid__item--md6 {{ project.category | slugify }}">
           <div class="card card--sm card--transparent card--project">
             <div class="card__media">
