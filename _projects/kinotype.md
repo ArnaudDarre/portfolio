@@ -30,6 +30,6 @@ video_id: 130741186
   legend="Poster created with the data"
 %}
 
-{% include components/project-grid.html 
+{% include components/project-grid.html
   legend="Thumbnails of the poster"
 %}

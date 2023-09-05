@@ -24,7 +24,8 @@ jekyll serve
 On branch develop
 
 ```
-git checkout main &&
+git push &&
+  git checkout main &&
   git pull origin develop &&
   git push &&
   git checkout develop
