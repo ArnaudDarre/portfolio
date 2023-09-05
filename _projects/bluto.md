@@ -35,6 +35,17 @@ tags:
 I was able to bring everything I had learned so far on my previous roles and use it for a project I cared about deeply and I had started myself. I combined my skills in branding, design systems implentation and UI/UX design to create from scratch a platform that people would acutally use.
 
 {% include components/project-image.html
+  file_name='mockup-leaflet'
+  legend='Advertising leaflet'
+%}
+
+{% include components/project-image.html
+  size='md'
+  file_name='mockup-business-card'
+  legend='Business cards'
+%}
+
+{% include components/project-image.html
   size='md'
   file_name='mockup-home'
   legend='Mockup for the homepage'

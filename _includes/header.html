@@ -12,13 +12,7 @@
 		gtag('config', 'UA-149677473-1');
 	</script>
 
-	<title>
-		{% if page.title %} 
-			{{ page.title }} | {{ site.title }}
-		{% else %} 
-			{{ site.title }} | {{ site.description }}
-		{% endif %}
-	</title>	
+	<title>{{ site.title }} | {% if page.layout == 'index' %}Portfolio{% else %}{{ page.title }}{% endif %}</title>	
 
 	<!-- META -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
