@@ -48,7 +48,7 @@
   }
 
   &__poster { border-radius: $integer; }
-  &__grid img { border-radius: $integer*2; }
+  &__grid img { border-radius: $integer; }
   &__pdf img { border-radius: $integer; }
   &__image img { border-radius: $integer; }
 

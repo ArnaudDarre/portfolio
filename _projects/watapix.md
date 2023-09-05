@@ -32,7 +32,9 @@ tags:
   legend='Stationery'
 %}
 
-{% include components/project-grid.html %}
+{% include components/project-grid.html
+  file_name='applications'
+%}
 
 {% include components/project-image.html 
   file_name='mockup-research'

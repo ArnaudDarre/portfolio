@@ -31,5 +31,6 @@ video_id: 130741186
 %}
 
 {% include components/project-grid.html
+  file_name='thumbnails'
   legend="Thumbnails of the poster"
 %}
