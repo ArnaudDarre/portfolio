@@ -27,8 +27,9 @@ On branch develop
 git push &&
   git checkout main &&
   git pull origin develop &&
-  git push &&
-  git checkout develop
+  git push origin main &&
+  git checkout develop &&
+  git pull origin main
 ```
 
 Deployment is automated with Netlify. The production environment is deployed automatically when the branch `main` is pushed.
