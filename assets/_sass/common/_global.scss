@@ -23,9 +23,12 @@ body.js-freeze {
 	overflow: hidden;
 }
 
-// fix horizontal scrolling on mobile
 .page {
-
+	// needed for footer margin-top: auto if content smaller than viewport height
+	display: flex;
+	flex-direction: column;
+	
+	// fix horizontal scrolling on mobile
   // CSS for other than iOS devices
   @supports not (-webkit-touch-callout: none) { overflow-x: clip; }
   // CSS for iOS devices
@@ -141,6 +144,18 @@ a {
   .pr-#{$i} { padding-right: $i*$spacing-sm !important; }
   .pb-#{$i} { padding-bottom: $i*$spacing-sm !important; }
   .pl-#{$i} { padding-left: $i*$spacing-sm !important; }
+}
+
+// width
+
+$max: 100;
+$step: 5;
+
+@for $i from 1 through ($max/$step) {
+  $value: $i * $step;
+
+  .w-percent-#{$value} { width: $value + 0% !important; }
+  .w-rem-#{$value} { width: $value*$spacing-sm !important; }
 }
 
 // responsive

@@ -21,7 +21,6 @@
   h2 { @extend %h4; }
   h3 { @extend %h5; }
   blockquote { @extend %h6; }
-  p:not(.caption), ol, ul, a { @extend %subtitle; }
 
   h2,
   h3 {
@@ -44,7 +43,7 @@
   ol,
   ul {
 
-    &:not(:first-child) { margin-top: $spacing-md - $spacing-xs; }
+    &:not(:first-child) { margin-top: 0.75em; }
   }
 
   ol,

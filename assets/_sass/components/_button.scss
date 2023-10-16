@@ -121,10 +121,9 @@
 
 @include button-fill-color('button--',
 //	 prefix 		 background		 color
-	'primary'   	$primary 			$black,
-	'secondary' 	$secondary		$white,
-	'highlight' 	$highlight		$white,
-	'white' 			$white 				$black
+	'primary'   	$primary 			$primary-text,
+	'secondary' 	$secondary		$secondary-text,
+	'highlight' 	$highlight		$highlight-text
 );
 
 // —————————————————————————————————————————————————————————————————

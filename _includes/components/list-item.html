@@ -3,9 +3,14 @@
 {% assign type = include.type %}
 {% assign url = include.url %}
 
+{% if url != null %}
 <a href="{% if type == null %}{% link {{ url }} %}{% else %}{{ url }}{% endif %}" {% if type != null %}target="_blank" rel="external"{% endif %} class="list__item link">
-  {% if icon %}{% svg /assets/icons/{{ icon }}.svg %}{% endif %}
+{% else %}
+<p class="list__item">
+{% endif %}
+  {% if icon != null %}<img src="{{ icon }}" alt="Logo for {{ label }}" class="list__itemIcon">{% endif %}
   {{ label }}
+  {% if url != null %}
   {% if type == 'external' %}
   {% svg /assets/icons/external-link.svg %}
   {% elsif type == 'download' %}
@@ -13,4 +18,9 @@
   {% else %}
   {% svg /assets/icons/arrow-right.svg %}
   {% endif %}
+  {% endif %}
+{% if url != null %}
 </a>
+{% else %}
+</p>
+{% endif %}

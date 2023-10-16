@@ -9,6 +9,12 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
+// remove border-bottom on last section before footer
+section.section:last-of-type .section__container,
+footer.section .section__container {
+  border-bottom: 0;
+}
+
 .section {
   display: flex;
   position: relative;
@@ -38,6 +44,11 @@
   &__subtitle {
     flex: 1;
     padding: $spacing-md;
+  }
+
+  &__lead {
+    @extend %h5;
+    margin-bottom: $spacing-md;
   }
 
   &__content {

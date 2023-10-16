@@ -10,11 +10,13 @@
       margin-bottom: $spacing-xs;
     }
 
+    &Icon,
     svg {
       width: $spacing-md;
       height: $spacing-md;
-      margin-right: $spacing-sm;
-      margin-left: $spacing-sm;
     }
+    
+    &Icon { margin-right: $spacing-sm; }
+    svg { margin-left: $spacing-sm; }
   }
 }
