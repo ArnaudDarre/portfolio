@@ -179,14 +179,15 @@ $step: 5;
 
 // z-index
 
-.carousel__image { z-index: -1; }
-.cookie { z-index: 10; }
-header { z-index: 11; }
-.modal { z-index: 12; }
-
 @for $i from 0 through 9 {
 	.z-index--#{$i} { z-index: $i; }
 }
+
+.carousel__image { z-index: -1; }
+.tabs { z-index: 10; }
+.cookie { z-index: 11; }
+header { z-index: 12; }
+.modal { z-index: 13; }
 
 // hover classes
 

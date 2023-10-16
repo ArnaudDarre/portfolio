@@ -52,6 +52,13 @@ html, body {
 
 .caption, %caption {
 	@include font-size(0.875);
+	font-weight: $font-bold;
+	color: $text-alt;
+}
+
+.overline, %overline {
+	@include font-size(0.875);
+	font-style: italic;
 }
 
 // ——————————————————————————————————————————————————

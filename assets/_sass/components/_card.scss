@@ -1,7 +1,6 @@
 // —————————————————————————————————————————————————————————————————
 // elements
 // size
-// transparent
 // variants
 // —————————————————————————————————————————————————————————————————
 
@@ -14,7 +13,12 @@
   display: flex;
   flex-direction: column;
 
-  &__title {
+  &__label {
+    @extend %caption;
+  }
+
+  &__title,
+  &__subtitle {
     font-weight: $font-bold !important;
   }
 
@@ -87,35 +91,9 @@
 
 .card {
 
-	@include size(md, $spacing-md); 
-	&--lg { @include size(lg, $spacing-lg); }
-	&--sm { @include size(sm, $spacing-sm); }
-}
-
-// —————————————————————————————————————————————————————————————————
-// transparent
-// —————————————————————————————————————————————————————————————————
-
-.card--transparent {
-
-  .card {
-
-    &__media,
-    &__header,
-    &__content,
-    &__actions {
-      padding-right: 0;
-      padding-left: 0;
-
-      &:first-child {
-        padding-top: 0;
-      }
-
-      &:last-child {
-        padding-bottom: 0;
-      }
-    }
-  }
+  &--sm { @include size(sm, $spacing-sm); }
+	&--md { @include size(md, $spacing-md); }
+	&--lg { @include size(lg, $spacing-md); }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -123,13 +101,6 @@
 // —————————————————————————————————————————————————————————————————
 
 .card {
-
-  &--project {
-
-    @include responsive(up, tablet) {
-      padding-bottom: $spacing-xs;
-    }
-  }
 
   &--skills {
 

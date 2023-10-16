@@ -1,36 +1,41 @@
 ---
-layout: projects
+layout: default
 title: Projects
-description: Browse through my entire collection of projects
 ---
 
-<section class="section">
-  <div class="section__background">
-    <span class="background__circle background__circle--landing"></span>
-    <span class="background__square background__square--landing"></span>
-  </div>
+<section class="section section--lg">
   <div class="section__container">
     <div class="section__header">
-      <h1 class="section__title h2">Projects</h1>
-      <div class="section__subtitle tabs js-filter-buttons">
+      <div class="section__title">
+        <h1 class="section__lead">Projects</h1>
+      </div>
+    </div>
+    <div class="section__content">
+      <div class="tabs js-filter-buttons">
         <a class="tab tab--active" data-filter="*">All</a>
         {% for category in site.data.categories %}
         <a class="tab" data-filter=".{{ category.title | slugify }}">{{ category.title }}</a>
         {% endfor %}
       </div>
-      <div class="section__lead js-grid grid grid--spacing3">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__container">
+    <div class="section__content">
+      <div class="js-grid grid grid--spacing3">
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
         <div class="grid__item grid__item--lg4 grid__item--md6 {{ project.category | slugify }}">
-          <div class="card card--sm card--transparent card--project">
+          <div class="card card--lg">
             <div class="card__media">
-              <div class="card__mediaInner background-cover"
-                style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é" , "e" }}-cover.jpg)"></div>
+              <div class="card__mediaInner background-cover"style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é" , "e" }}-cover.jpg)"></div>
             </div>
             <div class="card__header">
-              <h2 class="card__label caption">{{ project.category }}</h2>
-              <h2 class="card__title h5">{{ project.title }}</h2>
-              <p class="card__subtitle body--bold">{{ project.subtitle }}</p>
+              <h2 class="card__label">{{ project.category }}</h2>
+              <h2 class="card__title">{{ project.title }}</h2>
+              <p class="card__subtitle text--bold">{{ project.subtitle }}</p>
             </div>
             {% if project.body %}
             <div class="card__content">

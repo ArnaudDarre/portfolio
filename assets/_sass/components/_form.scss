@@ -24,8 +24,6 @@ input:focus {
 		@extend %caption;
 		transition: color $transition;
 		will-change: color;
-		font-weight: $font-bold !important;
-		color: $text-alt;
 		text-overflow: ellipsis;
 		cursor: pointer;
 		display: block;

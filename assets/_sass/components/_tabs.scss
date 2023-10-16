@@ -7,21 +7,7 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
-.tabs,
-.tab {
-
-  &:after {
-    content: "";
-    position: absolute;
-    height: $spacing-sm;
-    width: 100%;
-    background-color: $primary;
-    border-radius: $spacing-sm;
-  }
-}
-
 .tabs {
-  position: relative;
   display: flex;
 
   &:after {
@@ -33,16 +19,18 @@
 .tab {
   cursor: pointer;
   position: relative;
-  font-weight: $font-bold;
-  text-transform: uppercase;
   padding: 0 $spacing-md $spacing-sm $spacing-md;
-  border-bottom: $spacing-sm solid $primary;
 
   &:after {
+    content: "";
+    position: absolute;
+    height: $spacing-xs;
+    width: 100%;
+    background-color: transparent;
     transition: background-color $transition;
     will-change: background-color;
     z-index: 0;
-    bottom: -$spacing-sm;
+    bottom: -1px;
     left: 0;
   }
 }
@@ -52,8 +40,10 @@
 // —————————————————————————————————————————————————————————————————
 
 .tab--active {
+  font-weight: $font-bold;
+  color: $primary;
 
   &:after {
-    background-color: $secondary;
+    background-color: $primary;
   }
 }

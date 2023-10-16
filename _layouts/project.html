@@ -33,7 +33,7 @@ layout: compress
       <div class="card card--lg card--transparent">
         <div class="card__header">
           {% if page.category %}
-          <p class="card__label caption">{{ page.category }}</p>
+          <p class="card__label">{{ page.category }}</p>
           {% endif %}
           <h1 class="card__title h2">{{ page.title }}</h1>
           {% if page.subtitle %}
@@ -124,9 +124,9 @@ layout: compress
                 <div class="card__mediaInner background-cover" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é", "e" }}-cover.jpg)"></div>
               </div>
               <div class="card__header">
-                <p class="card__label caption">{{ project.category }}</p>
+                <p class="card__label">{{ project.category }}</p>
                 <h2 class="card__title h5">{{ project.title }}</h2>
-                <p class="card__subtitle body--bold">{{ project.subtitle }}</p>
+                <p class="card__subtitle text--bold">{{ project.subtitle }}</p>
               </div>
               {% if project.body %}
               <div class="card__content">
