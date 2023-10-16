@@ -1,6 +1,6 @@
 # Arnaud Darré's online portfolio
 
-Online portfolio presenting my projects, skills & training.
+Online portfolio presenting my work, skills & training.
 
 ## Run and deploy
 
@@ -21,18 +21,49 @@ jekyll serve
 
 ### Deployment
 
-On branch develop
+We use git flow for versioning and version tagging.
 
-```
-git push &&
-  git checkout main &&
-  git pull origin develop &&
-  git push origin main &&
-  git checkout develop &&
-  git pull origin main
+On branch develop: 
+
+- Pull the latest changes
+
+```shell
+git pull | git pull origin main
 ```
 
-Deployment is automated with Netlify. The production environment is deployed automatically when the branch `main` is pushed.
+- Initiate your feature
+
+```shell
+git flow feature start my-feature
+```
+
+- This will automatically create a new branch to work on your feature
+- Once the feature/update is done, close the feature
+
+```shell
+git flow feature finish my-feature
+```
+
+- push the changes to the remote `develop` branch, to test on the staging environment
+
+```shell
+git push
+```
+
+- Once the tests have passed, publish the release (adding the version tag at the end)
+
+```shell
+git flow release start 1.0.0
+git flow release finish 1.0.0
+```
+
+- push the changes
+
+```shell
+git push | git push origin develop | git push --tags
+```
+
+Deployment is automated with Netlify. The production and staging environments are deployed automatically when the corresponding branches are pushed.
 
 | Environment | Branch | URL |
 | --- | --- | --- |
