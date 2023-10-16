@@ -19,9 +19,17 @@ html, body {
 	height: 100%;
 }
 
-.page,
 body.js-freeze {
 	overflow: hidden;
+}
+
+// fix horizontal scrolling on mobile
+.page {
+
+  // CSS for other than iOS devices
+  @supports not (-webkit-touch-callout: none) { overflow-x: clip; }
+  // CSS for iOS devices
+  @supports (-webkit-touch-callout: none) { overflow-x: hidden; }
 }
 
 // embed responsively
@@ -139,31 +147,27 @@ a {
 
 .hide {
 	
-	&--desktop { @include responsive(down, desktop) { display: none !important; } }
-	&--laptop { @include responsive(down, laptop) { display: none !important; } }
-	&--tablet { @include responsive(down, tablet) { display: none !important; } }
-	&--mobile { @include responsive(down, mobile) { display: none !important; } }
-	&--touch { @include responsive-mobile() { display: none !important; } }
+	&-desktop { @include responsive(down, desktop) { display: none !important; } }
+	&-laptop { @include responsive(down, laptop) { display: none !important; } }
+	&-tablet { @include responsive(down, tablet) { display: none !important; } }
+	&-mobile { @include responsive(down, mobile) { display: none !important; } }
+	&-touch { @include responsive-mobile() { display: none !important; } }
 }
 
 .show {
 
-	&--desktop { @include responsive(up, desktop) { display: none !important; } }
-	&--laptop { @include responsive(up, laptop) { display: none !important; } }
-	&--tablet { @include responsive(up, tablet) { display: none !important; } }
-	&--mobile { @include responsive(up, mobile) { display: none !important; } }
+	&-desktop { @include responsive(up, desktop) { display: none !important; } }
+	&-laptop { @include responsive(up, laptop) { display: none !important; } }
+	&-tablet { @include responsive(up, tablet) { display: none !important; } }
+	&-mobile { @include responsive(up, mobile) { display: none !important; } }
 }
 
 // z-index
 
 .carousel__image { z-index: -1; }
-.section__header { z-index: 20; }
-.section__container { z-index: 20; }
-.cookie { z-index: 30; }
-body:before { z-index: 40; }
-.section__label { z-index: 45; }
-.header { z-index: 50; }
-.modal { z-index: 60; }
+.cookie { z-index: 10; }
+header { z-index: 11; }
+.modal { z-index: 12; }
 
 @for $i from 0 through 9 {
 	.z-index--#{$i} { z-index: $i; }

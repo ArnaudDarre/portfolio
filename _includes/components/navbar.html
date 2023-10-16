@@ -1,40 +1,28 @@
-<header class="header">
-  <div class="sidebar sidebar--left">
-    {% if page.layout != 'index' %}
-    <a href="{% link index.html %}" class="button button--md button--icon button--lg button--secondary hide--tablet">
-      {% svg /assets/icons/home.svg %}
-    </a>
-    <a href="{% link index.html %}" class="button button--md button--icon button--md button--secondary show--tablet">
-      {% svg /assets/icons/home.svg %}
-    </a>
-    {% endif %}
-  </div>
-  <div class="sidebar sidebar--right">
-    <div class="">
-      <a {% if page.layout == 'index' %}href="#landing" class="js-button-anchor logo"{% else %}href="{% link index.html %}"{% endif %}>
-        {% svg /assets/images/logo.svg %}
-      </a>
-      {% if page.layout == 'index' %}
-      <div class="anchor">
-        <div class="anchor__container">
-          <div class="anchor__item">
-            <a href="#landing" class="anchor__dot anchor__dot--active"></a>
-          </div>
-          <div class="anchor__item">
-            <a href="#portfolio" class="anchor__dot"></a>
-          </div>
-          <div class="anchor__item">
-            <a href="#about" class="anchor__dot"></a>
-          </div>
-          <div class="anchor__item">
-            <a href="#contact" class="anchor__dot"></a>
-          </div>
+<header class="section navbar">
+  <div class="section__container">
+    <div class="navbar__button js-button-menu button--menu show-tablet">
+      <i class="button__inner"></i>
+    </div>
+    <div class="navbar__logo text--bold">
+      <h1 class="text--primary">Arnaud Darré</h1>
+      <p class="text--alt">/</p>
+      <p>Portfolio</p>
+    </div>
+    <div class="navbar__main nav">
+      <div class="nav__container">
+        <div class="nav__item{% if page.title == 'Home' %} nav__item--active{% endif %}">
+          <a class="nav__trigger" href="{% link index.html %}">Home</a>
+        </div>
+        <div class="nav__item{% if page.title == 'Work' %} nav__item--active{% endif %}">
+          <a class="nav__trigger" href="{% link index.html %}">Work</a>
+        </div>
+        <div class="nav__item{% if page.title == 'About' %} nav__item--active{% endif %}">
+          <a class="nav__trigger" href="{% link index.html %}">About</a>
+        </div>
+        <div class="nav__item{% if page.title == 'Contact' %} nav__item--active{% endif %}">
+          <a class="nav__trigger" href="{% link index.html %}">Contact</a>
         </div>
       </div>
-      {% endif %}
     </div>
-    <a class="button--scroll-top button button--md button--icon button--secondary">
-      {% svg /assets/icons/chevron-up.svg %}
-    </a>
   </div>
 </header>

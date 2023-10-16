@@ -11,13 +11,13 @@
 
 // lines > close
 @include keyframes(button-menu-open-before) {
-	0% 		{ transform: translateY(10px); }
+	0% 		{ transform: translateY($spacing-xs*1.5); }
 	50% 	{ transform: translateY(0); 
 			  	transform: rotate(0); }
 	100% 	{ transform: rotate(45deg); }
 }
 @include keyframes(button-menu-open-after) {
-	0% 		{ transform: translateY(-10px); }
+	0% 		{ transform: translateY(-$spacing-xs*1.5); }
 	50% 	{ transform: translateY(0); 
 			  	transform: rotate(0); }
 	100% 	{ transform: rotate(-45deg); }
@@ -28,11 +28,11 @@
 	0% 		{ transform: rotate(45deg); }
 	50% 	{ transform: rotate(0); 
 			  	transform: translateY(0); }
-	100% 	{ transform: translateY(10px); }
+	100% 	{ transform: translateY($spacing-xs*1.5); }
 }
 @include keyframes(button-menu-close-after) {
 	0% 		{ transform: rotate(-45deg); }
 	50% 	{ transform: rotate(0); 
 			  	transform: translateY(0); }
-	100% 	{ transform: translateY(-10px); }
+	100% 	{ transform: translateY(-$spacing-xs*1.5); }
 }

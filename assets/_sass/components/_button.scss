@@ -3,6 +3,7 @@
 // size
 // animate
 // color
+// menu
 // scroll to top
 // —————————————————————————————————————————————————————————————————
 
@@ -125,6 +126,73 @@
 	'highlight' 	$highlight		$white,
 	'white' 			$white 				$black
 );
+
+// —————————————————————————————————————————————————————————————————
+// menu
+// —————————————————————————————————————————————————————————————————
+
+.button--menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: button-menu-opacity 0.8s ease 0s;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  width: $spacing-md;
+  height: $spacing-md;
+  background-color: transparent !important;
+  border: 0;
+  padding: 0;
+
+  &:before,
+  &:after,
+  .button__inner {
+    background-color: $text;
+  }
+
+  &:before,
+  &:after {
+    @include pseudo-element('', auto, auto, auto, auto, $spacing-md, 2px);
+    transition: transform $transition;
+    border-radius: 0.15rem;
+    will-change: transform;
+  }
+
+  &:before {
+    transform: translateY($spacing-xs*1.5);
+    animation: button-menu-close-before 0.8s ease;
+  }
+
+  &:after {
+    transform: translateY(-$spacing-xs*1.5);
+    animation: button-menu-close-after 0.8s ease;
+  }
+
+  .button__inner {
+    transition: opacity $transition;
+    border-radius: 0.15rem;
+    will-change: opacity;
+    width: $spacing-md;
+    height: 2px;
+    position: absolute;
+  }
+
+  &.button--menu--open {
+
+    &:before {
+      animation: button-menu-open-before 0.8s ease forwards;
+    }
+
+    &:after {
+      animation: button-menu-open-after 0.8s ease forwards;
+    }
+
+    .button__inner {
+      opacity: 0;
+    }
+  }
+}
 
 // —————————————————————————————————————————————————————————————————
 // scroll to top

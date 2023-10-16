@@ -1,5 +1,5 @@
 .link {
-  @extend %text--bold;
+  font-weight: $font-bold;
   color: $primary;
   text-decoration: underline;
 
