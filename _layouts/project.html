@@ -2,6 +2,8 @@
 layout: compress
 ---
 
+{% include containers/header.html %}
+
 <section class="section grid--column">
   <div class="section__background">
     <span class="background__trigger background__trigger--{{ page.category | downcase }}"></span>
@@ -90,7 +92,7 @@ layout: compress
   </div>
 </section>  
 
-<section id="related-projects" class="section section--primary">
+<section id="related-projects" class="section section--paper">
   <div class="section__container">
     <div class="section__header">
       <h1 class="section__title h3">Related projects</h1>
@@ -151,3 +153,5 @@ layout: compress
     </div>
   </div>
 </section>
+
+{% include containers/footer.html %}

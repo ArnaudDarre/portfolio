@@ -47,9 +47,8 @@
 		&__header,
 		&__content,
 		&__actions {
-			padding: $size $size 0 $size;
 
-			&:last-child {
+			&:not(:last-child) {
 				padding-bottom: $size;
 			}
 		}
@@ -77,9 +76,9 @@
 
 .card {
 
-	@include size(md, $spacing-lg - $spacing-md); 
-	&--lg { @include size(lg, $spacing-md); }
-	&--sm { @include size(sm, $spacing-md); }
+	@include size(md, $spacing-md); 
+	&--lg { @include size(lg, $spacing-lg); }
+	&--sm { @include size(sm, $spacing-sm); }
 }
 
 // —————————————————————————————————————————————————————————————————

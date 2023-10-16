@@ -2,6 +2,8 @@
 layout: compress
 ---
 
+{% include containers/header.html %}
+
 {{ content }}
 
 <!-- VENDORS -->
@@ -11,3 +13,5 @@ layout: compress
 <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/anime.min.js"></script>
 <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/scrollingletters.js"></script>
 <script src="{{ site.base-url }}{{ site.resourceurl }}/vendors/codrops/project-carousel.js"></script>
+
+{% include containers/footer.html %}

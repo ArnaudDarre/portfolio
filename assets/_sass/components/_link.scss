@@ -1,4 +1,6 @@
 .link {
+  @extend %text--bold;
+  color: $primary;
   text-decoration: underline;
 
   &:hover {

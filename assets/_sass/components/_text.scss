@@ -16,10 +16,6 @@ html, body {
 	line-height: 1.5;
 	font-weight: $font-regular;
 	color: $black;
-
-	@include responsive(up, desktop-lg) {
-		font-size: 20px;
-	}
 }
 
 .h1, %h1 {

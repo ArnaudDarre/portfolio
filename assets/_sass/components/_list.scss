@@ -1,0 +1,20 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-xs;
+    }
+
+    svg {
+      width: $spacing-md;
+      height: $spacing-md;
+      margin-right: $spacing-sm;
+      margin-left: $spacing-sm;
+    }
+  }
+}

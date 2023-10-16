@@ -1,7 +1,7 @@
 // —————————————————————————————————————————————————————————————————
 // elements
 // alignement
-// colour
+// color
 // overrides
 // —————————————————————————————————————————————————————————————————
 
@@ -12,62 +12,37 @@
 .section {
   display: flex;
   position: relative;
-  min-height: 100vh;
+  padding-right: $spacing-xl;
+  padding-left: $spacing-xl;
 
   &__container {
     display: flex;
     flex-direction: column;
-    padding-top: $spacing-md;
-    padding-right: $spacing-lg - $spacing-md;
-    padding-bottom: $spacing-md;
-    padding-left: $spacing-lg - $spacing-md;
     width: 100%;
-
-    & + & {
-      padding-top: 0;
-    }
-  }
-
-  &__label {
-    transform: rotate(-90deg);
-    transform-origin: top left;
-    position: fixed;
-    bottom: $spacing-sm;
-    left: $spacing-lg;
-
-    @include responsive(down, laptop) {
-      display: none;
-    }
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
   }
 
   &__header {
-    position: relative;
-    
+    display: flex;
+    align-items: baseline;
+    margin: -$spacing-md;
+
     & + .section__content {
-      margin-top: $spacing-md;
+      margin-top: $spacing-lg;
     }
   }
 
-  &__title {
-
-    & + .section__subtitle { margin-top: $spacing-xs; }
-    & + .section__lead { margin-top: $spacing-sm; }
-  }
-
+  &__title,
   &__subtitle {
-
-    & + & { margin-top: $spacing-xs; }
-    & + .section__lead { margin-top: $spacing-sm; }
-  }
-
-  &__lead {
-    max-width: $spacing-xxl;
+    flex: 1;
+    padding: $spacing-md;
   }
 
   &__content {
     
     & + & {
-      margin-top: $spacing-md - $spacing-xs;
+      margin-top: $spacing-lg;
     }
   }
 }
@@ -84,42 +59,19 @@
 }
 
 // —————————————————————————————————————————————————————————————————
-// colour
+// color
 // —————————————————————————————————————————————————————————————————
 
 .section {
 
-  &--primary {
-    background-color: $primary;
+  &--paper {
+    background-color: $background-paper;
   }
 }
 
 // —————————————————————————————————————————————————————————————————
 // overrides
 // —————————————————————————————————————————————————————————————————
-
-.page--index {
-
-  .section {
-
-    &__header {
-
-      @include responsive(down, tablet) {
-        padding-right: $spacing-xl;
-      }
-    }
-
-    &__title {
-      
-      @include responsive(up, laptop) {
-        display: none;
- 
-        & + .section__subtitle { margin-top: 0; }
-        & + .section__lead { margin-top: 0; }
-      }
-    }
-  }
-}
 
 #landing {
 
@@ -129,31 +81,5 @@
       padding-top: $spacing-lg - $spacing-md;
       padding-bottom: $spacing-sm;
     }
-  }
-}
-
-#portfolio {
-
-  .section__subtitle .grid--aiEnd {
-
-    @include responsive(down, laptop) {
-      align-items: flex-start !important;
-    }
-  }
-}
-
-.page--projects {
-
-  .section__lead {
-    max-width: unset;
-  }
-}
-
-.page--project {
-
-  section .section {
-
-    &__container { align-items: center; }
-    &__content, &__header { width: 100%; }
   }
 }
