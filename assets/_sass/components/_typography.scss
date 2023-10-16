@@ -1,3 +1,15 @@
+// —————————————————————————————————————————————————————————————————
+// elements
+// style
+// weight
+// alignement
+// color
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
 html, body {
 	font-family: $font;
 	font-size: 16px;
@@ -11,36 +23,19 @@ html, body {
 }
 
 .h1, %h1 {
-	@include font-size(5, $font-black, normal);
-	line-height: 1;
-	text-transform: uppercase;
-
-	@include responsive-mobile() { font-size: 4rem; }
-	@include responsive(down, laptop) { font-size: 4.5rem; }
-	@include responsive(down, tablet) { font-size: 4rem; }
-	@include responsive(down, mobile) { font-size: 3rem; }
-	@include responsive-mobile-landscape() { display: none; }
+	@include font-size(5, $font-black, normal, 1.25);
 }
 
 .h2, %h2 {
-	@include font-size(4, $font-black, normal, 1.25);
-
-	@include responsive-mobile() { font-size: 3rem; }
-	@include responsive(down, tablet) { font-size: 3rem; }
-	@include responsive(down, mobile) { font-size: 2.5rem; }
+	@include font-size(3.5, $font-black, normal, 1.25);
 }
 
 .h3, %h3 {
 	@include font-size(2.5, $font-bold, normal, 1.25);
-
-	@include responsive-mobile() { font-size: 2rem; }
-	@include responsive(down, tablet) { font-size: 2rem; }
-	@include responsive(down, mobile) { font-size: 1.8rem; }
 }
 
 .h4, %h4 {
-	@include font-size(1.5, $font-black, normal, 1.25);
-	text-transform: uppercase;
+	@include font-size(2, $font-black, normal, 1.25);
 }
 
 .h5, %h5 {
@@ -51,25 +46,62 @@ html, body {
 	@include font-size(1.25, $font-bold, normal, 1.25);
 }
 
-.subtitle, %subtitle { @include font-size(1.125); }
-.body, %body { @include font-size(1); }
-.caption, %caption { @include font-size(0.75, $font-bold); color: $secondary; }
-
-// overrides
-
-.body {
-
-	&--regular { font-weight: $font-regular; }
-	&--bold { font-weight: $font-bold; }
-	&--italic { font-style: italic; }
-	&--underline { text-decoration: underline; }
+.subtitle, %subtitle {
+	@include font-size(1.125);
 }
 
+.body, %body {
+	@include font-size(1);
+}
+
+.caption, %caption {
+	@include font-size(0.875);
+}
+
+// ——————————————————————————————————————————————————
+// style
+// ——————————————————————————————————————————————————
+
+.text--italic, %text--italic { font-style: italic; }
+.text--underline, %text--underline { text-decoration: underline; }
+.text--strikeThrough, %text--strikeThrough { text-decoration: line-through; }
+
+// ——————————————————————————————————————————————————
+// weight
+// ——————————————————————————————————————————————————
+
+.text--regular, %text--regular { font-weight: $font-regular; }
+.text--bold, %text--bold { font-weight: $font-bold; }
+.text--black, %text--black { font-weight: $font-black; }
+
+// ——————————————————————————————————————————————————
 // alignement
+// ——————————————————————————————————————————————————
 
-.body {
+.text--left, %text--left { text-align: left; }
+.text--center, %text--center { text-align: center; }
+.text--right, %text--right { text-align: right; }
 
-	&--left { text-align: left; }
-	&--center { text-align: center; }
-	&--right { text-align: right; }
+// ——————————————————————————————————————————————————
+// color
+// ——————————————————————————————————————————————————
+
+@mixin color($color) {
+  color: $color !important;
+
+  .h1, .h2, .h3, .h4, .h5, .h6 { 
+    color: $color !important;
+  }
+}
+
+.text {
+
+  &--default { @include color($text); }
+  &--alt { @include color($text-alt); }
+
+  &--contrast { @include color($text-contrast); }
+  &--contrastAlt { @include color($text-contrast-alt); }
+
+  &--primary { @include color($primary); }
+  &--secondary { @include color($secondary); }
 }

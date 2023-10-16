@@ -1,13 +1,13 @@
 // —————————————————————————————————————————————————————————————————
-// colors
+// color
 // spacing
-// fonts
+// font
 // anchor points
 // misc
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
-// colors
+// color
 // —————————————————————————————————————————————————————————————————
 
 // main
@@ -31,7 +31,10 @@ $grey-5: #F2F3F4;
 // text
 
 $text: $black;
+$text-alt: rgba($black, 0.56);
+
 $text-contrast: $white;
+$text-contrast-alt: rgba($white, 0.56);
 
 //  background
 
@@ -79,10 +82,10 @@ $spacing-xl: 5rem; // 80px
 $spacing-xxl: 7.5rem; // 120px
 
 // —————————————————————————————————————————————————————————————————
-// fonts
+// font
 // —————————————————————————————————————————————————————————————————
 
-// fonts
+// typefaces
 
 $font: "Chivo", Verdana, Geneva, sans-serif;
 $font-code: "Roboto Mono", Courier, monospace;

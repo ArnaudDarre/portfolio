@@ -1,7 +1,6 @@
 // —————————————————————————————————————————————————————————————————
 // general
 // focused
-// select
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
@@ -75,77 +74,6 @@
 
 		&__input {
 			border-color: $secondary;
-		}
-	}
-}
-
-// —————————————————————————————————————————————————————————————————
-// select
-// —————————————————————————————————————————————————————————————————
-
-.select-hide {
-	opacity: 0;
-	position: absolute;
-	height: 0;
-	padding: 0;
-	bottom: 0;
-}
-
-.form__select {
-	cursor: pointer;
-	position: relative;
-
-	.form__input {
-		cursor: pointer;
-	}
-
-	&:after {
-		@include font-awesome("\f078", 0, $spacing-sm, auto, auto, $primary);
-		transition: color $transition;
-		display: flex;
-		align-items: center;
-		will-change: color;
-		height: 100%;
-		font-size: 1.2rem;
-		pointer-events: none;
-	}
-
-	.form__dropdown {
-		@include calc(top, '100% -' $spacing-xs*0.5);
-		display: none;
-		position: absolute;
-		right: 0;
-		left: 0;
-		max-height: $spacing-md;
-		overflow: scroll;
-		z-index: 2;
-		background-color: $primary;
-		margin-left: 0;
-		border: $spacing-xs*0.5 solid $black;
-
-		li {
-			@include font-size(1, $font-regular, normal);
-			transition: color $transition;
-			will-change: color;
-			margin: 0;
-			padding: $spacing-sm $spacing-sm !important;
-			cursor: pointer;
-
-			&:nth-child(1) {
-				display: none;
-			}
-
-			&:nth-child(2) {
-				border-top: 0;
-			}
-
-			& + li {
-				border-top: $spacing-xs*0.5 solid $black;
-			}
-
-			&:hover {
-				color: $primary;
-			}
 		}
 	}
 }

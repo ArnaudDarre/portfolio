@@ -1,10 +1,9 @@
 // —————————————————————————————————————————————————————————————————
 // general
-// media queris
-// fonts
-// forms
-// buttons
-// vendors
+// media querie
+// font
+// form
+// button
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
@@ -40,16 +39,6 @@
 	}
 }
 
-@mixin position($position, $top, $right, $bottom, $left, $height, $width) {
-	position: $position;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
-	width: $width;
-	height: $height;
-}
-
 @mixin keyframes($name) {
 	@-webkit-keyframes #{$name} {
 		@content; 
@@ -71,7 +60,7 @@
 }
 
 // —————————————————————————————————————————————————————————————————
-// media queries
+// media querie
 // —————————————————————————————————————————————————————————————————
 
 @mixin responsive($value, $breakpoint) {
@@ -112,7 +101,7 @@
 }
 
 // —————————————————————————————————————————————————————————————————
-// fonts
+// font
 // —————————————————————————————————————————————————————————————————
 
 @mixin fontface($font-name, $font-file, $font-weight, $font-style) {
@@ -138,25 +127,6 @@
 	}
 }
 
-@mixin font-awesome($fa, $top, $right, $bottom, $left, $color) {
-	content: $fa;
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
-	font-style: normal;
-	text-decoration: none;
-	color: $color;
-	position: absolute;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
-}
-
-@mixin text-overflow($property) {
-	-o-text-overflow: $property;
-	   text-overflow: $property;
-}
-
 @mixin text-ellipsis() {
 	white-space: nowrap;
 	overflow: hidden;
@@ -164,7 +134,7 @@
 }
 
 // —————————————————————————————————————————————————————————————————
-// forms
+// form
 // —————————————————————————————————————————————————————————————————
 
 @mixin placeholder {
@@ -175,7 +145,7 @@
 }
 
 // —————————————————————————————————————————————————————————————————
-// buttons
+// button
 // —————————————————————————————————————————————————————————————————
 
 @mixin button-fill-color($prefix, $colors...) {
@@ -209,20 +179,4 @@
 			}
 		}
 	}
-}
-
-// —————————————————————————————————————————————————————————————————
-// vendors
-// —————————————————————————————————————————————————————————————————
-
-@mixin background-shape($top, $right, $bottom, $left, $height, $width, $background-color, $rotate) {
-
-	@if ($rotate != null) { transform: rotate($rotate); }
-	@if ($top != null) { top: $top; }
-	@if ($right != null) { right: $right; }
-	@if ($bottom != null) { bottom: $bottom; }
-	@if ($left != null) { left: $left; }
-	@if ($height != null) { height: $height; }
-	@if ($width != null) { width: $width; }
-	@if ($background-color != null) { background-color: $background-color; }
 }
