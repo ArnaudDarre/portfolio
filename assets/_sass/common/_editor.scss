@@ -30,33 +30,33 @@
 
   h2 {
 
-    &:not(:first-child) { margin-top: $integer*4; }
-    &:not(:last-child) { margin-bottom: $integer*2.5; }
+    &:not(:first-child) { margin-top: $spacing-md; }
+    &:not(:last-child) { margin-bottom: $spacing-md; }
   }
 
   h3 {
 
-    &:not(:first-child) { margin-top: $integer*4; }
-    &:not(:last-child) { margin-bottom: $integer*2; }
+    &:not(:first-child) { margin-top: $spacing-md; }
+    &:not(:last-child) { margin-bottom: $spacing-md; }
   }
 
   p,
   ol,
   ul {
 
-    &:not(:first-child) { margin-top: $integer*1.5; }
+    &:not(:first-child) { margin-top: $spacing-md - $spacing-xs; }
   }
 
   ol,
   ul {
-    margin-left: $integer*4;
+    margin-left: $spacing-md;
   }
 
   ol { list-style: decimal; }
   ul { list-style: disc; }
 
   li + li {
-    margin-top: $integer/2;
+    margin-top: $spacing-xs;
   }
 
   li {
@@ -106,7 +106,7 @@
     position: relative;
     
     &:before {
-      @include pseudo-element('”', -$spacing*2, auto, auto, -$spacing, auto, auto);
+      @include pseudo-element('”', -$spacing-md, auto, auto, -$spacing-sm, auto, auto);
       z-index: -1;
       font-size: 20rem;
       color: rgba($secondary, 0.1);
@@ -131,14 +131,14 @@
   .section__content {
 
     + h2, + h3, + p, + ol, + ul, + a, + blockquote {
-      margin-top: $spacing*1.5 !important;
+      margin-top: $spacing-md - $spacing-xs !important;
     }
   }
 
   h2, h3, p, ol, ul, a, blockquote {
 
     & + .section__content {
-      margin-top: $spacing*1.5;
+      margin-top: $spacing-md - $spacing-xs;
     }
   }
 }

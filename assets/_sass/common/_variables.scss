@@ -1,55 +1,82 @@
 // —————————————————————————————————————————————————————————————————
 // colors
-// general
+// spacing
 // fonts
 // anchor points
+// misc
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
 // colors
 // —————————————————————————————————————————————————————————————————
 
-$primary: #36fffc;
-$secondary: #004548;
-$highlight: #f03c3c;
-$dark: #4c3e3e;
+// main
 
-$primary-darken: darken($primary, 15%);
-$primary-lighten: lighten($primary, 15%);
-
-$info: #00d7e9;
-$success: #2ce71c;
-$warning: #ffdd00;
-$error: #f03c3c;
-
-$black: #000a1e;
-$darker-grey: #8c8c96;
-$dark-grey: #8c8c96;
-$medium-grey: #d7d7dc;
-$light-grey: #f0f0f0;
-$light-grey: #f8f8f8;
 $white: #ffffff;
+$black: #000a1e;
 
-$facebook: #3b5998;
-$google: #dd4b39;
-$linkedin: #0077b5;
-$medium: #00ab6c;
-$twitter: #1da1f2;
+// grey
+
+$grey-90: #1A2335;
+$grey-80: #333B4B;
+$grey-70: #4D5462;
+$grey-60: #666C78;
+$grey-50: #7F848E;
+$grey-40: #999DA5;
+$grey-30: #B2B5BB;
+$grey-20: #CCCED2;
+$grey-10: #E5E6E8;
+$grey-5: #F2F3F4;
+
+// text
+
+$text: $black;
+$text-contrast: $white;
+
+//  background
+
+$background-default: $white;
+$background-paper: $grey-5;
+
+// brand
+
+$primary-light: #BEFBFF;
+$primary: #00A3AE;
+$primary-dark: #006F7A;
+$primary-text: $text-contrast;
+
+$secondary-light: #CBD6D7;
+$secondary: #617C7E;
+$secondary-dark: #455859;
+$secondary-text: $text-contrast;
+
+$highlight-light: #F9D7B8;
+$highlight: #F2994A;
+$highlight-dark: #EF7910;
+$highlight-text: $text;
+
+// others
+
+$border: rgba($black, 0.2);
+
+// social
+
+$linkedin: #0077B5;
+$github: #4078C0;
 
 // —————————————————————————————————————————————————————————————————
-// general
+// spacing
 // —————————————————————————————————————————————————————————————————
 
+// misc
 $col: 100%/12;
 
-$integer: 0.5rem;
-$spacing: $integer*6;
-
-$transition: 0.4s ease 0s;
-
-$box-shadow-sm: 0 0 10px 0 rgba($dark, 0.15);
-$box-shadow-md: 0 0 15px 0 rgba($dark, 0.20);
-$box-shadow-lg: 0 0 20px 0 rgba($dark, 0.25);
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 2.5rem; // 40px
+$spacing-xl: 5rem; // 80px
+$spacing-xxl: 7.5rem; // 120px
 
 // —————————————————————————————————————————————————————————————————
 // fonts
@@ -62,22 +89,16 @@ $font-code: "Roboto Mono", Courier, monospace;
 
 // weight
 
-$font-thin: 100;
-$font-extralight: 200;
-$font-light: 300;
 $font-regular: 400;
-$font-medium: 500;
-$font-semibold: 600;
 $font-bold: 700;
-$font-extrabold: 800;
 $font-black: 900;
 
 // —————————————————————————————————————————————————————————————————
 // anchor points
 // —————————————————————————————————————————————————————————————————
 
-$desktop-lg-up: 1800px;
-$desktop-lg-down: 1879.98px;
+$desktop-lg-up: 1440px;
+$desktop-lg-down: 1439.98px;
 
 $desktop-up: 1280px;
 $desktop-down: 1279.98px;
@@ -93,3 +114,29 @@ $mobile-down: 567.98px;
 
 $mobile-sm-up: 350px;
 $mobile-sm-down: 349.98px;
+
+// —————————————————————————————————————————————————————————————————
+// misc
+// —————————————————————————————————————————————————————————————————
+
+// box-shadow
+
+$box-shadow-sm: 0 0 10px 0 rgba($text, 0.15);
+$box-shadow-md: 0 0 15px 0 rgba($text, 0.20);
+$box-shadow-lg: 0 0 20px 0 rgba($text, 0.25);
+
+// transition
+
+$transition: 0.4s ease 0s;
+
+// border
+
+$border-sm: 1px solid;
+$border-md: 2px solid;
+$border-lg: $spacing-xs solid;
+
+// border-radius
+
+$border-radius-sm: $spacing-xs;
+$border-radius-md: $spacing-sm;
+$border-radius-lg: $spacing-md;

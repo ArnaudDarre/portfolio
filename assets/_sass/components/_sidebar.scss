@@ -4,8 +4,8 @@
   position: fixed;
   top: 0;
   height: 100vh;
-  padding-top: $spacing;
-  padding-bottom: $spacing;
+  padding-top: $spacing-sm;
+  padding-bottom: $spacing-sm;
   pointer-events: none;
 
   * {
@@ -13,7 +13,7 @@
   }
 
   &--left {
-    left: $integer*3*2;
+    left: $spacing-lg - $spacing-md;
 
     .button {
 
@@ -27,7 +27,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    right: $integer*3*2;
+    right: $spacing-lg - $spacing-md;
   }
 
   .button {

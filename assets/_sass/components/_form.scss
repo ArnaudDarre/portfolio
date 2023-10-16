@@ -34,8 +34,8 @@
 		overflow: hidden;
 		white-space: nowrap;
 		position: relative;
-		padding-bottom: $integer*0.5;
-		padding-left: $integer;
+		padding-bottom: $spacing-sm;
+		padding-left: $spacing-sm;
 	}
 
 	&__input {
@@ -46,13 +46,13 @@
 		will-change: border-color;
 		width: 100%;
 		background-color: white;
-    border: $integer solid $primary;
-    border-radius: $integer*2 !important;
-    padding: $integer;
+    border: $spacing-sm solid $primary;
+    border-radius: $spacing-md !important;
+    padding: $spacing-sm;
 	}
 
 	&__button {
-		margin-top: $integer*2;
+		margin-top: $spacing-md;
 	}
 	
 	&__footer {
@@ -61,7 +61,7 @@
 }
 
 @include placeholder {
-	color: $medium-grey;
+	color: $grey-30;
 	opacity: 1;
 }
 
@@ -100,7 +100,7 @@
 	}
 
 	&:after {
-		@include font-awesome("\f078", 0, $integer, auto, auto, $primary);
+		@include font-awesome("\f078", 0, $spacing-sm, auto, auto, $primary);
 		transition: color $transition;
 		display: flex;
 		align-items: center;
@@ -111,24 +111,24 @@
 	}
 
 	.form__dropdown {
-		@include calc(top, '100% -' $integer*0.25);
+		@include calc(top, '100% -' $spacing-xs*0.5);
 		display: none;
 		position: absolute;
 		right: 0;
 		left: 0;
-		max-height: $spacing*2;
+		max-height: $spacing-md;
 		overflow: scroll;
 		z-index: 2;
 		background-color: $primary;
 		margin-left: 0;
-		border: $integer*0.25 solid $black;
+		border: $spacing-xs*0.5 solid $black;
 
 		li {
 			@include font-size(1, $font-regular, normal);
 			transition: color $transition;
 			will-change: color;
 			margin: 0;
-			padding: $integer $integer !important;
+			padding: $spacing-sm $spacing-sm !important;
 			cursor: pointer;
 
 			&:nth-child(1) {
@@ -140,7 +140,7 @@
 			}
 
 			& + li {
-				border-top: $integer*0.25 solid $black;
+				border-top: $spacing-xs*0.5 solid $black;
 			}
 
 			&:hover {

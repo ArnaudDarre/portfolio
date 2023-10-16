@@ -8,9 +8,9 @@
 // variables
 // —————————————————————————————————————————————————————————————————
 
-$spacing-laptop: $integer*3;
-$spacing-tablet: $integer*2;
-$spacing-mobile: $integer*1.5;
+$spacing-laptop: $spacing-lg - $spacing-md;
+$spacing-tablet: $spacing-md;
+$spacing-mobile: $spacing-md - $spacing-xs;
 
 // —————————————————————————————————————————————————————————————————
 // mixins
@@ -21,25 +21,25 @@ $spacing-mobile: $integer*1.5;
 	@include responsive(down, $viewport) {
 
 		body:before {
-			border-width: $spacing;
+			border-width: $spacing-sm;
 		}
 
 		.sidebar {
-			padding-top: $spacing*2;
-			padding-bottom: $spacing*2;
+			padding-top: $spacing-md;
+			padding-bottom: $spacing-md;
 			
-			&--left { left: $spacing*2; }
-			&--right { right: $spacing*2; }
+			&--left { left: $spacing-md; }
+			&--right { right: $spacing-md; }
 		}
 
 		.section {
 
 			&__container {
-				padding-right: $spacing*2;
-				padding-left: $spacing*2;
+				padding-right: $spacing-md;
+				padding-left: $spacing-md;
 
 				#landing & {
-					padding-top: $spacing*2;
+					padding-top: $spacing-md;
 				}
 			}
 		}
@@ -57,7 +57,7 @@ $spacing-mobile: $integer*1.5;
 @include responsive(down, desktop) {
 
 	.page--project .project__nav {
-		right: -$spacing*2;
+		right: -$spacing-md;
 	}
 }
 
@@ -78,13 +78,13 @@ $spacing-mobile: $integer*1.5;
 @include responsive(down, tablet) {
 
 	.section:first-of-type .section__container {
-		padding-top: $integer*10;
+		padding-top: $spacing-xl;
 
 		+ .section__container { padding-top: 0; }
 	}
 
 	.page--project .project__nav {
-		top: -$integer*6;
+		top: -$spacing-lg;
 	}
 }
 
@@ -108,12 +108,12 @@ $spacing-mobile: $integer*1.5;
 
 		&__subtitle {
 
-			& + & { margin-top: $integer; }
+			& + & { margin-top: $spacing-sm; }
 			& + .section__lead { margin-top: $spacing-mobile; }
 		}
 	}
 
 	.page--project .project__nav {
-		top: -$integer*7;
+		top: -$spacing-lg;
 	}
 }

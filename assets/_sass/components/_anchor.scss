@@ -1,7 +1,7 @@
 .anchor {
   display: flex;
   justify-content: center;
-  margin-top: $spacing;
+  margin-top: $spacing-sm;
 	pointer-events: initial;
 
   // use if you want to draw a line between the dots
@@ -10,13 +10,13 @@
     flex-direction: column;
     align-items: center;
     // background-color: $secondary;
-    // width: $integer*0.25;
+    // width: $spacing-xs*0.5;
   }
   
   &__item {
 
     & + & {
-      margin-top: $spacing*0.5;
+      margin-top: $spacing-xs;
     }
   }
   
@@ -24,8 +24,8 @@
     transition: transform 0.4s ease;
     border-radius: 50%;
     background-color: $secondary;
-    width: $integer;
-    height: $integer;
+    width: $spacing-sm;
+    height: $spacing-sm;
     display: block;
 
     @include hover {

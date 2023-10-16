@@ -20,9 +20,9 @@
   }
 
   &__mediaInner {
-    border-radius: $spacing;
+    border-radius: $spacing-sm;
     padding-bottom: 66.66%;
-    border-radius: $integer;
+    border-radius: $spacing-sm;
     overflow: hidden;
   }
 
@@ -77,9 +77,9 @@
 
 .card {
 
-	@include size(md, $integer*3); 
-	&--lg { @include size(lg, $integer*4); }
-	&--sm { @include size(sm, $integer*2); }
+	@include size(md, $spacing-lg - $spacing-md); 
+	&--lg { @include size(lg, $spacing-md); }
+	&--sm { @include size(sm, $spacing-md); }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -117,14 +117,14 @@
   &--project {
 
     @include responsive(up, tablet) {
-      padding-bottom: $spacing*0.5;
+      padding-bottom: $spacing-xs;
     }
   }
 
   &--skills {
 
     .card__subtitle {
-      max-width: $spacing*10;
+      max-width: $spacing-xl;
     }
   }
 }

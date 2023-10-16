@@ -13,10 +13,10 @@
   &:after {
     content: "";
     position: absolute;
-    height: $integer;
+    height: $spacing-sm;
     width: 100%;
     background-color: $primary;
-    border-radius: $integer;
+    border-radius: $spacing-sm;
   }
 }
 
@@ -35,14 +35,14 @@
   position: relative;
   font-weight: $font-bold;
   text-transform: uppercase;
-  padding: 0 $integer*2 $integer $integer*2;
-  border-bottom: $integer solid $primary;
+  padding: 0 $spacing-md $spacing-sm $spacing-md;
+  border-bottom: $spacing-sm solid $primary;
 
   &:after {
     transition: background-color $transition;
     will-change: background-color;
     z-index: 0;
-    bottom: -$integer;
+    bottom: -$spacing-sm;
     left: 0;
   }
 }

@@ -17,10 +17,10 @@
   &__container {
     display: flex;
     flex-direction: column;
-    padding-top: $spacing*2;
-    padding-right: $spacing*3;
-    padding-bottom: $spacing*2;
-    padding-left: $spacing*3;
+    padding-top: $spacing-md;
+    padding-right: $spacing-lg - $spacing-md;
+    padding-bottom: $spacing-md;
+    padding-left: $spacing-lg - $spacing-md;
     width: 100%;
 
     & + & {
@@ -32,8 +32,8 @@
     transform: rotate(-90deg);
     transform-origin: top left;
     position: fixed;
-    bottom: $spacing;
-    left: $integer*5;
+    bottom: $spacing-sm;
+    left: $spacing-lg;
 
     @include responsive(down, laptop) {
       display: none;
@@ -44,30 +44,30 @@
     position: relative;
     
     & + .section__content {
-      margin-top: $spacing*2;
+      margin-top: $spacing-md;
     }
   }
 
   &__title {
 
-    & + .section__subtitle { margin-top: $spacing*0.5; }
-    & + .section__lead { margin-top: $spacing; }
+    & + .section__subtitle { margin-top: $spacing-xs; }
+    & + .section__lead { margin-top: $spacing-sm; }
   }
 
   &__subtitle {
 
-    & + & { margin-top: $spacing*0.5; }
-    & + .section__lead { margin-top: $spacing; }
+    & + & { margin-top: $spacing-xs; }
+    & + .section__lead { margin-top: $spacing-sm; }
   }
 
   &__lead {
-    max-width: $spacing*15;
+    max-width: $spacing-xxl;
   }
 
   &__content {
     
     & + & {
-      margin-top: $spacing*1.5;
+      margin-top: $spacing-md - $spacing-xs;
     }
   }
 }
@@ -105,7 +105,7 @@
     &__header {
 
       @include responsive(down, tablet) {
-        padding-right: $integer*8;
+        padding-right: $spacing-xl;
       }
     }
 
@@ -126,8 +126,8 @@
   .section {
 
     &__container {
-      padding-top: $spacing*3;
-      padding-bottom: $spacing;
+      padding-top: $spacing-lg - $spacing-md;
+      padding-bottom: $spacing-sm;
     }
   }
 }

@@ -17,31 +17,31 @@
 
     @include responsive(down, mobile) { height: 40vh; }
 
-    &--applied-blockchain { .char8 { width: $integer*1.5; }}
-    &--freedom-on-the-internet { .char8, .char11, .char15 { width: $integer*1.5; }}
+    &--applied-blockchain { .char8 { width: $spacing-md - $spacing-xs; }}
+    &--freedom-on-the-internet { .char8, .char11, .char15 { width: $spacing-md - $spacing-xs; }}
   }
 
   &__index {
     display: flex;
 
-    &Current { padding-right: $integer; }
+    &Current { padding-right: $spacing-sm; }
     &Inner { display: block; }
 
     &Total {
       position: relative;
-      margin: 0 0 0 $spacing*0.5;
-      padding-left: $integer;
+      margin: 0 0 0 $spacing-xs;
+      padding-left: $spacing-sm;
 
       @include responsive(down, mobile) {
-        margin-left: $spacing;
+        margin-left: $spacing-sm;
       }
 
       &:after {
-        @include pseudo-element('', $integer, 100%, auto, auto, $spacing*0.5, 2px);
+        @include pseudo-element('', $spacing-sm, 100%, auto, auto, $spacing-xs, 2px);
         background: $secondary;
 
         @include responsive(down, mobile) {
-          width: $spacing;
+          width: $spacing-sm;
         }
       }
     }
@@ -50,15 +50,15 @@
   &__image {
     overflow: hidden;
     position: absolute;
-    top: -$spacing;
-    left: $spacing*10;
+    top: -$spacing-sm;
+    left: $spacing-xl;
     border-radius: 1rem;
-    right: -$spacing*0.5;
-    bottom: -$spacing;
-    border-radius: $integer*2;
+    right: -$spacing-xs;
+    bottom: -$spacing-sm;
+    border-radius: $spacing-md;
 
-    @include responsive(down, desktop) { left: $spacing*8; }
-    @include responsive(down, laptop) { left: $spacing*6; right: 0; }
+    @include responsive(down, desktop) { left: $spacing-xl - $spacing-md; }
+    @include responsive(down, laptop) { left: $spacing-lg; right: 0; }
     @include responsive(down, tablet) {
       left: -1rem;
       right: -1rem;
@@ -81,7 +81,7 @@
 
     @include responsive(down, tablet) {
       background-color: $white;
-      padding: $integer;
+      padding: $spacing-sm;
     }
   }
 
@@ -92,11 +92,11 @@
   }
 
   &__subtitle, &__body {
-    width: $spacing*10;
-    padding-right: $spacing;
+    width: $spacing-xl;
+    padding-right: $spacing-sm;
     
-    @include responsive(down, desktop) { width: $spacing*8; }
-    @include responsive(down, laptop) { width: $spacing*6; }
+    @include responsive(down, desktop) { width: $spacing-xl - $spacing-md; }
+    @include responsive(down, laptop) { width: $spacing-lg; }
   }
 
   &__title {

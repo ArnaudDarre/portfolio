@@ -84,9 +84,9 @@
 
 .button {
 
-  @include size(md, $integer*5);
-  &--sm { @include size(sm, $integer*4); }
-  &--lg { @include size(lg, $integer*6); }
+  @include size(md, $spacing-lg);
+  &--sm { @include size(sm, $spacing-md); }
+  &--lg { @include size(lg, $spacing-lg); }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -123,13 +123,7 @@
 	'primary'   	$primary 			$black,
 	'secondary' 	$secondary		$white,
 	'highlight' 	$highlight		$white,
-	'dark' 				$dark 				$white,
-	'white' 			$white 				$black,
-	'facebook' 		$facebook 		$white,
-	'google' 			$google 			$white,
-	'linkedin' 		$linkedin 		$white,
-	'medium' 			$medium 			$white,
-	'twitter' 		$twitter 			$white
+	'white' 			$white 				$black
 );
 
 // —————————————————————————————————————————————————————————————————
@@ -140,17 +134,17 @@
 	transition: bottom $transition, transform $transition;
 	will-change: bottom, transform;
 	position: absolute;
-	right: $integer;
-	bottom: -$spacing;
+	right: $spacing-sm;
+	bottom: -$spacing-sm;
 	@include responsive-mobile() {
 		display: none !important;
 	}
 
 	&.js-show {
-		bottom: $integer*3*2;
+		bottom: $spacing-lg - $spacing-md;
 	}
 
 	&:hover {
-		transform: translateY(-$integer*0.125) scale(1.04);
+		transform: translateY(-1px) scale(1.04);
 	}
 }

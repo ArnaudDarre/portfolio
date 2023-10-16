@@ -78,7 +78,7 @@
 
   &__trigger {
     position: absolute;
-    transform: translateY(-$integer*2);
+    transform: translateY(-$spacing-md);
   
     &--landing { top: 50vh;}
     &--about { top: -30vh;}

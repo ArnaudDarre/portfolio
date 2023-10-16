@@ -12,26 +12,26 @@
   &__nav {
     display: flex;
     align-items: center;
-    margin: -$integer*0.5;
+    margin: -$spacing-sm;
 
     > * {
-      padding: $integer*0.5;
+      padding: $spacing-sm;
     }
   }
 
   &__body {
 
     @include responsive(up, mobile) {
-      padding-right: $spacing;
+      padding-right: $spacing-sm;
     }
   }
 
-  &__label { margin-bottom: $integer*0.25; }
-  &__legend { margin-top: $integer*2; }
+  &__label { margin-bottom: $spacing-xs*0.5; }
+  &__legend { margin-top: $spacing-md; }
 
   &__fullWidth {
-    margin-right: -$spacing*3;
-    margin-left: -$spacing*3;
+    margin-right: -$spacing-lg - $spacing-md;
+    margin-left: -$spacing-lg - $spacing-md;
   }
 
   &__cover {
@@ -44,13 +44,13 @@
   }
 
   &__poster {
-    max-width: $spacing*15;
+    max-width: $spacing-xxl;
   }
 
-  &__poster { border-radius: $integer; }
-  &__grid img { border-radius: $integer; }
-  &__pdf img { border-radius: $integer; }
-  &__image img { border-radius: $integer; }
+  &__poster { border-radius: $spacing-sm; }
+  &__grid img { border-radius: $spacing-sm; }
+  &__pdf img { border-radius: $spacing-sm; }
+  &__image img { border-radius: $spacing-sm; }
 
   &__pdf {
     display: flex;
@@ -69,7 +69,7 @@
       transition: opacity 0.4s ease;
       will-change: opacity;
       opacity: 1;
-      border: $integer*0.5 solid $medium-grey;
+      border: $spacing-sm solid $grey-30;
     }
 
     @include hover {
@@ -95,7 +95,7 @@
 
   .project__nav {
     position: absolute;
-    top: -$integer*5;
+    top: -$spacing-lg;
     right: 0;
     z-index: 1;
   }
