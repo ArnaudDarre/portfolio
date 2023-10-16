@@ -4,17 +4,6 @@ layout: compress
 
 {% include containers/header.html %}
 
-<section class="section">
-  <div class="section__container">
-    <div class="section__header">
-      <h1 class="section__title h1">{{ page.page_title }}</h2>
-      {% if page.subtitle %}
-      <div class="section__subtitle editor">{{ page.subtitle | markdownify }}</div>
-      {% endif %}
-    </div>
-  </div>
-</section>
-
 {{ content }}
 
 {% include containers/footer.html %}

@@ -1,0 +1,49 @@
+---
+layout: default
+title: Contact
+---
+
+<section class="section section--lg">
+  <div class="section__container">
+    <div class="section__header">
+      <div class="section__title">
+        <h1 class="section__lead">Contact</h1>
+      </div>
+      <div class="section__subtitle">
+        <div class="grid grid--spacing3">
+          <div class="grid__item editor">
+            <p>I can offer eight years of experience working for companies of diverse sizes in different countries and on numerous mediums. In these roles, I have led and designed projects from the initial brief and cost estimate to the final result.</p>
+            <p>Get in touch to discuss a new project or learn more about my work.</p>
+          </div>
+          <div class="grid__item">
+            <form name="contact" method="POST" data-netlify="true" action="/thank-you" class="form">
+              <div class="grid grid--spacing2">
+                <div class="grid__item form__group">
+                  <label for="first_name" class="form__label">Name</label>
+                  <input type="text" name="first_name" id="first_name" class="form__input" required="required">
+                </div>
+                <div class="grid__item form__group">
+                  <label for="email" class="form__label">Email</label>
+                  <input type="email" name="email" id="email" class="form__input" required="required">
+                </div>
+                <div class="grid__item form__group">
+                  <label for="message" class="form__label">Message</label>
+                  <textarea name="message" id="message" class="form__input" rows="6"></textarea>
+                </div>
+              </div>
+              <!-- prevent spam entries -->
+              <div style="position: absolute; left: -5000px;">
+                <input type="checkbox" name="grass_fed_red_waved_profit" value="1" tabindex="-1" autocomplete="no">
+              </div>
+              <button type="submit" class="form__button button button--md button--primary button--animate">
+                <p class="button__inner">Send</p>
+                {% svg /assets/icons/send.svg %}
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
