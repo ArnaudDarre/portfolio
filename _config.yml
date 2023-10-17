@@ -1,19 +1,18 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
 title: Arnaud Darre
-description: >- # this means to ignore newlines until "baseurl:"
-  Print and web designer based in London. Discover my work and profile on my homemade online portfolio.
+description: >-
+  Print and web designer based in London. Discover my work and profile.
 
 # Personnal settings
 name: "Arnaud Darre"
-email: arnaudarre@gmail.com
 github_username:  ArnaudDarre
 
 # social links
 github: https://github.com/ArnaudDarre
-linkedin: https://www.linkedin.com/in/arnaud-darre/?locale=en_US
+linkedin: https://www.linkedin.com/in/arnaud-darre/
 spotify: https://open.spotify.com/user/117157101?si=rvwOIUyNR72RwV6RagJOFg
 
 # Additional settings
@@ -28,10 +27,6 @@ collections:
   posts:
     output: true
     permalink: /:title
-
-# internal path
-url: http://arnaud-darre.com
-resourceurl: /assets
 
 # PLUGINS
 plugins:

@@ -10,9 +10,9 @@
     <div class="section__content {% if size != 'lg' %} grid grid--jcCenter{% endif %}">
       <div class="{% if size == 'lg' %}project__fullWidth{% else %}grid__item{% if size == 'sm' %} grid__item--lg6 grid__item--md8 grid__item--sm10{% elsif size == 'md' %} grid__item--lg10{% endif %}{% endif %}">
         <picture>
-          <source srcset="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.webp" type="image/webp">
-          <source srcset="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" type="image/jpeg">
-          <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.jpg" alt="{{ page.title }} {{ file_name }}">
+          <source srcset="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.webp" type="image/webp">
+          <source srcset="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" type="image/jpeg">
+          <img src="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.jpg" alt="{{ page.title }} {{ file_name }}">
         </picture>
         {% if legend != null %}
         <p class="project__legend caption">{{ legend }}</p>
