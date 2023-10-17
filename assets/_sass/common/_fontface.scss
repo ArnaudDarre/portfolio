@@ -21,10 +21,6 @@
 // chivo (content)
 // —————————————————————————————————————————————————————————————————
 
-// light
-@include fontface('Chivo', chivo/chivo-light, $font-light, normal);
-@include fontface('Chivo', chivo/chivo-lightitalic, $font-light, italic);
-
 // regular
 @include fontface('Chivo', chivo/chivo-regular, $font-regular, normal);
 @include fontface('Chivo', chivo/chivo-regularitalic, $font-regular, italic);
@@ -40,10 +36,6 @@
 // —————————————————————————————————————————————————————————————————
 // roboto mono (code)
 // —————————————————————————————————————————————————————————————————
-
-// light
-@include fontface('Roboto Mono', roboto-mono/roboto-mono-light, $font-light, normal);
-@include fontface('Roboto Mono', roboto-mono/roboto-mono-lightitalic, $font-light, italic);
 
 // regular
 @include fontface('Roboto Mono', roboto-mono/roboto-mono-regular, $font-regular, normal);

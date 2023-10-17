@@ -1,109 +1,48 @@
 ---
 layout: index
-title: Arnaud Darré
+title: Home
 ---
 
-<!-- landing -->
-<section id="landing" class="section js-scrolling-letters__section">
-  <div class="section__background">
-    <span class="background__trigger background__trigger--landing"></span>
-    <span class="background__circle background__circle--landing"></span>
-    <span class="background__square background__square--landing"></span>
-  </div>
-  <div class="section__label">
-    <h1 class="h1 js-scrolling-letters__text">Arnaud Darré</h1>
-  </div>
-  <div class="section__container grid grid--column grid--jcSpaceBetween">
-    <div class="section__header">
-      <p class="section__title h1">Arnaud Darré</p>
-      <h2 class="section__subtitle h2">Graphic & Web Designer</h2>
-      <div class="section__lead">
-        <p class="h3">Scroll down to discover my <a href="#portfolio" class="js-button-anchor link">work</a>, get to <a href="#about" class="js-button-anchor link">know me</a> and <a href="#contact" class="js-button-anchor link">contact</a> me!</p>
-      </div>
-    </div>
-    <div class="section__content">
-      <div class="grid grid__item grid--spacing4 grid--aiBaseline grid--jcSpaceBetween">
-        <p class="grid__item grid__item--lg6 grid__item--md8 body">London-based designer with 10 years of experience working for web agencies and digital consultancies in France and the UK. I specialise in Brand Identity & Design Systems and UI/UX Design.</p>
-        <p class="grid__item grid__item--lg6 grid__item--md4 h5 body--right">Available for work</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- portfolio -->
-<section id="portfolio" class="section js-scrolling-letters__section">
-  <div class="section__background">
-    <span class="background__trigger background__trigger--portfolio"></span>
-  </div>
-  <div class="section__label">
-    <h1 class="h1 js-scrolling-letters__text">Portfolio</h1>
-  </div>
+<div id="landing" class="section">
   <div class="section__container">
     <div class="js-carousel carousel">
-      <div class="section__header">
-        <p class="section__title h1">Portfolio</p>
-        <div class="section__subtitle">
-          <div class="grid grid--spacing3">
-            <div class="grid__item grid__item--lg6">
-              <p class="h5">Browse through some crunchy bites or <a href="{% link projects.html %}" class="link">check the entire collection</a>.</p>
-            </div>
-            <div class="grid__item grid__item--lg6 grid--aiEnd">
-              <nav class="project__nav">
-                <div>
-                  <button class="js-carousel-prev button button--md button--icon button--secondary">
-                    {% svg /assets/icons/chevron-left.svg %}
-                  </button>
-                </div>
-                <div class="carousel__index">
-                  <span class="carousel__indexCurrent">
-                    <span class="carousel__indexInner caption">01</span>
-                  </span>
-                  {% assign total = 0 %}
-                  {% for project in site.projects %}
-                  {% if project.featured != null  %}
-                  {% assign total = total | plus: 1 %}
-                  {% endif %}
-                  {% endfor %}
-                  <span class="carousel__indexTotal caption">0{{ total }}</span>
-                </div>
-                <div>
-                  <button class="js-carousel-next button button--md button--icon button--secondary">
-                    {% svg /assets/icons/chevron-right.svg %}
-                  </button>
-                </div>
-              </nav>
-            </div>
+      <div class="carousel__wrapper">
+        <div class="carousel__nav project__nav">
+          <button class="js-carousel-prev button button--md button--icon button--transparent button--primary">
+            {% svg /assets/icons/chevron-left.svg %}
+          </button>
+          <div class="carousel__index">
+            <span class="carousel__indexCurrent">
+              <span class="carousel__indexInner caption">01</span>
+            </span>
+            {% assign total = 0 %}
+            {% for project in site.projects %}
+            {% if project.featured != null %}
+            {% assign total = total | plus: 1 %}
+            {% endif %}
+            {% endfor %}
+            <span class="carousel__indexTotal caption">0{{ total }}</span>
           </div>
+          <button class="js-carousel-next button button--md button--icon button--transparent button--primary">
+            {% svg /assets/icons/chevron-right.svg %}
+          </button>
         </div>
-      </div>
-      <div class="section__content carousel__wrapper">
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
         {% if project.featured == true %}
         <div class="carousel__item {% if forloop.first %}carousel__item--current{% endif %} carousel__item--{{ project.title | slugify }}">
-          <a href="{{ project.url }}" class="carousel__image">
-            <div class="carousel__imageInner" style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
-          </a>
-          <div class="carousel__content card card--lg card--transparent">
-            <div class="card__header">
+          <div class="carousel__image">
+            <div class="carousel__imageInner"style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
+          </div>
+          <div class="card card--lg card--carousel">
+            <div class="carousel__content card__header">
               {% if project.category %}
-              <p class="carousel__category card__label caption">{{ project.category }}</p>
+              <p class="carousel__category card__label">{{ project.category }}</p>
               {% endif %}
-              <h2 class="carousel__title card__title h2">{{ project.title }}</h2>
+              <p class="carousel__title card__title">{{ project.title }}</p>
               {% if project.subtitle %}
-              <p class="carousel__subtitle card__subtitle h5">{{ project.subtitle }}</p>
+              <p class="carousel__subtitle card__subtitle">{{ project.subtitle }}</p>
               {% endif %}
-            </div>
-            {% if project.body %}
-            <div class="card__content hide--laptop">
-              <p class="carousel__body body--bold">{{ project.body }}</p>
-            </div>
-            {% endif %}
-            <div class="card__actions carousel__button">
-              <a href="{{ project.url }}" class="button button--md button--secondary button--animate">
-                <p class="button__inner">View project</p>
-                {% svg /assets/icons/chevron-right.svg %}
-              </a>
             </div>
           </div>
         </div>
@@ -112,95 +51,57 @@ title: Arnaud Darré
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- about -->
-<section id="about" class="section js-scrolling-letters__section">
-  <div class="section__background">
-    <span class="background__trigger background__trigger--about"></span>
-    <span class="background__circle background__circle--about"></span>
-    <span class="background__circle background__circle--about-small"></span>
-  </div>
-  <div class="section__label">
-    <h1 class="h1 js-scrolling-letters__text">About</h1>
-  </div>
+<div class="section">
   <div class="section__container">
     <div class="section__header">
-      <p class="section__title h1">About</p>
-      <h2 class="section__subtitle h5">How I approach design:</h2>
-      <p class="section__subtitle h2">Let's draw something together!</p>
-      <div class="section__lead">
-        <p class="body">Graphic design, whether for print or digital medium, are not so different from a drawing composition. It all has to do with the use of breathing space around elements, colours, hierarchy and contrast.</p>
-        <p class="body">This is why each design should start with a pen and paper. This playful but effective method enhances creativity by shortening the gap between the brain and the design tool, your hand.</p>
+      <div class="section__title">
+        <h2 class="section__lead">About</h2>
       </div>
-    </div>
-    <div class="section__content">
-      <h2 class="section__subtitle h5">What I like doing:</h2>
-      <div class="section__subtitle">
-        <div class="grid grid--spacing6">
-          {% for skill in site.data.skills %}
-          <div class="grid__item grid__item--lg6">
-            <div class="card card--sm card--transparent card--skills">
-              <div class="card__header">
-                <h3 class="card__title h4">{{ skill.title }}</h3>
-                <p class="card__subtitle">{{ skill.body }}</p>
-              </div>
-              <div class="card__content">
-                <p class="caption">Project</p>
-                <a href="{{ site.base-url }}/projects/{{ skill.project | slugify }}" class="link">{{ skill.project }}</a>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
+      <div class="section__subtitle editor">
+        <p>With over eight years of experience design, I am passionate about creating and enhancing digital products and platforms that are user-friendly, engaging, and functional. I have a strong background in branding and UI/UX design, as well as front-end development skills that allow me to bring my designs to life with code.</p>
+        {% include components/list-item.html label='Read more' url='about.html' %}
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- contact -->
-<section id="contact" class="section js-scrolling-letters__section">
-  <div class="section__background">
-    <span class="background__trigger background__trigger--contact"></span>
-    <span class="background__square background__square--contact"></span>
-  </div>
-  <div class="section__label">
-    <h1 class="h1 js-scrolling-letters__text">Contact</h1>
-  </div>
+<div class="section">
   <div class="section__container">
     <div class="section__header">
-      <p class="section__title h1">Contact</p>
-      <h2 class="section__lead h5">Feel free to drop me a line of you're interested, or if you simply want to have a chat</h2>
+      <div class="section__title">
+        <h2 class="section__lead">Projects</h2>
+      </div>
+      <div class="section__subtitle editor">
+        {% include components/list-item.html label='View all projects' url='projects.html' %}
+      </div>
     </div>
     <div class="section__content">
-      <form name="contact" method="POST" data-netlify="true" action="/thank-you">
-        <div class="grid grid--spacing3">
-          <div class="grid__item grid__item--md5 form__group">
-            <label for="first_name" class="form__label">Name</label>
-            <input type="text" name="first_name" id="first_name" class="form__input" required="required">
-          </div>
-          <div class="grid__item grid__item--md5 form__group">
-            <label for="surname" class="form__label">Surname</label>
-            <input type="text" name="surname" id="surname" class="form__input" required="required">
-          </div>
-          <div class="grid__item grid__item--md10 form__group">
-            <label for="email" class="form__label">Email</label>
-            <input type="email" name="email" id="email" class="form__input" required="required">
-          </div>
-          <div class="grid__item grid__item--md10 form__group">
-            <label for="message" class="form__label">Message</label>
-            <textarea name="message" id="message" class="form__input" rows="6"></textarea>
-          </div>
+      <div class="grid grid--spacing3">
+        {% assign sorted = site.projects | sort: 'order' %}
+        {% for project in sorted %}
+        {% if project.featured == true %}
+        <div class="grid__item grid__item--md6">
+          {% include components/card-project.html title_component='h3' %}
         </div>
-        <!-- prevent spam entries -->
-        <div style="position: absolute; left: -5000px;">
-          <input type="checkbox" name="grass_fed_red_waved_profit" value="1" tabindex="-1" autocomplete="no">
-        </div>
-        <button type="submit" class="form__button button button--md button--secondary button--animate">
-          <p class="button__inner">Send</p>
-          {% svg /assets/icons/send.svg %}
-        </button>
-      </form>
+        {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </div>
-</section>
+</div>
+
+<div class="section">
+  <div class="section__container">
+    <div class="section__header">
+      <div class="section__title">
+        <h2 class="section__lead">Contact</h2>
+      </div>
+      <div class="section__subtitle editor">
+        <p>Get in touch to discuss a new project or learn more about my work.</p>
+        {% include components/list-item.html label='Contact me' url='contact.html' %}
+      </div>
+    </div>
+  </div>
+</div>

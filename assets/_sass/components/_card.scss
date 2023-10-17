@@ -1,7 +1,6 @@
 // —————————————————————————————————————————————————————————————————
 // elements
 // size
-// transparent
 // variants
 // —————————————————————————————————————————————————————————————————
 
@@ -14,15 +13,23 @@
   display: flex;
   flex-direction: column;
 
+  &__label {
+    @extend %caption;
+  }
+
+  &__subtitle {
+    font-weight: $font-bold;
+  }
+
   &__icon {
     font-size: 12rem;
     color: rgba($secondary, 0.05);
   }
 
   &__mediaInner {
-    border-radius: $spacing;
+    border-radius: $spacing-sm;
     padding-bottom: 66.66%;
-    border-radius: $integer;
+    border-radius: $spacing-sm;
     overflow: hidden;
   }
 
@@ -47,9 +54,8 @@
 		&__header,
 		&__content,
 		&__actions {
-			padding: $size $size 0 $size;
 
-			&:last-child {
+			&:not(:last-child) {
 				padding-bottom: $size;
 			}
 		}
@@ -72,59 +78,49 @@
 				margin-top: $size/2;
 			}
 		}
+
+    &__title {
+
+      @if $proportion == xs { @extend %body; @extend %text--bold; }
+      @else if $proportion == sm { @extend %subtitle; @extend %text--bold; }
+      @else if $proportion == md { @extend %h6; }
+      @else if $proportion == lg { @extend %h5; }
+      @else if $proportion == xl { @extend %h2; }
+    }
 	}
 }
 
 .card {
 
-	@include size(md, $integer*3); 
-	&--lg { @include size(lg, $integer*4); }
-	&--sm { @include size(sm, $integer*2); }
-}
-
-// —————————————————————————————————————————————————————————————————
-// transparent
-// —————————————————————————————————————————————————————————————————
-
-.card--transparent {
-
-  .card {
-
-    &__media,
-    &__header,
-    &__content,
-    &__actions {
-      padding-right: 0;
-      padding-left: 0;
-
-      &:first-child {
-        padding-top: 0;
-      }
-
-      &:last-child {
-        padding-bottom: 0;
-      }
-    }
-  }
+  &--xs { @include size(xs, $spacing-sm); }
+  &--sm { @include size(sm, $spacing-md); }
+	&--md { @include size(md, $spacing-md); }
+	&--lg { @include size(lg, $spacing-md); }
+	&--xl { @include size(xl, $spacing-md*2); }
 }
 
 // —————————————————————————————————————————————————————————————————
 // variants
 // —————————————————————————————————————————————————————————————————
 
-.card {
+.card--project {
 
-  &--project {
+  .card__content,
+  .card__subtitle {
 
-    @include responsive(up, tablet) {
-      padding-bottom: $spacing*0.5;
+    @include responsive (up, tablet) {
+      width: $spacing-project;
+      padding-right: $spacing-xxl;
     }
   }
 
-  &--skills {
-
-    .card__subtitle {
-      max-width: $spacing*10;
-    }
+  .card__title {
+    display: inline-block;
+    background-color: $background-default;
+    border-radius: $spacing-sm;
+    padding: $spacing-xs $spacing-md;
+    margin-top: -$spacing-xs;
+    margin-bottom: -$spacing-xs;
+    margin-left: -$spacing-md;
   }
 }

@@ -1,8 +1,17 @@
 // —————————————————————————————————————————————————————————————————
+// reset
 // general
 // focused
-// select
 // —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// reset
+// —————————————————————————————————————————————————————————————————
+
+textarea:focus,
+input:focus {
+	outline: none;
+}
 
 // —————————————————————————————————————————————————————————————————
 // general
@@ -11,31 +20,17 @@
 .form {
 	width: 100%;
 
-	&__content {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	&__control {
-		display: flex;
-	}
-
-	&__textarea {
-		width: 100%;
-	}
-
 	&__label {
 		@extend %caption;
 		transition: color $transition;
-		text-overflow: ellipsis;
 		will-change: color;
+		text-overflow: ellipsis;
 		cursor: pointer;
 		display: block;
 		overflow: hidden;
 		white-space: nowrap;
 		position: relative;
-		padding-bottom: $integer*0.5;
-		padding-left: $integer;
+		padding-bottom: $spacing-sm;
 	}
 
 	&__input {
@@ -46,22 +41,19 @@
 		will-change: border-color;
 		width: 100%;
 		background-color: white;
-    border: $integer solid $primary;
-    border-radius: $integer*2 !important;
-    padding: $integer;
+    border: $spacing-xs solid transparent;
+    border-radius: $border-radius-md !important;
+    padding: $spacing-sm;
+		background-color: $background-paper;
 	}
 
 	&__button {
-		margin-top: $integer*2;
-	}
-	
-	&__footer {
-		text-align: left;
+		margin-top: $spacing-md;
 	}
 }
 
 @include placeholder {
-	color: $medium-grey;
+	color: $text-alt;
 	opacity: 1;
 }
 
@@ -73,79 +65,7 @@
 
 	.form {
 
-		&__input {
-			border-color: $secondary;
-		}
-	}
-}
-
-// —————————————————————————————————————————————————————————————————
-// select
-// —————————————————————————————————————————————————————————————————
-
-.select-hide {
-	opacity: 0;
-	position: absolute;
-	height: 0;
-	padding: 0;
-	bottom: 0;
-}
-
-.form__select {
-	cursor: pointer;
-	position: relative;
-
-	.form__input {
-		cursor: pointer;
-	}
-
-	&:after {
-		@include font-awesome("\f078", 0, $integer, auto, auto, $primary);
-		transition: color $transition;
-		display: flex;
-		align-items: center;
-		will-change: color;
-		height: 100%;
-		font-size: 1.2rem;
-		pointer-events: none;
-	}
-
-	.form__dropdown {
-		@include calc(top, '100% -' $integer*0.25);
-		display: none;
-		position: absolute;
-		right: 0;
-		left: 0;
-		max-height: $spacing*2;
-		overflow: scroll;
-		z-index: 2;
-		background-color: $primary;
-		margin-left: 0;
-		border: $integer*0.25 solid $black;
-
-		li {
-			@include font-size(1, $font-regular, normal);
-			transition: color $transition;
-			will-change: color;
-			margin: 0;
-			padding: $integer $integer !important;
-			cursor: pointer;
-
-			&:nth-child(1) {
-				display: none;
-			}
-
-			&:nth-child(2) {
-				border-top: 0;
-			}
-
-			& + li {
-				border-top: $integer*0.25 solid $black;
-			}
-
-			&:hover {
-				color: $primary;
-			}
-		}
+		&__label { color: $primary; }
+		&__input { border-color: $primary; }
 	}
 }

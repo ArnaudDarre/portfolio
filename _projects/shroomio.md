@@ -17,11 +17,16 @@ website:
   label: Visit Storybook
 tags:
 - React
-- Web Developmentv  
+- Web Development
 - Design System
 
 ---
 
 {% include components/project-cover.html %}
 
-> Having learned web development on my own, it was important for me to keep track of everything I was building. This is how this project came to life.
+{% include components/project-content.html
+  lead='Presentation'
+  content='
+    <p>Having learned web development on my own, it was important for me to keep track of everything I was building. This is how this project came to life.</p>
+  '
+%}

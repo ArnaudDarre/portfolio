@@ -1,24 +1,9 @@
 $(document).ready(function() {
 
 // —————————————————————————————————————————————————————————————————
-// menu scroll animation
-// menu open animation
 // back to top
 // cookie bar accept
 // —————————————————————————————————————————————————————————————————
-
-// —————————————————————————————————————————————————————————————————
-// menu scroll animation
-// —————————————————————————————————————————————————————————————————
-
-$(window).scroll(function() { //the scrolled element
-	var scroll = $(this).scrollTop();
-	if (scroll >= 5) { //the point past whom you add the class (in pixel)
-		$('.header').addClass("js-scrolled"); //the element to which add the class
-	} else {
-		$('.header').removeClass("js-scrolled");
-	}
-});
 
 // —————————————————————————————————————————————————————————————————
 // back to top
@@ -43,7 +28,7 @@ btn.on('click', function(e) {
 // cookie bar accept
 // —————————————————————————————————————————————————————————————————
 
-var cookieKey = "__applied_blockchain_cookie_banner"
+var cookieKey = "__arnaud_darre_portfolio_cookie_banner"
 var cookieClose = function() {
 	if (typeof localStorage !== 'undefined') {
 		localStorage[cookieKey] = "true"

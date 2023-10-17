@@ -1,50 +1,4 @@
 // —————————————————————————————————————————————————————————————————
-// general
-// scroll
-// button menu
-// —————————————————————————————————————————————————————————————————
-
-// —————————————————————————————————————————————————————————————————
-// general
-// —————————————————————————————————————————————————————————————————
-
-@include keyframes(fade-in) {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
-
-@include keyframes(spin) {
-	100% { transform: rotate(360deg); }
-}
-
-@include keyframes(spin-reverse) {
-	100% { transform: rotate(-360deg); }
-}
-
-@include keyframes(pulse) {
-	0% { 	box-shadow: 0 0 0 0 rgba($secondary, 0.4); }
-	70% { 	box-shadow: 0 0 0 $integer rgba($secondary, 0); }
-	100% { 	box-shadow: 0 0 0 0 rgba($secondary, 0); }
-}
-
-@include keyframes(pulse-lg) {
-	0% { 	box-shadow: 0 0 0 0 rgba($secondary, 0.4); }
-	70% { 	box-shadow: 0 0 0 $integer*0.5 rgba($secondary, 0); }
-	100% { 	box-shadow: 0 0 0 0 rgba($secondary, 0); }
-}
-
-// —————————————————————————————————————————————————————————————————
-// scroll
-// —————————————————————————————————————————————————————————————————
-
-@include keyframes(slide) {
-	0% 		{ opacity: 0;
-			  transform: translateY(-30%); }
-	100% 	{ opacity: 1;
-			  transform: translateY(0); } 
-}
-
-// —————————————————————————————————————————————————————————————————
 // button menu
 // —————————————————————————————————————————————————————————————————
 
@@ -57,13 +11,13 @@
 
 // lines > close
 @include keyframes(button-menu-open-before) {
-	0% 		{ transform: translateY(10px); }
+	0% 		{ transform: translateY($spacing-xs*1.5); }
 	50% 	{ transform: translateY(0); 
 			  	transform: rotate(0); }
 	100% 	{ transform: rotate(45deg); }
 }
 @include keyframes(button-menu-open-after) {
-	0% 		{ transform: translateY(-10px); }
+	0% 		{ transform: translateY(-$spacing-xs*1.5); }
 	50% 	{ transform: translateY(0); 
 			  	transform: rotate(0); }
 	100% 	{ transform: rotate(-45deg); }
@@ -74,11 +28,11 @@
 	0% 		{ transform: rotate(45deg); }
 	50% 	{ transform: rotate(0); 
 			  	transform: translateY(0); }
-	100% 	{ transform: translateY(10px); }
+	100% 	{ transform: translateY($spacing-xs*1.5); }
 }
 @include keyframes(button-menu-close-after) {
 	0% 		{ transform: rotate(-45deg); }
 	50% 	{ transform: rotate(0); 
 			  	transform: translateY(0); }
-	100% 	{ transform: translateY(-10px); }
+	100% 	{ transform: translateY(-$spacing-xs*1.5); }
 }

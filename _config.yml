@@ -45,7 +45,7 @@ svg:
 # http://jch.penibelst.de/
 compress_html:
   clippings: []
-  comments: []
+  comments: ["<!-- ", " -->"]
   endings: []
   ignore:
     envs: []

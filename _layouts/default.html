@@ -2,29 +2,8 @@
 layout: compress
 ---
 
-{% include header.html %}
+{% include containers/header.html %}
 
-<section class="section">
-  <div class="section__background">
-    <span class="background__circle background__circle--landing"></span>
-    <span class="background__square background__square--landing"></span>
-  </div>
-  <div class="section__container">
-    <div class="section__header">
-      {% if page.page_title %}
-      <h2 class="section__title h2">{{ page.page_title }}</h2>
-      {% endif %}
-      {% if page.subtitle %}
-      <p class="section__subtitle h3">{{ page.subtitle }}</p>
-      {% endif %}
-      {% if page.lead %}
-      <p class="section__lead h5">{{ page.lead }}</p>
-      {% endif %}
-    </div>
-    <div class="section__content">
-      {{ content }}
-    </div>
-  </div>
-</section>
+{{ content }}
 
-{% include footer.html %}
+{% include containers/footer.html %}

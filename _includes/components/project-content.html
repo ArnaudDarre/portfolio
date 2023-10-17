@@ -1,0 +1,15 @@
+{% assign lead = include.lead %}
+{% assign content = include.content %}
+
+<div class="section">
+  <div class="section__container">
+    <div class="section__header">
+      <div class="section__title">
+        <p class="section__lead">{{ lead }}</p>
+      </div>
+      <div class="section__subtitle editor">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,5 @@
 // —————————————————————————————————————————————————————————————————
 // general
-// reset
 // misc
 // containers
 // logo
@@ -20,23 +19,21 @@ html, body {
 	height: 100%;
 }
 
-body {
-	
-	&:before {
-		@include pseudo-element('', 0, 0, 0, 0, auto, auto);
-		position: fixed;
-		border: $spacing*0.5 solid $white;
-		box-sizing: border-box;
-		pointer-events: none;
-	}
-	
-	&.js-freeze {
-		overflow: hidden;
-	}
+body.js-freeze {
+	overflow: hidden;
 }
 
 .page {
-	overflow: hidden;
+	// needed for footer margin-top: auto if content smaller than viewport height
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	
+	// fix horizontal scrolling on mobile
+  // CSS for other than iOS devices
+  @supports not (-webkit-touch-callout: none) { overflow-x: clip; }
+  // CSS for iOS devices
+  @supports (-webkit-touch-callout: none) { overflow-x: hidden; }
 }
 
 // embed responsively
@@ -47,7 +44,7 @@ body {
 	height: 0; 
 	overflow: hidden; 
 	max-width: 100%;
-	border-radius: $integer*2;
+	border-radius: $spacing-md;
 
 	iframe, object, embed { 
 		position: absolute; 
@@ -60,16 +57,18 @@ body {
 
 // text selection
 ::-moz-selection {
-	background: $secondary;
-	color: $white;
+	background: $primary;
+	color: $primary-text;
 }
+
 ::selection {
-	background: $secondary;
-	color: $white;
+	background: $primary;
+	color: $primary-text;
 }
+
 ::-moz-selection {
-	background: $secondary;
-	color: $white;
+	background: $primary;
+	color: $primary-text;
 }
 
 // remove autocomplete from webkit browsers
@@ -101,19 +100,18 @@ ul {
 }
 
 li {
-	margin-left: 18px;
+	margin-left: $spacing-md;
 
 	& + & {
-		padding-top: $integer/2 !important;
+		padding-top: $spacing-xs !important;
 	}
 }
 
-// —————————————————————————————————————————————————————————————————
-// reset
-// —————————————————————————————————————————————————————————————————
+// buttons and links
 
-button, a {
-	outline-color: $secondary;
+button,
+a {
+	outline-color: $primary;
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -122,66 +120,76 @@ button, a {
 
 // margins & paddings
 
-.m-05 { margin: $integer*0.5 !important; }
-.mt-05 { margin-top: $integer*0.5 !important; }
-.mr-05 { margin-right: $integer*0.5 !important; }
-.mb-05 { margin-bottom: $integer*0.5 !important; }
-.ml-05 { margin-left: $integer*0.5 !important; }
+.m-05 { margin: $spacing-sm !important; }
+.mt-05 { margin-top: $spacing-sm !important; }
+.mr-05 { margin-right: $spacing-sm !important; }
+.mb-05 { margin-bottom: $spacing-sm !important; }
+.ml-05 { margin-left: $spacing-sm !important; }
 
-.p-05 { padding: $integer*0.5 !important; }
-.pt-05 { padding-top: $integer*0.5 !important; }
-.pr-05 { padding-right: $integer*0.5 !important; }
-.pb-05 { padding-bottom: $integer*0.5 !important; }
-.pl-05 { padding-left: $integer*0.5 !important; }
+.p-05 { padding: $spacing-sm !important; }
+.pt-05 { padding-top: $spacing-sm !important; }
+.pr-05 { padding-right: $spacing-sm !important; }
+.pb-05 { padding-bottom: $spacing-sm !important; }
+.pl-05 { padding-left: $spacing-sm !important; }
 
 @for $i from 0 through 20 {
 
-  .m-#{$i} { margin: $i*$integer !important; }
-  .mt-#{$i} { margin-top: $i*$integer !important; }
-  .mr-#{$i} { margin-right: $i*$integer !important; }
-  .mb-#{$i} { margin-bottom: $i*$integer !important; }
-  .ml-#{$i} { margin-left: $i*$integer !important; }
+  .m-#{$i} { margin: $i*$spacing-sm !important; }
+  .mt-#{$i} { margin-top: $i*$spacing-sm !important; }
+  .mr-#{$i} { margin-right: $i*$spacing-sm !important; }
+  .mb-#{$i} { margin-bottom: $i*$spacing-sm !important; }
+  .ml-#{$i} { margin-left: $i*$spacing-sm !important; }
 
-  .p-#{$i} { padding: $i*$integer !important; }
-  .pt-#{$i} { padding-top: $i*$integer !important; }
-  .pr-#{$i} { padding-right: $i*$integer !important; }
-  .pb-#{$i} { padding-bottom: $i*$integer !important; }
-  .pl-#{$i} { padding-left: $i*$integer !important; }
+  .p-#{$i} { padding: $i*$spacing-sm !important; }
+  .pt-#{$i} { padding-top: $i*$spacing-sm !important; }
+  .pr-#{$i} { padding-right: $i*$spacing-sm !important; }
+  .pb-#{$i} { padding-bottom: $i*$spacing-sm !important; }
+  .pl-#{$i} { padding-left: $i*$spacing-sm !important; }
+}
+
+// width
+
+$max: 100;
+$step: 5;
+
+@for $i from 1 through ($max/$step) {
+  $value: $i * $step;
+
+  .w-percent-#{$value} { width: $value + 0% !important; }
+  .w-rem-#{$value} { width: $value*$spacing-sm !important; }
 }
 
 // responsive
 
 .hide {
 	
-	&--desktop { @include responsive(down, desktop) { display: none !important; } }
-	&--laptop { @include responsive(down, laptop) { display: none !important; } }
-	&--tablet { @include responsive(down, tablet) { display: none !important; } }
-	&--mobile { @include responsive(down, mobile) { display: none !important; } }
-	&--touch { @include responsive-mobile() { display: none !important; } }
+	&-desktop { @include responsive(down, desktop) { display: none !important; } }
+	&-laptop { @include responsive(down, laptop) { display: none !important; } }
+	&-tablet { @include responsive(down, tablet) { display: none !important; } }
+	&-mobile { @include responsive(down, mobile) { display: none !important; } }
+	&-touch { @include responsive-mobile() { display: none !important; } }
 }
 
 .show {
 
-	&--desktop { @include responsive(up, desktop) { display: none !important; } }
-	&--laptop { @include responsive(up, laptop) { display: none !important; } }
-	&--tablet { @include responsive(up, tablet) { display: none !important; } }
-	&--mobile { @include responsive(up, mobile) { display: none !important; } }
+	&-desktop { @include responsive(up, desktop) { display: none !important; } }
+	&-laptop { @include responsive(up, laptop) { display: none !important; } }
+	&-tablet { @include responsive(up, tablet) { display: none !important; } }
+	&-mobile { @include responsive(up, mobile) { display: none !important; } }
 }
 
 // z-index
 
-.carousel__image { z-index: -1; }
-.section__header { z-index: 20; }
-.section__container { z-index: 20; }
-.cookie { z-index: 30; }
-body:before { z-index: 40; }
-.section__label { z-index: 45; }
-.header { z-index: 50; }
-.modal { z-index: 60; }
-
 @for $i from 0 through 9 {
 	.z-index--#{$i} { z-index: $i; }
 }
+
+.carousel__image { z-index: -1; }
+.project__nav { z-index: 10; }
+.tabs { z-index: 11; }
+.cookie { z-index: 12; }
+header { z-index: 13; }
+.modal { z-index: 14; }
 
 // hover classes
 
@@ -189,7 +197,7 @@ body:before { z-index: 40; }
 	filter: grayscale(100%);
 	transition: filter, $transition;
 	will-change: filter;
-	
+
 	@include hover {
 		filter: grayscale(0%);
 	}
@@ -201,18 +209,4 @@ body:before { z-index: 40; }
 	@include background(50% 50%, cover);
 	width: 100%;
 	height: 100%;
-}
-
-// —————————————————————————————————————————————————————————————————
-// logo
-// —————————————————————————————————————————————————————————————————
-
-.logo {
-	display: flex;
-	width: $spacing;
-	height: $spacing;
-	border-radius: 50%;
-
-	&__background { fill: $primary; }
-	&__icon { fill: $black; }
 }
