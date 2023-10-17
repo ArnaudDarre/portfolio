@@ -22,20 +22,27 @@ tags: # no more than three
   file_name='book'
 %}
 
-[un]earth offers us a vision. One that a civilization from space is going to lay on our society, our lifestyle, our behaviours. A project that uses sience-fiction to speak about the problems in our world, a glimpse that helps us question its methods. This project is a graphic anthology, a history book that tells us a tale, a new myth of world destruction.
-
-The immersion had to be complete. The aliens have their own writing, a limitless curiosity. They offer us their understanding of our world as they discovered it, and the harvested digital relics, damaged by time.
+{% include components/project-content.html
+  lead='Presentation'
+  content='
+    <p>[un]earth offers us a vision. One that a civilization from space is going to lay on our society, our lifestyle, our behaviours. A project that uses sience-fiction to speak about the problems in our world, a glimpse that helps us question its methods. This project is a graphic anthology, a history book that tells us a tale, a new myth of world destruction.</p>
+    <p>The immersion had to be complete. The aliens have their own writing, a limitless curiosity. They offer us their understanding of our world as they discovered it, and the harvested digital relics, damaged by time.</p>
+  '
+%}
 
 {% include components/project-cover.html %}
 
-> This project has been particularly fun because it blended a lot of different mediums and skills. And it allowed me to dive into written storytelling, something that I had only experienced graphically before.
+{% include components/project-content.html
+  lead='Presentation'
+  content='
+    <p>This project has been particularly fun because it blended a lot of different mediums and skills. And it allowed me to dive into written storytelling, something that I had only experienced graphically before.</p>
+  '
+%}
 
 {% include components/project-grid.html 
   file_name='illustrations'
   legend='Thumbnails of the illustrations'
 %}
-
-Amongt the artwork I created to accompany the book is a full timeline of the events that are described in the book.
 
 {% include components/project-image.html 
   size='lg'

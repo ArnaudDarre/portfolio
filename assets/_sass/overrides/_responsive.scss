@@ -8,9 +8,9 @@
 // variables
 // —————————————————————————————————————————————————————————————————
 
-$spacing-laptop: $integer*3;
-$spacing-tablet: $integer*2;
-$spacing-mobile: $integer*1.5;
+$spacing-laptop: $spacing-lg - $spacing-md;
+$spacing-tablet: $spacing-md;
+$spacing-mobile: $spacing-md - $spacing-xs;
 
 // —————————————————————————————————————————————————————————————————
 // mixins
@@ -20,29 +20,6 @@ $spacing-mobile: $integer*1.5;
 
 	@include responsive(down, $viewport) {
 
-		body:before {
-			border-width: $spacing;
-		}
-
-		.sidebar {
-			padding-top: $spacing*2;
-			padding-bottom: $spacing*2;
-			
-			&--left { left: $spacing*2; }
-			&--right { right: $spacing*2; }
-		}
-
-		.section {
-
-			&__container {
-				padding-right: $spacing*2;
-				padding-left: $spacing*2;
-
-				#landing & {
-					padding-top: $spacing*2;
-				}
-			}
-		}
 	}
 }
 
@@ -53,67 +30,3 @@ $spacing-mobile: $integer*1.5;
 // —————————————————————————————————————————————————————————————————
 // specific
 // —————————————————————————————————————————————————————————————————
-
-@include responsive(down, desktop) {
-
-	.page--project .project__nav {
-		right: -$spacing*2;
-	}
-}
-
-@include responsive(down, laptop) {
-
-	.section:first-of-type .section__container {
-		padding-top: $spacing-tablet*8;
-
-		+ .section__container { padding-top: 0; }
-	}
-
-	.page--project .project__nav {
-		top: -$spacing-tablet*5;
-		right: 0;
-	}
-}
-
-@include responsive(down, tablet) {
-
-	.section:first-of-type .section__container {
-		padding-top: $integer*10;
-
-		+ .section__container { padding-top: 0; }
-	}
-
-	.page--project .project__nav {
-		top: -$integer*6;
-	}
-}
-
-@include responsive(down, mobile) {
-
-	.section {
-
-		&__container {
-			padding-top: $spacing-mobile*4;
-			padding-bottom: $spacing-mobile*4;
-		}
-
-		&__header + &__content { margin-top: $spacing-mobile*5; }
-		&__content + &__content { margin-top: $spacing-mobile*4; }
-
-		&__title {
-
-			& + .section__subtitle { margin-top: $spacing-mobile*2; }
-			& + .section__lead { margin-top: $spacing-mobile*2; }
-		}
-
-		&__subtitle {
-
-			& + & { margin-top: $integer; }
-			& + .section__lead { margin-top: $spacing-mobile; }
-		}
-	}
-
-	.page--project .project__nav {
-		top: -$integer*7;
-	}
-}

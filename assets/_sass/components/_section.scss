@@ -1,7 +1,8 @@
 // —————————————————————————————————————————————————————————————————
 // elements
 // alignement
-// colour
+// color
+// variants
 // overrides
 // —————————————————————————————————————————————————————————————————
 
@@ -9,65 +10,59 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
+div.section {
+
+  & + & {
+
+    .section__container {
+      border-top: $border-sm $border;
+    }
+  }
+}
+
 .section {
   display: flex;
   position: relative;
-  min-height: 100vh;
+  padding-right: $spacing-section-horizontal;
+  padding-left: $spacing-section-horizontal;
 
   &__container {
     display: flex;
     flex-direction: column;
-    padding-top: $spacing*2;
-    padding-right: $spacing*3;
-    padding-bottom: $spacing*2;
-    padding-left: $spacing*3;
     width: 100%;
-
-    & + & {
-      padding-top: 0;
-    }
-  }
-
-  &__label {
-    transform: rotate(-90deg);
-    transform-origin: top left;
-    position: fixed;
-    bottom: $spacing;
-    left: $integer*5;
-
-    @include responsive(down, laptop) {
-      display: none;
-    }
+    padding-top: $spacing-section-vertical;
+    padding-bottom: $spacing-section-vertical;
   }
 
   &__header {
-    position: relative;
-    
+    display: flex;
+    align-items: baseline;
+    margin: -$spacing-md;
+
     & + .section__content {
-      margin-top: $spacing*2;
+      margin-top: $spacing-lg;
+    }
+
+    @include responsive(down, laptop) {
+      flex-direction: column;
+			align-items: stretch;
     }
   }
 
-  &__title {
-
-    & + .section__subtitle { margin-top: $spacing*0.5; }
-    & + .section__lead { margin-top: $spacing; }
-  }
-
+  &__title,
   &__subtitle {
-
-    & + & { margin-top: $spacing*0.5; }
-    & + .section__lead { margin-top: $spacing; }
+    flex: 1;
+    padding: $spacing-md;
   }
 
   &__lead {
-    max-width: $spacing*15;
+    @extend %h5;
   }
 
   &__content {
     
     & + & {
-      margin-top: $spacing*1.5;
+      margin-top: $spacing-lg;
     }
   }
 }
@@ -84,13 +79,32 @@
 }
 
 // —————————————————————————————————————————————————————————————————
-// colour
+// color
 // —————————————————————————————————————————————————————————————————
 
 .section {
 
-  &--primary {
-    background-color: $primary;
+  &--paper {
+    background-color: $background-paper;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// variants
+// —————————————————————————————————————————————————————————————————
+
+.section--lg .section__lead {
+  @extend %h1;
+}
+
+.section--fullWidth {
+  padding-right: 0;
+  padding-left: 0;
+
+  .section__container {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 0
   }
 }
 
@@ -98,62 +112,67 @@
 // overrides
 // —————————————————————————————————————————————————————————————————
 
-.page--index {
+// index
 
-  .section {
-
-    &__header {
-
-      @include responsive(down, tablet) {
-        padding-right: $integer*8;
-      }
-    }
-
-    &__title {
-      
-      @include responsive(up, laptop) {
-        display: none;
- 
-        & + .section__subtitle { margin-top: 0; }
-        & + .section__lead { margin-top: 0; }
-      }
-    }
-  }
-}
-
-#landing {
+#landing.section {
+  @include calc(height, '100vh - '$spacing-xxl);
+  padding-right: 0;
+  padding-left: 0;
 
   .section {
 
     &__container {
-      padding-top: $spacing*3;
-      padding-bottom: $spacing;
+      padding-top: 0;
+      padding-bottom: 0;
     }
+  }
+
+  & + .section .section__container {
+    border-top: 0;
   }
 }
 
-#portfolio {
-
-  .section__subtitle .grid--aiEnd {
-
-    @include responsive(down, laptop) {
-      align-items: flex-start !important;
-    }
-  }
-}
+// projects
 
 .page--projects {
 
-  .section__lead {
-    max-width: unset;
+  .section--lg .section__container {
+    padding-bottom: 0 !important;
   }
 }
 
-.page--project {
+// project
 
-  section .section {
+#project_landing {
+  @include calc(min-height, '100vh - '$spacing-xxl);
 
-    &__container { align-items: center; }
-    &__content, &__header { width: 100%; }
+  @include responsive (down, laptop) {
+    
+    .section__container {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
+
+  + .section--fullWidth .section__container {
+    padding-top: $spacing-section-vertical;
+  }
+}
+
+
+div.section#project_landing + div.section .section__container,
+div.section + div.section.project__cover .section__container,
+div.section.project__cover + .section .section__container,
+div.section.project__image + div.section.project__image .section__container {
+  border-top: 0;
+}
+
+div.section.project__image + div.section.project__image .section__container {
+  padding-top: 0;
+}
+
+// footer
+
+.footer.section {
+  margin-top: auto;
 }

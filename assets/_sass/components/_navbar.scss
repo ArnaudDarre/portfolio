@@ -1,0 +1,161 @@
+// ——————————————————————————————————————————————————
+// navbar
+// nav
+// ——————————————————————————————————————————————————
+
+// ——————————————————————————————————————————————————
+// navbar
+// ——————————————————————————————————————————————————
+
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: $background-default;
+  
+  @include responsive(up, tablet) {
+    height: $spacing-xl;
+  }
+  
+  &.section {
+    position: sticky;
+  }
+
+  .section__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: $spacing-lg - $spacing-md;
+    padding-bottom: 0;
+    border-bottom: $border-sm $border;
+    
+    @include responsive(up, tablet) {
+      height: 100%;
+    }
+    
+    @include responsive(down, tablet) {
+      padding-top: 0;
+      align-items: flex-start;
+    }
+  }
+
+  &__button {
+    top: $spacing-md*1.5;
+    position: absolute;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: baseline;
+
+    > * {
+      margin-right: $spacing-xs;
+    }
+
+    @include responsive(down, tablet) {
+      position: absolute;
+      top: $spacing-md + $spacing-sm - $spacing-xs;
+      margin-left: $spacing-lg;
+    }
+  }
+
+  &__main.nav {
+
+    @include responsive(down, tablet) {
+      transition: max-height $transition;
+      will-change: max-height;
+      align-items: flex-start;
+      padding-top: $spacing-xl - $spacing-md;
+      max-height: $spacing-xl - $spacing-md;
+      width: 100%;
+      overflow: hidden;
+      
+      .js-opened & {
+        max-height: 100vh;
+      }
+    }
+  }
+}
+
+// ——————————————————————————————————————————————————
+// nav
+// ——————————————————————————————————————————————————
+
+.nav {
+
+  @include responsive(up, tablet) {
+    height: 100%;
+  }
+
+  &__container {
+    display: flex;
+
+    @include responsive(up, tablet) {
+      height: 100%;
+    }
+
+    @include responsive(down, tablet) {
+      @include calc(max-height, '100vh - '$spacing-xl*3);
+      align-items: flex-start;
+      // overflow: scroll;
+      width: 100%;
+      padding-bottom: $spacing-md*2;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    position: relative;
+
+    @include responsive(down, tablet) {
+      width: 100%;
+      margin-bottom: $spacing-sm;
+
+      @include hover {
+        background-color: $background-paper;
+      }
+    }
+
+    &--active {
+      font-weight: $font-bold;
+      color: $primary;
+      
+      @include responsive(up, tablet) {
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          width: 100%;
+          height: $spacing-xs;
+          background-color: $primary;
+        }
+      }
+
+      @include responsive(down, tablet) {
+
+        .navbar__main & {
+          background-color: $background-paper;
+        }
+      }
+    }
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    height: 100%;
+    color: inherit;
+    padding-right: $spacing-md;
+    padding-left: $spacing-md;
+    text-decoration: none;
+
+    @include responsive(down, tablet) {
+      padding: $spacing-md - $spacing-xs;
+    }
+  }
+}

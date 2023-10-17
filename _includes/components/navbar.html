@@ -1,0 +1,28 @@
+<header class="section navbar">
+  <div class="section__container">
+    <button class="navbar__button js-button-menu button--menu show-tablet">
+      <i class="button__inner"></i>
+    </button>
+    <div class="navbar__logo text--bold">
+      <h1 class="text--primary">Arnaud Darré</h1>
+      <p class="text--alt">/</p>
+      <p>Portfolio</p>
+    </div>
+    <div class="navbar__main nav">
+      <div class="nav__container">
+        <div class="nav__item{% if page.title == 'Home' %} nav__item--active{% endif %}">
+          <a class="nav__trigger" href="{% link index.html %}">Home</a>
+        </div>
+        <div class="nav__item{% if page.title == 'Projects' or page.layout == 'project' %} nav__item--active{% endif %}">
+          <a class="nav__trigger" href="{% link projects.html %}">Projects</a>
+        </div>
+        <div class="nav__item{% if page.title == 'About' %} nav__item--active{% endif %}">
+          <a class="nav__trigger" href="{% link about.html %}">About</a>
+        </div>
+        <div class="nav__item{% if page.title == 'Contact' %} nav__item--active{% endif %}">
+          <a class="nav__trigger" href="{% link contact.html %}">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

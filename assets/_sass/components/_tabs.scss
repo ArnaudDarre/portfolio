@@ -7,22 +7,9 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
-.tabs,
-.tab {
-
-  &:after {
-    content: "";
-    position: absolute;
-    height: $integer;
-    width: 100%;
-    background-color: $primary;
-    border-radius: $integer;
-  }
-}
-
 .tabs {
-  position: relative;
   display: flex;
+  flex-wrap: wrap;
 
   &:after {
     z-index: -1;
@@ -33,16 +20,28 @@
 .tab {
   cursor: pointer;
   position: relative;
-  font-weight: $font-bold;
-  text-transform: uppercase;
-  padding: 0 $integer*2 $integer $integer*2;
-  border-bottom: $integer solid $primary;
+  padding: 0 $spacing-md $spacing-sm $spacing-md;
+
+  @include responsive (down, mobile) {
+    padding-top: $spacing-sm;
+    width: 50%;
+    border-top: $border-sm $border;
+    
+    &:nth-child(even) {
+      border-left: $border-sm $border;
+    }
+  }
 
   &:after {
+    content: "";
+    position: absolute;
+    height: $spacing-xs;
+    width: 100%;
+    background-color: transparent;
     transition: background-color $transition;
     will-change: background-color;
     z-index: 0;
-    bottom: -$integer;
+    bottom: -1px;
     left: 0;
   }
 }
@@ -52,8 +51,17 @@
 // —————————————————————————————————————————————————————————————————
 
 .tab--active {
+  font-weight: $font-bold;
+  color: $primary;
 
-  &:after {
-    background-color: $secondary;
+  @include responsive (down, mobile) {
+    background-color: $background-paper;
+  }
+
+  @include responsive (up, mobile) {
+
+    &:after {
+      background-color: $primary;
+    }
   }
 }

@@ -1,0 +1,28 @@
+{% assign label = include.label %}
+{% assign icon = include.icon %}
+{% assign type = include.type %}
+{% assign url = include.url %}
+
+{% if url != null %}
+<a href="{% if type == null %}{% link {{ url }} %}{% else %}{{ url }}{% endif %}" {% if type == 'external' %}target="_blank" rel="external"{% endif %} class="list__item link">
+{% else %}
+<p class="list__item">
+{% endif %}
+  {% if icon != null %}<img src="{{ icon }}" alt="Logo for {{ label }}" class="list__itemIcon">{% endif %}
+  {{ label }}
+  {% if url != null %}
+  {% if type == 'external' %}
+  {% svg /assets/icons/external-link.svg %}
+  {% elsif type == 'download' %}
+  {% svg /assets/icons/download.svg %}
+  {% elsif type == 'email' %}
+  {% svg /assets/icons/mail.svg %}
+  {% else %}
+  {% svg /assets/icons/arrow-right.svg %}
+  {% endif %}
+  {% endif %}
+{% if url != null %}
+</a>
+{% else %}
+</p>
+{% endif %}

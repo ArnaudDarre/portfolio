@@ -1,13 +1,19 @@
 ---
 layout: default
 title: 404
-
-page_title: Oh no!
-subtitle: This page is lost or forgotten.
-lead: It's sad, but there are a lot of other things to discover still.
 ---
 
-<a href="{% link index.html %}" class="button button--md button--secondary button--animate">
-  <p class="button__inner">Back to homepage</p>
-  {% svg /assets/icons/home.svg %}
-</a>
+<div class="section section--lg">
+  <div class="section__container">
+    <div class="section__header">
+      <div class="section__title">
+        <h1 class="section__lead">404 Error</h1>
+      </div>
+      <div class="section__subtitle editor">
+        <p>A creative blank canvas. This page seems to have escaped our portfolio. It's sad, but there are a lot of other things to
+        discover still.</p>
+        {% include components/list-item.html label='Back to homepage' url='index.html' %}
+      </div>
+    </div>
+  </div>
+</div>

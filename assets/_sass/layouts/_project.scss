@@ -1,40 +1,35 @@
-// —————————————————————————————————————————————————————————————————
-// elements
-// overrides
-// —————————————————————————————————————————————————————————————————
-
-// —————————————————————————————————————————————————————————————————
-// overrides
-// —————————————————————————————————————————————————————————————————
-
 .project {
 
   &__nav {
     display: flex;
     align-items: center;
-    margin: -$integer*0.5;
+  }
 
-    > * {
-      padding: $integer*0.5;
+  &__thumbnail {
+    height: 50vw;
+    width: auto;
+    
+    @include responsive (up, laptop) {
+      position: absolute;
+      top: $spacing-lg;
+      right: 0;
+      bottom: 0;
+      left: $spacing-project;
+      height: auto;
+      border-top-left-radius: $border-radius-lg;
+      border-bottom-left-radius: $border-radius-lg;
+    }
+
+    @include responsive (down, laptop) {
+      margin-right: clamp(-$spacing-md*2, -10vw, -$spacing-xl*2);
+      margin-left: clamp(-$spacing-md*2, -10vw, -$spacing-xl*2);
+      margin-bottom: $spacing-section-vertical;
     }
   }
 
-  &__body {
+  &__legend { margin-top: $spacing-md; }
 
-    @include responsive(up, mobile) {
-      padding-right: $spacing;
-    }
-  }
-
-  &__label { margin-bottom: $integer*0.25; }
-  &__legend { margin-top: $integer*2; }
-
-  &__fullWidth {
-    margin-right: -$spacing*3;
-    margin-left: -$spacing*3;
-  }
-
-  &__cover {
+  &__coverInner {
     @include background(center center, cover);
     height: 75vh;
 
@@ -43,14 +38,17 @@
     }
   }
 
+  &__video { max-width: $spacing-xxl*8; }
+  &__poster { max-width: $spacing-xxl*4; }
+
+  &__video,
   &__poster {
-    max-width: $spacing*15;
+    margin-right: auto;
+    margin-left: auto;
   }
 
-  &__poster { border-radius: $integer; }
-  &__grid img { border-radius: $integer; }
-  &__pdf img { border-radius: $integer; }
-  &__image img { border-radius: $integer; }
+  &__poster,
+  &__image img { border-radius: $spacing-sm; }
 
   &__pdf {
     display: flex;
@@ -69,7 +67,7 @@
       transition: opacity 0.4s ease;
       will-change: opacity;
       opacity: 1;
-      border: $integer*0.5 solid $medium-grey;
+      border: $spacing-sm solid $grey-30;
     }
 
     @include hover {
@@ -77,26 +75,5 @@
       p { opacity: 1; }
       img { opacity: 0.3; }
     }
-  }
-}
-
-#related-projects {
-
-  &.section {
-    min-height: auto;
-  }
-}
-
-// —————————————————————————————————————————————————————————————————
-// overrides
-// —————————————————————————————————————————————————————————————————
-
-.page--project {
-
-  .project__nav {
-    position: absolute;
-    top: -$integer*5;
-    right: 0;
-    z-index: 1;
   }
 }
