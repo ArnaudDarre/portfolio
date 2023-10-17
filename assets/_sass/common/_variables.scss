@@ -83,6 +83,8 @@ $spacing-xxl: 7.5rem; // 120px
 
 $spacing-section-vertical: clamp($spacing-lg, 10vw, $spacing-xl);
 $spacing-section-horizontal: clamp($spacing-md, 5vw, $spacing-xl);
+$spacing-section-horizontal-negative: clamp(-$spacing-xl, -5vw, -$spacing-md);
+
 $spacing-project: clamp($spacing-xl*5, 40vw, $spacing-xxl*5);
 
 // —————————————————————————————————————————————————————————————————

@@ -40,7 +40,7 @@ div.section {
     margin: -$spacing-md;
 
     & + .section__content {
-      margin-top: $spacing-lg;
+      margin-top: $spacing-section-vertical;
     }
 
     @include responsive(down, laptop) {
@@ -97,14 +97,22 @@ div.section {
   @extend %h1;
 }
 
+.section--fullWidth .section__content,
+.section__content--fullWidth {
+  margin-right: $spacing-section-horizontal-negative;
+  margin-left: $spacing-section-horizontal-negative;
+}
+
 .section--fullWidth {
-  padding-right: 0;
-  padding-left: 0;
 
   .section__container {
     padding-top: 0;
     padding-bottom: 0;
-    border-bottom: 0
+  }
+  
+  .section__container,
+  + .section .section__container {
+    border-top: 0 !important;
   }
 }
 
@@ -144,31 +152,14 @@ div.section {
 // project
 
 #project_landing {
-  @include calc(min-height, '100vh - '$spacing-xxl);
+  @include calc(min-height, '100vh - '$spacing-lg);
 
   @include responsive (down, laptop) {
     
     .section__container {
       padding-top: 0;
-      padding-bottom: 0;
     }
   }
-
-  + .section--fullWidth .section__container {
-    padding-top: $spacing-section-vertical;
-  }
-}
-
-
-div.section#project_landing + div.section .section__container,
-div.section + div.section.project__cover .section__container,
-div.section.project__cover + .section .section__container,
-div.section.project__image + div.section.project__image .section__container {
-  border-top: 0;
-}
-
-div.section.project__image + div.section.project__image .section__container {
-  padding-top: 0;
 }
 
 // footer

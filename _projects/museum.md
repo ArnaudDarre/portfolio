@@ -1,37 +1,46 @@
 ---
 layout: project
 color: '#be181f'
-order: 8
+order: 9
 
-# info
 title: Museum
 subtitle: Branding of TV network
 body: The goal of this project was to give a case to a logo that was already design, but didnhad very few branding around it. The tricky part was to make my own sometinhg that had already been design, and imagine the world that could be built with it.
 category: Branding
 
-# meta
 client: Museum
 tags: 
-  - Brand Identity
-  - Design System
+  - Brand identity
+  - Design system
+  - Editorial design
 
 ---
 
-{% include components/project-pdf.html 
-  file_name='guidelines'
-%}
+<div class="section">
+  <div class="section__container">
+    {% include components/project-pdf.html 
+      file_name='guidelines'
+    %}
+  </div>
+</div>
 
-{% include components/project-cover.html %}
+<div class="section section--fullWidth">
+  <div class="section__container">
+    {% include components/project-cover.html %}
+  </div>
+</div>
 
-{% include components/project-image.html 
-  file_name='mockup-stationnery'
-  legend='Stationery'
-%}
-
-{% include components/project-poster.html 
-  file_name='1'
-%}
-
-{% include components/project-poster.html 
-  file_name='2'
-%}
+<div class="section">
+  <div class="section__container">
+    {% include components/project-image.html 
+      file_name='mockup-stationnery'
+      legend='Stationery'
+    %}
+    {% include components/project-poster.html 
+      file_name='1'
+    %}
+    {% include components/project-poster.html 
+      file_name='2'
+    %}
+  </div>
+</div>
