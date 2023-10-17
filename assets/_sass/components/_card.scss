@@ -1,7 +1,6 @@
 // —————————————————————————————————————————————————————————————————
 // elements
 // size
-// variants
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
@@ -85,6 +84,7 @@
       @if $proportion == sm { @extend %body; }
       @else if $proportion == md { @extend %subtitle; }
       @else if $proportion == lg { @extend %h6; }
+      @else if $proportion == xl { @extend %h5; }
     }
 	}
 }
@@ -94,18 +94,5 @@
   &--sm { @include size(sm, $spacing-sm); }
 	&--md { @include size(md, $spacing-md); }
 	&--lg { @include size(lg, $spacing-md); }
-}
-
-// —————————————————————————————————————————————————————————————————
-// variants
-// —————————————————————————————————————————————————————————————————
-
-.card {
-
-  &--skills {
-
-    .card__subtitle {
-      max-width: $spacing-xl;
-    }
-  }
+	&--xl { @include size(xl, $spacing-md); }
 }

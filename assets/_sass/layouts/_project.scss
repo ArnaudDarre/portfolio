@@ -12,11 +12,6 @@
   &__nav {
     display: flex;
     align-items: center;
-    margin: -$spacing-sm;
-
-    > * {
-      padding: $spacing-sm;
-    }
   }
 
   &__body {

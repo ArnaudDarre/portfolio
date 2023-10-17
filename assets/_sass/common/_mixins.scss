@@ -153,19 +153,18 @@
 		.#{$prefix}#{nth($i, 1)} {
 			background-color: nth($i, 2);
 			color: nth($i, 3);
-
+			
 			svg {
 				stroke: nth($i, 3);
 			}
-
-			&-lighten {
-				background-color: lighten(nth($i, 2), 15%);
-				color: nth($i, 3);
-			}
-
-			&-darken {
-				background-color: darken(nth($i, 2), 15%);
-				color: nth($i, 3);
+			
+			&.button--transparent {
+				background-color: transparent;
+				color: nth($i, 2);
+				
+				svg {
+					stroke: nth($i, 2);
+				}
 			}
 		}
 	}

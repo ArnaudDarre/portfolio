@@ -9,23 +9,16 @@
 
 .editor, %editor {
 
-  h2, h3,
-  p,
+  h2, h3, p,
   ol, ul,
   a,
   blockquote {
     text-align: left;
-    max-width: 800px;
   }
 
   h2 { @extend %h4; }
   h3 { @extend %h5; }
   blockquote { @extend %h6; }
-
-  h2,
-  h3 {
-    color: $secondary;
-  }
 
   h2 {
 
@@ -40,8 +33,8 @@
   }
 
   p,
-  ol,
-  ul {
+  ol, ul,
+  p + a, a + p {
 
     &:not(:first-child) { margin-top: 0.75em; }
   }

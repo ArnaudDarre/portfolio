@@ -1,5 +1,22 @@
+// —————————————————————————————————————————————————————————————————
+// variables
+// elements
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// variables
+// —————————————————————————————————————————————————————————————————
+
+$padding-vertical: $spacing-xs;
+$padding-horizontal: $spacing-sm;
+
+$border-radius: $border-radius-sm;
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
 .carousel {
-  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -9,61 +26,57 @@
     flex-grow: 1;
   }
 
+  &__nav {
+    position: absolute;
+    right: $spacing-xl;
+    bottom: $spacing-lg;
+    background-color: $background-default;
+    border-radius: $border-radius;
+  }
+
+  &__index {
+    display: flex;
+    margin-right: $spacing-sm;
+    margin-left: $spacing-sm;
+
+    &Current {
+      padding-right: $spacing-sm;
+    }
+
+    &Inner {
+      display: block;
+    }
+
+    &Total {
+      position: relative;
+      padding-left: $spacing-sm;
+
+      &:after {
+        @include pseudo-element('/', -1px, 100%, auto, auto, $spacing-xs, auto);
+        color: inherit;
+      }
+    }
+  }
+  
   &__item {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 100%;
-
-    @include responsive(down, mobile) { height: 40vh; }
-
-    &--applied-blockchain { .char8 { width: $spacing-md - $spacing-xs; }}
-    &--freedom-on-the-internet { .char8, .char11, .char15 { width: $spacing-md - $spacing-xs; }}
-  }
-
-  &__index {
     display: flex;
-
-    &Current { padding-right: $spacing-sm; }
-    &Inner { display: block; }
-
-    &Total {
-      position: relative;
-      margin: 0 0 0 $spacing-xs;
-      padding-left: $spacing-sm;
-
-      @include responsive(down, mobile) {
-        margin-left: $spacing-sm;
-      }
-
-      &:after {
-        @include pseudo-element('', $spacing-sm, 100%, auto, auto, $spacing-xs, 2px);
-        background: $secondary;
-
-        @include responsive(down, mobile) {
-          width: $spacing-sm;
-        }
-      }
-    }
+    align-items: flex-end;
+    padding-right: $spacing-xl;
+    padding-bottom: $spacing-lg;
+    padding-left: $spacing-xl;
   }
 
   &__image {
     overflow: hidden;
     position: absolute;
-    top: -$spacing-sm;
-    left: $spacing-xl;
-    border-radius: 1rem;
-    right: -$spacing-xs;
-    bottom: -$spacing-sm;
-    border-radius: $spacing-md;
-
-    @include responsive(down, desktop) { left: $spacing-xl - $spacing-md; }
-    @include responsive(down, laptop) { left: $spacing-lg; right: 0; }
-    @include responsive(down, tablet) {
-      left: -1rem;
-      right: -1rem;
-      border-radius: 0;
-    }
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     &Inner {
       @include background(50% 50%, cover);
@@ -73,47 +86,30 @@
   }
 
   &__content {
-    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  &__category, &__title, &__subtitle, &__body {
+  &__category,
+  &__title,
+  &__subtitle {
     pointer-events: none;
-
-    @include responsive(down, tablet) {
-      background-color: $white;
-      padding: $spacing-sm;
-    }
-  }
-
-  &__category, &__subtitle, &__body {
+    background-color: $background-default;
+    padding: $padding-vertical $padding-horizontal;
+    border-radius: $border-radius;
     overflow: hidden !important;
-    position: relative;
     display: inline-block;
-  }
-
-  &__subtitle, &__body {
-    width: $spacing-xl;
-    padding-right: $spacing-sm;
-    
-    @include responsive(down, desktop) { width: $spacing-xl - $spacing-md; }
-    @include responsive(down, laptop) { width: $spacing-lg; }
-  }
-
-  &__title {
-    overflow: hidden !important;
-    
-    span {
-      display: inline-block;
-    }
+    margin-top: $spacing-sm !important;
   }
 
   .carousel__item:not(.carousel__item--current) {
     pointer-events: none;
 
-    .carousel__title span,
+    .carousel__title,
     .carousel__category,
     .carousel__subtitle,
-    .carousel__body,
     .carousel__button,
     .carousel__imageInner {
       opacity: 0;

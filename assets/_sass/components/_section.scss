@@ -94,13 +94,17 @@ footer.section .section__container {
 // overrides
 // —————————————————————————————————————————————————————————————————
 
-#landing {
+#landing.section {
+  @include calc(height, '100vh - '$spacing-xxl);
+  padding-right: 0;
+  padding-left: 0;
 
   .section {
 
     &__container {
-      padding-top: $spacing-lg - $spacing-md;
-      padding-bottom: $spacing-sm;
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
     }
   }
 }

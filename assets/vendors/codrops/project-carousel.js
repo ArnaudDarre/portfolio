@@ -31,11 +31,11 @@
 	// some animation settings.
 	const settings = {
 		image: {duration: 800, delay: 0, easing: [0.8,0,0.2,1]},
-		title: {duration: 800, delay: 200, easing: [0.8,0,0.2,1]},
-		category: {duration: 400, delay: 200, easing: 'easeOutExpo'},
-		subtitle: {duration: 400, delay: 200, easing: 'easeOutExpo'},
+		category: {duration: 400, delay: 500, easing: 'easeOutExpo'},
+		title: { duration: 400, delay: 550, easing: 'easeOutExpo'},
+		subtitle: {duration: 400, delay: 600, easing: 'easeOutExpo'},
 		description: {duration: 400, delay: 400, easing: 'easeOutExpo'},
-		pagination: {duration: 400, delay: 200, easing: 'easeInOutQuad'},
+		pagination: {duration: 400, delay: 0, easing: 'easeInOutQuad'},
 	};
 	
 	class Entry {
@@ -47,8 +47,6 @@
 			// DOM elements:
 			// title
 			this.DOM.title = this.DOM.el.querySelector('.carousel__title');
-			charming(this.DOM.title);
-			this.DOM.titleLetters = this.DOM.title.querySelectorAll('span');
 			// category
 			this.DOM.category = this.DOM.el.querySelector('.carousel__category');
 			// subtitle
@@ -75,18 +73,14 @@
 								this.toggleImage(!this.isHidden)]);
 		}
 		toggleTitle() {
-			anime.remove(this.DOM.titleLetters);
+			anime.remove(this.DOM.title);
 			return anime({
-				targets: this.DOM.titleLetters,
+				targets: this.DOM.title,
 				duration: settings.title.duration,
-				delay: (target, index) => index * 30 + settings.title.delay,
+				delay: !this.isHidden ? settings.title.duration * 0.5 + settings.title.delay : settings.title.delay,
 				easing: settings.title.easing,
-				translateY: this.isHidden ? [0,this.direction === 'next' ? '-100%' : '100%'] : [this.direction === 'next' ? '100%' : '-100%', 0],
-				opacity: {
-					value: this.isHidden ? 0 : 1,
-					duration: 1,
-					delay: (target, index) => this.isHidden ? settings.title.duration + settings.title.delay : settings.title.delay
-				}
+				translateY: this.isHidden ? [0, this.direction === 'next' ? '-50%' : '50%'] : [this.direction === 'next' ? '50%' : '-50%', 0],
+				opacity: this.isHidden ? 0 : 1
 			}).finished;
 		}
 		toggleCategory() {
@@ -96,7 +90,7 @@
 				duration: settings.category.duration,
 				delay: !this.isHidden ? settings.category.duration * 0.5 + settings.category.delay : settings.category.delay,
 				easing: settings.category.easing,
-				translateY: this.isHidden ? [0, this.direction === 'next' ? '-10%' : '10%'] : [this.direction === 'next' ? '20%' : '-20%', 0],
+				translateY: this.isHidden ? [0, this.direction === 'next' ? '-50%' : '50%'] : [this.direction === 'next' ? '50%' : '-50%', 0],
 				opacity: this.isHidden ? 0 : 1
 			}).finished;
 		}
@@ -107,7 +101,7 @@
 				duration: settings.subtitle.duration,
 				delay: !this.isHidden ? settings.subtitle.duration * 0.5 + settings.subtitle.delay : settings.subtitle.delay,
 				easing: settings.subtitle.easing,
-				translateY: this.isHidden ? [0, this.direction === 'next' ? '-10%' : '10%'] : [this.direction === 'next' ? '20%' : '-20%', 0],
+				translateY: this.isHidden ? [0, this.direction === 'next' ? '-50%' : '50%'] : [this.direction === 'next' ? '50%' : '-50%', 0],
 				opacity: this.isHidden ? 0 : 1
 			}).finished;
 		}
@@ -118,7 +112,7 @@
 				duration: settings.description.duration,
 				delay: !this.isHidden ? settings.description.duration * 0.5 + settings.description.delay : settings.description.delay,
 				easing: settings.description.easing,
-				translateY: this.isHidden ? [0, this.direction === 'next' ? '-10%' : '10%'] : [this.direction === 'next' ? '20%' : '-20%', 0],
+				translateY: this.isHidden ? [0, this.direction === 'next' ? '-50%' : '50%'] : [this.direction === 'next' ? '50%' : '-50%', 0],
 				opacity: this.isHidden ? 0 : 1
 			}).finished;
 		}

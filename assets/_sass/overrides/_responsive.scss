@@ -37,10 +37,6 @@ $spacing-mobile: $spacing-md - $spacing-xs;
 			&__container {
 				padding-right: $spacing-md;
 				padding-left: $spacing-md;
-
-				#landing & {
-					padding-top: $spacing-md;
-				}
 			}
 		}
 	}

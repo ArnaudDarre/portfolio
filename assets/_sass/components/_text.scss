@@ -31,7 +31,7 @@ html, body {
 }
 
 .h4, %h4 {
-	@include font-size(2, $font-black, normal, 1.25);
+	@include font-size(2, $font-bold, normal, 1.25);
 }
 
 .h5, %h5 {
