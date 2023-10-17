@@ -1,3 +1,8 @@
+.page--project {
+
+  img { border-radius: $spacing-sm; }
+}
+
 .project {
 
   &__nav {
@@ -6,14 +11,14 @@
   }
 
   &__thumbnail {
-    height: 50vw;
+    height: 50vh;
     width: auto;
     
     @include responsive (up, laptop) {
       position: absolute;
       top: $spacing-lg;
       right: 0;
-      bottom: 0;
+      bottom: $spacing-xl;
       left: $spacing-project;
       height: auto;
       border-top-left-radius: $border-radius-lg;
@@ -21,8 +26,8 @@
     }
 
     @include responsive (down, laptop) {
-      margin-right: clamp(-$spacing-md*2, -10vw, -$spacing-xl*2);
-      margin-left: clamp(-$spacing-md*2, -10vw, -$spacing-xl*2);
+      margin-right: $spacing-section-horizontal-negative;
+      margin-left: $spacing-section-horizontal-negative;
       margin-bottom: $spacing-section-vertical;
     }
   }
@@ -46,9 +51,6 @@
     margin-right: auto;
     margin-left: auto;
   }
-
-  &__poster,
-  &__image img { border-radius: $spacing-sm; }
 
   &__pdf {
     display: flex;

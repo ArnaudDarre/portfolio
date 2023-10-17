@@ -1,45 +1,47 @@
 ---
 layout: project
 color: '#dc9b64'
-order: 5
+order: 6
 
-# info
 title: le Domaine des Prés Verts
 subtitle: Prototype of a website
 body: Layout of the new website for Le Domaine des Prés Verts, a luxury guest house in Burgundy, France. Project carried out while working at Watapix.
 category: Digital
 
-# meta
 client: Le Domaine des Prés Verts
-tags: # no more than three
-  - Responsive Design
-  - Web Design
+tags:
+  - Brand identity
+  - Web design
 
 ---
 
-{% include components/project-cover.html %}
+<div class="section section--fullWidth">
+  <div class="section__container">
+    {% include components/project-cover.html %}
+  </div>
+</div>
 
-{% include components/project-image.html
-  size='md'
-  file_name='home'
-%}
-
-{% include components/project-image.html
-  size='md'
-  file_name='menu'
-%}
-
-{% include components/project-image.html 
-  size='md'
-  file_name='room'
-%}
-
-{% include components/project-image.html 
-  size='md'
-  file_name='room-2'
-%}
-
-{% include components/project-image.html 
-  size='md'
-  file_name='footer'
-%}
+<div class="section">
+  <div class="section__container">
+    {% include components/project-image.html
+      size='md'
+      file_name='home'
+    %}
+    {% include components/project-image.html
+      size='md'
+      file_name='menu'
+    %}
+    {% include components/project-image.html
+      size='md'
+      file_name='room'
+    %}
+    {% include components/project-image.html
+      size='md'
+      file_name='room-2'
+    %}
+    {% include components/project-image.html
+      size='md'
+      file_name='footer'
+    %}
+  </div>
+</div>

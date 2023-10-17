@@ -6,7 +6,7 @@ layout: compress
 
 <div id="project_landing" class="section">
   <div class="section__container">
-    <div class="project__thumbnail background-cover"style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é" , "e" }}-cover.jpg)"></div>
+    <div class="project__thumbnail background-cover"style="background-image: url(/assets/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é" , "e" }}-cover.jpg)"></div>
     <div class="section__content">
       <div class="card card--xl card--project">
         <!-- <nav class="card__content project__nav">
@@ -27,7 +27,7 @@ layout: compress
             {% if page.tags %}
             <div class="list w-rem-20" style="margin-bottom: 1px;">
               {% for tag in page.tags %}
-              <p class="list__item caption">{{ tag }} <span class="ml-1">/</span></p>
+              <p class="list__item caption text--primary">{{ tag }} <span class="ml-1 text--alt">/</span></p>
               {% endfor %}
             </div>
             {% endif %}
@@ -89,7 +89,7 @@ layout: compress
     </div>
     <div class="section__content">
       <div class="grid grid--spacing3">
-        {% assign maxRelated = 2 %} 
+        {% assign maxRelated = 3 %} 
         {% assign minCommonTags =  1 %}
         {% assign maxRelatedCounter = 0 %}
         {% for project in site.projects %}

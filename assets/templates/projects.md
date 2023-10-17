@@ -1,7 +1,8 @@
 ---
 layout: project
-featured: true
 color: # primary color of the project or client
+featured: true
+order: 
 
 title: 
 subtitle: 
@@ -12,20 +13,18 @@ client:
 website:
   url: 
   label: 
-website_label: 
-tags: # no more than three
-  - Brand Identity
-  - Data Visualisation
-  - Design Research
-  - Editorial Design
+tags:
+  - Brand identity
+  - Design system
+  - Editorial design
   - Illustration
-  - Logo Design
-  - Motion Design
-  - Responsive Design
-  - Storytelling
-  - Web Design
-  - Web Development
-  - Wordpress
+  - Logo design
+  - Mobile design
+  - Motion design
+  - Product design
+  - Web design
+  - Web development
+  - Wireframing
 
 video_id: # vimeo video id if relevant
 ---
