@@ -82,7 +82,7 @@ title: Home
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
         {% if project.featured == true %}
-        <div class="grid__item grid__item--6">
+        <div class="grid__item grid__item--md6">
           {% include components/card-project.html title_component='h3' %}
         </div>
         {% endif %}

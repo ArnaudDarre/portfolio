@@ -20,25 +20,6 @@ $spacing-mobile: $spacing-md - $spacing-xs;
 
 	@include responsive(down, $viewport) {
 
-		body:before {
-			border-width: $spacing-sm;
-		}
-
-		.sidebar {
-			padding-top: $spacing-md;
-			padding-bottom: $spacing-md;
-			
-			&--left { left: $spacing-md; }
-			&--right { right: $spacing-md; }
-		}
-
-		.section {
-
-			&__container {
-				padding-right: $spacing-md;
-				padding-left: $spacing-md;
-			}
-		}
 	}
 }
 
@@ -49,67 +30,3 @@ $spacing-mobile: $spacing-md - $spacing-xs;
 // —————————————————————————————————————————————————————————————————
 // specific
 // —————————————————————————————————————————————————————————————————
-
-@include responsive(down, desktop) {
-
-	.page--project .project__nav {
-		right: -$spacing-md;
-	}
-}
-
-@include responsive(down, laptop) {
-
-	.section:first-of-type .section__container {
-		padding-top: $spacing-tablet*8;
-
-		+ .section__container { padding-top: 0; }
-	}
-
-	.page--project .project__nav {
-		top: -$spacing-tablet*5;
-		right: 0;
-	}
-}
-
-@include responsive(down, tablet) {
-
-	.section:first-of-type .section__container {
-		padding-top: $spacing-xl;
-
-		+ .section__container { padding-top: 0; }
-	}
-
-	.page--project .project__nav {
-		top: -$spacing-lg;
-	}
-}
-
-@include responsive(down, mobile) {
-
-	.section {
-
-		&__container {
-			padding-top: $spacing-mobile*4;
-			padding-bottom: $spacing-mobile*4;
-		}
-
-		&__header + &__content { margin-top: $spacing-mobile*5; }
-		&__content + &__content { margin-top: $spacing-mobile*4; }
-
-		&__title {
-
-			& + .section__subtitle { margin-top: $spacing-mobile*2; }
-			& + .section__lead { margin-top: $spacing-mobile*2; }
-		}
-
-		&__subtitle {
-
-			& + & { margin-top: $spacing-sm; }
-			& + .section__lead { margin-top: $spacing-mobile; }
-		}
-	}
-
-	.page--project .project__nav {
-		top: -$spacing-lg;
-	}
-}

@@ -40,7 +40,7 @@
   }
 
   &__button {
-    height: $spacing-xl;
+    top: $spacing-md*1.5;
     position: absolute;
   }
 
@@ -54,7 +54,7 @@
 
     @include responsive(down, tablet) {
       position: absolute;
-      top: $spacing-md + $spacing-sm + $spacing-xs;
+      top: $spacing-md + $spacing-sm - $spacing-xs;
       margin-left: $spacing-lg;
     }
   }
@@ -65,11 +65,11 @@
       transition: max-height $transition;
       will-change: max-height;
       align-items: flex-start;
-      padding-top: $spacing-xl;
-      max-height: $spacing-xl;
-      overflow: hidden;
+      padding-top: $spacing-xl - $spacing-md;
+      max-height: $spacing-xl - $spacing-md;
       width: 100%;
-  
+      overflow: hidden;
+      
       .js-opened & {
         max-height: 100vh;
       }
@@ -97,7 +97,7 @@
     @include responsive(down, tablet) {
       @include calc(max-height, '100vh - '$spacing-xl*3);
       align-items: flex-start;
-      overflow: scroll;
+      // overflow: scroll;
       width: 100%;
       padding-bottom: $spacing-md*2;
       flex-direction: column;

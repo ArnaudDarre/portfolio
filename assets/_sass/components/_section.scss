@@ -23,15 +23,15 @@ div.section {
 .section {
   display: flex;
   position: relative;
-  padding-right: $spacing-xl;
-  padding-left: $spacing-xl;
+  padding-right: $spacing-section-horizontal;
+  padding-left: $spacing-section-horizontal;
 
   &__container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: $spacing-xl;
-    padding-bottom: $spacing-xl;
+    padding-top: $spacing-section-vertical;
+    padding-bottom: $spacing-section-vertical;
   }
 
   &__header {
@@ -41,6 +41,11 @@ div.section {
 
     & + .section__content {
       margin-top: $spacing-lg;
+    }
+
+    @include responsive(down, laptop) {
+      flex-direction: column;
+			align-items: stretch;
     }
   }
 
@@ -52,7 +57,6 @@ div.section {
 
   &__lead {
     @extend %h5;
-    margin-bottom: $spacing-md;
   }
 
   &__content {
@@ -142,8 +146,16 @@ div.section {
 #project_landing {
   @include calc(min-height, '100vh - '$spacing-xxl);
 
+  @include responsive (down, laptop) {
+    
+    .section__container {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
   + .section--fullWidth .section__container {
-    padding-top: $spacing-xl;
+    padding-top: $spacing-section-vertical;
   }
 }
 

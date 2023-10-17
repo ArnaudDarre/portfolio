@@ -6,15 +6,25 @@
   }
 
   &__thumbnail {
-    position: absolute;
-    top: $spacing-lg;
-    right: 0;
-    bottom: 0;
-    left: $spacing-project;
-    height: auto;
+    height: 50vw;
     width: auto;
-    border-top-left-radius: $border-radius-lg;
-    border-bottom-left-radius: $border-radius-lg;
+    
+    @include responsive (up, laptop) {
+      position: absolute;
+      top: $spacing-lg;
+      right: 0;
+      bottom: 0;
+      left: $spacing-project;
+      height: auto;
+      border-top-left-radius: $border-radius-lg;
+      border-bottom-left-radius: $border-radius-lg;
+    }
+
+    @include responsive (down, laptop) {
+      margin-right: clamp(-$spacing-md*2, -10vw, -$spacing-xl*2);
+      margin-left: clamp(-$spacing-md*2, -10vw, -$spacing-xl*2);
+      margin-bottom: $spacing-section-vertical;
+    }
   }
 
   &__legend { margin-top: $spacing-md; }

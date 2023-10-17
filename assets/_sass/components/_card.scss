@@ -107,8 +107,11 @@
 
   .card__content,
   .card__subtitle {
-    width: $spacing-project;
-    padding-right: $spacing-xl + $spacing-lg;
+
+    @include responsive (up, tablet) {
+      width: $spacing-project;
+      padding-right: $spacing-xxl;
+    }
   }
 
   .card__title {

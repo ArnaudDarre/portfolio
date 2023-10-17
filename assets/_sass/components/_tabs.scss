@@ -9,6 +9,7 @@
 
 .tabs {
   display: flex;
+  flex-wrap: wrap;
 
   &:after {
     z-index: -1;
@@ -20,6 +21,16 @@
   cursor: pointer;
   position: relative;
   padding: 0 $spacing-md $spacing-sm $spacing-md;
+
+  @include responsive (down, mobile) {
+    padding-top: $spacing-sm;
+    width: 50%;
+    border-top: $border-sm $border;
+    
+    &:nth-child(even) {
+      border-left: $border-sm $border;
+    }
+  }
 
   &:after {
     content: "";
@@ -43,7 +54,14 @@
   font-weight: $font-bold;
   color: $primary;
 
-  &:after {
-    background-color: $primary;
+  @include responsive (down, mobile) {
+    background-color: $background-paper;
+  }
+
+  @include responsive (up, mobile) {
+
+    &:after {
+      background-color: $primary;
+    }
   }
 }
