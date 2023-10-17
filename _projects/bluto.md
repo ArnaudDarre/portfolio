@@ -17,8 +17,6 @@ website:
   label: Visit website
 tags:
 - Brand Identity
-- Design system
-- Wireframing
 - Web Design
 - Web Development
 
@@ -32,7 +30,12 @@ tags:
   legend='Logo research'
 %}
 
-I was able to bring everything I had learned so far on my previous roles and use it for a project I cared about deeply and I had started myself. I combined my skills in branding, design systems implentation and UI/UX design to create from scratch a platform that people would acutally use.
+{% include components/project-content.html
+  lead='Presentation'
+  content='
+    <p>I was able to bring everything I had learned so far on my previous roles and use it for a project I cared about deeply and I had started myself. I combined my skills in branding, design systems implentation and UI/UX design to create from scratch a platform that people would acutally use.</p>
+  '
+%}
 
 {% include components/project-image.html
   file_name='mockup-leaflet'

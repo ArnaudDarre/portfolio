@@ -10,10 +10,14 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
-// remove border-bottom on last section before footer
-section.section:last-of-type .section__container,
-footer.section .section__container {
-  border-bottom: 0;
+div.section {
+
+  & + & {
+
+    .section__container {
+      border-top: $border-sm $border;
+    }
+  }
 }
 
 .section {
@@ -28,7 +32,6 @@ footer.section .section__container {
     width: 100%;
     padding-top: $spacing-xl;
     padding-bottom: $spacing-xl;
-    border-bottom: $border-sm $border;
   }
 
   &__header {
@@ -90,9 +93,22 @@ footer.section .section__container {
   @extend %h1;
 }
 
+.section--fullWidth {
+  padding-right: 0;
+  padding-left: 0;
+
+  .section__container {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 0
+  }
+}
+
 // —————————————————————————————————————————————————————————————————
 // overrides
 // —————————————————————————————————————————————————————————————————
+
+// index
 
 #landing.section {
   @include calc(height, '100vh - '$spacing-xxl);
@@ -104,14 +120,47 @@ footer.section .section__container {
     &__container {
       padding-top: 0;
       padding-bottom: 0;
-      border-bottom: 0;
     }
   }
+
+  & + .section .section__container {
+    border-top: 0;
+  }
 }
+
+// projects
 
 .page--projects {
 
   .section--lg .section__container {
     padding-bottom: 0 !important;
   }
+}
+
+// project
+
+#project_landing {
+  @include calc(min-height, '100vh - '$spacing-xxl);
+
+  + .section--fullWidth .section__container {
+    padding-top: $spacing-xl;
+  }
+}
+
+
+div.section#project_landing + div.section .section__container,
+div.section + div.section.project__cover .section__container,
+div.section.project__cover + .section .section__container,
+div.section.project__image + div.section.project__image .section__container {
+  border-top: 0;
+}
+
+div.section.project__image + div.section.project__image .section__container {
+  padding-top: 0;
+}
+
+// footer
+
+.footer.section {
+  margin-top: auto;
 }

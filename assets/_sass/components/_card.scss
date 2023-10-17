@@ -1,6 +1,7 @@
 // —————————————————————————————————————————————————————————————————
 // elements
 // size
+// variants
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
@@ -16,9 +17,8 @@
     @extend %caption;
   }
 
-  &__title,
   &__subtitle {
-    font-weight: $font-bold !important;
+    font-weight: $font-bold;
   }
 
   &__icon {
@@ -81,18 +81,43 @@
 
     &__title {
 
-      @if $proportion == sm { @extend %body; }
-      @else if $proportion == md { @extend %subtitle; }
-      @else if $proportion == lg { @extend %h6; }
-      @else if $proportion == xl { @extend %h5; }
+      @if $proportion == xs { @extend %body; @extend %text--bold; }
+      @else if $proportion == sm { @extend %subtitle; @extend %text--bold; }
+      @else if $proportion == md { @extend %h6; }
+      @else if $proportion == lg { @extend %h5; }
+      @else if $proportion == xl { @extend %h2; }
     }
 	}
 }
 
 .card {
 
-  &--sm { @include size(sm, $spacing-sm); }
+  &--xs { @include size(xs, $spacing-sm); }
+  &--sm { @include size(sm, $spacing-md); }
 	&--md { @include size(md, $spacing-md); }
 	&--lg { @include size(lg, $spacing-md); }
-	&--xl { @include size(xl, $spacing-md); }
+	&--xl { @include size(xl, $spacing-md*2); }
+}
+
+// —————————————————————————————————————————————————————————————————
+// variants
+// —————————————————————————————————————————————————————————————————
+
+.card--project {
+
+  .card__content,
+  .card__subtitle {
+    width: $spacing-project;
+    padding-right: $spacing-xl + $spacing-lg;
+  }
+
+  .card__title {
+    display: inline-block;
+    background-color: $background-default;
+    border-radius: $spacing-sm;
+    padding: $spacing-xs $spacing-md;
+    margin-top: -$spacing-xs;
+    margin-bottom: -$spacing-xs;
+    margin-left: -$spacing-md;
+  }
 }

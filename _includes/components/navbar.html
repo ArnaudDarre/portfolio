@@ -13,7 +13,7 @@
         <div class="nav__item{% if page.title == 'Home' %} nav__item--active{% endif %}">
           <a class="nav__trigger" href="{% link index.html %}">Home</a>
         </div>
-        <div class="nav__item{% if page.title == 'Projects' %} nav__item--active{% endif %}">
+        <div class="nav__item{% if page.title == 'Projects' or page.layout == 'project' %} nav__item--active{% endif %}">
           <a class="nav__trigger" href="{% link projects.html %}">Projects</a>
         </div>
         <div class="nav__item{% if page.title == 'About' %} nav__item--active{% endif %}">

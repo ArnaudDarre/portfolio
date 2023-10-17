@@ -20,7 +20,13 @@ tags: # no more than three
   file_name='3'
 %}
 
-> I find that sketching helps me focus. It takes my mind of things and is a great way to free your mind when you are stuck in a projects. I started this habbit in Design School and will keep on doing it.
+
+{% include components/project-content.html
+  lead='Presentation'
+  content='
+    <p>Sketching helps me focus. It takes my mind of things and is a great way to free your mind when you are stuck in a projects. I started this habbit in Design School and will keep on doing it.</p>
+  '
+%}
 
 {% include components/project-cover.html 
   size='large'

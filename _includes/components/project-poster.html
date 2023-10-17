@@ -1,7 +1,13 @@
 {% assign legend = include.legend %}
 {% assign file_name = include.file_name %}
 
-<div class="section__content project__poster">
-  <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-poster{% if file_name %}-{{ file_name }}{% endif %}.jpg" alt="{{ page.title }} poster" class="project__poster">
-  <p class="project__legend caption">{{ legend }}</p>
+<div class="section project__image">
+  <div class="section__container">
+    <div class="section__content project__poster">
+      <img src="{{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-poster{% if file_name %}-{{ file_name }}{% endif %}.jpg" alt="{{ page.title }} poster" class="project__poster">
+      {% if legend != null %}
+      <p class="project__legend caption">{{ legend }}</p>
+      {% endif %}
+    </div>
+  </div>
 </div>

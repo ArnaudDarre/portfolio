@@ -121,10 +121,6 @@
 	font-weight: $font-weight;
 	font-style: $font-style;
 	line-height: $line-height;
-
-	& + & {
-		margin-top: 0.75em;
-	}
 }
 
 @mixin text-ellipsis() {

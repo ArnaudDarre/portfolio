@@ -3,11 +3,11 @@ layout: index
 title: Home
 ---
 
-<section id="landing" class="section">
+<div id="landing" class="section">
   <div class="section__container">
     <div class="js-carousel carousel">
       <div class="carousel__wrapper">
-        <nav class="carousel__nav project__nav">
+        <div class="carousel__nav project__nav">
           <button class="js-carousel-prev button button--md button--icon button--transparent button--primary">
             {% svg /assets/icons/chevron-left.svg %}
           </button>
@@ -26,7 +26,7 @@ title: Home
           <button class="js-carousel-next button button--md button--icon button--transparent button--primary">
             {% svg /assets/icons/chevron-right.svg %}
           </button>
-        </nav>
+        </div>
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
         {% if project.featured == true %}
@@ -34,12 +34,12 @@ title: Home
           <div class="carousel__image">
             <div class="carousel__imageInner"style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify }}/{{ project.title | slugify }}-cover.jpg)"></div>
           </div>
-          <div class="card card--xl card--carousel">
+          <div class="card card--lg card--carousel">
             <div class="carousel__content card__header">
               {% if project.category %}
               <p class="carousel__category card__label">{{ project.category }}</p>
               {% endif %}
-              <h2 class="carousel__title card__title">{{ project.title }}</h2>
+              <p class="carousel__title card__title">{{ project.title }}</p>
               {% if project.subtitle %}
               <p class="carousel__subtitle card__subtitle">{{ project.subtitle }}</p>
               {% endif %}
@@ -51,13 +51,13 @@ title: Home
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="section">
+<div class="section">
   <div class="section__container">
     <div class="section__header">
       <div class="section__title">
-        <h1 class="section__lead">About</h1>
+        <h2 class="section__lead">About</h2>
       </div>
       <div class="section__subtitle editor">
         <p>With over eight years of experience design, I am passionate about creating and enhancing digital products and platforms that are user-friendly, engaging, and functional. I have a strong background in branding and UI/UX design, as well as front-end development skills that allow me to bring my designs to life with code.</p>
@@ -65,13 +65,13 @@ title: Home
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="section">
+<div class="section">
   <div class="section__container">
     <div class="section__header">
       <div class="section__title">
-        <h1 class="section__lead">Projects</h1>
+        <h2 class="section__lead">Projects</h2>
       </div>
       <div class="section__subtitle editor">
         {% include components/list-item.html label='View all projects' url='projects.html' %}
@@ -83,20 +83,20 @@ title: Home
         {% for project in sorted %}
         {% if project.featured == true %}
         <div class="grid__item grid__item--6">
-          {% include components/card-project.html body=false %}
+          {% include components/card-project.html title_component='h3' %}
         </div>
         {% endif %}
         {% endfor %}
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="section">
+<div class="section">
   <div class="section__container">
     <div class="section__header">
       <div class="section__title">
-        <h1 class="section__lead">Contact</h1>
+        <h2 class="section__lead">Contact</h2>
       </div>
       <div class="section__subtitle editor">
         <p>Get in touch to discuss a new project or learn more about my work.</p>
@@ -104,4 +104,4 @@ title: Home
       </div>
     </div>
   </div>
-</section>
+</div>

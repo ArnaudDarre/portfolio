@@ -3,7 +3,7 @@ layout: default
 title: 404
 ---
 
-<section class="section section--lg">
+<div class="section section--lg">
   <div class="section__container">
     <div class="section__header">
       <div class="section__title">
@@ -12,11 +12,8 @@ title: 404
       <div class="section__subtitle editor">
         <p>A creative blank canvas. This page seems to have escaped our portfolio. It's sad, but there are a lot of other things to
         discover still.</p>
-        <a href="{% link index.html %}" class="button button--md button--primary button--animate">
-          <p class="button__inner">Back to homepage</p>
-          {% svg /assets/icons/home.svg %}
-        </a>
+        {% include components/list-item.html label='Back to homepage' url='index.html' %}
       </div>
     </div>
   </div>
-</section>
+</div>

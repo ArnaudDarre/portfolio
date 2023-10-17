@@ -4,135 +4,125 @@ layout: compress
 
 {% include containers/header.html %}
 
-<section class="section grid--column">
-  <div class="section__background">
-    <span class="background__trigger background__trigger--{{ page.category | downcase }}"></span>
-    <span class="background__circle background__circle--{{ page.category | downcase }}"></span>
-    <span class="background__square background__square--{{ page.category | downcase }}"></span>
-  </div>
+<div id="project_landing" class="section">
   <div class="section__container">
-    <div class="section__header">
-      <nav class="project__nav">
-        {% if page.previous.url %}
-        <div>
-          <a href="{{ page.previous.url }}" class="button button--md button--icon button--secondary">{% svg /assets/icons/chevron-left.svg %}</a>
-        </div>
-        {% endif %}
-        {% if page.next.url %}
-        <div>
-          <a href="{{ page.next.url }}" class="button button--md button--icon button--secondary">{% svg /assets/icons/chevron-right.svg %}</a>
-        </div>
-        {% endif %}
-        <div>
-          <a href="{% link projects.html %}" class="button button--sm button--secondary button--animate">
-            <p class="button__inner">Go to project list</p>
-            {% svg /assets/icons/list.svg %}
-          </a>
-        </div>
-      </nav>
-      <div class="card card--lg card--transparent">
-        <div class="card__header">
-          {% if page.category %}
-          <p class="card__label">{{ page.category }}</p>
+    <div class="project__thumbnail background-cover"style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é" , "e" }}-cover.jpg)"></div>
+    <div class="section__content">
+      <div class="card card--xl card--project">
+        <!-- <nav class="card__content project__nav">
+          {% if page.previous.url %}
+            <a href="{{ page.previous.url }}" class="button button--md button--icon button--transparent button--primary">
+              {% svg /assets/icons/arrow-left.svg %}
+            </a>
           {% endif %}
+          {% if page.next.url %}
+          <a href="{{ page.next.url }}" class="button button--md button--icon button--transparent button--primary">
+            {% svg /assets/icons/arrow-right.svg %}
+          </a>
+          {% endif %}
+        </nav> -->
+        {% if page.tags or page.client %}
+        <div class="card__content">
+          <div class="grid grid--aiEnd">
+            {% if page.tags %}
+            <div class="list w-rem-20" style="margin-bottom: 1px;">
+              {% for tag in page.tags %}
+              <p class="list__item caption">{{ tag }} <span class="ml-1">/</span></p>
+              {% endfor %}
+            </div>
+            {% endif %}
+            {% if page.client %}
+            <div>
+              <p class="text--bold">Client</p>
+              <p>{{ page.client }}</p>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+        <div class="card__header">
+          <!-- {% if page.category %}
+          <p class="card__label">{{ page.category }}</p>
+          {% endif %} -->
           <h1 class="card__title h2">{{ page.title }}</h1>
           {% if page.subtitle %}
-          <p class="card__subtitle h5">{{ page.subtitle }}</p>
+          <p class="card__subtitle h4">{{ page.subtitle }}</p>
           {% endif %}
         </div>
-        {% if page.body or page.tags or page.client or page.website %}
+        {% if page.body %}
         <div class="card__content">
-          <div class="grid grid--spacing3 grid--aiBaseline">
-            {% if page.body %}
-            <div class="grid__item grid__item--lg6">
-              <p class="project__body">{{ page.body }}</p>
-            </div>
-            {% endif %}
-            {% if page.tags or page.client or page.website %}
-            <div class="grid__item grid__item--lg6 grid grid grid--spacing2">
-              {% if page.tags %}
-              <div class="grid__item grid__item--sm4">
-                <p class="project__label caption">Tags</p>
-                {% for tag in page.tags %}
-                <p>{{ tag }}</p>
-                {% endfor %}
-              </div>
-              {% endif %}
-              {% if page.client %}
-              <div class="grid__item grid__item--sm4">
-                <p class="project__label caption">Client</p>
-                <p>{{ page.client }}</p>
-              </div>
-              {% endif %}
-              {% if page.website %}
-              <div class="grid__item grid__item--sm4 grid--aiStart">
-                <a href="{{ page.website.url }}" target="_blank" rel="external" class="button button--sm button--secondary button--animate">
-                  <p class="button__inner">{{ page.website.label }}</p>
-                  {% svg /assets/icons/globe.svg %}
-                </a>
-              </div>
-              {% endif %}
-            </div>
-            {% endif %}
-          </div>
+          <p>{{ page.body }}</p>
+        </div>
+        {% endif %}
+        {% if page.website %}
+        <div class="card__content">
+          {% include components/list-item.html label='Go to website' type='external' url=page.website.url %}
         </div>
         {% endif %}
       </div>
     </div>
-    {% if page.video_id %}
-    <div class="section__content">
-      <div class="embed-container">
-        <iframe src="https://player.vimeo.com/video/{{ page.video_id }}?color=00ffc4&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
-    </div>
-    {% endif %}
   </div>
-  <div class="section__container editor">
-    {{ content }}
-  </div>
-</section>  
+</div>
 
-<section id="related-projects" class="section section--paper">
+{% if page.video_id %}
+<div class="section">
   <div class="section__container">
-    <div class="section__header">
-      <h1 class="section__title h3">Related projects</h1>
-      <div class="section__subtitle">
-        <div class="grid grid--spacing3">
-          {% assign maxRelated = 2 %} 
-          {% assign minCommonTags =  1 %}
-          {% assign maxRelatedCounter = 0 %}
-          {% for project in site.projects %}
-
-          {% assign sameTagCount = 0 %}
-          {% assign commonTags = '' %}
-
-          {% for tag in project.tags %}
-          {% if project.url != page.url %}
-          {% if page.tags contains tag %}
-          {% assign sameTagCount = sameTagCount | plus: 1 %}
-          {% capture tagmarkup %} 
-          <span class="caption">{{ tag }}</span> 
-          {% endcapture %}
-          {% assign commonTags = commonTags | append: tagmarkup %}
-          {% endif %}
-          {% endif %}
-          {% endfor %}
-    
-          {% if sameTagCount >= minCommonTags %}
-          <div class="grid__item grid__item--lg4 grid__item--md6">
-            {% include components/card-project.html %}
-          </div>
-          {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-          {% if maxRelatedCounter >= maxRelated %}
-            {% break %}
-          {% endif %}
-          {% endif %}
-    
-          {% endfor %}
+    <div class="section__content">
+      <div class="project__video">
+        <div class="embed-container">
+          <iframe src="https://player.vimeo.com/video/{{ page.video_id }}?color=00ffc4&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>  
+{% endif %}
+
+{{ content }}
+
+<div class="section">
+  <div class="section__container">
+    <div class="section__header">
+      <div class="section__title">
+        <p class="section__lead">Related projects</p>
+      </div>
+    </div>
+    <div class="section__content">
+      <div class="grid grid--spacing3">
+        {% assign maxRelated = 2 %} 
+        {% assign minCommonTags =  1 %}
+        {% assign maxRelatedCounter = 0 %}
+        {% for project in site.projects %}
+
+        {% assign sameTagCount = 0 %}
+        {% assign commonTags = '' %}
+
+        {% for tag in project.tags %}
+        {% if project.url != page.url %}
+        {% if page.tags contains tag %}
+        {% assign sameTagCount = sameTagCount | plus: 1 %}
+        {% capture tagmarkup %} 
+        <span class="caption">{{ tag }}</span> 
+        {% endcapture %}
+        {% assign commonTags = commonTags | append: tagmarkup %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+  
+        {% if sameTagCount >= minCommonTags %}
+        <div class="grid__item grid__item--lg4 grid__item--md6">
+          {% include components/card-project.html title_component='p' %}
+        </div>
+        {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+        {% if maxRelatedCounter >= maxRelated %}
+          {% break %}
+        {% endif %}
+        {% endif %}
+  
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 
 {% include containers/footer.html %}
