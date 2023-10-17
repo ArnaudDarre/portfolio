@@ -149,8 +149,8 @@
     line-height: 1;
     height: 100%;
     color: inherit;
-    padding-right: $spacing-lg - $spacing-md;
-    padding-left: $spacing-lg - $spacing-md;
+    padding-right: $spacing-md;
+    padding-left: $spacing-md;
     text-decoration: none;
 
     @include responsive(down, tablet) {

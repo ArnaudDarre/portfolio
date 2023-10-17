@@ -1,9 +1,10 @@
 .list {
   display: flex;
   flex-direction: column;
+  align-items: flex-start; // so that children don't take 100% width (for focus style)
 
   &__item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     &:not(:last-child) {

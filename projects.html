@@ -27,30 +27,9 @@ title: Projects
       <div class="js-grid grid grid--spacing3">
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
-        <div class="grid__item grid__item--lg4 grid__item--md6 {{ project.category | slugify }}">
-          <div class="card card--lg">
-            <div class="card__media">
-              <div class="card__mediaInner background-cover"style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é" , "e" }}-cover.jpg)"></div>
-            </div>
-            <div class="card__header">
-              <p class="card__label">{{ project.category }}</p>
-              <h2 class="card__title">{{ project.title }}</h2>
-              <p class="card__subtitle text--bold">{{ project.subtitle }}</p>
-            </div>
-            {% if project.body %}
-            <div class="card__content">
-              <p>{{ project.body | truncatewords: 15 }}</p>
-            </div>
-            {% endif %}
-            <div class="card__actions">
-              <a href="{{ project.url }}"
-                class="button button--sm button--secondary button--animate">
-                <p class="button__inner">View project</p>
-                {% svg /assets/icons/chevron-right.svg %}
-              </a>
-            </div>
+          <div class="grid__item grid__item--lg4 grid__item--md6 {{ project.category | slugify }}">
+            {% include components/card-project.html %}
           </div>
-        </div>
         {% endfor %}
       </div>
     </div>

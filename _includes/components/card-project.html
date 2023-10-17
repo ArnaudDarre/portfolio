@@ -1,0 +1,25 @@
+{% assign body = include.body %}
+
+<div class="card card--lg">
+  <div class="card__media">
+    <div class="card__mediaInner background-cover"style="background-image: url({{ site.base-url }}{{ site.resourceurl }}/projects/{{ project.title | slugify | replace: "é", "e" }}/{{ project.title | slugify | replace: "é", "e" }}-cover.jpg)"></div>
+  </div>
+  <div class="card__header">
+    <p class="card__label">{{ project.category }}</p>
+    <h2 class="card__title h5">{{ project.title }}</h2>
+    <p class="card__subtitle text--bold">{{ project.subtitle }}</p>
+  </div>
+  {% if body != false %}
+  {% if project.body %}
+  <div class="card__content">
+    <p>{{ project.body | truncatewords: 20 }}</p>
+  </div>
+  {% endif %}
+  {% endif %}
+  <div class="card__actions">
+    <a href="{{ project.url }}" class="list__item link">
+      <p class="button__inner">View project</p>
+      {% svg /assets/icons/arrow-right.svg %}
+    </a>
+  </div>
+</div>
