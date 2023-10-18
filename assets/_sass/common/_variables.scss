@@ -31,10 +31,10 @@ $grey-5: #F2F3F4;
 // text
 
 $text: $black;
-$text-alt: rgba($black, 0.56);
+$text-alt: rgba($black, 0.5);
 
 $text-contrast: $white;
-$text-contrast-alt: rgba($white, 0.56);
+$text-contrast-alt: rgba($white, 0.5);
 
 //  background
 
@@ -60,7 +60,7 @@ $highlight-text: $text;
 
 // others
 
-$border: rgba($black, 0.2);
+$border-color: rgba($black, 0.2);
 
 // social
 
@@ -129,9 +129,7 @@ $mobile-sm-down: 349.98px;
 
 // box-shadow
 
-$box-shadow-sm: 0 0 10px 0 rgba($text, 0.15);
-$box-shadow-md: 0 0 15px 0 rgba($text, 0.20);
-$box-shadow-lg: 0 0 20px 0 rgba($text, 0.25);
+$box-shadow: 0 0 $spacing-sm 0 rgba($black, 0.2);
 
 // transition
 
@@ -139,9 +137,7 @@ $transition: 0.4s ease 0s;
 
 // border
 
-$border-sm: 1px solid;
-$border-md: 2px solid;
-$border-lg: $spacing-xs solid;
+$border: 1px solid $border-color;
 
 // border-radius
 

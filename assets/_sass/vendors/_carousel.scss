@@ -26,40 +26,41 @@ $border-radius: $border-radius-sm;
     flex-grow: 1;
   }
 
+  &__nav,
+  &__category,
+  &__title,
+  &__subtitle {
+    box-shadow: $box-shadow;
+    background-color: $background-default;
+    border-radius: $border-radius;
+  }
+
   &__nav {
     position: absolute;
     right: $spacing-section-horizontal;
     bottom: $spacing-lg;
-    background-color: $background-default;
-    border-radius: $border-radius;
 
     @include responsive (down, tablet) {
-      top: $spacing-lg;
-      right: auto;
+      top: $spacing-section-horizontal;
       bottom: auto;
-      left: $spacing-section-horizontal;
     }
   }
 
   &__index {
     display: flex;
-    margin-right: $spacing-sm;
-    margin-left: $spacing-sm;
-
-    &Current {
-      padding-right: $spacing-sm;
-    }
-
+    align-items: baseline;
+    margin-right: $spacing-xs;
+    margin-left: $spacing-xs;
     &Inner {
-      display: block;
+      display: block; // needed for translate animation
     }
 
     &Total {
       position: relative;
-      padding-left: $spacing-sm;
+      padding-left: $spacing-xs;
 
-      &:after {
-        @include pseudo-element('/', -1px, 100%, auto, auto, $spacing-xs, auto);
+      &:before {
+        content: " / ";
         color: inherit;
       }
     }
@@ -72,9 +73,11 @@ $border-radius: $border-radius-sm;
     width: 100%;
     display: flex;
     align-items: flex-end;
-    padding-right: $spacing-section-horizontal;
-    padding-bottom: $spacing-lg;
-    padding-left: $spacing-section-horizontal;
+    padding: $spacing-lg $spacing-section-horizontal;
+    
+    @include responsive (down, tablet) {
+      padding-bottom: $spacing-section-horizontal;
+    }
   }
 
   &__image {
@@ -103,9 +106,7 @@ $border-radius: $border-radius-sm;
   &__title,
   &__subtitle {
     pointer-events: none;
-    background-color: $background-default;
     padding: $padding-vertical $padding-horizontal;
-    border-radius: $border-radius;
     overflow: hidden !important;
     display: inline-block;
     margin-top: $spacing-sm !important;

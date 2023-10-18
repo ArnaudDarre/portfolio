@@ -18,7 +18,6 @@ tags:
   - Editorial design
   - Logo design
   - Product design
-  - Web development
 
 ---
 

@@ -27,7 +27,7 @@
     justify-content: space-between;
     padding-top: $spacing-lg - $spacing-md;
     padding-bottom: 0;
-    border-bottom: $border-sm $border;
+    border-bottom: $border;
     
     @include responsive(up, tablet) {
       height: 100%;
