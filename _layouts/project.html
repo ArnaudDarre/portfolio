@@ -4,7 +4,7 @@ layout: compress
 
 {% include containers/header.html %}
 
-<!-- capture previous and next custom order -->
+<!-- capture custom order for prev and next links -->
 {% assign posts = site.projects | sort: 'order' %}
 {% assign i = 0 %}
 {% for post in posts %}
@@ -73,7 +73,7 @@ layout: compress
         {% endif %}
         {% if page.website %}
         <div class="card__content">
-          {% include components/list-item.html label='Go to website' type='external' url=page.website.url %}
+          {% include components/list-item.html label=page.website.label type='external' url=page.website.url %}
         </div>
         {% endif %}
       </div>

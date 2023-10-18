@@ -5,8 +5,8 @@ featured: true
 order: 1
 
 title: Bluto
-subtitle: E-commerce brand and platform
-body: "Bluto was my latest adventure, and the most interesting challenge I came to face in my career, but one I had been dreaming ever since design school: creating my own brand from scratch. I started this company with two friends, and learned so much along the way."
+subtitle: Creating the first online artisan bakery in London
+body: "Bluto was my latest adventure, and the most interesting challenge I came to face in my career. One I had been dreaming ever since design school: creating my own brand from scratch. I started this company with two friends, and learned so much along the way."
 category: Branding
 
 client: Bluto
@@ -32,7 +32,7 @@ tags:
     {% include components/project-content.html
       lead='Presentation'
       content='
-        <p>I was able to bring everything I had learned so far on my previous roles and use it for a project I cared about deeply and I had started myself. I combined my skills in branding, design systems implentation and UI/UX design to create from scratch a platform that people would acutally use.</p>
+        <p>I was able to bring everything I had learned so far on my previous roles and use it for a project I cared about deeply and I had started myself. I combined my skills in branding, design systems implentation and UI/UX design to create from scratch a platform that people would use in their daily lives.</p>
       '
     %}
     {% include components/project-image.html

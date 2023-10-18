@@ -4,8 +4,8 @@ color: '#231d1f'
 order: 10
 
 title: Freedom on the Internet
-subtitle: A book on Internet Censorship
-body: This book explores how censorship, weather applied automatically by the author, or carried out by countries and organisation affect the web and our daily lives. 
+subtitle: Make people realise we need to fight for a free web
+body: This book explores how censorship, whether applied automatically by the author, or carried out by countries and organisation affect the web and our daily lives. 
 category: Editorial
 
 client: Personal project
