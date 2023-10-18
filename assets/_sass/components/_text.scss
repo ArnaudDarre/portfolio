@@ -20,12 +20,12 @@ html, body {
 
 .h1, %h1 {
 	@include font-size(5, $font-black, normal, 1.25);
-	@include responsive (down, tablet) { font-size: 4rem; }
+	@include responsive (down, tablet) { font-size: 4rem; line-height: 1.1 }
 }
 
 .h2, %h2 {
 	@include font-size(3.5, $font-black, normal, 1.25);
-	@include responsive (down, tablet) { font-size: 3rem; }
+	@include responsive (down, tablet) { font-size: 3rem; line-height: 1.1 }
 }
 
 .h3, %h3 {

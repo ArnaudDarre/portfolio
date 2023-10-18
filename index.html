@@ -36,13 +36,13 @@ title: Home
           </div>
           <div class="card card--lg card--carousel">
             <div class="carousel__content card__header">
-              {% if project.category %}
-              <p class="carousel__category card__label">{{ project.category }}</p>
-              {% endif %}
               <p class="carousel__title card__title">{{ project.title }}</p>
               {% if project.subtitle %}
               <p class="carousel__subtitle card__subtitle">{{ project.subtitle }}</p>
               {% endif %}
+              <div class="carousel__button card__subtitle">
+                {% include components/list-item.html label='View project' url=project.path %}
+              </div>
             </div>
           </div>
         </div>

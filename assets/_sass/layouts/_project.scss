@@ -6,12 +6,18 @@
 .project {
 
   &__nav {
+    position: absolute;
+    top: $spacing-md*1.5;
     display: flex;
     align-items: center;
+
+    @include responsive (down, laptop) {
+      top: $spacing-section-horizontal;
+    }
   }
 
   &__thumbnail {
-    height: 50vh;
+    height: 40vh;
     width: auto;
     
     @include responsive (up, laptop) {
