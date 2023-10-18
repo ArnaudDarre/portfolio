@@ -114,7 +114,7 @@
 
     @include responsive (up, laptop) {
       width: $spacing-project;
-      padding-right: $spacing-xxl;
+      padding-right: $spacing-xl + $spacing-md;
     }
   }
 
