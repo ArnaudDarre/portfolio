@@ -15,7 +15,7 @@ div.section {
   & + & {
 
     .section__container {
-      border-top: $border-sm $border;
+      border-top: $border;
     }
   }
 }
@@ -166,4 +166,11 @@ div.section {
 
 .footer.section {
   margin-top: auto;
+
+  .section__header {
+
+    @include responsive (down, mobile) {
+      flex-direction: column-reverse;
+    }
+  }
 }

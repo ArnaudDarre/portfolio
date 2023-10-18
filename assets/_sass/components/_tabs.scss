@@ -25,10 +25,10 @@
   @include responsive (down, mobile) {
     padding-top: $spacing-sm;
     width: 50%;
-    border-top: $border-sm $border;
+    border-top: $border;
     
     &:nth-child(even) {
-      border-left: $border-sm $border;
+      border-left: $border;
     }
   }
 
