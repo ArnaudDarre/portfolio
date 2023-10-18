@@ -5,7 +5,7 @@ featured: true
 order: 3
 
 title: Applied Blockchain
-subtitle: Website redesign
+subtitle: Website redesign to improve brand recognition and SEO scores
 body: This project was part of the complete re-branding of Applied Blockchain, a blockchain consultancy and development startup. I was brought onboard to create from scratch what would become the company's new brand identity. And the biggest part of that project was the website rebranding.
 category: Digital
 

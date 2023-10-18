@@ -5,7 +5,7 @@ featured: true
 order: 4
 
 title: Wallet app
-subtitle: Mobile app wireframing and design
+subtitle: Creating a prototype to showcase and idea to investors
 body: This was a design for a pre-seed A MVP. The client wanted a the demo app to be graphically appealing, so I created a cool design system and then prototyped the first features for the developers to code.
 category: Digital
 
