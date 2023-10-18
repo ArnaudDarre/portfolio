@@ -105,10 +105,14 @@
 
 .card--project {
 
+  .card__content {
+    max-width: $spacing-xxl*5;
+  }
+
   .card__content,
   .card__subtitle {
 
-    @include responsive (up, tablet) {
+    @include responsive (up, laptop) {
       width: $spacing-project;
       padding-right: $spacing-xxl;
     }
