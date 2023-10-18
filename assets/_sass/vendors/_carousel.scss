@@ -27,12 +27,26 @@ $border-radius: $border-radius-sm;
   }
 
   &__nav,
-  &__category,
   &__title,
-  &__subtitle {
+  &__subtitle,
+  &__button {
     box-shadow: $box-shadow;
     background-color: $background-default;
     border-radius: $border-radius;
+  }
+
+  &__title,
+  &__subtitle,
+  &__button {
+    padding: $padding-vertical $padding-horizontal;
+    margin-top: $spacing-sm !important;
+  }
+
+  &__title,
+  &__subtitle {
+    pointer-events: none;
+    overflow: hidden !important;
+    display: inline-block;
   }
 
   &__nav {
@@ -102,21 +116,10 @@ $border-radius: $border-radius-sm;
     align-items: flex-start;
   }
 
-  &__category,
-  &__title,
-  &__subtitle {
-    pointer-events: none;
-    padding: $padding-vertical $padding-horizontal;
-    overflow: hidden !important;
-    display: inline-block;
-    margin-top: $spacing-sm !important;
-  }
-
   .carousel__item:not(.carousel__item--current) {
     pointer-events: none;
 
     .carousel__title,
-    .carousel__category,
     .carousel__subtitle,
     .carousel__button,
     .carousel__imageInner {

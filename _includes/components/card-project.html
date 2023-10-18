@@ -16,9 +16,6 @@
     <p class="card__subtitle">{{ project.subtitle }}</p>
   </div>
   <div class="card__actions">
-    <a href="{{ project.url }}" class="list__item link">
-      View project
-      {% svg /assets/icons/arrow-right.svg %}
-    </a>
+    {% include components/list-item.html label='View project' url=project.path %}
   </div>
 </div>

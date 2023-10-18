@@ -34,7 +34,7 @@
 		category: {duration: 400, delay: 500, easing: 'easeOutExpo'},
 		title: { duration: 400, delay: 550, easing: 'easeOutExpo'},
 		subtitle: {duration: 400, delay: 600, easing: 'easeOutExpo'},
-		description: {duration: 400, delay: 400, easing: 'easeOutExpo'},
+		button: {duration: 400, delay: 650, easing: 'easeOutExpo'},
 		pagination: {duration: 400, delay: 0, easing: 'easeInOutQuad'},
 	};
 	
@@ -51,8 +51,8 @@
 			this.DOM.category = this.DOM.el.querySelector('.carousel__category');
 			// subtitle
 			this.DOM.subtitle = this.DOM.el.querySelector('.carousel__subtitle');
-			// description
-			this.DOM.description = this.DOM.el.querySelector('.carousel__body');
+			// button
+			this.DOM.button = this.DOM.el.querySelector('.carousel__button');
 			// image
 			this.DOM.image = this.DOM.el.querySelector('.carousel__imageInner');
 		}
@@ -106,12 +106,12 @@
 			}).finished;
 		}
 		toggleDescription() {
-			anime.remove(this.DOM.description);
+			anime.remove(this.DOM.button);
 			return anime({
-				targets: this.DOM.description,
-				duration: settings.description.duration,
-				delay: !this.isHidden ? settings.description.duration * 0.5 + settings.description.delay : settings.description.delay,
-				easing: settings.description.easing,
+				targets: this.DOM.button,
+				duration: settings.button.duration,
+				delay: !this.isHidden ? settings.button.duration * 0.5 + settings.button.delay : settings.button.delay,
+				easing: settings.button.easing,
 				translateY: this.isHidden ? [0, this.direction === 'next' ? '-50%' : '50%'] : [this.direction === 'next' ? '50%' : '-50%', 0],
 				opacity: this.isHidden ? 0 : 1
 			}).finished;
