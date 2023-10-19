@@ -65,29 +65,8 @@
     }
   }
 
-  a:not(.button) {
-    transition: color $transition, background-color $transition;
-    will-change: color, background-color;
-    text-decoration: underline;
-    font-weight: $font-bold;
-    color: $primary;
-    
-    @include hover {
-      color: $primary;
-      text-decoration: none;
-    }
-
-    &.button {
-      display: inline-flex;
-    }
-  }
-
-  a.link:hover {
-    text-decoration: none;
-  }
-
   strong {
-    font-weight: $font-bold;
+    font-variation-settings: $font-bold;
   }
 
   em {

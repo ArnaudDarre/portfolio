@@ -18,9 +18,20 @@
 }
 
 .tab {
+  animation: get-thin $transition-md;
+  will-change: font-variation-settings;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   position: relative;
   padding: 0 $spacing-md $spacing-sm $spacing-md;
+
+  @include hover {
+    animation: get-bold $transition-md forwards;
+    font-variation-settings: $font-bold;
+  }
 
   @include responsive (down, mobile) {
     padding-top: $spacing-sm;
@@ -32,13 +43,27 @@
     }
   }
 
+  &:before {
+    content: attr(data-text);
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    font-variation-settings: $font-bold;
+
+    @media speech {
+      display: none;
+    }
+  }
+
   &:after {
     content: "";
     position: absolute;
     height: $spacing-xs;
     width: 100%;
     background-color: transparent;
-    transition: background-color $transition;
+    transition: background-color $transition-md;
     will-change: background-color;
     z-index: 0;
     bottom: -1px;
@@ -51,8 +76,13 @@
 // —————————————————————————————————————————————————————————————————
 
 .tab--active {
-  font-weight: $font-bold;
+  animation: none;
+  font-variation-settings: $font-bold;
   color: $primary;
+
+  @include hover {
+    animation: none;
+  }
 
   @include responsive (down, mobile) {
     background-color: $background-paper;

@@ -23,8 +23,8 @@
   justify-content: center;
   line-height: 0;
   text-transform: uppercase;
-  font-weight: 700;
-  transition: background-color $transition;
+  font-variation-settings: $font-bold;
+  transition: background-color $transition-md;
   white-space: nowrap;
 
   &.disabled,
@@ -107,7 +107,7 @@
 
 	.button__inner,
 	svg {
-		transition: transform $transition;
+		transition: transform $transition-md;
 		will-change: transform;
 	}
 
@@ -144,7 +144,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: button-menu-opacity 0.8s ease 0s;
+  animation: button-menu-opacity $transition-lg;
   cursor: pointer;
   position: relative;
   overflow: visible;
@@ -163,23 +163,23 @@
   &:before,
   &:after {
     @include pseudo-element('', auto, auto, auto, auto, $spacing-md, 2px);
-    transition: transform $transition;
+    transition: transform $transition-md;
     border-radius: 0.15rem;
     will-change: transform;
   }
 
   &:before {
     transform: translateY($spacing-xs*1.5);
-    animation: button-menu-close-before 0.8s ease;
+    animation: button-menu-close-before $transition-lg;
   }
 
   &:after {
     transform: translateY(-$spacing-xs*1.5);
-    animation: button-menu-close-after 0.8s ease;
+    animation: button-menu-close-after $transition-lg;
   }
 
   .button__inner {
-    transition: opacity $transition;
+    transition: opacity $transition-md;
     border-radius: 0.15rem;
     will-change: opacity;
     width: $spacing-md;
@@ -190,11 +190,11 @@
   &.button--menu--open {
 
     &:before {
-      animation: button-menu-open-before 0.8s ease forwards;
+      animation: button-menu-open-before $transition-lg forwards;
     }
 
     &:after {
-      animation: button-menu-open-after 0.8s ease forwards;
+      animation: button-menu-open-after $transition-lg forwards;
     }
 
     .button__inner {
@@ -208,7 +208,7 @@
 // —————————————————————————————————————————————————————————————————
 
 .button--scroll-top {
-	transition: bottom $transition, transform $transition;
+	transition: bottom $transition-md, transform $transition-md;
 	will-change: bottom, transform;
 	position: absolute;
 	right: $spacing-sm;

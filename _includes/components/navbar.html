@@ -12,18 +12,11 @@
     </div>
     <div class="navbar__main nav">
       <div class="nav__container">
-        <div class="nav__item{% if page.title == 'Home' %} nav__item--active{% endif %}">
-          <a class="nav__trigger" href="{% link index.html %}">Home</a>
-        </div>
-        <div class="nav__item{% if page.title == 'Projects' or page.layout == 'project' %} nav__item--active{% endif %}">
-          <a class="nav__trigger" href="{% link projects.html %}">Projects</a>
-        </div>
-        <div class="nav__item{% if page.title == 'About' %} nav__item--active{% endif %}">
-          <a class="nav__trigger" href="{% link about.html %}">About</a>
-        </div>
-        <div class="nav__item{% if page.title == 'Contact' %} nav__item--active{% endif %}">
-          <a class="nav__trigger" href="{% link contact.html %}">Contact</a>
-        </div>
+        {% for item in site.data.nav %}
+        <h2 class="nav__item">
+          <a class="nav__trigger{% if page.title == item.title %} nav__trigger--active{% endif %}" href="{% link {{ item.url }} %}" data-text="{{ item.title }}">{{ item.title }}</a>
+        </h2>
+        {% endfor %}
       </div>
     </div>
   </div>

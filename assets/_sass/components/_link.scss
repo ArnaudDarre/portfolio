@@ -1,9 +1,11 @@
 .link {
-  font-weight: $font-bold;
+  animation: get-thin $transition-md;
+  will-change: font-variation-settings;
+  font-variation-settings: $font-regular;
   color: $primary;
   text-decoration: underline;
-
-  &:hover {
-    text-decoration: none;
+  
+  @include hover {
+    animation: get-bold $transition-md forwards;
   }
 }

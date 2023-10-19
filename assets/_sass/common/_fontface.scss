@@ -1,5 +1,5 @@
 // In order to have a clean a easy to use font, give the same font-family name to all styles.
-// You can then sort them by using the font-weight and font-style (normal or italic) property
+// You can then sort them by using the font-style (normal or italic) property
 
 // —————————————————————————————————————————————————————————————————
 // list of styles and their weight equivalent
@@ -22,13 +22,5 @@
 // —————————————————————————————————————————————————————————————————
 
 // regular
-@include fontface('Chivo', chivo/chivo-regular, $font-regular, normal);
-@include fontface('Chivo', chivo/chivo-regularitalic, $font-regular, italic);
-
-// bold
-@include fontface('Chivo', chivo/chivo-bold, $font-bold, normal);
-@include fontface('Chivo', chivo/chivo-bolditalic, $font-bold, italic);
-
-// black
-@include fontface('Chivo', chivo/chivo-black, $font-black, normal);
-@include fontface('Chivo', chivo/chivo-blackitalic, $font-black, italic);
+@include fontface('Chivo', chivo/chivo-regular, normal);
+@include fontface('Chivo', chivo/chivo-italic, italic);
