@@ -131,9 +131,7 @@
 @include button-fill-color('button--',
 // prefix				background				color
 	'primary'			$primary					$primary-text,
-	'secondary'		$secondary				$secondary-text,
-	'highlight'		$highlight				$highlight-text,
-	'grey'				$background-paper	$text
+	'grey'				var(--background-paper)	var(--text)
 );
 
 // —————————————————————————————————————————————————————————————————
@@ -157,7 +155,7 @@
   &:before,
   &:after,
   .button__inner {
-    background-color: $text;
+    background-color: var(--text);;
   }
 
   &:before,
@@ -235,7 +233,7 @@
   .button--grey {
 
     @include responsive (down, laptop) {
-      background-color: $background-default;
+      background-color: var(--background-default);
       box-shadow: $box-shadow;
     }
   }

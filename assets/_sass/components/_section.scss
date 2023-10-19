@@ -15,7 +15,7 @@ div.section {
   & + & {
 
     .section__container {
-      border-top: $border;
+      border-top: var(--border);
     }
   }
 }
@@ -85,7 +85,7 @@ div.section {
 .section {
 
   &--paper {
-    background-color: $background-paper;
+    background-color: var(--background-paper);
   }
 }
 

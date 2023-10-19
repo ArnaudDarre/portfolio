@@ -47,7 +47,7 @@
 .caption, %caption {
 	@include font-size(0.875);
 	font-variation-settings: $font-bold;
-	color: $text-alt;
+	color: var(--text-alt);
 }
 
 .overline, %overline {
@@ -93,12 +93,11 @@
 
 .text {
 
-  &--default { @include color($text); }
-  &--alt { @include color($text-alt); }
+  &--default { @include color(var(--text)); }
+  &--alt { @include color(var(--text-alt)); }
 
-  &--contrast { @include color($text-contrast); }
-  &--contrastAlt { @include color($text-contrast-alt); }
+  &--contrast { @include color(var(--text-contrast)); }
+  &--contrastAlt { @include color(var(--text-contrast-alt)); }
 
   &--primary { @include color($primary); }
-  &--secondary { @include color($secondary); }
 }

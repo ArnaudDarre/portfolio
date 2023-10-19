@@ -21,11 +21,6 @@
     font-variation-settings: $font-bold;
   }
 
-  &__icon {
-    font-size: 12rem;
-    color: rgba($secondary, 0.05);
-  }
-
   &__mediaInner {
     border-radius: $spacing-sm;
     padding-bottom: 66.66%;
@@ -120,7 +115,7 @@
 
   .card__title {
     display: inline-block;
-    background-color: $background-default;
+    background-color: var(--background-default);
     border-radius: $spacing-sm;
     padding: $spacing-xs $spacing-md;
     margin-top: -$spacing-xs;

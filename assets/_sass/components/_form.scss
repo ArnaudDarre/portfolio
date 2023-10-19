@@ -40,11 +40,10 @@ input:focus {
 		text-overflow: ellipsis;
 		will-change: border-color;
 		width: 100%;
-		background-color: white;
     border: $spacing-xs solid transparent;
     border-radius: $border-radius-md !important;
     padding: $spacing-sm;
-		background-color: $background-paper;
+		background-color: var(--background-paper);
 	}
 
 	&__button {
@@ -53,7 +52,7 @@ input:focus {
 }
 
 @include placeholder {
-	color: $text-alt;
+	color: var(--text-alt);
 	opacity: 1;
 }
 

@@ -48,16 +48,6 @@ $primary: #00A3AE;
 $primary-dark: #006F7A;
 $primary-text: $text-contrast;
 
-$secondary-light: #CBD6D7;
-$secondary: #617C7E;
-$secondary-dark: #455859;
-$secondary-text: $text-contrast;
-
-$highlight-light: #F9D7B8;
-$highlight: #F2994A;
-$highlight-dark: #EF7910;
-$highlight-text: $text;
-
 // others
 
 $border-color: rgba($black, 0.2);
@@ -138,7 +128,7 @@ $transition-lg: 0.8s ease 0s;
 
 // border
 
-$border: 1px solid $border-color;
+$border: 1px solid;
 
 // border-radius
 

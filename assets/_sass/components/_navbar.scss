@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  background-color: $background-default;
+  background-color: var(--background-default);
   
   @include responsive(up, tablet) {
     height: $spacing-xl;
@@ -27,7 +27,7 @@
     justify-content: space-between;
     padding-top: $spacing-lg - $spacing-md;
     padding-bottom: 0;
-    border-bottom: $border;
+    border-bottom: var(--border);
     
     @include responsive(up, tablet) {
       height: 100%;
@@ -152,7 +152,7 @@
       }
 
       @include responsive(down, tablet) {
-        background-color: $background-paper;
+        background-color: var(--background-paper);
       }
     }
 
@@ -162,7 +162,7 @@
       padding: $spacing-md - $spacing-xs;
 
       @include hover {
-        background-color: $background-paper;
+        background-color: var(--background-paper);
       }
     }
 
