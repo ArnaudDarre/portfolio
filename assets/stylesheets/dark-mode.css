@@ -1,0 +1,22 @@
+:root {
+  --grey-90: #F2F3F4;
+  --grey-80: #E5E6E8;
+  --grey-70: #CCCED2;
+  --grey-60: #B2B5BB;
+  --grey-50: #999DA5;
+  --grey-40: #7F848E;
+  --grey-30: #666C78;
+  --grey-20: #4D5462;
+  --grey-10: #333B4B;
+  --grey-5: #1A2335;
+
+  --text: #FFFFFF;
+  --text-alt: rgba(#FFFFFF, 0.5);
+  --text-contrast: #000A1E;
+  --text-contrast-alt: rgba(#000A1E, 0.5);
+
+  --background-default: #000A1E;
+  --background-paper: var(--grey-5);
+
+  --border-color: rgba($light, 0.2);
+}

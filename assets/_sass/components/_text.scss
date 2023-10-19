@@ -10,14 +10,6 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
-html, body {
-	font-family: $font;
-	font-size: 16px;
-	line-height: 1.5;
-	font-variation-settings: $font-regular;
-	color: $text;
-}
-
 .h1, %h1 {
 	@include font-size(5, $font-black, normal, 1.25);
 	@include responsive (down, tablet) { font-size: 4rem; line-height: 1.1 }
