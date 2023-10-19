@@ -14,7 +14,7 @@ html, body {
 	font-family: $font;
 	font-size: 16px;
 	line-height: 1.5;
-	font-weight: $font-regular;
+	font-variation-settings: $font-regular;
 	color: $text;
 }
 
@@ -54,7 +54,7 @@ html, body {
 
 .caption, %caption {
 	@include font-size(0.875);
-	font-weight: $font-bold;
+	font-variation-settings: $font-bold;
 	color: $text-alt;
 }
 
@@ -75,9 +75,9 @@ html, body {
 // weight
 // ——————————————————————————————————————————————————
 
-.text--regular, %text--regular { font-weight: $font-regular; }
-.text--bold, %text--bold { font-weight: $font-bold; }
-.text--black, %text--black { font-weight: $font-black; }
+.text--regular, %text--regular { font-variation-settings: $font-regular; }
+.text--bold, %text--bold { font-variation-settings: $font-bold; }
+.text--black, %text--black { font-variation-settings: $font-black; }
 
 // ——————————————————————————————————————————————————
 // alignement

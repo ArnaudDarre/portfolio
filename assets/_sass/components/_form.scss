@@ -22,7 +22,7 @@ input:focus {
 
 	&__label {
 		@extend %caption;
-		transition: color $transition;
+		transition: color $transition-md;
 		will-change: color;
 		text-overflow: ellipsis;
 		cursor: pointer;
@@ -36,7 +36,7 @@ input:focus {
 	&__input {
 		@include font-size(1, $font-regular, normal);
 		font-family: $font;
-		transition: border-color $transition;
+		transition: border-color $transition-md;
 		text-overflow: ellipsis;
 		will-change: border-color;
 		width: 100%;

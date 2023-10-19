@@ -62,7 +62,7 @@
   &__main.nav {
 
     @include responsive(down, tablet) {
-      transition: max-height $transition;
+      transition: max-height $transition-md;
       will-change: max-height;
       align-items: flex-start;
       padding-top: $spacing-xl - $spacing-md;
@@ -106,22 +106,38 @@
   }
 
   &__item {
-    height: 100%;
-    position: relative;
 
     @include responsive(down, tablet) {
       width: 100%;
-      margin-bottom: $spacing-sm;
+    }
+  }
+
+  &__trigger {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    line-height: 1;
+    height: 100%;
+    color: inherit;
+    padding-right: $spacing-md;
+    padding-left: $spacing-md;
+
+    &:not(.nav__trigger--active) {
+      will-change: font-variation-settings;
+      animation: get-thin $transition-md;
 
       @include hover {
-        background-color: $background-paper;
+        animation: get-bold $transition-md forwards;
+        font-variation-settings: $font-bold;
       }
     }
 
     &--active {
-      font-weight: $font-bold;
+      font-variation-settings: $font-bold;
       color: $primary;
-      
+
       @include responsive(up, tablet) {
 
         &:after {
@@ -136,26 +152,32 @@
       }
 
       @include responsive(down, tablet) {
-
-        .navbar__main & {
-          background-color: $background-paper;
-        }
+        background-color: $background-paper;
       }
     }
-  }
-
-  &__trigger {
-    display: flex;
-    align-items: center;
-    line-height: 1;
-    height: 100%;
-    color: inherit;
-    padding-right: $spacing-md;
-    padding-left: $spacing-md;
-    text-decoration: none;
 
     @include responsive(down, tablet) {
+      width: 100%;
+      margin-bottom: $spacing-sm;
       padding: $spacing-md - $spacing-xs;
+
+      @include hover {
+        background-color: $background-paper;
+      }
+    }
+
+    &:before {
+      content: attr(data-text);
+      height: 0;
+      visibility: hidden;
+      overflow: hidden;
+      user-select: none;
+      pointer-events: none;
+      font-variation-settings: $font-bold;
+
+      @media speech {
+        display: none;
+      }
     }
   }
 }

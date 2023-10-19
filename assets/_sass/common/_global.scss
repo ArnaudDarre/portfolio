@@ -67,7 +67,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
 	-webkit-box-shadow: 0 0 0px 1000px rgba($primary, 0.1) inset;
-	transition: background-color $transition;
+	transition: background-color $transition-md;
 }
 
 // prevent images from stretching with flex 
@@ -179,7 +179,7 @@ header { z-index: 13; }
 
 .hover-grayscale {
 	filter: grayscale(100%);
-	transition: filter, $transition;
+	transition: filter, $transition-md;
 	will-change: filter;
 
 	@include hover {
