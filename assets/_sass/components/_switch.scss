@@ -1,26 +1,63 @@
+// —————————————————————————————————————————————————————————————————
+// variables
+// elements
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// variables
+// —————————————————————————————————————————————————————————————————
+
+$height: $spacing-md + $spacing-xs;
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
+  display: flex;
+  align-items: center;
+  height: $height;
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--background-paper);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
+  &__input {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    
+    &:checked + .switch__switch {
+      
+      .switch__toggle {
+        @include calc(left, '100% -'($height - $spacing-xs*0.5));
+      }
+    }
+  }
 
-.slider.round {
-  border-radius: 34px;
-}
+  &__switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: $height*1.75;
+    height: $height;
+    border-radius: $height;
+    position: relative;
+    background-color: $primary-light;
+    margin-right: $spacing-xs;
+    margin-left: $spacing-xs;
+  }
 
-.slider.round:before {
-  border-radius: 50%;
+  &__toggle {
+    transition: left $transition-md;
+    position: absolute;
+    left: $spacing-xs*0.5;
+    width: $height - $spacing-xs;
+    height: $height - $spacing-xs;
+    border-radius: $spacing-md;
+    background-color: $primary;
+  }
+
+  svg {
+    height: $spacing-sm + $spacing-xs;
+    width: $spacing-sm + $spacing-xs;
+  }
 }

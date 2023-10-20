@@ -43,7 +43,11 @@ input:focus {
     border: $spacing-xs solid transparent;
     border-radius: $border-radius-md !important;
     padding: $spacing-sm;
-		background-color: var(--background-paper);
+		background-color: $background-paper;
+
+		.dark-mode & {
+			background-color: $background-paper-dark;
+		}
 	}
 
 	&__button {
@@ -52,8 +56,12 @@ input:focus {
 }
 
 @include placeholder {
-	color: var(--text-alt);
+	color: $text-alt;
 	opacity: 1;
+
+	.dark-mode & {
+		color: $text-contrast;
+	}
 }
 
 // —————————————————————————————————————————————————————————————————

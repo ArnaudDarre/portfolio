@@ -9,11 +9,13 @@
       </h1>
       <p class="text--alt">/</p>
       <p>Portfolio</p>
-      <div class="switch-container">
-        <label class="switch">
-          <input type="checkbox" id="mode-switch">
-          <span class="slider round"></span>
+      <div class="switch ml-3">
+        {% svg assets/icons/sun.svg %}
+        <input class="switch__input" type="checkbox" name="mode-switch" id="mode-switch" />
+        <label class="switch__switch" for="mode-switch">
+          <div class="switch__toggle"></div>
         </label>
+        {% svg assets/icons/moon.svg %}
       </div>
     </div>
     <div class="navbar__main nav">

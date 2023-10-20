@@ -31,8 +31,12 @@ $border-radius: $border-radius-sm;
   &__subtitle,
   &__button {
     box-shadow: $box-shadow;
-    background-color: var(--background-paper);
     border-radius: $border-radius;
+    background-color: $background-paper;
+    
+    .dark-mode & {
+      background-color: $background-paper-dark;
+    }
   }
 
   &__title,

@@ -115,11 +115,15 @@
 
   .card__title {
     display: inline-block;
-    background-color: var(--background-default);
+    background-color: $background-default;
     border-radius: $spacing-sm;
     padding: $spacing-xs $spacing-md;
     margin-top: -$spacing-xs;
     margin-bottom: -$spacing-xs;
     margin-left: -$spacing-md;
+
+    .dark-mode & {
+      background-color: $background-default-dark;
+    }
   }
 }

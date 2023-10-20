@@ -11,7 +11,11 @@
   top: 0;
   left: 0;
   width: 100vw;
-  background-color: var(--background-default);
+  background-color: $background-default;
+  
+  .dark-mode & {
+    background-color: $background-default-dark;
+  }
   
   @include responsive(up, tablet) {
     height: $spacing-xl;
@@ -27,7 +31,11 @@
     justify-content: space-between;
     padding-top: $spacing-lg - $spacing-md;
     padding-bottom: 0;
-    border-bottom: var(--border);
+    border-bottom: $border;
+
+    .dark-mode & {
+      border-bottom: $border-dark;
+    }
     
     @include responsive(up, tablet) {
       height: 100%;
@@ -46,7 +54,7 @@
 
   &__logo {
     display: flex;
-    align-items: baseline;
+    align-items: center;
 
     > * {
       margin-right: $spacing-xs;
@@ -152,7 +160,11 @@
       }
 
       @include responsive(down, tablet) {
-        background-color: var(--background-paper);
+        background-color: $background-paper;
+
+        .dark-mode & {
+          background-color: $background-paper-dark;
+        }
       }
     }
 
@@ -162,7 +174,11 @@
       padding: $spacing-md - $spacing-xs;
 
       @include hover {
-        background-color: var(--background-paper);
+        background-color: $background-paper;
+
+        .dark-mode & {
+          background-color: $background-paper-dark;
+        }
       }
     }
 

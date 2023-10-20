@@ -36,10 +36,18 @@
   @include responsive (down, mobile) {
     padding-top: $spacing-sm;
     width: 50%;
-    border-top: var(--border);
+    border-top: $border;
+    
+    .dark-mode & {
+      border-top: $border-dark;
+    }
     
     &:nth-child(even) {
-      border-left: var(--border);
+      border-left: $border;
+      
+      .dark-mode & {
+        border-left: $border-dark;
+      }
     }
   }
 
@@ -85,7 +93,11 @@
   }
 
   @include responsive (down, mobile) {
-    background-color: var(--background-paper);
+    background-color: $background-paper;
+
+    .dark-mode & {
+      background-color: $background-paper-dark;
+    }
   }
 
   @include responsive (up, mobile) {

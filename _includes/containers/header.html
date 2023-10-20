@@ -1,6 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-container">
 <head>
+
+	<script>
+		// check preferred mode before page load
+		const themeContainer = document.querySelector(".theme-container");
+		var darkMode = localStorage.getItem("dark-mode");
+		if (darkMode === true) {
+			themeContainer.classList.add("dark-mode");
+		}
+	</script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149677473-1"></script>
@@ -31,7 +40,6 @@
 	<meta name="theme-color" content="#00a3ae">
 
 	<!-- CSS -->
-	<link id="color-mode" rel="stylesheet" href="/assets/stylesheets/light-color.css">
 	<link rel="stylesheet" href="/assets/stylesheets/style.css" />
 	
 	<!-- VENDORS -->
@@ -41,7 +49,7 @@
 	<!-- isotope (blog filter) -->
 	<script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
 	<!-- project carousel -->
-	<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	<script>var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 
 </head>
 

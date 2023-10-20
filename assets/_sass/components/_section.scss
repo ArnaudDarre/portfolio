@@ -15,7 +15,11 @@ div.section {
   & + & {
 
     .section__container {
-      border-top: var(--border);
+      border-top: $border;
+
+      .dark-mode & {
+        border-top: $border-dark;
+      }
     }
   }
 }
@@ -85,7 +89,11 @@ div.section {
 .section {
 
   &--paper {
-    background-color: var(--background-paper);
+    background-color: $background-paper;
+
+    .dark-mode & {
+      background-color: $background-paper-dark;
+    }
   }
 }
 

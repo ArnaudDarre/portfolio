@@ -19,12 +19,17 @@
 	font-size: 16px;
 	line-height: 1.5;
 	font-variation-settings: $font-regular;
-	color: var(--text);
-	background-color: var(--background-default);
+	color: $text;
+	background-color: $background-default;
 	// needed for footer margin-top: auto if content smaller than viewport height
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	
+	.dark-mode & {
+		color: $text-contrast;		
+		background-color: $background-default-dark;
+	}
 }
 
 // embed responsively

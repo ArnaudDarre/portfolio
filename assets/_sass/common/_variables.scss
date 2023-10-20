@@ -34,12 +34,15 @@ $text: $black;
 $text-alt: rgba($black, 0.5);
 
 $text-contrast: $white;
-$text-contrast-alt: rgba($white, 0.5);
+$text-contrast-alt: rgba($white, 0.6);
 
 //  background
 
 $background-default: $white;
 $background-paper: $grey-5;
+
+$background-default-dark: $black;
+$background-paper-dark: $grey-90;
 
 // brand
 
@@ -50,7 +53,8 @@ $primary-text: $text-contrast;
 
 // others
 
-$border-color: rgba($black, 0.2);
+$border: 1px solid rgba($black, 0.2);
+$border-dark: 1px solid rgba($white, 0.3);
 
 // social
 
@@ -125,10 +129,6 @@ $box-shadow: 0 0 $spacing-sm 0 rgba($black, 0.2);
 
 $transition-md: 0.4s ease 0s;
 $transition-lg: 0.8s ease 0s;
-
-// border
-
-$border: 1px solid;
 
 // border-radius
 

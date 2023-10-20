@@ -1,32 +1,24 @@
-const modeSwitch = document.getElementById("mode-switch");
-const colorMode = document.getElementById("color-mode");
+const body = document.querySelector(".theme-container");
 
-// Check if the user has a preferred mode stored in localStorage
-const userPreferredMode = localStorage.getItem("preferred-mode");
+// Function to toggle between light and dark mode
+function toggleMode() {
+  body.classList.toggle('dark-mode');
+  const isDarkMode = body.classList.contains('dark-mode');
+  localStorage.setItem('dark-mode', isDarkMode);
+}
 
-// Function to set the theme based on user preference or system preference
-function setTheme() {
-  if (userPreferredMode === "dark" || (userPreferredMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    colorMode.href = "/assets/stylesheets/dark-mode.css";
-    modeSwitch.checked = true;
-  } else {
-    colorMode.href = "/assets/stylesheets/light-mode.css";
-    modeSwitch.checked = false;
+// Check user preference and set the mode accordingly
+function setInitialMode() {
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedMode = localStorage.getItem('dark-mode');
+
+  if (savedMode === 'true' || (savedMode === null && prefersDarkMode)) {
+    body.classList.add('dark-mode');
   }
 }
 
-// Toggle theme when the switch is clicked
-modeSwitch.addEventListener("change", () => {
-  if (modeSwitch.checked) {
-    console.log('checked');
-    colorMode.href = "/assets/stylesheets/dark-mode.css";
-    localStorage.setItem("preferred-mode", "dark");
-  } else {
-    console.log('unchecked');
-    colorMode.href = "/assets/stylesheets/light-mode.css";
-    localStorage.setItem("preferred-mode", "light");
-  }
-});
+// Add event listener to the mode switch
+document.getElementById('mode-switch').addEventListener('change', toggleMode);
 
-// Initialize the theme
-setTheme();
+// Set the initial mode
+setInitialMode();

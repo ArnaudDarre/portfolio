@@ -47,7 +47,11 @@
 .caption, %caption {
 	@include font-size(0.875);
 	font-variation-settings: $font-bold;
-	color: var(--text-alt);
+	color: $text-alt;
+	
+	.dark-mode & {
+		color: $text-contrast-alt;
+	}
 }
 
 .overline, %overline {
@@ -83,21 +87,30 @@
 // color
 // ——————————————————————————————————————————————————
 
-@mixin color($color) {
-  color: $color !important;
+@mixin color($prefix, $colors...) {
+	@each $i in $colors {
+		.#{$prefix}#{nth($i, 1)} {
+			color: nth($i, 2);
 
-  .h1, .h2, .h3, .h4, .h5, .h6 { 
-    color: $color !important;
-  }
+			.dark-mode & {
+				color: nth($i, 3) !important;
+			}
+
+		.h1, .h2, .h3, .h4, .h5, .h6 { 
+			color: nth($i, 2) !important;
+
+			.dark-mode & {
+				color: nth($i, 3) !important;
+			}
+		}
+		}
+	}
 }
 
-.text {
-
-  &--default { @include color(var(--text)); }
-  &--alt { @include color(var(--text-alt)); }
-
-  &--contrast { @include color(var(--text-contrast)); }
-  &--contrastAlt { @include color(var(--text-contrast-alt)); }
-
-  &--primary { @include color($primary); }
-}
+@include color('text--',
+	'default' 			$text								$text-contrast,
+	'alt' 					$text-alt						$text-contrast-alt,
+	'contrast' 			$text-contrast 			$text,
+	'contrastAlt' 	$text-contrast-alt 	$text-alt,
+	'primary' 			$primary 						$primary
+);
