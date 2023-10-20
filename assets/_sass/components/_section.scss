@@ -16,6 +16,10 @@ div.section {
 
     .section__container {
       border-top: $border;
+
+      .dark-mode & {
+        border-top: $border-dark;
+      }
     }
   }
 }
@@ -86,6 +90,10 @@ div.section {
 
   &--paper {
     background-color: $background-paper;
+
+    .dark-mode & {
+      background-color: $background-paper-dark;
+    }
   }
 }
 

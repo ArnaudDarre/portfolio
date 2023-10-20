@@ -3,14 +3,24 @@
     <button class="navbar__button js-button-menu button--menu show-tablet">
       <i class="button__inner"></i>
     </button>
-    <div class="navbar__logo text--bold">
-      <h1 class="text--primary">
-        <a href="{% link index.html %}">{{ site.title }}</a>
-      </h1>
-      <p class="text--alt">/</p>
-      <p>Portfolio</p>
+    <div class="navbar__main">
+      <div class="navbar__logo text--bold">
+        <h1 class="text--primary">
+          <a href="{% link index.html %}">{{ site.title }}</a>
+        </h1>
+        <p class="text--alt">/</p>
+        <p>Portfolio</p>
+      </div>
+      <div class="switch ml-3">
+        <input class="switch__input" type="checkbox" name="mode-switch" id="mode-switch" />
+        <label class="switch__switch" for="mode-switch">
+          <div class="switch__toggle"></div>
+        </label>
+        {% svg assets/icons/sun.svg %}
+        {% svg assets/icons/moon.svg %}
+      </div>
     </div>
-    <div class="navbar__main nav">
+    <div class="navbar__nav nav">
       <div class="nav__container">
         {% for item in site.data.nav %}
         <h2 class="nav__item">

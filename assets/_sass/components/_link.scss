@@ -4,8 +4,18 @@
   font-variation-settings: $font-regular;
   color: $primary;
   text-decoration: underline;
+
+  svg {
+    transition: stroke-width $transition-md;
+    will-change: stroke-width;
+    stroke-width: 2;
+  }
   
   @include hover {
     animation: get-bold $transition-md forwards;
+
+    svg {
+      stroke-width: 3;
+    }
   }
 }

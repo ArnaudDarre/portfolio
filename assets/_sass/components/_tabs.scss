@@ -38,8 +38,16 @@
     width: 50%;
     border-top: $border;
     
+    .dark-mode & {
+      border-top: $border-dark;
+    }
+    
     &:nth-child(even) {
       border-left: $border;
+      
+      .dark-mode & {
+        border-left: $border-dark;
+      }
     }
   }
 
@@ -86,6 +94,10 @@
 
   @include responsive (down, mobile) {
     background-color: $background-paper;
+
+    .dark-mode & {
+      background-color: $background-paper-dark;
+    }
   }
 
   @include responsive (up, mobile) {
