@@ -8,6 +8,7 @@
 // ——————————————————————————————————————————————————
 
 .navbar {
+  @include transition($transition-md, background-color);
   top: 0;
   left: 0;
   width: 100vw;
@@ -26,6 +27,7 @@
   }
 
   .section__container {
+    @include transition($transition-md, border-bottom);
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -76,8 +78,7 @@
   &__nav.nav {
 
     @include responsive(down, tablet) {
-      transition: max-height $transition-md;
-      will-change: max-height;
+      @include transition($transition-md, max-height);
       align-items: flex-start;
       max-height: 0;
       overflow: hidden;
@@ -138,8 +139,8 @@
     padding-left: $spacing-md;
 
     &:not(.nav__trigger--active) {
-      will-change: font-variation-settings;
       animation: get-thin $transition-md;
+      will-change: font-variation-settings;
 
       @include hover {
         animation: get-bold $transition-md forwards;
@@ -148,6 +149,7 @@
     }
 
     @include responsive(down, tablet) {
+      @include transition($transition-md, background-color);
       width: 100%;
       margin-bottom: $spacing-xs;
       padding: $spacing-md - $spacing-xs;
@@ -180,6 +182,7 @@
       }
 
       @include responsive(down, tablet) {
+        @include transition($transition-md, background-color);
         background-color: $background-paper;
 
         .dark-mode & {

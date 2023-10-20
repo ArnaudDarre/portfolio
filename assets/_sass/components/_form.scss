@@ -22,8 +22,7 @@ input:focus {
 
 	&__label {
 		@extend %caption;
-		transition: color $transition-md;
-		will-change: color;
+		@include transition($transition-md, color);
 		text-overflow: ellipsis;
 		cursor: pointer;
 		display: block;
@@ -35,10 +34,9 @@ input:focus {
 
 	&__input {
 		@include font-size(1, $font-regular, normal);
+		@include transition($transition-md, background-color, border-color);
 		font-family: $font;
-		transition: border-color $transition-md;
 		text-overflow: ellipsis;
-		will-change: border-color;
 		width: 100%;
     border: $spacing-xs solid transparent;
     border-radius: $border-radius-md !important;
@@ -56,6 +54,7 @@ input:focus {
 }
 
 @include placeholder {
+	@include transition($transition-md, color);
 	color: $text-alt;
 	opacity: 1;
 

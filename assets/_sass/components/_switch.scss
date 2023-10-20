@@ -26,11 +26,9 @@ $height: $spacing-md + $spacing-xs;
     opacity: 0;
     
     &:checked + .switch__switch {
-      background-color: $background-default;
 
       .switch__toggle {
-        @include calc(left, '100% -'($height - $spacing-xs*0.5));
-        background-color: $primary;
+        @include calc(left, '100% -'($height - $spacing-xs*0.75));
       }
     }
   }
@@ -44,23 +42,27 @@ $height: $spacing-md + $spacing-xs;
     height: $height;
     border-radius: $height;
     position: relative;
-    background-color: $primary;
     margin-right: $spacing-xs;
     margin-left: $spacing-xs;
+    border: $border;
+    
+    .dark-mode & {
+      border: $border-dark;
+    }
   }
 
   &__toggle {
-    transition: left $transition-md;
+    @include transition($transition-md, left);
     position: absolute;
-    left: $spacing-xs*0.5;
+    left: $spacing-xs*0.25;
     width: $height - $spacing-xs;
     height: $height - $spacing-xs;
     border-radius: $spacing-md;
-    background-color: $background-default;
+    background-color: $primary;
   }
 
   svg {
-    transition: stroke $transition-md;
+    @include transition($transition-md, stroke);
     position: absolute;
     z-index: 1;
     pointer-events: none;
@@ -69,12 +71,20 @@ $height: $spacing-md + $spacing-xs;
 
     &:nth-child(3) {
       left: $spacing-sm;
-      stroke: $primary;
+      stroke: $text-contrast;
+      
+      .dark-mode & {
+        stroke: $primary;
+      }
     }
-
+    
     &:nth-child(4) {
       right: $spacing-sm;
-      stroke: $text-contrast;
+      stroke: $primary;
+
+      .dark-mode & {
+        stroke: $text-contrast;
+      }
     }
   }
 }

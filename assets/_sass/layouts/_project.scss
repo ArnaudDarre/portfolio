@@ -64,16 +64,14 @@
     justify-content: center;
 
     p {
-      transition: opacity 0.4s ease;
-      will-change: opacity;
+      @include transition($transition-md, opacity);
       position: absolute;
       opacity: 0;
       text-align: center;
     }
 
     img {
-      transition: opacity 0.4s ease;
-      will-change: opacity;
+      @include transition($transition-md, opacity);
       opacity: 1;
       border: $spacing-sm solid $grey-30;
     }

@@ -6,8 +6,7 @@
   text-decoration: underline;
 
   svg {
-    transition: stroke-width $transition-md;
-    will-change: stroke-width;
+    @include transition($transition-md, stroke-width);
     stroke-width: 2;
   }
   
