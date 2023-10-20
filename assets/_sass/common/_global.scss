@@ -14,21 +14,21 @@
 }
 
 .page {
-	transition: background-color $transition-md, color $transition-md;
+	@include transition($transition-md, background-color, color);
 	font-family: $font;
 	font-size: 16px;
 	line-height: 1.5;
 	font-variation-settings: $font-regular;
-	color: $text;
 	background-color: $background-default;
+	color: $text;
 	// needed for footer margin-top: auto if content smaller than viewport height
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	
 	.dark-mode & {
-		color: $text-contrast;		
 		background-color: $background-default-dark;
+		color: $text-contrast;		
 	}
 }
 
@@ -79,7 +79,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
 	-webkit-box-shadow: 0 0 0px 1000px rgba($primary, 0.1) inset;
-	transition: background-color $transition-md;
+	@include transition($transition-md, background-color);
 }
 
 // prevent images from stretching with flex 
@@ -191,8 +191,7 @@ header { z-index: 13; }
 
 .hover-grayscale {
 	filter: grayscale(100%);
-	transition: filter, $transition-md;
-	will-change: filter;
+	@include transition($transition-md, filter);
 
 	@include hover {
 		filter: grayscale(0%);

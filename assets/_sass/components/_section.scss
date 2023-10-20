@@ -15,6 +15,7 @@ div.section {
   & + & {
 
     .section__container {
+      @include transition($transition-md, border-top);
       border-top: $border;
 
       .dark-mode & {
@@ -89,6 +90,7 @@ div.section {
 .section {
 
   &--paper {
+    @include transition($transition-md, background-color);
     background-color: $background-paper;
 
     .dark-mode & {

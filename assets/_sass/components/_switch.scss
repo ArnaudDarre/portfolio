@@ -50,7 +50,7 @@ $height: $spacing-md + $spacing-xs;
   }
 
   &__toggle {
-    transition: left $transition-md;
+    @include transition($transition-md, left);
     position: absolute;
     left: $spacing-xs*0.5;
     width: $height - $spacing-xs;
@@ -60,7 +60,7 @@ $height: $spacing-md + $spacing-xs;
   }
 
   svg {
-    transition: stroke $transition-md;
+    @include transition($transition-md, stroke);
     position: absolute;
     z-index: 1;
     pointer-events: none;

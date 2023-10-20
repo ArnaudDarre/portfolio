@@ -54,9 +54,19 @@
 	} 
 }
 
-@mixin overflow-scroll {
-	overflow: scroll;
-	-webkit-overflow-scrolling: touch;
+@mixin transition($time, $properties...) {
+	$transition: ();
+	$will-change: ();
+  @each $property in $properties {
+    $transition: append(
+        $transition, ($property $time), $separator: comma
+    );
+    $will-change: append(
+        $will-change, ($property), $separator: comma
+    );
+  }
+	transition: $transition;
+	will-change: $will-change;
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -158,16 +168,6 @@
 				svg {
 					stroke: nth($i, 2);
 				}
-			}
-		}
-	}
-}
-
-@mixin button-close-color($prefix, $colors...) {
-	@each $i in $colors {
-		.#{$prefix}#{nth($i, 1)} {
-			&::before, &::after {
-				background-color: nth($i, 2);
 			}
 		}
 	}

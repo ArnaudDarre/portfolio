@@ -114,6 +114,7 @@
   }
 
   .card__title {
+    @include transition($transition-md, background-color);
     display: inline-block;
     background-color: $background-default;
     border-radius: $spacing-sm;

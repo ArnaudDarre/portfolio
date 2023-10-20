@@ -46,6 +46,7 @@
 
 .caption, %caption {
 	@include font-size(0.875);
+	@include transition($transition-md, color);
 	font-variation-settings: $font-bold;
 	color: $text-alt;
 	
@@ -90,13 +91,15 @@
 @mixin color($prefix, $colors...) {
 	@each $i in $colors {
 		.#{$prefix}#{nth($i, 1)} {
+			@include transition($transition-md, color);
 			color: nth($i, 2);
 
 			.dark-mode & {
 				color: nth($i, 3) !important;
 			}
 
-		.h1, .h2, .h3, .h4, .h5, .h6 { 
+		.h1, .h2, .h3, .h4, .h5, .h6 {
+			@include transition($transition-md, color);
 			color: nth($i, 2) !important;
 
 			.dark-mode & {

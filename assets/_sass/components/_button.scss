@@ -24,7 +24,7 @@
   line-height: 0;
   text-transform: uppercase;
   font-variation-settings: $font-bold;
-  transition: background-color $transition-md;
+  @include transition($transition-md, background-color);
   white-space: nowrap;
 
   &.disabled,
@@ -107,8 +107,7 @@
 
 	.button__inner,
 	svg {
-		transition: transform $transition-md;
-		will-change: transform;
+    @include transition($transition-md, transform);
 	}
 
 	svg {
@@ -151,10 +150,11 @@
   background-color: transparent !important;
   border: 0;
   padding: 0;
-
+  
   &:before,
   &:after,
   .button__inner {
+    @include transition($transition-md, background-color);
     background-color: $text;
 
     .dark-mode & {
@@ -165,9 +165,8 @@
   &:before,
   &:after {
     @include pseudo-element('', auto, auto, auto, auto, $spacing-md, 2px);
-    transition: transform $transition-md;
+    @include transition($transition-md, transform);
     border-radius: 0.15rem;
-    will-change: transform;
   }
 
   &:before {
@@ -181,9 +180,8 @@
   }
 
   .button__inner {
-    transition: opacity $transition-md;
+    @include transition($transition-md, opacity);
     border-radius: 0.15rem;
-    will-change: opacity;
     width: $spacing-md;
     height: 2px;
     position: absolute;
@@ -210,12 +208,12 @@
 // —————————————————————————————————————————————————————————————————
 
 .button--scroll-top {
-	transition: bottom $transition-md, transform $transition-md;
-	will-change: bottom, transform;
+  @include transition($transition-md, bottom, transform);
 	position: absolute;
 	right: $spacing-sm;
 	bottom: -$spacing-sm;
-	@include responsive-mobile() {
+
+  @include responsive-mobile() {
 		display: none !important;
 	}
 

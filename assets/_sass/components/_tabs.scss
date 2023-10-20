@@ -34,6 +34,7 @@
   }
 
   @include responsive (down, mobile) {
+    @include transition($transition-md, border-top);
     padding-top: $spacing-sm;
     width: 50%;
     border-top: $border;
@@ -43,6 +44,7 @@
     }
     
     &:nth-child(even) {
+      @include transition($transition-md, border-left);
       border-left: $border;
       
       .dark-mode & {
@@ -67,12 +69,11 @@
 
   &:after {
     content: "";
+    @include transition($transition-md, background-color);
     position: absolute;
     height: $spacing-xs;
     width: 100%;
     background-color: transparent;
-    transition: background-color $transition-md;
-    will-change: background-color;
     z-index: 0;
     bottom: -1px;
     left: 0;
@@ -93,6 +94,7 @@
   }
 
   @include responsive (down, mobile) {
+    @include transition($transition-md, background-color);
     background-color: $background-paper;
 
     .dark-mode & {
