@@ -80,7 +80,7 @@
       @include pseudo-element('”', -$spacing-md, auto, auto, -$spacing-sm, auto, auto);
       z-index: -1;
       font-size: 20rem;
-      color: rgba($secondary, 0.1);
+      color: rgba($primary, 0.1);
     }
     
     &:not(:first-child) {

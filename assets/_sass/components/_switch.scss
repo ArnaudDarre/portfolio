@@ -1,0 +1,80 @@
+// —————————————————————————————————————————————————————————————————
+// variables
+// elements
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// variables
+// —————————————————————————————————————————————————————————————————
+
+$height: $spacing-md + $spacing-xs;
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: $height;
+
+  &__input {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    
+    &:checked + .switch__switch {
+      background-color: $background-default;
+
+      .switch__toggle {
+        @include calc(left, '100% -'($height - $spacing-xs*0.5));
+        background-color: $primary;
+      }
+    }
+  }
+
+  &__switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: $height*2;
+    height: $height;
+    border-radius: $height;
+    position: relative;
+    background-color: $primary;
+    margin-right: $spacing-xs;
+    margin-left: $spacing-xs;
+  }
+
+  &__toggle {
+    transition: left $transition-md;
+    position: absolute;
+    left: $spacing-xs*0.5;
+    width: $height - $spacing-xs;
+    height: $height - $spacing-xs;
+    border-radius: $spacing-md;
+    background-color: $background-default;
+  }
+
+  svg {
+    transition: stroke $transition-md;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    height: $spacing-sm + $spacing-xs;
+    width: $spacing-sm + $spacing-xs;
+
+    &:nth-child(3) {
+      left: $spacing-sm;
+      stroke: $primary;
+    }
+
+    &:nth-child(4) {
+      right: $spacing-sm;
+      stroke: $text-contrast;
+    }
+  }
+}
