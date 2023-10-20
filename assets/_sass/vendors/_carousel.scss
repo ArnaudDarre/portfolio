@@ -32,10 +32,10 @@ $border-radius: $border-radius-sm;
   &__button {
     box-shadow: $box-shadow;
     border-radius: $border-radius;
-    background-color: $background-paper;
+    background-color: $background-default;
     
     .dark-mode & {
-      background-color: $background-paper-dark;
+      background-color: $background-default-dark;
     }
   }
 

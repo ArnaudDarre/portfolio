@@ -16,7 +16,7 @@
   .dark-mode & {
     background-color: $background-default-dark;
   }
-  
+
   @include responsive(up, tablet) {
     height: $spacing-xl;
   }
@@ -42,8 +42,9 @@
     }
     
     @include responsive(down, tablet) {
+      flex-direction: column;
+      align-items: stretch;
       padding-top: 0;
-      align-items: flex-start;
     }
   }
 
@@ -52,34 +53,37 @@
     position: absolute;
   }
 
-  &__logo {
+  &__main {
     display: flex;
     align-items: center;
+
+    @include responsive(down, tablet) {
+      justify-content: space-between;
+      padding-left: $spacing-lg;
+      height: $spacing-xl - $spacing-md;
+    }
+  }
+  
+  &__logo {
+    display: flex;
+    align-items: baseline;
 
     > * {
       margin-right: $spacing-xs;
     }
-
-    @include responsive(down, tablet) {
-      position: absolute;
-      top: $spacing-md + $spacing-sm - $spacing-xs;
-      margin-left: $spacing-lg;
-    }
   }
 
-  &__main.nav {
+  &__nav.nav {
 
     @include responsive(down, tablet) {
       transition: max-height $transition-md;
       will-change: max-height;
       align-items: flex-start;
-      padding-top: $spacing-xl - $spacing-md;
-      max-height: $spacing-xl - $spacing-md;
-      width: 100%;
+      max-height: 0;
       overflow: hidden;
       
       .js-opened & {
-        max-height: 100vh;
+        max-height: 50vh;
       }
     }
   }
@@ -117,6 +121,7 @@
 
     @include responsive(down, tablet) {
       width: 100%;
+      display: flex;
     }
   }
 
@@ -142,6 +147,21 @@
       }
     }
 
+    @include responsive(down, tablet) {
+      width: 100%;
+      margin-bottom: $spacing-xs;
+      padding: $spacing-md - $spacing-xs;
+      align-items: flex-start;
+
+      @include hover {
+        background-color: $background-paper;
+
+        .dark-mode & {
+          background-color: $background-paper-dark;
+        }
+      }
+    }
+
     &--active {
       font-variation-settings: $font-bold;
       color: $primary;
@@ -160,20 +180,6 @@
       }
 
       @include responsive(down, tablet) {
-        background-color: $background-paper;
-
-        .dark-mode & {
-          background-color: $background-paper-dark;
-        }
-      }
-    }
-
-    @include responsive(down, tablet) {
-      width: 100%;
-      margin-bottom: $spacing-sm;
-      padding: $spacing-md - $spacing-xs;
-
-      @include hover {
         background-color: $background-paper;
 
         .dark-mode & {
