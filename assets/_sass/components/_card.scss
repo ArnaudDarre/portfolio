@@ -21,11 +21,13 @@
     font-variation-settings: $font-bold;
   }
 
-  &__mediaInner {
-    border-radius: $spacing-sm;
-    padding-bottom: 66.66%;
-    border-radius: $spacing-sm;
+  &__media {
     overflow: hidden;
+    border-radius: $border-radius-md;
+  }
+
+  &__mediaInner {
+    padding-bottom: 66.66%;
   }
 
   &__content {
@@ -51,7 +53,7 @@
 		&__actions {
 
 			&:not(:last-child) {
-				padding-bottom: $size;
+				margin-bottom: $size;
 			}
 		}
 
@@ -62,7 +64,7 @@
 		&__label {
 
 			& + .card__title {
-				margin-top: $size/3;
+        margin-top: $size/3;
 			}
 		}
 	
@@ -97,6 +99,30 @@
 // —————————————————————————————————————————————————————————————————
 // variants
 // —————————————————————————————————————————————————————————————————
+
+.card--projects {
+
+  .card__mediaInner {
+    @include transition($transition-lg, transform);
+  }
+
+  @include hover {
+
+    .card__mediaInner {
+      transform: scale(1.03);
+    }
+  }
+
+  // make all card clickable
+  .card__actions a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
 
 .card--project {
 
