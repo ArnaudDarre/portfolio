@@ -98,13 +98,13 @@
   }
 }
 
-@mixin responsive-mobile() {
+@mixin responsive-touch {
 	@media (pointer:coarse) {
 		@content;
 	}
 }
 
-@mixin responsive-mobile-landscape {
+@mixin responsive-touch-landscape {
 	@media only screen and (max-device-width: $laptop-down) and (orientation: landscape) {
 		@content;
 	}
