@@ -213,7 +213,7 @@
 	right: $spacing-sm;
 	bottom: -$spacing-sm;
 
-  @include responsive-mobile() {
+  @include responsive-touch {
 		display: none !important;
 	}
 

@@ -7,7 +7,12 @@
 // variables
 // —————————————————————————————————————————————————————————————————
 
-$height: $spacing-md + $spacing-xs;
+$margin-sm: $spacing-xs*0.5;
+$margin-md: $spacing-xs;
+$margin-lg: $spacing-xs*1.5;
+
+$size: $spacing-md*1.5;
+$toggle-size: $size - $margin-md;
 
 // —————————————————————————————————————————————————————————————————
 // elements
@@ -17,7 +22,6 @@ $height: $spacing-md + $spacing-xs;
   position: relative;
   display: flex;
   align-items: center;
-  height: $height;
 
   &__input {
     position: absolute;
@@ -28,22 +32,22 @@ $height: $spacing-md + $spacing-xs;
     &:checked + .switch__switch {
 
       .switch__toggle {
-        @include calc(left, '100% -'($height - $spacing-xs*0.75));
+        @include calc(left, $size*2 - $margin-sm);
+        transform: translateX(-100%);
       }
     }
   }
 
   &__switch {
+    box-sizing: content-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    width: $height*2;
-    height: $height;
-    border-radius: $height;
+    width: $size*2;
+    height: $size;
+    border-radius: $size;
     position: relative;
-    margin-right: $spacing-xs;
-    margin-left: $spacing-xs;
     border: $border;
     
     .dark-mode & {
@@ -52,12 +56,13 @@ $height: $spacing-md + $spacing-xs;
   }
 
   &__toggle {
-    @include transition($transition-md, left);
+    @include transition($transition-md, left, transform);
+    transform: translateX(0);
     position: absolute;
-    left: $spacing-xs*0.25;
-    width: $height - $spacing-xs;
-    height: $height - $spacing-xs;
-    border-radius: $spacing-md;
+    left: $margin-sm;
+    width: $toggle-size;
+    height: $toggle-size;
+    border-radius: $toggle-size;
     background-color: $primary;
   }
 
@@ -66,11 +71,11 @@ $height: $spacing-md + $spacing-xs;
     position: absolute;
     z-index: 1;
     pointer-events: none;
-    height: $spacing-sm + $spacing-xs;
-    width: $spacing-sm + $spacing-xs;
+    height: $toggle-size - $margin-lg;
+    width: $toggle-size - $margin-lg;
 
     &:nth-child(3) {
-      left: $spacing-sm;
+      left: $margin-lg;
       stroke: $text-contrast;
       
       .dark-mode & {
@@ -79,7 +84,7 @@ $height: $spacing-md + $spacing-xs;
     }
     
     &:nth-child(4) {
-      right: $spacing-sm;
+      right: $margin-lg;
       stroke: $primary;
 
       .dark-mode & {

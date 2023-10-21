@@ -163,7 +163,7 @@ $step: 5;
 	&-laptop { @include responsive(down, laptop) { display: none !important; } }
 	&-tablet { @include responsive(down, tablet) { display: none !important; } }
 	&-mobile { @include responsive(down, mobile) { display: none !important; } }
-	&-touch { @include responsive-mobile() { display: none !important; } }
+	&-touch { @include responsive-touch { display: none !important; } }
 }
 
 .show {
