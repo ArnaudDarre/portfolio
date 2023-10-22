@@ -1,11 +1,17 @@
 {% assign size = include.size %}
 {% assign file_name = include.file_name %}
 
+{% assign project_title = page.title | slugify | replace: "é", "e" %}
+
 <div class="section__content grid grid--jcCenter">
   <div class="grid__item--lg6 grid__item--md8 grid__item--sm10">
-    <a href="/assets/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}{% if file_name %}-{{ file_name }}{% endif %}.pdf" target="_blank" class="project__pdf">
+    <a href="/assets/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}{% if file_name %}-{{ file_name }}{% endif %}.pdf" target="_blank" title="Open PDF file" class="project__pdf">
       <p class="z-index--2 subtitle text--default">Click on the image to view the {{ file_name }}</p>
-      <img src="/assets/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}{% if file_name %}-{{ file_name }}{% endif %}.jpg" alt="{{ page.title }} {% assign file_name = include.file_name %} thumbnail" class="">
+      <picture>
+        <source srcset="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.webp" type="image/webp">
+        <source srcset="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" type="image/jpeg">
+        <img src="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" alt="{{ page.title }} {{ file_name }} thumbnail">
+      </picture>
     </a>
   </div>
 </div>
