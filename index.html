@@ -8,7 +8,7 @@ title: Home
     <div class="js-carousel carousel">
       <div class="carousel__wrapper">
         <div class="carousel__nav project__nav">
-          <button class="js-carousel-prev button button--md button--icon button--transparent button--primary">
+          <button aria-label="Previous project" class="js-carousel-prev button button--md button--icon button--transparent button--primary">
             {% svg /assets/icons/chevron-left.svg %}
           </button>
           <div class="carousel__index">
@@ -23,7 +23,7 @@ title: Home
             {% endfor %}
             <span class="carousel__indexTotal caption">0{{ total }}</span>
           </div>
-          <button class="js-carousel-next button button--md button--icon button--transparent button--primary">
+          <button aria-label="Next project" class="js-carousel-next button button--md button--icon button--transparent button--primary">
             {% svg /assets/icons/chevron-right.svg %}
           </button>
         </div>
