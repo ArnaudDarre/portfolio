@@ -8,17 +8,19 @@
 {% else %}
 <p class="list__item">
 {% endif %}
-  {% if icon != null %}<img src="{{ icon }}" alt="Logo for {{ label }}" class="list__itemIcon">{% endif %}
+  {% if icon != null %}
+  {% svg "/assets/icons/skills/{{ icon }}.svg" class="list__itemIcon" %}
+  {% endif %}
   {{ label }}
   {% if url != null %}
   {% if type == 'external' %}
-  {% svg /assets/icons/external-link.svg %}
+  {% svg /assets/icons/feather/external-link.svg %}
   {% elsif type == 'download' %}
-  {% svg /assets/icons/download.svg %}
+  {% svg /assets/icons/feather/download.svg %}
   {% elsif type == 'email' %}
-  {% svg /assets/icons/mail.svg %}
+  {% svg /assets/icons/feather/mail.svg %}
   {% else %}
-  {% svg /assets/icons/arrow-right.svg %}
+  {% svg /assets/icons/feather/arrow-right.svg %}
   {% endif %}
   {% endif %}
 {% if url != null %}

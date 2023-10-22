@@ -8,8 +8,8 @@ title: Home
     <div class="js-carousel carousel">
       <div class="carousel__wrapper">
         <div class="carousel__nav project__nav">
-          <button class="js-carousel-prev button button--md button--icon button--transparent button--primary">
-            {% svg /assets/icons/chevron-left.svg %}
+          <button aria-label="Previous project" class="js-carousel-prev button button--md button--icon button--transparent button--primary">
+            {% svg /assets/icons/feather/chevron-left.svg %}
           </button>
           <div class="carousel__index">
             <span class="carousel__indexCurrent">
@@ -23,8 +23,8 @@ title: Home
             {% endfor %}
             <span class="carousel__indexTotal caption">0{{ total }}</span>
           </div>
-          <button class="js-carousel-next button button--md button--icon button--transparent button--primary">
-            {% svg /assets/icons/chevron-right.svg %}
+          <button aria-label="Next project" class="js-carousel-next button button--md button--icon button--transparent button--primary">
+            {% svg /assets/icons/feather/chevron-right.svg %}
           </button>
         </div>
         {% assign sorted = site.projects | sort: 'order' %}
@@ -61,7 +61,7 @@ title: Home
       </div>
       <div class="section__subtitle editor">
         <p>With over eight years of experience design, I am passionate about creating and enhancing digital products and platforms that are user-friendly, engaging, and functional. I have a strong background in branding and UI/UX design, as well as front-end development skills that allow me to bring my designs to life with code.</p>
-        {% include components/list-item.html label='Read more' url='about.html' %}
+        {% include components/list-item.html label='Get to know me' url='about.html' %}
       </div>
     </div>
   </div>

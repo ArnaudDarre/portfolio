@@ -22,12 +22,12 @@
   }
 
   &__media {
-    overflow: hidden;
     border-radius: $border-radius-md;
+    overflow: hidden;
   }
 
   &__mediaInner {
-    padding-bottom: 66.66%;
+    display: flex;
   }
 
   &__content {
@@ -52,8 +52,8 @@
 		&__content,
 		&__actions {
 
-			&:not(:last-child) {
-				margin-bottom: $size;
+			&:not(:first-child) {
+				margin-top: $size;
 			}
 		}
 

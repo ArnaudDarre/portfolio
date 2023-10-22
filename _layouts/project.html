@@ -29,11 +29,11 @@ layout: compress
   <div class="section__container">
     <div class="project__thumbnail background-cover"style="background-image: url(/assets/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é" , "e" }}-cover.jpg)"></div>
     <div class="project__nav buttons">
-      <a href="{{ prev.url }}" class="button button--md button--icon button--grey">
-        {% svg /assets/icons/arrow-left.svg %}
+      <a href="{{ prev.url }}" title="Previous project" class="button button--md button--icon button--grey">
+        {% svg /assets/icons/feather/arrow-left.svg %}
       </a>
-      <a href="{{ next.url }}" class="button button--md button--icon button--grey">
-        {% svg /assets/icons/arrow-right.svg %}
+      <a href="{{ next.url }}" title="Next project" class="button button--md button--icon button--grey">
+        {% svg /assets/icons/feather/arrow-right.svg %}
       </a>
     </div>
     <div class="section__content">
