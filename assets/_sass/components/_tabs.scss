@@ -8,8 +8,25 @@
 // —————————————————————————————————————————————————————————————————
 
 .tabs {
+  @include transition($transition-md, border-bottom);
   display: flex;
   flex-wrap: wrap;
+  border-bottom: $border;
+  
+  .dark-mode & {
+    border-bottom: $border-dark;
+  }
+
+  @include responsive (down, mobile) {
+    @include transition($transition-md, border);
+    border: $border;
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    
+    .dark-mode & {
+      border: $border-dark;
+    }
+  }
 
   &:after {
     z-index: -1;
@@ -51,6 +68,11 @@
         border-left: $border-dark;
       }
     }
+  }
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    border-top: 0 !important;
   }
 
   &:before {

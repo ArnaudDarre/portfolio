@@ -10,6 +10,11 @@ title: Projects
         <h1 class="section__lead">Projects</h1>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section__container">
     <div class="section__content">
       <div class="tabs js-filter-buttons">
         <a class="tab tab--active" data-filter="*" data-text="All">All</a>
@@ -18,11 +23,6 @@ title: Projects
         {% endfor %}
       </div>
     </div>
-  </div>
-</div>
-
-<div class="section">
-  <div class="section__container">
     <div class="section__content">
       <div class="js-grid grid grid--spacing3">
         {% assign sorted = site.projects | sort: 'order' %}

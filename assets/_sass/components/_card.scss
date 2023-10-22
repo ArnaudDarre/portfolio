@@ -21,11 +21,12 @@
     font-variation-settings: $font-bold;
   }
 
-  &__media {
-    border-radius: $border-radius-md;
+  &__media,
+  &__mediaInner {
     overflow: hidden;
+    border-radius: $border-radius-md;
   }
-  
+
   &__mediaInner {
     padding-bottom: 66.66%;
   }
@@ -106,7 +107,7 @@
     @include transition($transition-lg, transform);
   }
 
-  @include hover {
+  &:hover {
 
     .card__mediaInner {
       transform: scale(1.03);

@@ -1,6 +1,8 @@
 .page--project {
 
-  img { border-radius: $spacing-sm; }
+  img:not(.project__cover) {
+    border-radius: $spacing-sm;
+  }
 }
 
 .project {

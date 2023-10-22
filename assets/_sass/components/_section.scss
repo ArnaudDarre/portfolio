@@ -154,8 +154,15 @@ div.section {
 
 .page--projects {
 
-  .section--lg .section__container {
-    padding-bottom: 0 !important;
+  .section--lg {
+
+    .section__container {
+      padding-bottom: 0 !important;
+    }
+    
+    + .section .section__container {
+      border-top: 0 !important;
+    }
   }
 }
 

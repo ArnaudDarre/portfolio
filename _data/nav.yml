@@ -2,6 +2,7 @@
   url: index.html
 - title: Projects
   url: projects.html
+  collection: project
 - title: About
   url: about.html
 - title: Contact
