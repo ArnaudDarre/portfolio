@@ -112,7 +112,7 @@
       align-items: flex-start;
       // overflow: scroll;
       width: 100%;
-      padding-bottom: $spacing-md*2;
+      padding-bottom: $spacing-md;
       flex-direction: column;
       width: 100%;
     }
@@ -154,6 +154,7 @@
       margin-bottom: $spacing-xs;
       padding: $spacing-md - $spacing-xs;
       align-items: flex-start;
+      border-radius: $border-radius-sm;
 
       @include hover {
         background-color: $background-paper;
