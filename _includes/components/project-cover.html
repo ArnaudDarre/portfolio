@@ -1,6 +1,12 @@
 {% assign size = include.size %}
 {% assign file_name = include.file_name %}
 
+{% assign project_title = page.title | slugify | replace: "é", "e" %}
+
 <div class="section__content section__content--fullWidth">
-  <div class="project__coverInner {% if size == 'large' %}project__coverInner--large{% endif %}" style="background-image: url(/assets/projects/{{ page.title | slugify | replace: "é", "e" }}/{{ page.title | slugify | replace: "é", "e" }}-mockup-cover{% if file_name %}-{{ file_name }}{% endif %}.jpg)"></div>
+  <picture>
+    <source srcset="/assets/projects/{{ project_title }}/{{ project_title }}-mockup-cover{% if file_name %}-{{ file_name }}{% endif %}.webp" type="image/webp">
+    <source srcset="/assets/projects/{{ project_title }}/{{ project_title }}-mockup-cover{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" type="image/jpeg">
+    <img src="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}..{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" alt="{{ page.title }} {{ file_name }}">
+  </picture>
 </div>

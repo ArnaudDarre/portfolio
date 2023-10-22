@@ -16,8 +16,14 @@
       width: $spacing-md;
       height: $spacing-md;
     }
-    
-    &Icon { margin-right: $spacing-sm; }
-    svg { margin-left: $spacing-sm; }
+
+    svg {
+      margin-left: $spacing-sm;
+    }
+
+    &Icon {
+      margin-right: $spacing-sm;
+      margin-left: 0 !important;
+    }
   }
 }

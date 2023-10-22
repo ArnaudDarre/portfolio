@@ -11,7 +11,7 @@
     <picture class="grid__item grid__item--md6">
       <source srcset="{{ site.base-url }}{{ image_path }}.webp" type="image/webp">
       <source srcset="{{ site.base-url }}{{ image_path }}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" type="image/jpeg">
-      <img src="{{ site.base-url }}{{ image_path }}.jpg" alt="{{ page.title }} {{ file_name }}">
+      <img src="{{ site.base-url }}{{ image_path }}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" alt="{{ page.title }} {{ file_name }}">
     </picture>
     {% endif %}
     {% endfor %}
