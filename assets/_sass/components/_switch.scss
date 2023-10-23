@@ -28,7 +28,7 @@ $toggle-size: $size - $margin-md;
     height: 0;
     width: 0;
     opacity: 0;
-    
+
     &:checked + .switch__switch {
 
       .switch__toggle {
@@ -48,7 +48,7 @@ $toggle-size: $size - $margin-md;
     border-radius: $size;
     position: relative;
     border: $border;
-    
+
     .dark-mode & {
       border: $border-dark;
     }
@@ -76,12 +76,12 @@ $toggle-size: $size - $margin-md;
     &:nth-child(3) {
       left: $margin-lg;
       stroke: $text-contrast;
-      
+
       .dark-mode & {
         stroke: $primary;
       }
     }
-    
+
     &:nth-child(4) {
       right: $margin-lg;
       stroke: $primary;

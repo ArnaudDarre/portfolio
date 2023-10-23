@@ -65,7 +65,7 @@ div.section {
   }
 
   &__content {
-    
+
     & + & {
       margin-top: $spacing-lg;
     }
@@ -119,7 +119,7 @@ div.section {
     padding-top: 0;
     padding-bottom: 0;
   }
-  
+
   .section__container,
   + .section .section__container {
     border-top: 0 !important;
@@ -159,7 +159,7 @@ div.section {
     .section__container {
       padding-bottom: 0 !important;
     }
-    
+
     + .section .section__container {
       border-top: 0 !important;
     }
@@ -172,7 +172,7 @@ div.section {
   @include calc(min-height, '100vh - '$spacing-lg);
 
   @include responsive (down, laptop) {
-    
+
     .section__container {
       padding-top: 0;
     }
