@@ -17,9 +17,9 @@ title: Projects
   <div class="section__container">
     <div class="section__content">
       <div class="tabs js-filter-buttons">
-        <a class="tab tab--active" data-filter="*" data-text="All">All</a>
+        <button class="tab tab--active" data-filter="*" data-text="All">All</button>
         {% for category in site.data.categories %}
-        <a class="tab" data-filter=".{{ category.title | slugify }}" data-text="{{ category.title }}">{{ category.title }}</a>
+        <button class="tab" data-filter=".{{ category.title | slugify }}" data-text="{{ category.title }}">{{ category.title }}</button>
         {% endfor %}
       </div>
     </div>

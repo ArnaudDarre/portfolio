@@ -5,12 +5,12 @@ $(document).ready(function() {
     layoutMode: 'fitRows'
   });
   // filter items on button click
-  $('.js-filter-buttons').on( 'click', 'a', function() {
+  $('.js-filter-buttons').on( 'click', '.tab', function() {
     var filterValue = $(this).attr('data-filter');
     $grid.isotope({ filter: filterValue });
   });
-  $('.js-filter-buttons a.tab').on('click', function () {
-    $('.js-filter-buttons a.tab').removeClass('tab--active');
+  $('.js-filter-buttons .tab').on('click', function () {
+    $('.js-filter-buttons .tab').removeClass('tab--active');
     $(this).addClass('tab--active');
   });
 

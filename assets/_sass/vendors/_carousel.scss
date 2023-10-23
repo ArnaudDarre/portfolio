@@ -34,7 +34,7 @@ $border-radius: $border-radius-sm;
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     background-color: $background-default;
-    
+
     .dark-mode & {
       background-color: $background-default-dark;
     }
@@ -85,7 +85,7 @@ $border-radius: $border-radius-sm;
       }
     }
   }
-  
+
   &__item {
     position: absolute;
     top: 0;
@@ -94,7 +94,7 @@ $border-radius: $border-radius-sm;
     display: flex;
     align-items: flex-end;
     padding: $spacing-lg $spacing-section-horizontal;
-    
+
     @include responsive (down, tablet) {
       padding-bottom: $spacing-section-horizontal;
     }

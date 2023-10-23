@@ -12,7 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   border-bottom: $border;
-  
+
   .dark-mode & {
     border-bottom: $border-dark;
   }
@@ -22,7 +22,7 @@
     border: $border;
     border-radius: $border-radius-md;
     overflow: hidden;
-    
+
     .dark-mode & {
       border: $border-dark;
     }
@@ -55,15 +55,15 @@
     padding-top: $spacing-sm;
     width: 50%;
     border-top: $border;
-    
+
     .dark-mode & {
       border-top: $border-dark;
     }
-    
+
     &:nth-child(even) {
       @include transition($transition-md, border-left);
       border-left: $border;
-      
+
       .dark-mode & {
         border-left: $border-dark;
       }

@@ -21,7 +21,7 @@
   &__thumbnail {
     height: 40vh;
     width: auto;
-    
+
     @include responsive (up, laptop) {
       position: absolute;
       top: $spacing-lg;

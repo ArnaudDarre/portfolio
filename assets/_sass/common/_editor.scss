@@ -75,18 +75,18 @@
 
   blockquote {
     position: relative;
-    
+
     &:before {
       @include pseudo-element('”', -$spacing-md, auto, auto, -$spacing-sm, auto, auto);
       z-index: -1;
       font-size: 20rem;
       color: rgba($primary, 0.1);
     }
-    
+
     &:not(:first-child) {
       margin-top: 1rem;
     }
-    
+
     p:not(.caption) {
       font-size: 1.5rem;
     }

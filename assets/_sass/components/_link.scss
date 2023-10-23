@@ -9,7 +9,7 @@
     @include transition($transition-md, stroke-width);
     stroke-width: 2;
   }
-  
+
   @include hover {
     animation: get-bold $transition-md forwards;
 

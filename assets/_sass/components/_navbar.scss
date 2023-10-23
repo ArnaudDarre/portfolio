@@ -13,7 +13,7 @@
   left: 0;
   width: 100vw;
   background-color: $background-default;
-  
+
   .dark-mode & {
     background-color: $background-default-dark;
   }
@@ -21,7 +21,7 @@
   @include responsive(up, tablet) {
     height: $spacing-xl;
   }
-  
+
   &.section {
     position: sticky;
   }
@@ -38,11 +38,11 @@
     .dark-mode & {
       border-bottom: $border-dark;
     }
-    
+
     @include responsive(up, tablet) {
       height: 100%;
     }
-    
+
     @include responsive(down, tablet) {
       flex-direction: column;
       align-items: stretch;
@@ -65,7 +65,7 @@
       height: $spacing-xl - $spacing-md;
     }
   }
-  
+
   &__logo {
     display: flex;
     align-items: baseline;
@@ -82,7 +82,7 @@
       align-items: flex-start;
       max-height: 0;
       overflow: hidden;
-      
+
       .js-opened & {
         max-height: 50vh;
       }
