@@ -1,4 +1,6 @@
 .link {
+  display: inline-flex;
+  align-items: center;
   animation: get-thin $transition-md;
   will-change: font-variation-settings;
   font-variation-settings: $font-regular;
@@ -7,6 +9,9 @@
 
   svg {
     @include transition($transition-md, stroke-width);
+    height: $spacing-md;
+    width: $spacing-md;
+    margin-left: $spacing-xs;
     stroke-width: 2;
   }
 

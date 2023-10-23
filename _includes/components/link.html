@@ -1,0 +1,16 @@
+{% assign label = include.label %}
+{% assign type = include.type %}
+{% assign url = include.url %}
+
+<a href="{% if type == null %}{% link {{ url }} %}{% else %}{{ url }}{% endif %}" {% if type == 'external' %}target="_blank" rel="external"{% endif %} class="link">
+  {{ label }}
+  {% if type == 'external' %}
+  {% svg /assets/icons/feather/external-link.svg %}
+  {% elsif type == 'download' %}
+  {% svg /assets/icons/feather/download.svg %}
+  {% elsif type == 'email' %}
+  {% svg /assets/icons/feather/mail.svg %}
+  {% else %}
+  {% svg /assets/icons/feather/arrow-right.svg %}
+  {% endif %}
+</a>

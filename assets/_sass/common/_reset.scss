@@ -32,3 +32,20 @@ table {
 textarea {
   white-space: revert;
 }
+
+// Add focus styles
+a[href],
+area[href],
+input,
+select,
+textarea,
+button,
+iframe,
+[tabindex],
+[contentEditable=true] {
+
+  &:focus {
+    outline: revert;
+    outline-color: $primary;
+  }
+}

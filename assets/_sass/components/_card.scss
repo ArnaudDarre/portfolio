@@ -111,6 +111,10 @@
 
     .card__mediaInner {
       transform: scale(1.03);
+
+      @include responsive-touch {
+        transform: none;
+      }
     }
   }
 
