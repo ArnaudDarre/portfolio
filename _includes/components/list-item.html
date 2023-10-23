@@ -3,28 +3,13 @@
 {% assign type = include.type %}
 {% assign url = include.url %}
 
-{% if url != null %}
-<a href="{% if type == null %}{% link {{ url }} %}{% else %}{{ url }}{% endif %}" {% if type == 'external' %}target="_blank" rel="external"{% endif %} class="list__item link">
-{% else %}
 <p class="list__item">
-{% endif %}
   {% if icon != null %}
   {% svg "/assets/icons/skills/{{ icon }}.svg" class="list__itemIcon" %}
   {% endif %}
+  {% if url == null %}
   {{ label }}
-  {% if url != null %}
-  {% if type == 'external' %}
-  {% svg /assets/icons/feather/external-link.svg %}
-  {% elsif type == 'download' %}
-  {% svg /assets/icons/feather/download.svg %}
-  {% elsif type == 'email' %}
-  {% svg /assets/icons/feather/mail.svg %}
   {% else %}
-  {% svg /assets/icons/feather/arrow-right.svg %}
+  {% include components/link.html label=label type=type url=url %}
   {% endif %}
-  {% endif %}
-{% if url != null %}
-</a>
-{% else %}
 </p>
-{% endif %}
