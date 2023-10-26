@@ -2,7 +2,7 @@
 {% assign type = include.type %}
 {% assign url = include.url %}
 
-<a href="{% if type == null %}{% link {{ url }} %}{% else %}{{ url }}{% endif %}" {% if type == 'external' %}target="_blank" rel="external"{% endif %} class="link">
+<a href="{% if type == null %}{% link {{ url }} %}{% else %}{{ url }}{% endif %}" {% if type == 'external' or type == 'download' %}target="_blank" rel="external"{% endif %} class="link">
   {{ label }}
   {% if type == 'external' %}
   {% svg /assets/icons/feather/external-link.svg %}
