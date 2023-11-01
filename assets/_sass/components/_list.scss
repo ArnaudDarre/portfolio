@@ -4,7 +4,7 @@
   align-items: flex-start; // so that children don't take 100% width (for focus style)
 
   &__item {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 
     &:not(:last-child) {

@@ -1,11 +1,12 @@
 ---
 layout: project
-color: '#00aec7'
-order: 7
+color: "#00aec7"
+order: 8
 
 title: Watapix
 subtitle: Rebranding to boost brand awareness and match it with the customer base
-body: Design of the logo and the brand guidelines of Watapix, a multi-channel communication agency. Project carried out while working at Watapix.
+body: |-
+  Design of the logo and the brand guidelines of Watapix, a multi-channel communication agency. Project carried out while working at Watapix.
 category: Branding
 
 client: Watapix
@@ -22,7 +23,7 @@ tags:
 <div class="section">
   <div class="section__container">
     {% include components/project-pdf.html 
-      file_name='guidelines'
+      file_name = "guidelines"
     %}
   </div>
 </div>
@@ -36,15 +37,16 @@ tags:
 <div class="section">
   <div class="section__container">
     {% include components/project-image.html 
-      file_name='mockup-identity'
-      legend='Stationery'
+      file_name = "mockup-identity"
+      legend = "Stationery"
     %}
     {% include components/project-grid.html
-      file_name='applications'
+      size = 6
+      file_name = "applications"
     %}
     {% include components/project-image.html 
-      file_name='mockup-research'
-      legend='First research for the logo'
+      file_name = "mockup-research"
+      legend = "First research for the logo"
     %}
   </div>
 </div>

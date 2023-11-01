@@ -2,11 +2,12 @@
 layout: project
 color: "#00FFC4"
 featured: true
-order: 2
+order: 3
 
 title: Shroomio
 subtitle: Designing my own React component library
-body: I started building this component library when I started learning React and have been completing it ever since. It's a great way to keep learning, and also to have a collection of resources at hand when I build design systems for new projects.
+body: |-
+  I started building this component library when I started learning React and have been completing it ever since. It's a great way to keep learning, and also to have a collection of resources at hand when I build design systems for new projects.
 category: Digital
 
 client: Personal project
@@ -28,8 +29,8 @@ tags:
 <div class="section">
   <div class="section__container">
     {% include components/project-content.html
-      lead='Presentation'
-      content=content
+      title = "Presentation"
+      content = content
     %}
     {% include components/project-cover.html %}
   </div>
