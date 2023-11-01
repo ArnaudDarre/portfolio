@@ -50,6 +50,7 @@ tags:
     {% include components/project-grid.html
       size = "4"
       file_name = "user"
+      file_extension = "png"
       legend = "Collection of user facing screens"
     %}
   </div>
@@ -66,6 +67,7 @@ tags:
     {% include components/project-grid.html
       size = "4"
       file_name = "admin"
+      file_extension = "png"
       legend = "Collection of admin screens"
     %}
   </div>

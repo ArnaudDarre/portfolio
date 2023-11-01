@@ -39,11 +39,11 @@
 	};
 	
 	class Entry {
-        constructor(el) {
-            this.DOM = {el: el};
-            this.init();
-        }
-        init() {
+		constructor(el) {
+			this.DOM = {el: el};
+			this.init();
+		}
+		init() {
 			// DOM elements:
 			// title
 			this.DOM.title = this.DOM.el.querySelector('.carousel__title');
@@ -67,10 +67,10 @@
 		toggle(direction) {
 			this.direction = direction; 
 			return Promise.all([this.toggleTitle(!this.isHidden), 
-								this.toggleCategory(!this.isHidden),
-								this.toggleSubtitle(!this.isHidden),
-								this.toggleDescription(!this.isHidden),
-								this.toggleImage(!this.isHidden)]);
+													this.toggleCategory(!this.isHidden),
+													this.toggleSubtitle(!this.isHidden),
+													this.toggleDescription(!this.isHidden),
+													this.toggleImage(!this.isHidden)]);
 		}
 		toggleTitle() {
 			anime.remove(this.DOM.title);
@@ -134,15 +134,15 @@
 				}
 			}).finished;
 		}
-    };
+	};
 
-    class Slideshow {
-        constructor(el) {
-            this.DOM = {};
-            this.DOM.el = el;
-            this.init();
-        }
-        init() {
+	class Slideshow {
+		constructor(el) {
+			this.DOM = {};
+			this.DOM.el = el;
+			this.init();
+		}
+		init() {
 			// DOM elements.
 			this.DOM.pagination = this.DOM.el.querySelector('.carousel__index .carousel__indexInner');
 			this.DOM.navigation = this.DOM.el.querySelector('.project__nav');
@@ -158,7 +158,6 @@
 		}
 		layout() {
 			this.currentEntry = this.DOM.entries[this.currentPos];
-			
 		}
 		initEvents() {
 			// Navigation

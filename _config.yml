@@ -67,5 +67,5 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - assets/masters/
+  - assets/templates/
   - .sass-cache

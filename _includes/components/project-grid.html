@@ -3,7 +3,9 @@
 {% assign file_extension = include.file_extension %}
 {% assign legend = include.legend %}
 
-{% assign project_title = page.path | remove: "/" | remove: "_projects" | remove: ".md" %}
+{% capture project_title %}{{ page.path | remove: "/" | remove: "_projects" | remove: ".md" }}{% endcapture %}
+{% capture file_name %}{% if file_name %}-{{ file_name }}{% endif %}{% endcapture %}
+{% capture file_extension %}{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}{% endcapture %}
 
 <div class="section__content">
   <div class="grid grid--spacing2">
@@ -12,13 +14,13 @@
     {% assign image_path = image.path | remove: ".jpg" | remove: ".png" | remove: ".webp" %}
     <picture class="grid__item grid__item--md{% if size != null %}{{ size }}{% else %}6{% endif %}">
       <source 
-        srcset="{{ site.base-url }}{{ image_path }}.webp"
+        srcset="{% link {{ image_path }}.webp %}"
         type="image/webp">
-      <source
-        srcset="{{ site.base-url }}{{ image_path }}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}"
+        <source
+        srcset="{% link {{ image_path }}.{{ file_extension }} %}"
         type="image/{% if file_extension %}{{ file_extension }}{% else %}jpeg{% endif %}">
-      <img
-        src="{{ site.base-url }}{{ image_path }}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}"
+        <img
+        src="{% link {{ image_path }}.{{ file_extension }} %}"
         alt="{{ page.title }} {{ file_name }}">
     </picture>
     {% endif %}
