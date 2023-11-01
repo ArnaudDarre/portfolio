@@ -3,19 +3,21 @@
 {% assign file_extension = include.file_extension %}
 {% assign legend = include.legend %}
 
-{% assign project_title = page.path | remove: "/" | remove: "_projects" | remove: ".md" %}
+{% capture project_title %}{{ page.path | remove: "/" | remove: "_projects" | remove: ".md" }}{% endcapture %}
+{% capture file_name %}{% if file_name %}-{{ file_name }}{% endif %}{% endcapture %}
+{% capture file_extension %}{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}{% endcapture %}
 
 <div class="section__content {% if size != 'lg' %} grid grid--jcCenter{% endif %} project__image">
   <div class="{% if size == 'lg' %}project__fullWidth{% else %}grid__item{% if size == 'sm' %} grid__item--lg6 grid__item--md8 grid__item--sm10{% elsif size == 'md' %} grid__item--lg10{% endif %}{% endif %}">
     <picture>
       <source
-        srcset="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.webp"
+        srcset="{% link assets/projects/{{ project_title }}/{{ project_title }}{{ file_name }}.webp %}"
         type="image/webp">
-      <source
-        srcset="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}"
+        <source
+        srcset="{% link assets/projects/{{ project_title }}/{{ project_title }}{{ file_name }}.{{ file_extension }} %}"
         type="image/{% if file_extension %}{{ file_extension }}{% else %}jpeg{% endif %}">
-      <img
-        src="/assets/projects/{{ project_title }}/{{ project_title }}{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}"
+        <img
+        src="{% link assets/projects/{{ project_title }}/{{ project_title }}{{ file_name }}.{{ file_extension }} %}"
         alt="{{ page.title }} {{ file_name }}">
     </picture>
     {% if legend != null %}

@@ -28,13 +28,13 @@ layout: compress
 <div id="project_landing" class="section">
   <div class="section__container">
     {% assign project_title = page.path | remove: "/" | remove: "_projects" | remove: ".md" %}
-    <div class="project__thumbnail background-cover"  style="background-image: url('/assets/projects/{{ project_title }}/{{ project_title }}-cover.webp'), url('/assets/projects/{{ project_title }}/{{ project_title }}-cover.jpg');"></div>
+    <div class="project__thumbnail background-cover"  style="background-image: url('{% link assets/projects/{{ project_title }}/{{ project_title }}-cover.webp %}'), url('{% link assets/projects/{{ project_title }}/{{ project_title }}-cover.jpg %}');"></div>
     <div class="project__nav buttons">
       <a href="{{ prev.url }}" title = "Previous project" class="button button--md button--icon button--grey">
-        {% svg /assets/icons/feather/arrow-left.svg %}
+        {% svg assets/icons/feather/arrow-left.svg %}
       </a>
       <a href="{{ next.url }}" title = "Next project" class="button button--md button--icon button--grey">
-        {% svg /assets/icons/feather/arrow-right.svg %}
+        {% svg assets/icons/feather/arrow-right.svg %}
       </a>
     </div>
     <div class="section__content">

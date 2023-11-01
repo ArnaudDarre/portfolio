@@ -1,16 +1,19 @@
 {% assign legend = include.legend %}
 {% assign file_name = include.file_name %}
 
+{% capture project_title %}{{ page.path | remove: "/" | remove: "_projects" | remove: ".md" }}{% endcapture %}
+{% capture file_name %}{% if file_name %}-{{ file_name }}{% endif %}{% endcapture %}
+
 <div class="section__content project__poster">
   <picture>
     <source
-      srcset="/assets/projects/{{ site.page_title }}/{{ site.page_title }}-poster{% if file_name %}-{{ file_name }}{% endif %}.webp"
+      srcset="{% link assets/projects/{{ project_title }}/{{ project_title }}-poster{{ file_name }}.webp %}"
       type="image/webp">
     <source
-      srcset="/assets/projects/{{ site.page_title }}/{{ site.page_title }}-poster{% if file_name %}-{{ file_name }}{% endif %}.jpg"
+      srcset="{% link assets/projects/{{ project_title }}/{{ project_title }}-poster{{ file_name }}.jpg %}"
       type="image/jpeg">
     <img
-      src="/assets/projects/{{ site.page_title }}/{{ site.page_title }}-poster{% if file_name %}-{{ file_name }}{% endif %}.jpg"
+      srcset="{% link assets/projects/{{ project_title }}/{{ project_title }}-poster{{ file_name }}.jpg %}"
       alt="{{ page.title }} {{ file_name }} poster">
   </picture>
   {% if legend != null %}

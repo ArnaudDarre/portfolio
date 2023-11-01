@@ -27,6 +27,7 @@ tags: # select maximum 4
   - Wireframing
 
 video_id: # vimeo video id if relevant
+
 ---
 
 {% include components/project-cover.html %}
