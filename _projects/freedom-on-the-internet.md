@@ -1,11 +1,12 @@
 ---
 layout: project
-color: '#231d1f'
-order: 10
+color: "#231d1f"
+order: 11
 
 title: Freedom on the Internet
 subtitle: Make people realise we need to fight for a free web
-body: This book explores how censorship, whether applied automatically by the author, or carried out by countries and organisation affect the web and our daily lives. 
+body: |-
+  This book explores how censorship, whether applied automatically by the author, or carried out by countries and organisation affect the web and our daily lives. 
 category: Editorial
 
 client: Personal project
@@ -17,7 +18,7 @@ tags:
 <div class="section">
   <div class="section__container">
     {% include components/project-pdf.html 
-      file_name='book'
+      file_name = "book"
     %}
   </div>
 </div>

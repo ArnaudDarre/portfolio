@@ -1,13 +1,17 @@
 {% assign legend = include.legend %}
 {% assign file_name = include.file_name %}
 
-{% assign project_title = page.title | slugify | replace: "é", "e" %}
-
 <div class="section__content project__poster">
   <picture>
-    <source srcset="/assets/projects/{{ project_title }}/{{ project_title }}-poster{% if file_name %}-{{ file_name }}{% endif %}.webp" type="image/webp">
-    <source srcset="/assets/projects/{{ project_title }}/{{ project_title }}-poster{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" type="image/jpeg">
-    <img src="/assets/projects/{{ project_title }}/{{ project_title }}-poster{% if file_name %}-{{ file_name }}{% endif %}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" alt="{{ page.title }} {{ file_name }} poster">
+    <source
+      srcset="/assets/projects/{{ site.page_title }}/{{ site.page_title }}-poster{% if file_name %}-{{ file_name }}{% endif %}.webp"
+      type="image/webp">
+    <source
+      srcset="/assets/projects/{{ site.page_title }}/{{ site.page_title }}-poster{% if file_name %}-{{ file_name }}{% endif %}.jpg"
+      type="image/jpeg">
+    <img
+      src="/assets/projects/{{ site.page_title }}/{{ site.page_title }}-poster{% if file_name %}-{{ file_name }}{% endif %}.jpg"
+      alt="{{ page.title }} {{ file_name }} poster">
   </picture>
   {% if legend != null %}
   <p class="project__legend caption">{{ legend }}</p>

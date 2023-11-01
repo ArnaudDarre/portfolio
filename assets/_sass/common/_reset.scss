@@ -49,3 +49,8 @@ iframe,
     outline-color: $primary;
   }
 }
+
+// remove space under picture tag
+picture {
+  display: flex;
+}

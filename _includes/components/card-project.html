@@ -1,6 +1,6 @@
 {% assign title_component = include.title_component %}
 
-{% assign project_title = project.title | slugify | replace: "é", "e" %}
+{% assign project_title = project.path | remove: "/" | remove: "_projects" | remove: ".md" %}
 
 <div class="card card--md card--projects">
   <div class="card__media">

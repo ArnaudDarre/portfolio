@@ -1,7 +1,7 @@
 ---
 layout: project
-color: '#000000'
-order: 8
+color: "#000000"
+order: 9
 
 title: Life Sketching
 subtitle: Collection of life sketches
@@ -16,7 +16,7 @@ tags:
 <div class="section section--fullWidth">
   <div class="section__container">
     {% include components/project-cover.html 
-      size='large'
+      size = "large"
     %}
   </div>
 </div>
@@ -24,21 +24,21 @@ tags:
 <div class="section">
   <div class="section__container">
     {% include components/project-content.html
-      lead='Presentation'
-      content='
+      title = "Presentation"
+      body = "
         <p>Sketching helps me focus. It takes my mind of things and is a great way to free your mind when you are stuck in a projects. I started this habbit in Design School and will keep on doing it.</p>
-      '
+      "
     %}
     {% include components/project-image.html 
-      file_name='3'
+      file_name = "3"
     %}
     {% include components/project-image.html 
-      size='md'
-      file_name='19'
+      size = "md"
+      file_name = "19"
     %}
     {% include components/project-image.html 
-      size='md'
-      file_name='21'
+      size = "md"
+      file_name = "21"
     %}
   </div>
 </div>

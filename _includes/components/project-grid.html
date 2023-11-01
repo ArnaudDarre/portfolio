@@ -1,17 +1,25 @@
+{% assign size = include.size %}
 {% assign file_name = include.file_name %}
+{% assign file_extension = include.file_extension %}
 {% assign legend = include.legend %}
 
-{% assign project_title = page.title | slugify | replace: "é", "e" %}
+{% assign project_title = page.path | remove: "/" | remove: "_projects" | remove: ".md" %}
 
 <div class="section__content">
-  <div class="grid grid--spacing3">
+  <div class="grid grid--spacing2">
     {% for image in site.static_files %}
     {% if image.path contains project_title and image.path contains '-grid-' and image.path contains '.webp' and image.path contains file_name %}
     {% assign image_path = image.path | remove: ".jpg" | remove: ".png" | remove: ".webp" %}
-    <picture class="grid__item grid__item--md6">
-      <source srcset="{{ site.base-url }}{{ image_path }}.webp" type="image/webp">
-      <source srcset="{{ site.base-url }}{{ image_path }}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" type="image/jpeg">
-      <img src="{{ site.base-url }}{{ image_path }}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}" alt="{{ page.title }} {{ file_name }}">
+    <picture class="grid__item grid__item--md{% if size != null %}{{ size }}{% else %}6{% endif %}">
+      <source 
+        srcset="{{ site.base-url }}{{ image_path }}.webp"
+        type="image/webp">
+      <source
+        srcset="{{ site.base-url }}{{ image_path }}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}"
+        type="image/{% if file_extension %}{{ file_extension }}{% else %}jpeg{% endif %}">
+      <img
+        src="{{ site.base-url }}{{ image_path }}.{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}"
+        alt="{{ page.title }} {{ file_name }}">
     </picture>
     {% endif %}
     {% endfor %}
