@@ -207,23 +207,41 @@
 // scroll to top
 // —————————————————————————————————————————————————————————————————
 
-.button--scroll-top {
-  @include transition($transition-md, bottom, transform);
-	position: absolute;
-	right: $spacing-sm;
-	bottom: -$spacing-sm;
+.button--scrollTop {
+  @include transition($transition-md, transform);
+  transform: translateY($spacing-xl);
+  z-index: 100;
+  position: fixed;
+  bottom: $spacing-section-horizontal;
+  right: $spacing-section-horizontal;
+  margin-bottom: -$spacing-md;
+  margin-right: -$spacing-md;
+  box-shadow: $box-shadow;
+  
+  @include responsive(down, mobile) {
+    margin-bottom: -$spacing-sm;
+    margin-right: -$spacing-sm;
+  }
 
-  @include responsive-touch {
-		display: none !important;
-	}
+  .dark-mode & {
+    background-color: $background-default-dark;
 
-	&.js-show {
-		bottom: $spacing-lg - $spacing-md;
-	}
+    svg {
+      stroke: $text-contrast;
+    }
+  }
+  
+  &.js-show {
+    transform: translateY(0);
+  }
 
-	&:hover {
-		transform: translateY(-1px) scale(1.04);
-	}
+  &:hover {
+    transform: translateY(-$spacing-sm);
+
+    @include responsive-touch() {
+      transform: translateY(0);
+    }
+  }
 }
 
 // —————————————————————————————————————————————————————————————————

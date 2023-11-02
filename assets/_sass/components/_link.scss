@@ -6,6 +6,16 @@
   font-variation-settings: $font-regular;
   color: $primary;
   text-decoration: underline;
+  white-space: nowrap;
+
+  .overline > & {
+
+    svg {
+      height: $spacing-md*0.75;
+      width: $spacing-md*0.75;
+      margin-left: $spacing-xs*0.5;
+    }
+  }
 
   svg {
     @include transition($transition-md, stroke-width);

@@ -1,16 +1,7 @@
-$(document).ready(function () {
+const navbar = document.querySelector('.navbar');
+const button = document.querySelector('.button--menu');
 
-$(function () {
-
-    let body = $('body');
-    let navbar = $('.navbar');
-    let button = $('.button--menu');
-
-    button.on('click', function () {
-        button.toggleClass('button--menu--open');
-        navbar.toggleClass('js-opened');
-        body.toggleClass('js-freeze');
-    });
-});
-
+button.addEventListener('click', function () {
+  button.classList.toggle('button--menu--open');
+  navbar.classList.toggle('js-opened');
 });

@@ -56,8 +56,7 @@
 }
 
 .overline, %overline {
-	@include font-size(0.875);
-	font-style: italic;
+	@include font-size(0.75);
 }
 
 // ——————————————————————————————————————————————————
