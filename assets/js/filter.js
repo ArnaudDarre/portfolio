@@ -1,17 +1,21 @@
-$(document).ready(function() {
+// init Isotope
+var grid = document.querySelector('.js-grid');
+var isotope = new Isotope(grid, {
+  layoutMode: 'fitRows'
+});
 
-  // init Isotope
-  var $grid = $('.js-grid').isotope({
-    layoutMode: 'fitRows'
-  });
-  // filter items on button click
-  $('.js-filter-buttons').on( 'click', '.tab', function() {
-    var filterValue = $(this).attr('data-filter');
-    $grid.isotope({ filter: filterValue });
-  });
-  $('.js-filter-buttons .tab').on('click', function () {
-    $('.js-filter-buttons .tab').removeClass('tab--active');
-    $(this).addClass('tab--active');
-  });
+// filter items on button click
+var filterButtons = document.querySelector('.js-filter-buttons');
+filterButtons.addEventListener('click', function (event) {
+  if (event.target.classList.contains('tab')) {
+    var filterValue = event.target.getAttribute('data-filter');
+    isotope.arrange({ filter: filterValue });
 
+    // Manage active tab
+    var tabs = document.querySelectorAll('.js-filter-buttons .tab');
+    tabs.forEach(function (tab) {
+      tab.classList.remove('tab--active');
+    });
+    event.target.classList.add('tab--active');
+  }
 });
