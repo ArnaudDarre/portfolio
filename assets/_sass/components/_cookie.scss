@@ -3,15 +3,15 @@
   display: none;
   align-items: baseline;
   justify-content: space-between;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 11px $spacing-section-horizontal;
+  padding: 11px $spacing-section-horizontal-2 11px $spacing-section-horizontal;
   background-color: $background-default;
   
   .dark-mode & {
     background-color: $background-default-dark;
+  }
+
+  @include responsive(down, mobile) {
+    padding-right: $spacing-lg;
   }
   
   &.js-cookie-accepted {
