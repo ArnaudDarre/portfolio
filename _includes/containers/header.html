@@ -58,4 +58,6 @@
 
 <body class="page{% if page.layout == 'index' %} page--index{% elsif page.layout == 'project' %} page--project{% else %} page--{{ page.title | downcase | replace: " ", "-" }}{% endif %}">
 
+{% include components/cookie.html %}
+
 {% include components/navbar.html %}
