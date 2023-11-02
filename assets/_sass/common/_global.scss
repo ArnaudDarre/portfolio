@@ -36,6 +36,13 @@ html {
 	}
 }
 
+.widgets {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
 // embed responsively
 
 .embed-container { 
@@ -188,7 +195,7 @@ $step: 5;
 .carousel__image { z-index: -1; }
 .project__nav { z-index: 10; }
 .tabs { z-index: 11; }
-.cookie { z-index: 12; }
+.widgets { z-index: 12; }
 header { z-index: 13; }
 
 // hover classes

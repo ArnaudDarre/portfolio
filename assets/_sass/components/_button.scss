@@ -211,20 +211,21 @@
   @include transition($transition-md, transform);
   transform: translateY($spacing-xl);
   z-index: 100;
-  position: fixed;
-  bottom: $spacing-section-horizontal;
+  position: absolute;
+  top: -$spacing-md;
   right: $spacing-section-horizontal;
-  margin-bottom: -$spacing-md;
   margin-right: -$spacing-md;
   box-shadow: $box-shadow;
   
   @include responsive(down, mobile) {
+    top: auto;
+    bottom: $spacing-section-horizontal;
     margin-bottom: -$spacing-sm;
     margin-right: -$spacing-sm;
   }
 
   .dark-mode & {
-    background-color: $background-default-dark;
+    background-color: $background-paper-dark;
 
     svg {
       stroke: $text-contrast;
