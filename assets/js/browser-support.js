@@ -5,5 +5,5 @@ var supportsCssVars = function () {
 
 if (!supportsCssVars()) {
   document.querySelector(".browserWarning").style.display = 'flex';
-  document.body.classList.add('no-css-variables-support');
+  document.body.classList.add('js-freeze');
 }
