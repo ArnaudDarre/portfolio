@@ -1,10 +1,6 @@
 var supportsCssVars = function () {
-  var t = document.createElement("style");
-  t.innerHTML = ":root { --tmp-var: bold; }";
-  document.head.appendChild(t);
-  var isSupported = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)"));
-  document.head.removeChild(t);
-  return isSupported;
+  var e, t = document.createElement("style");
+  return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
 };
 
 if (!supportsCssVars()) {
