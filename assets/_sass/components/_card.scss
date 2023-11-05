@@ -86,6 +86,16 @@
       @else if $proportion == xl { @extend %h2; }
     }
 	}
+
+  &.card--background {
+    background-color: $background-default;
+    padding: $size*2;
+    border-radius: $size;
+
+    .dark-mode & {
+		  background-color: $background-default-dark;
+	  }
+  }
 }
 
 .card {
