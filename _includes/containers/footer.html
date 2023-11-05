@@ -1,6 +1,23 @@
 {% include components/footer.html %}
 
+<div class="browserWarning">
+  <div role="alertdialog" class="card card--lg card--background">
+    <div class="card__header">
+      <p class="card__title">Unsupported Browser</p>
+      <p class="card__subtitle">Some of the features on this website are not supported by older browsers. Please use a recent version of any major browser.</p>
+    </div>
+    <div class="card__content">
+      <p>Alternatively, you can check out the PDF version of my portfolio, or have a look at my CV.</p>
+      <div class="list mt-1">
+        {% include components/list-item.html label='Portfolio' type='download' url='/public/arnaud-darre-portfolio.pdf' %}
+        {% include components/list-item.html label='CV' type='download' url='/public/arnaud-darre-cv.pdf' %}
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- JAVASCRIPT -->
+<script src="{% link assets/js/browser-support.js %}"></script>
 <script src="{% link assets/js/color-mode.js %}"></script>
 <script src="{% link assets/js/cookie.js %}"></script>
 <script src="{% link assets/js/filter.js %}"></script>

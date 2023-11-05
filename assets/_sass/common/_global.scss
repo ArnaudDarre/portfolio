@@ -17,6 +17,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+body.js-freeze {
+	overflow: hidden;
+}
+
 .page {
 	@include transition($transition-md, background-color, color);
 	font-family: $font;
@@ -41,6 +45,38 @@ html {
 	right: 0;
 	bottom: 0;
 	left: 0;
+}
+
+.browserWarning {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	align-items: center;
+	justify-content: center;
+	background-color: $overlay;
+	z-index: 13;
+	padding: $spacing-section-vertical $spacing-section-horizontal;
+	
+	.dark-mode & {
+		background-color: $overlay-dark;
+	}
+
+	.card {
+		max-width: $spacing-xxl*5;
+		text-align: center;
+		box-shadow: $box-shadow;
+
+		&__subtitle {
+			font-variation-settings: $font-regular;
+		}
+	}
+
+	.list {
+		align-items: center;
+	}
 }
 
 // embed responsively

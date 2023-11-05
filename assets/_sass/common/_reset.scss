@@ -1,4 +1,35 @@
+// —————————————————————————————————————————————————————————————————
+// custom (for IE)
 // The new CSS Reset - version 1.2.0 (last updated 23.7.2021)
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// custom (for IE)
+// —————————————————————————————————————————————————————————————————
+
+body,
+html {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+// remove visited link styling
+button, a  {
+  color: inherit;
+}
+
+// remove space under picture tag
+picture {
+  display: flex;
+}
+
+// —————————————————————————————————————————————————————————————————
+// The new CSS Reset - version 1.2.0 (last updated 23.7.2021)
+// —————————————————————————————————————————————————————————————————
 
 // Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
@@ -48,9 +79,4 @@ iframe,
     outline: revert;
     outline-color: $primary;
   }
-}
-
-// remove space under picture tag
-picture {
-  display: flex;
 }
