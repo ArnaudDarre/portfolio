@@ -52,18 +52,6 @@
 	<!-- isotope (blog filter) -->
 	<script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
 
-	<!--[if lt IE 9]>
-	<script>
-		document.getElementsByTagName('body')[0].className += ' js-freeze';
-		window.onload = function() {
-			var elements = document.getElementsByClassName('browserWarning');
-			for (var i = 0; i < elements.length; i++) {
-				elements[i].style.display = 'flex';
-			}
-		};
-	</script>
-	<![endif]-->
-
 </head>
 
 <body class="page{% if page.layout == 'index' %} page--index{% elsif page.layout == 'project' %} page--project{% else %} page--{{ page.title | downcase | replace: " ", "-" }}{% endif %}">
