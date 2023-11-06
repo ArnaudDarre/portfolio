@@ -40,13 +40,6 @@ body.js-freeze {
 	}
 }
 
-.widgets {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
 .browserWarning {
 	display: none;
 	position: fixed;
@@ -146,7 +139,7 @@ li {
 	margin-left: $spacing-md;
 
 	& + & {
-		padding-top: $spacing-xs !important;
+		padding-top: $spacing-xs;
 	}
 }
 

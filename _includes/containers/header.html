@@ -24,11 +24,11 @@
 	<title>{{ site.title }} | {% if page.layout == 'index' %}Portfolio{% else %}{{ page.title }}{% endif %}</title>	
 
 	<!-- META -->
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="{{ site.description }} ">
-	<meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="{{ site.description }}">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
 	<!-- image for social sharing -->
-	<meta property="og:image" content="http://arnaud-darre.com/public/images/social-cover.jpg" />
+	<meta property="og:image" content="http://arnaud-darre.com/public/images/social-cover.jpg">
 
 	<!-- FAVICONS -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -44,7 +44,7 @@
 	<link rel="preload" href="{% link assets/fonts/chivo/chivo-regular.woff2 %}" as="font" type="font/woff2" crossorigin>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="{% link assets/stylesheets/style.scss %}" />
+	<link rel="stylesheet" href="{% link assets/stylesheets/style.scss %}">
 	
 	<!-- VENDORS -->
 	<!-- jquery -->
@@ -56,18 +56,6 @@
 
 <body class="page{% if page.layout == 'index' %} page--index{% elsif page.layout == 'project' %} page--project{% else %} page--{{ page.title | downcase | replace: " ", "-" }}{% endif %}">
 
-<div class="widgets">
-	<p id="cookie" class="cookie overline text--alt">
-		This site uses cookies to deliver better experience. By continuing to browse, you agree to our cookie policy.
-		<!-- <a href="https://about-cookies.eu.org" class="cookie-more" target="_blank" rel="noopener">More info...</a> -->
-		<a href="javascript:void(0)" class="cookie__button link" onclick="closeCookieNotice()">
-			I understand
-			{% svg assets/icons/feather/check.svg %}
-		</a>
-	</p>
-	<a class="button button--md button--icon button--grey button--scrollTop" href="#top" title="Scroll to top">
-		{% svg assets/icons/feather/chevron-up.svg %}
-	</a>
-</div>
-
 {% include components/navbar.html %}
+
+<main>

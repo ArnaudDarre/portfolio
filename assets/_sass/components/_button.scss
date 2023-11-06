@@ -4,7 +4,6 @@
 // animate
 // color
 // menu
-// scroll to top
 // overrides
 // —————————————————————————————————————————————————————————————————
 
@@ -199,48 +198,6 @@
 
     .button__inner {
       opacity: 0;
-    }
-  }
-}
-
-// —————————————————————————————————————————————————————————————————
-// scroll to top
-// —————————————————————————————————————————————————————————————————
-
-.button--scrollTop {
-  @include transition($transition-md, transform);
-  transform: translateY($spacing-xl);
-  z-index: 100;
-  position: absolute;
-  top: -$spacing-md;
-  right: $spacing-section-horizontal;
-  margin-right: -$spacing-md;
-  box-shadow: $box-shadow;
-  
-  @include responsive(down, mobile) {
-    top: auto;
-    bottom: $spacing-section-horizontal;
-    margin-bottom: -$spacing-sm;
-    margin-right: -$spacing-sm;
-  }
-
-  .dark-mode & {
-    background-color: $background-paper-dark;
-
-    svg {
-      stroke: $text-contrast;
-    }
-  }
-  
-  &.js-show {
-    transform: translateY(0);
-  }
-
-  &:hover {
-    transform: translateY(-$spacing-sm);
-
-    @include responsive-touch() {
-      transform: translateY(0);
     }
   }
 }

@@ -12,11 +12,11 @@
 <path d="M9.8222 19.12C9.93542 19.12 10.0272 19.0278 10.0272 18.914C10.0272 18.8002 9.93542 18.708 9.8222 18.708C9.70899 18.708 9.61719 18.8002 9.61719 18.914C9.61719 19.0278 9.70899 19.12 9.8222 19.12Z" fill="white"/>
 <defs>
 <linearGradient id="paint0_linear_2561_37466" x1="8.63111" y1="10.9405" x2="14.3948" y2="11.5798" gradientUnits="userSpaceOnUse">
-<stop stop-color="#919191"/>
+<stop offset="0" stop-color="#919191"/>
 <stop offset="1" stop-color="white"/>
 </linearGradient>
 <linearGradient id="paint1_linear_2561_37466" x1="8.48715" y1="14.8323" x2="11.9531" y2="15.3009" gradientUnits="userSpaceOnUse">
-<stop stop-color="#990000"/>
+<stop offset="0" stop-color="#990000"/>
 <stop offset="1" stop-color="#E80000"/>
 </linearGradient>
 </defs>

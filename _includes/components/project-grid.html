@@ -16,15 +16,15 @@
       <source 
         srcset="{% link {{ image_path }}.webp %}"
         type="image/webp">
-        <source
+      <source
         srcset="{% link {{ image_path }}.{{ file_extension }} %}"
         type="image/{% if file_extension %}{{ file_extension }}{% else %}jpeg{% endif %}">
-        <img
+      <img
         src="{% link {{ image_path }}.{{ file_extension }} %}"
         alt="{{ page.title }} {{ file_name }}">
     </picture>
     {% endif %}
     {% endfor %}
-    <p class="grid__item caption">{{ legend }}</p>
+    <figcaption class="grid__item caption">{{ legend }}</figcaption>
   </div>
 </div>
