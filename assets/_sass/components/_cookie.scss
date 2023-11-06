@@ -1,5 +1,9 @@
 .cookie {
   @include transition($transition-md, background-color, transform);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: none;
   align-items: baseline;
   justify-content: space-between;

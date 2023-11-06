@@ -12,22 +12,22 @@
         <p>Portfolio</p>
       </div>
       <div class="switch ml-3">
-        <input aria-label="Color mode switch" class="switch__input" type="checkbox" name="mode-switch" id="mode-switch" />
+        <input aria-label="Color mode switch" class="switch__input" type="checkbox" name="mode-switch" id="mode-switch">
         <label class="switch__switch" for="mode-switch">
-          <div class="switch__toggle"></div>
+          <span class="switch__toggle"></span>
         </label>
         {% svg assets/icons/feather/sun.svg %}
         {% svg assets/icons/feather/moon.svg %}
       </div>
     </div>
-    <div class="navbar__nav nav">
-      <div class="nav__container">
+    <nav class="navbar__nav nav">
+      <ul class="nav__container">
         {% for item in site.data.nav %}
-        <h2 class="nav__item">
+        <li class="nav__item">
           <a class="nav__trigger{% if page.title == item.title or page.layout == item.collection %} nav__trigger--active{% endif %}" href="{% link {{ item.url }} %}" data-text="{{ item.title }}">{{ item.title }}</a>
-        </h2>
+        </li>
         {% endfor %}
-      </div>
-    </div>
+      </ul>
+    </nav>
   </div>
 </header>
