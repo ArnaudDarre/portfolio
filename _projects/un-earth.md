@@ -11,6 +11,7 @@ category: Editorial
 
 client: Degree Project
 tags:
+  - Art Direction
   - Editorial design
   - Illustration
 

@@ -8,20 +8,11 @@
   text-decoration: underline;
   white-space: nowrap;
 
-  .overline > & {
-
-    svg {
-      height: $spacing-md*0.75;
-      width: $spacing-md*0.75;
-      margin-left: $spacing-xs*0.5;
-    }
-  }
-
   svg {
     @include transition($transition-md, stroke-width);
-    height: $spacing-md;
-    width: $spacing-md;
-    margin-left: $spacing-xs;
+    height: 1em;
+    width: 1em;
+    margin-left: 0.25em;
     stroke-width: 2;
   }
 
