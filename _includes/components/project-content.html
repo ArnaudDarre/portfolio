@@ -5,7 +5,9 @@
   <div class="section__title">
     <p class="section__lead">{{ title }}</p>
   </div>
+  {% if body %}
   <div class="section__subtitle editor">
     {{ body }}
   </div>
+  {% endif %}
 </div>

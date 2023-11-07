@@ -151,6 +151,20 @@ a {
 	cursor: pointer;
 }
 
+// iframe
+
+iframe {
+	@include transition($transition-md, border);
+	display: block; // remove bottom spacing
+	width: 100%;
+	border-radius: $border-radius-md;
+	border: $border;
+	
+	.dark-mode & {
+		border: $border-dark;
+	}
+}
+
 // —————————————————————————————————————————————————————————————————
 // misc
 // —————————————————————————————————————————————————————————————————

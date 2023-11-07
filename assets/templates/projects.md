@@ -15,6 +15,7 @@ website:
   label: 
 tags: # select maximum 4
   - Brand identity
+  - Data visualisation
   - Design system
   - Editorial design
   - Illustration

@@ -10,7 +10,7 @@ category: Motion
 
 client: Personal project
 tags: 
-  - Design system
+  - Data visualisation
   - Motion design
 
 video_id: 130741186
