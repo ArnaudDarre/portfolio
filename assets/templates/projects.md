@@ -14,6 +14,7 @@ website:
   url: 
   label: 
 tags: # select maximum 4
+  - Art Direction
   - Brand identity
   - Data visualisation
   - Design system

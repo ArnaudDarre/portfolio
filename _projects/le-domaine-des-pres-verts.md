@@ -3,8 +3,8 @@ layout: project
 color: "#dc9b64"
 order: 7
 
-title: le Domaine des Prés Verts
-subtitle: Website redesign tp improve booking experience
+title: Luxury guest house website
+subtitle: Website redesign to improve booking experience
 body: |-
   Layout of the new website for Le Domaine des Prés Verts, a luxury guest house in Burgundy, France. Project carried out while working at Watapix.
 category: Digital
