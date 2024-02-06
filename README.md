@@ -10,7 +10,7 @@ Online portfolio presenting my work, skills & training.
 
 - Run the website in development mode
 
-```
+```shell
 jekyll serve
 ```
 
