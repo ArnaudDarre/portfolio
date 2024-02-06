@@ -1,7 +1,7 @@
 ---
 layout: project
 color: "#000000"
-order: 9
+order: 12
 
 title: Life Sketching
 subtitle: Collection of life sketches

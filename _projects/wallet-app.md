@@ -1,12 +1,13 @@
 ---
 layout: project
 color: "#003FFF"
-order: 6
+featured: true
+order: 3
 
-title: CBRE
-subtitle: Creating a mobile app prototype
+title: Wallet app
+subtitle: Creating a prototype to pitch to investors
 body: |-
-  This project was to pitch to a potential client to create the mobile app for a tower in the Paris financial district. The whole platform and design system was creted from scratch.
+  This was a design for a pre-seed A MVP. The client wanted a the demo app to be graphically appealing, so I created a cool design system and then prototyped the first features for the developers to code.
 category: Digital
 
 tags:
@@ -24,7 +25,7 @@ tags:
         <p>Before starting the fully fledged design, I determined the layout types and created common structures to create balance and harmony between each screen.</p>
       "
     %}
-    {% include components/project-image.html file_name = "gabarits" %}
+    {% include components/project-image.html file_name = "layout-rules" %}
   </div>
 </div>
 
@@ -36,18 +37,19 @@ tags:
         <p>Using the layout rules I set in place, I then created scaled up wireframes, to test the user flows but also give the client a more visual representation of their app.</p>
       "
     %}
-    {% include components/project-image.html file_name = "home" %}
-    {% include components/project-image.html file_name = "interface-1" %}
-    {% include components/project-image.html file_name = "interface-2" %}
-    {% include components/project-image.html file_name = "interface-3" %}
+    {% include components/project-image.html file_name = "prototyping-auth" %}
+    {% include components/project-image.html file_name = "prototyping-dashboard" %}
+    {% include components/project-image.html file_name = "prototyping-purchase" %}
+    {% include components/project-image.html file_name = "prototyping-transfer" %}
+    {% include components/project-image.html file_name = "prototyping-settings" %}
   </div>
 </div>
 
 <div class="section">
   <div class="section__container">
-    {% include components/project-image.html
-      file_name = "situation"
-      legend = "Mockup"
+    {% include components/project-content.html
+      title = "Design system"
     %}
+    {% include components/project-cover.html %}
   </div>
 </div>

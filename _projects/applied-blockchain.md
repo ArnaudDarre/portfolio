@@ -2,7 +2,7 @@
 layout: project
 color: "#007bff"
 featured: true
-order: 3
+order: 4
 
 title: Blockchain consultancy website
 subtitle: Website redesign to improve brand recognition and SEO scores

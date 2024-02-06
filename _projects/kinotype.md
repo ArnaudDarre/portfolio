@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 6
+order: 9
 
 title: Movies data visualisation
 subtitle: Analysing creativity in movie poster design through data
