@@ -29,7 +29,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
 	<meta name="color-scheme" content="light dark">
 	<!-- image for social sharing -->
-	<meta property="og:image" content="http://arnaud-darre.com/assets/images/og-image.jpg">
+	{% capture project_title %}{{ page.path | remove: "/" | remove: "_projects" | remove: ".md" }}{% endcapture %}
+	<meta property="og:image" content="{% if page.layout == 'project' %}https://arnaud-darre.com/assets/projects/{{ project_title }}/{{ project_title }}-cover-sm.jpg{% else %}https://arnaud-darre.com/assets/images/og-image.jpg{% endif %}">
 
 	<!-- FAVICONS -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
