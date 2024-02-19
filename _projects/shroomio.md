@@ -2,7 +2,7 @@
 layout: project
 color: "#00FFC4"
 featured: true
-order: 2
+order: 4
 
 title: React component library
 subtitle: Bespoke components for React apps
