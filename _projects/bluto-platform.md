@@ -2,7 +2,7 @@
 layout: project
 color: "#C6882C"
 featured: true
-order: 1
+order: 2
 
 title: E-commerce online platform
 subtitle: Bespoke web-app and admin system for an online bakery

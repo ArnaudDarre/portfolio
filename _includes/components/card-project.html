@@ -1,6 +1,7 @@
 {% assign title_component = include.title_component %}
 
 {% assign project_title = project.path | remove: "/" | remove: "_projects" | remove: ".md" %}
+{% capture title_component %}{% if title_component %}{{title_component}}{% else %}p{% endif %}{% endcapture %}
 
 <div class="card card--md card--projects">
   <div class="card__media">
@@ -8,13 +9,7 @@
   </div>
   <div class="card__header">
     <p class="card__label text--primary">{{ project.category }}</p>
-    {% if title_component == 'h3' %}
-    <h3 class="card__title">{{ project.title }}</h3>
-    {% else if title_component == 'p' %}
-    <p class="card__title">{{ project.title }}</p>
-    {% else %}
-    <h2 class="card__title">{{ project.title }}</h2>
-    {% endif %}
+    <{{title_component}} class="card__title">{{ project.title }}</{{title_component}}>
     <p class="card__subtitle">{{ project.subtitle }}</p>
   </div>
   <div class="card__actions">

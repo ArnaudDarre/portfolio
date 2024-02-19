@@ -28,7 +28,7 @@ title: Projects
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
           <div class="grid__item grid__item--lg4 grid__item--md6 {{ project.category | slugify }}">
-            {% include components/card-project.html %}
+            {% include components/card-project.html title_component='h2' %}
           </div>
         {% endfor %}
       </div>
