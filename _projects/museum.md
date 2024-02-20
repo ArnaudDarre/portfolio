@@ -1,6 +1,7 @@
 ---
 layout: project
 color: "#be181f"
+visible: true
 order: 10
 
 title: TV broadcast identity

@@ -1,6 +1,7 @@
 ---
 layout: project
 color: "#d6a881"
+visible: false
 order: 11
 
 title: "[un]earth"

@@ -1,5 +1,6 @@
 ---
 layout: project
+visible: true
 order: 9
 
 title: Movies data visualisation

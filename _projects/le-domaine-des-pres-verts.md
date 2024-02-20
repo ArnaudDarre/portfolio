@@ -1,6 +1,7 @@
 ---
 layout: project
 color: "#dc9b64"
+visible: true
 order: 7
 
 title: Luxury guest house website

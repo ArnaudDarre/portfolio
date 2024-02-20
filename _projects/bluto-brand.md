@@ -1,7 +1,8 @@
 ---
 layout: project
 color: "#C6882C"
-order: 5
+visible: true
+order: 6
 
 title: E-commerce brand creation
 subtitle: Creating the first online artisan bakery in London
