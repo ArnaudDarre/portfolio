@@ -1,6 +1,7 @@
 ---
 layout: project
 color: "#003FFF"
+visible: true
 order: 6
 
 title: CBRE

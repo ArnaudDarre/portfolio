@@ -1,6 +1,7 @@
 ---
 layout: project
 color: "#00aec7"
+visible: true
 order: 8
 
 title: Creative agency brand identity

@@ -17,8 +17,10 @@ title: Home
             </span>
             {% assign total = 0 %}
             {% for project in site.projects %}
-            {% if project.featured != null %}
+            {% if project.featured == true %}
+            {% if project.visible == true %}
             {% assign total = total | plus: 1 %}
+            {% endif %}
             {% endif %}
             {% endfor %}
             <span class="carousel__indexTotal caption">0{{ total }}</span>
@@ -30,6 +32,7 @@ title: Home
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
         {% if project.featured == true %}
+        {% if project.visible == true %}
         <div class="carousel__item {% if forloop.first %}carousel__item--current{% endif %} carousel__item--{{ project.title | slugify }}">
           <div class="carousel__image">
             {% assign project_title = project.path | remove: "/" | remove: "_projects" | remove: ".md" %}
@@ -47,6 +50,7 @@ title: Home
             </div>
           </div>
         </div>
+        {% endif %}
         {% endif %}
         {% endfor %}
       </div>
@@ -83,9 +87,11 @@ title: Home
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
         {% if project.featured == true %}
+        {% if project.visible == true %}
         <div class="grid__item grid__item--md6">
           {% include components/card-project.html title_component='h3' %}
         </div>
+        {% endif %}
         {% endif %}
         {% endfor %}
       </div>

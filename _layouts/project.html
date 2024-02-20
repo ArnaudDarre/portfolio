@@ -110,7 +110,9 @@ layout: compress
         {% assign maxRelated = 3 %} 
         {% assign minCommonTags =  1 %}
         {% assign maxRelatedCounter = 0 %}
+
         {% for project in site.projects %}
+        {% if project.visible == true %}
 
         {% assign sameTagCount = 0 %}
         {% assign commonTags = "" %}
@@ -136,7 +138,8 @@ layout: compress
           {% break %}
         {% endif %}
         {% endif %}
-
+        
+        {% endif %}
         {% endfor %}
       </div>
     </div>
