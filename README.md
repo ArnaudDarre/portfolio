@@ -11,7 +11,7 @@ Online portfolio presenting my work, skills & training.
 - Run the website in development mode
 
 ```shell
-jekyll serve
+bundle exec jekyll serve
 ```
 
 > Local URL: [localhost:4000](http://localhost:4000)
@@ -23,7 +23,7 @@ We use git flow for versioning and version tagging. On branch develop:
 - Pull the latest changes
 
 ```shell
-git pull | git pull origin main
+git pull | git pull origin production
 ```
 
 - Initiate your feature
@@ -63,7 +63,7 @@ Deployment is automated with Netlify. The production and staging environments ar
 | Environment | Branch | URL |
 | --- | --- | --- |
 | Staging | develop | |
-| Production | main | [arnaud-darre.com](https://arnaud-darre.com/) |
+| Production | production | [arnaud-darre.com](https://arnaud-darre.com/) |
 
 ## Dependencies & Methodologies
 
