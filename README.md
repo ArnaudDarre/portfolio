@@ -23,7 +23,7 @@ We use git flow for versioning and version tagging. On branch develop:
 - Pull the latest changes
 
 ```shell
-git pull | git pull origin production
+git pull | git pull origin main
 ```
 
 - Initiate your feature
