@@ -11,13 +11,13 @@
       <picture>
         <source
           srcset="{% link assets/projects/{{ project_title }}/{{ project_title }}{{ file_name }}.webp %}"
-          type="image/webp">
+          type="image/webp" />
         <source
           srcset="{% link assets/projects/{{ project_title }}/{{ project_title }}{{ file_name }}.jpg %}"
-          type="image/jpeg">
+          type="image/jpeg" />
         <img
           src="{% link assets/projects/{{ project_title }}/{{ project_title }}{{ file_name }}.jpg %}"
-          alt="{{ page.title }} {{ file_name }} thumbnail">
+          alt="{{ page.title }} {{ file_name }} thumbnail" />
       </picture>
     </a>
   </div>
