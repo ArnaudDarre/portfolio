@@ -20,7 +20,7 @@ title: Projects
         <button
           class="tab tab--active"
           data-filter="*" data-text="All"
-          role="tab" aria-controls="All" aria-selected="aria-selected"
+          role="tab" aria-selected="aria-selected"
         >
           All
         </button>
@@ -28,7 +28,7 @@ title: Projects
         <button
           class="tab"
           data-filter=".{{ category.title | slugify }}" data-text="{{ category.title }}"
-          role="tab" aria-controls="{{ category.title | slugify }}" aria-selected="false"
+          role="tab" aria-selected="false"
         >
           {{ category.title }}
         </button>
@@ -40,7 +40,7 @@ title: Projects
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
         {% if project.visible == true %}
-        <div class="grid__item grid__item--lg4 grid__item--md6 {% for item in project.category %} {{ item | slugify }}{% endfor %}" role="tabpanel" aria-labelledby="{{ category.title | slugify }}">
+        <div class="grid__item grid__item--lg4 grid__item--md6 {% for item in project.category %} {{ item | slugify }}{% endfor %}">
           {% include components/card-project.html title_component='h2' %}
         </div>
         {% endif %}

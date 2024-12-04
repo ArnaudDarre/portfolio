@@ -8,20 +8,20 @@
 {% capture file_extension %}{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}{% endcapture %}
 
 <div class="section__content {% if size != 'lg' %} grid grid--jcCenter{% endif %} project__image">
-  <div class="{% if size == 'lg' %}project__fullWidth{% else %}grid__item{% if size == 'sm' %} grid__item--lg6 grid__item--md8 grid__item--sm10{% elsif size == 'md' %} grid__item--lg10{% endif %}{% endif %}">
+  <figure class="{% if size == 'lg' %}project__fullWidth{% else %}grid__item{% if size == 'sm' %} grid__item--lg6 grid__item--md8 grid__item--sm10{% elsif size == 'md' %} grid__item--lg10{% endif %}{% endif %}">
     <picture>
       <source
         srcset="{% link assets/projects/{{ project_title }}/{{ project_title }}{{ file_name }}.webp %}"
-        type="image/webp">
-        <source
+        type="image/webp" />
+      <source
         srcset="{% link assets/projects/{{ project_title }}/{{ project_title }}{{ file_name }}.{{ file_extension }} %}"
-        type="image/{% if file_extension %}{{ file_extension }}{% else %}jpeg{% endif %}">
-        <img
+        type="image/{% if file_extension %}{{ file_extension }}{% else %}jpeg{% endif %}" />
+      <img
         src="{% link assets/projects/{{ project_title }}/{{ project_title }}{{ file_name }}.{{ file_extension }} %}"
-        alt="{{ page.title }} {{ file_name }}">
+        alt="{{ page.title }} {{ file_name }}" />
     </picture>
     {% if legend != null %}
     <figcaption class="project__legend caption">{{ legend }}</figcaption>
     {% endif %}
-  </div>
+  </figure>
 </div>

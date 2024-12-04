@@ -48,7 +48,7 @@ tags:
     {% include components/project-content.html
       title = "Component examples"
     %}
-    <div class="section__content">
+    <figure class="section__content">
       <iframe
         src="https://shroomio.arnaud-darre.com/iframe.html?args=&id=components-interactions-button--guide&viewMode=story"
         height="400"
@@ -57,8 +57,8 @@ tags:
         Button component
         {% include components/link.html label='View in Storybook' type='external' url='https://shroomio.arnaud-darre.com/?path=/docs/components-interactions-button--docs' %}
       </figcaption>
-    </div>
-    <div class="section__content">
+    </figure>
+    <figure class="section__content">
       <iframe
         src="https://shroomio.arnaud-darre.com/iframe.html?args=&id=components-mixins-text--guide&viewMode=story"
         height="400"
@@ -67,8 +67,8 @@ tags:
         Text component
         {% include components/link.html label='View in Storybook' type='external' url='https://shroomio.arnaud-darre.com/?path=/docs/components-mixins-text--docs' %}
       </figcaption>
-    </div>
-    <div class="section__content">
+    </figure>
+    <figure class="section__content">
       <iframe
         src="https://shroomio.arnaud-darre.com/iframe.html?args=&id=components-data-table--guide&viewMode=story"
         height="400"
@@ -77,8 +77,8 @@ tags:
         Table component
         {% include components/link.html label='View in Storybook' type='external' url='https://shroomio.arnaud-darre.com/?path=/docs/components-data-table--docs' %}
       </figcaption>
-    </div>
-    <div class="section__content">
+    </figure>
+    <figure class="section__content">
       <iframe
         src="https://shroomio.arnaud-darre.com/iframe.html?args=&id=components-interactions-alert--guide&viewMode=story"
         height="400"
@@ -87,8 +87,8 @@ tags:
         Alert component
         {% include components/link.html label='View in Storybook' type='external' url='https://shroomio.arnaud-darre.com/?path=/docs/components-interactions-alert--docs' %}
       </figcaption>
-    </div>
-    <div class="section__content">
+    </figure>
+    <figure class="section__content">
       <iframe
         src="https://shroomio.arnaud-darre.com/iframe.html?args=&id=components-forms-formfield--guide&viewMode=story"
         height="400"
@@ -97,7 +97,7 @@ tags:
         field component
         {% include components/link.html label='View in Storybook' type='external' url='https://shroomio.arnaud-darre.com/?path=/docs/components-forms-formfield--docs' %}
       </figcaption>
-    </div>
+    </figure>
   </div>
 </div>
 

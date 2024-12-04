@@ -8,23 +8,23 @@
 {% capture file_extension %}{% if file_extension %}{{ file_extension }}{% else %}jpg{% endif %}{% endcapture %}
 
 <div class="section__content">
-  <div class="grid grid--spacing2">
+  <figure class="grid grid--spacing2">
     {% for image in site.static_files %}
     {% if image.path contains project_title and image.path contains '-grid-' and image.path contains '.webp' and image.path contains file_name %}
     {% assign image_path = image.path | remove: ".jpg" | remove: ".png" | remove: ".webp" %}
     <picture class="grid__item grid__item--md{% if size != null %}{{ size }}{% else %}6{% endif %}">
       <source 
         srcset="{% link {{ image_path }}.webp %}"
-        type="image/webp">
+        type="image/webp" />
       <source
         srcset="{% link {{ image_path }}.{{ file_extension }} %}"
-        type="image/{% if file_extension %}{{ file_extension }}{% else %}jpeg{% endif %}">
+        type="image/{% if file_extension %}{{ file_extension }}{% else %}jpeg{% endif %}" />
       <img
         src="{% link {{ image_path }}.{{ file_extension }} %}"
-        alt="{{ page.title }} {{ file_name }}">
+        alt="{{ page.title }} {{ file_name }}" />
     </picture>
     {% endif %}
     {% endfor %}
     <figcaption class="grid__item caption">{{ legend }}</figcaption>
-  </div>
+  </figure>
 </div>
