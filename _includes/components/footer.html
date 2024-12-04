@@ -4,10 +4,10 @@
       <p class="section__title caption text--regular">Copyright © {{ site.time | date: '%Y' }} {{ site.title }}</p>
       <div class="section__subtitle">
         <div class="grid grid--spacing3">
-          <div class="grid__item grid__item--lg4 grid__item--md3 grid__item--sm4">
+          <nav class="grid__item grid__item--lg4 grid__item--md3 grid__item--sm4" aria-labelledby="label-sitemap">
             <div class="card card--xs">
               <div class="card__header">
-                <p class="card__title">Sitemap</p>
+                <p id="label-sitemap" class="card__title">Sitemap</p>
               </div>
               <div class="card__content list">
                 {% include components/list-item.html label='Home' url='index.html' %}
@@ -16,29 +16,29 @@
                 {% include components/list-item.html label='Contact' url='contact.html' %}
               </div>
             </div>
-          </div>
-          <div class="grid__item grid__item--lg4 grid__item--md3 grid__item--sm4">
+          </nav>
+          <nav class="grid__item grid__item--lg4 grid__item--md3 grid__item--sm4" aria-labelledby="label-social">
             <div class="card card--xs">
               <div class="card__header">
-                <p class="card__title">Social</p>
+                <p id="label-social" class="card__title">Social links</p>
               </div>
               <div class="card__content list">
                 {% include components/list-item.html label='LinkedIn' type='external' url='https://www.linkedin.com/in/arnaud-darre/' %}
                 {% include components/list-item.html label='GitHub' type='external' url='https://github.com/ArnaudDarre' %}
               </div>
             </div>
-          </div>
-          <div class="grid__item grid__item--lg4 grid__item--md3 grid__item--sm4">
+          </nav>
+          <nav class="grid__item grid__item--lg4 grid__item--md3 grid__item--sm4" aria-labelledby="label-downloads">
             <div class="card card--xs">
               <div class="card__header">
-                <p class="card__title">Downloads</p>
+                <p id="label-downloads" class="card__title">Downloads</p>
               </div>
               <div class="card__content list">
                 {% include components/list-item.html label='CV' type='external' url='https://drive.google.com/file/d/11nCIc-dVkw3NLcWMMMUT0_8ImooZiaFv/view' %}
                 {% include components/list-item.html label='Portfolio' type='external' url='https://drive.google.com/open?id=11mWS0jGFJephZ7uy2tuogG6B262yV1w4&usp=drive_fs' %}
               </div>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </div>

@@ -20,11 +20,17 @@
         {% svg assets/icons/feather/moon.svg %}
       </div>
     </div>
-    <nav class="navbar__nav nav">
+    <nav class="navbar__nav nav" aria-label="Main navigation">
       <ul class="nav__container">
         {% for item in site.data.nav %}
         <li class="nav__item">
-          <a class="nav__trigger{% if page.title == item.title or page.layout == item.collection %} nav__trigger--active{% endif %}" href="{% link {{ item.url }} %}" data-text="{{ item.title }}">{{ item.title }}</a>
+          <a
+            class="nav__trigger{% if page.title == item.title or page.layout == item.collection %} nav__trigger--active{% endif %}"
+            href="{% link {{ item.url }} %}"
+            {% if page.title == item.title or page.layout == item.collection %}aria-current="page"{% endif %}
+          >
+              {{ item.title }}
+          </a>
         </li>
         {% endfor %}
       </ul>
