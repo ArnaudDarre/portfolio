@@ -25,9 +25,13 @@ $toggle-size: $size - $margin-md;
 
   &__input {
     position: absolute;
-    height: 0;
-    width: 0;
-    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $size;
+
+    &:focus {
+      outline: 2px solid $primary;
+    }
 
     &:checked + .switch__switch {
 
@@ -48,7 +52,7 @@ $toggle-size: $size - $margin-md;
     border-radius: $size;
     position: relative;
     border: $border;
-
+  
     .dark-mode & {
       border: $border-dark;
     }

@@ -13,6 +13,7 @@
     <p class="card__subtitle">{{ project.subtitle }}</p>
   </div>
   <div class="card__actions">
-    {% include components/list-item.html label='View project' url=project.path %}
+    {% capture aria_label %}{{ project.title | prepend: "View project: " }}{% endcapture %}
+    {% include components/link.html label='View project' aria_label=aria_label url=project.path %}
   </div>
 </div>

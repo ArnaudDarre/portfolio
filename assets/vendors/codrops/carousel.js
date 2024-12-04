@@ -189,6 +189,14 @@
 					this.currentEntry.DOM.el.classList.remove('carousel__item--current');
 					newEntry.DOM.el.classList.add('carousel__item--current');
 					this.currentEntry = newEntry;
+					this.DOM.entries.forEach(entry => {
+						const button = entry.DOM.button;
+						if (entry === this.currentEntry) {
+							button.removeAttribute('inert');
+						} else {
+							button.setAttribute('inert', '');
+						}
+					});
 				});
 			};
 

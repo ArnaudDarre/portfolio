@@ -44,8 +44,9 @@ title: Home
               {% if project.subtitle %}
               <p class="carousel__subtitle card__subtitle">{{ project.subtitle }}</p>
               {% endif %}
-              <div class="carousel__button card__subtitle">
-                {% include components/list-item.html label='View project' url=project.path %}
+              <div class="carousel__button card__subtitle" {% if forloop.first %}{% else %}inert{% endif %}>
+                {% capture aria_label %}{{ project.title | prepend: "View project: " }}{% endcapture %}
+                {% include components/link.html label='View project' aria_label=aria_label url=project.path %}
               </div>
             </div>
           </div>

@@ -10,8 +10,12 @@ $(document).ready(function() {
     $grid.isotope({ filter: filterValue });
   });
   $('.js-filter-buttons .tab').on('click', function () {
-    $('.js-filter-buttons .tab').removeClass('tab--active');
-    $(this).addClass('tab--active');
+    $('.js-filter-buttons .tab')
+      .removeClass('tab--active')
+      .attr('aria-selected', 'false');
+    $(this)
+      .addClass('tab--active')
+      .attr('aria-selected', 'true');
   });
 
 });
