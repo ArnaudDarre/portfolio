@@ -9,7 +9,9 @@ title: Blockchain consultancy website
 subtitle: Website redesign to improve brand recognition, SEO scores and accessibility
 body: |-
   This project was part of the complete rebranding of Applied Blockchain, a blockchain consultancy and development startup. I was brought onboard to redesign and code the website completely in accordance with the company's new brand identity, all the while making sure it aligned with the web best practices of accessibility and improving SEO ranking.
-category: Digital
+category:
+  - Design
+  - Development
 
 client: Applied Blockchain
 website:

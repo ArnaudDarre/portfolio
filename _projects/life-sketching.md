@@ -6,7 +6,8 @@ order: 12
 
 title: Life Sketching
 subtitle: Collection of life sketches
-category: Illustration
+category:
+  - Illustration
 
 client: Personal project
 tags:

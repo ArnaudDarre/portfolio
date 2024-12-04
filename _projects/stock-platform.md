@@ -8,7 +8,8 @@ title: Stock and ticketing platform
 subtitle: Back-office desktop and mobile app for a warehouse management system
 body: |-
   This project was less focused on design, and it allowed me to focus on UX and feature design, creating wireframes, user stories and feature flows with the client and then prototyping them for developers.
-category: Digital
+category:
+  - Design
 
 client: Applied Blockchain
 tags:

@@ -40,12 +40,18 @@ title: Home
           </div>
           <div class="card card--lg card--carousel">
             <div class="carousel__content card__header">
-              <p class="carousel__title card__title">{{ project.title }}</p>
+              <div class="carousel__title">
+                <div class="card__label tags mt-05 mb-05">
+                  {% for item in project.category %}<p class="tag">{{ item }}</p>{% endfor %}
+                </div>
+                <p class="card__title">{{ project.title }}</p>
+              </div>
               {% if project.subtitle %}
               <p class="carousel__subtitle card__subtitle">{{ project.subtitle }}</p>
               {% endif %}
-              <div class="carousel__button card__subtitle">
-                {% include components/list-item.html label='View project' url=project.path %}
+              <div class="carousel__button card__subtitle" {% if forloop.first %}{% else %}inert{% endif %}>
+                {% capture aria_label %}{{ project.title | prepend: "View project: " }}{% endcapture %}
+                {% include components/link.html label='View project' aria_label=aria_label url=project.path %}
               </div>
             </div>
           </div>
@@ -65,7 +71,7 @@ title: Home
         <h2 class="section__lead">About</h2>
       </div>
       <div class="section__subtitle editor">
-        <p>With over eight years of experience design, I am passionate about creating and enhancing digital products and platforms that are user-friendly, engaging, and functional. I have a strong background in branding and UI/UX design, as well as front-end development skills that allow me to bring my designs to life with code.</p>
+        <p>I am Senior UI/UX Designer with a strong knowledge of Front-end Developement and 9 years of experience leading digital projects from design to implementation. I am passionate about creating and enhancing digital products that are user-friendly, accessible, engaging, and functional.</p>
         {% include components/list-item.html label='Get to know me' url='about.html' %}
       </div>
     </div>

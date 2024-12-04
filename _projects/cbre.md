@@ -8,7 +8,8 @@ title: CBRE
 subtitle: Creating a mobile app prototype
 body: |-
   This project was to pitch to a potential client to create the mobile app for a tower in the Paris financial district. The whole platform and design system was creted from scratch.
-category: Digital
+category:
+  - Design
 
 tags:
   - Brand identity

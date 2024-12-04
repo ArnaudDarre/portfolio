@@ -171,17 +171,17 @@ iframe {
 
 // margins & paddings
 
-.m-05 { margin: $spacing-sm !important; }
-.mt-05 { margin-top: $spacing-sm !important; }
-.mr-05 { margin-right: $spacing-sm !important; }
-.mb-05 { margin-bottom: $spacing-sm !important; }
-.ml-05 { margin-left: $spacing-sm !important; }
+.m-05 { margin: $spacing-xs !important; }
+.mt-05 { margin-top: $spacing-xs !important; }
+.mr-05 { margin-right: $spacing-xs !important; }
+.mb-05 { margin-bottom: $spacing-xs !important; }
+.ml-05 { margin-left: $spacing-xs !important; }
 
-.p-05 { padding: $spacing-sm !important; }
-.pt-05 { padding-top: $spacing-sm !important; }
-.pr-05 { padding-right: $spacing-sm !important; }
-.pb-05 { padding-bottom: $spacing-sm !important; }
-.pl-05 { padding-left: $spacing-sm !important; }
+.p-05 { padding: $spacing-xs !important; }
+.pt-05 { padding-top: $spacing-xs !important; }
+.pr-05 { padding-right: $spacing-xs !important; }
+.pb-05 { padding-bottom: $spacing-xs !important; }
+.pl-05 { padding-left: $spacing-xs !important; }
 
 @for $i from 0 through 20 {
 

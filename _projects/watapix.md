@@ -8,7 +8,8 @@ title: Creative agency brand identity
 subtitle: Rebranding to boost brand awareness and align with the customer base
 body: |-
   Design of the logo and the brand guidelines of Watapix, a multi-channel communication agency. Project carried out while working at Watapix.
-category: Branding
+category:
+  - Design
 
 client: Watapix
 website:

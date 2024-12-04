@@ -1,0 +1,17 @@
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.tags {
+  display: flex;
+  gap: .25rem;
+}
+
+.tag {
+  @extend %overline;
+  border-radius: $border-radius-sm;
+  padding-right: .25rem;
+  padding-left: .25rem;
+  color: $primary;
+  border: 1px solid;
+}
