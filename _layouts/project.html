@@ -8,21 +8,23 @@ layout: compress
 {% assign posts = site.projects | sort: 'order' %}
 {% assign i = 0 %}
 {% for post in posts %}
-  {% assign nextIndex = i | plus: 1 %}
-  {% assign prevIndex = i | minus: 1 %}
-  {% if post.title == page.title %}
-    {% if forloop.first %}
-      {% assign prev = posts.last %}
-    {% else %}
-      {% assign prev = posts[prevIndex] %}
+  {% if post.visible == true %}
+    {% assign nextIndex = i | plus: 1 %}
+    {% assign prevIndex = i | minus: 1 %}
+    {% if post.title == page.title %}
+      {% if forloop.first %}
+        {% assign prev = posts.last %}
+      {% else %}
+        {% assign prev = posts[prevIndex] %}
+      {% endif %}
+      {% if forloop.last %}
+        {% assign next = posts.first %}
+      {% else %}
+        {% assign next = posts[nextIndex] %}
+      {% endif %}
     {% endif %}
-    {% if forloop.last %}
-      {% assign next = posts.first %}
-    {% else %}
-      {% assign next = posts[nextIndex] %}
-    {% endif %}
+    {% assign i = i | plus: 1 %}
   {% endif %}
-  {% assign i = i | plus: 1 %}
 {% endfor %}
 
 <div id="project_landing" class="section">
@@ -39,29 +41,12 @@ layout: compress
     </div>
     <div class="section__content">
       <div class="card card--xl card--project">
-        {% if page.tags or page.client %}
-        <div class="card__content">
-          <div class="grid grid--aiEnd">
-            {% if page.tags %}
-            <div class="list w-rem-20" style="margin-bottom: 1px;">
-              {% for tag in page.tags %}
-              <p class="list__item caption text--primary">{{ tag }} <span class="ml-1 text--alt">/</span></p>
-              {% endfor %}
-            </div>
-            {% endif %}
-            {% if page.client %}
-            <div>
-              <p class="text--bold">Client</p>
-              <p>{{ page.client }}</p>
-            </div>
-            {% endif %}
-          </div>
-        </div>
-        {% endif %}
         <div class="card__header">
-          <!-- {% if page.category %}
-          <p class="card__label">{{ page.category }}</p>
-          {% endif %} -->
+          <div class="tags tags--portrait mb-2">
+            {% for item in page.category %}
+            <p class="tag">{{ item }}</p>
+            {% endfor %}
+          </div>
           <h1 class="card__title">{{ page.title }}</h1>
           {% if page.subtitle %}
           <p class="card__subtitle h4">{{ page.subtitle }}</p>

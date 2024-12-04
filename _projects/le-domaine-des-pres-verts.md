@@ -8,7 +8,8 @@ title: Luxury guest house website
 subtitle: Website redesign to improve booking experience
 body: |-
   Layout of the new website for Le Domaine des Prés Verts, a luxury guest house in Burgundy, France. Project carried out while working at Watapix.
-category: Digital
+category:
+  - Design
 
 client: Le Domaine des Prés Verts
 tags:

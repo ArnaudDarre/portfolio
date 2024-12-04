@@ -40,7 +40,12 @@ title: Home
           </div>
           <div class="card card--lg card--carousel">
             <div class="carousel__content card__header">
-              <p class="carousel__title card__title">{{ project.title }}</p>
+              <div class="carousel__title">
+                <div class="card__label tags mt-05 mb-05">
+                  {% for item in project.category %}<p class="tag">{{ item }}</p>{% endfor %}
+                </div>
+                <p class="card__title">{{ project.title }}</p>
+              </div>
               {% if project.subtitle %}
               <p class="carousel__subtitle card__subtitle">{{ project.subtitle }}</p>
               {% endif %}

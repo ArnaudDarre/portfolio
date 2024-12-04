@@ -8,7 +8,9 @@
     <div class="card__mediaInner background-cover" style="background-image: url('{% link assets/projects/{{ project_title }}/{{ project_title }}-cover-sm.webp %}'), url('{% link assets/projects/{{ project_title }}/{{ project_title }}-cover-sm.jpg %}');"></div>
   </div>
   <div class="card__header">
-    <p class="card__label text--primary">{{ project.category }}</p>
+    <div class="card__label tags mb-1">
+      {% for item in project.category %}<p class="tag">{{ item }}</p>{% endfor %}
+    </div>
     <{{title_component}} class="card__title">{{ project.title }}</{{title_component}}>
     <p class="card__subtitle">{{ project.subtitle }}</p>
   </div>

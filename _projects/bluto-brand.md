@@ -8,7 +8,8 @@ title: E-commerce brand creation
 subtitle: Creating the first online artisan bakery in London
 body: |-
   This is a challenge I had been dreaming ever since finishing design school: designing my own brand from scratch. I started this company with two friends, and learned so much along the way.
-category: Branding
+category:
+  - Design
 
 client: Bluto
 website:
