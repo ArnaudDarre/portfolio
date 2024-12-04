@@ -27,6 +27,7 @@
           <a
             class="nav__trigger{% if page.title == item.title or page.layout == item.collection %} nav__trigger--active{% endif %}"
             href="{% link {{ item.url }} %}"
+            data-text="{{ item.title }}"
             {% if page.title == item.title or page.layout == item.collection %}aria-current="page"{% endif %}
           >
               {{ item.title }}

@@ -12,6 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   border-bottom: $border;
+  margin-top: -$spacing-sm;
 
   .dark-mode & {
     border-bottom: $border-dark;
@@ -43,7 +44,7 @@
   justify-content: center;
   cursor: pointer;
   position: relative;
-  padding: 0 $spacing-md $spacing-sm $spacing-md;
+  padding: $spacing-sm $spacing-md;
 
   @include hover {
     animation: get-bold $transition-md forwards;
