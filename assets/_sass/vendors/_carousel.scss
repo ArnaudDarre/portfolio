@@ -126,6 +126,7 @@ $border-radius: $border-radius-sm;
     pointer-events: none;
 
     .carousel__title,
+    .carousel__category,
     .carousel__subtitle,
     .carousel__button,
     .carousel__imageInner {
@@ -137,6 +138,15 @@ $border-radius: $border-radius-sm;
       @include responsive(down, tablet) {
         opacity: 0;
       }
+    }
+  }
+
+  .tag {
+    border: 0;
+    background-color: $background-default;
+
+    .dark-mode & {
+      background-color: $background-default-dark;
     }
   }
 }
