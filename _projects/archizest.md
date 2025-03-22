@@ -3,7 +3,7 @@ layout: project
 color: "#F3460B"
 visible: true
 featured: true
-order: 1
+order: 2
 
 title: Architect firm website
 subtitle: Improve admin user experience by implementing a CMS

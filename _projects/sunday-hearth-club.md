@@ -2,8 +2,8 @@
 layout: project
 color: "#F3460B"
 visible: true
-featured: true
-order: 1
+featured: false
+order: 3
 
 title: Brand identity of an event
 subtitle: Create a original and recognisable identity for an series of events in North London

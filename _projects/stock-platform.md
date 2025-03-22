@@ -2,7 +2,8 @@
 layout: project
 color: "#FF675B"
 visible: true
-order: 5
+featured: false
+order: 100
 
 title: Stock and ticketing platform
 subtitle: Back-office desktop and mobile app for a warehouse management system
@@ -22,7 +23,7 @@ tags:
 
 <div class="section section--fullWidth">
   <div class="section__container">
-    {% include components/project-cover.html %}
+    {% include components/project-cover.html file_name="mockup-cover" %}
   </div>
 </div>
 

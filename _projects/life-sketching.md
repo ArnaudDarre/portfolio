@@ -1,8 +1,8 @@
 ---
 layout: project
 color: "#000000"
-visible: false
-order: 12
+featured: false
+order: 100
 
 title: Life Sketching
 subtitle: Collection of life sketches
@@ -17,9 +17,7 @@ tags:
 
 <div class="section section--fullWidth">
   <div class="section__container">
-    {% include components/project-cover.html 
-      size = "large"
-    %}
+    {% include components/project-cover.html file_name="mockup-cover" %}
   </div>
 </div>
 

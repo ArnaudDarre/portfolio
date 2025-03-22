@@ -2,7 +2,8 @@
 layout: project
 color: "#d6a881"
 visible: false
-order: 11
+featured: false
+order: 100
 
 title: "[un]earth"
 subtitle: What if aliens discovered a desolated Earth in a millenia
@@ -41,7 +42,7 @@ tags:
 
 <div class="section section--fullWidth">
   <div class="section__container">
-    {% include components/project-cover.html %}
+    {% include components/project-cover.html file_name="mockup-cover" %}
   </div>
 </div>
 

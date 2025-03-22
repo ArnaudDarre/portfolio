@@ -3,7 +3,7 @@ layout: project
 color: "#00FFC4"
 visible: true
 featured: true
-order: 4
+order: 7
 
 title: React component library
 subtitle: Bespoke components for React apps
@@ -24,7 +24,7 @@ tags:
 
 <div class="section section--fullWidth">
   <div class="section__container">
-    {% include components/project-cover.html %}
+    {% include components/project-cover.html file_name="mockup-cover" %}
   </div>
 </div>
 

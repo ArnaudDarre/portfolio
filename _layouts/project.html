@@ -53,8 +53,8 @@ layout: compress
           {% endif %}
         </div>
         {% if page.body %}
-        <div class="card__content">
-          <p>{{ page.body }}</p>
+        <div class="card__content editor">
+          {{ page.body | markdownify }}
         </div>
         {% endif %}
         {% if page.website %}

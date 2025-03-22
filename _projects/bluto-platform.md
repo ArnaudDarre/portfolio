@@ -3,7 +3,7 @@ layout: project
 color: "#C6882C"
 visible: true
 featured: true
-order: 2
+order: 4
 
 title: E-commerce online platform
 subtitle: Bespoke web-app and admin system for an online bakery
@@ -27,7 +27,7 @@ tags:
 
 <div class="section section--fullWidth">
   <div class="section__container">
-    {% include components/project-cover.html %}
+    {% include components/project-cover.html file_name="mockup-cover" %}
   </div>
 </div>
 

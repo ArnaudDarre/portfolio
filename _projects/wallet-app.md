@@ -2,8 +2,8 @@
 layout: project
 color: "#003FFF"
 visible: true
-featured: true
-order: 3
+featured: false
+order: 100
 
 title: Wallet app
 subtitle: Creating a prototype to pitch to investors
@@ -52,6 +52,6 @@ tags:
     {% include components/project-content.html
       title = "Design system"
     %}
-    {% include components/project-cover.html %}
+    {% include components/project-cover.html file_name="mockup-cover" %}
   </div>
 </div>

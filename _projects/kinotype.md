@@ -1,7 +1,7 @@
 ---
 layout: project
-visible: false
-order: 9
+featured: false
+order: 100
 
 title: Movies data visualisation
 subtitle: Analysing creativity in movie poster design through data
@@ -21,7 +21,7 @@ video_id: 130741186
 
 <div class="section section--fullWidth">
   <div class="section__container">
-    {% include components/project-cover.html %}
+    {% include components/project-cover.html file_name="mockup-cover" %}
   </div>
 </div>
 

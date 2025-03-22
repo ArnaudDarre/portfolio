@@ -2,6 +2,8 @@
 
   img:not(.project__cover) {
     border-radius: $spacing-sm;
+    max-height: 90vh;
+    width: auto;
   }
 }
 

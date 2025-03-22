@@ -2,8 +2,8 @@
 layout: project
 color: "#007bff"
 visible: true
-featured: true
-order: 3
+featured: false
+order: 6
 
 title: Blockchain consultancy website
 subtitle: Website redesign to improve brand recognition, SEO scores and accessibility
@@ -27,7 +27,7 @@ tags:
 
 <div class="section section--fullWidth">
   <div class="section__container">
-    {% include components/project-cover.html %}
+    {% include components/project-cover.html file_name="mockup-cover" %}
   </div>
 </div>
 

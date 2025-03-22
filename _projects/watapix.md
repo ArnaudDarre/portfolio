@@ -2,7 +2,8 @@
 layout: project
 color: "#00aec7"
 visible: true
-order: 8
+featured: false
+order: 100
 
 title: Creative agency brand identity
 subtitle: Rebranding to boost brand awareness and align with the customer base
@@ -32,7 +33,7 @@ tags:
 
 <div class="section section--fullWidth">
   <div class="section__container">
-    {% include components/project-cover.html %}
+    {% include components/project-cover.html file_name="mockup-cover" %}
   </div>
 </div>
 

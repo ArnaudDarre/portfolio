@@ -2,7 +2,8 @@
 layout: project
 color: "#003FFF"
 visible: true
-order: 7
+featured: false
+order: 100
 
 title: CBRE
 subtitle: Creating a mobile app prototype
