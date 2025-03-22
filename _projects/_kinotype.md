@@ -1,5 +1,6 @@
 ---
 layout: project
+color: "#000000"
 featured: false
 order: 100
 

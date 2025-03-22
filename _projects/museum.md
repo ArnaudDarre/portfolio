@@ -1,7 +1,6 @@
 ---
 layout: project
 color: "#be181f"
-visible: true
 featured: false
 order: 100
 

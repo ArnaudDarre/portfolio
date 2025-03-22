@@ -8,23 +8,21 @@ layout: compress
 {% assign posts = site.projects | sort: 'order' %}
 {% assign i = 0 %}
 {% for post in posts %}
-  {% if post.visible == true %}
-    {% assign nextIndex = i | plus: 1 %}
-    {% assign prevIndex = i | minus: 1 %}
-    {% if post.title == page.title %}
-      {% if forloop.first %}
-        {% assign prev = posts.last %}
-      {% else %}
-        {% assign prev = posts[prevIndex] %}
-      {% endif %}
-      {% if forloop.last %}
-        {% assign next = posts.first %}
-      {% else %}
-        {% assign next = posts[nextIndex] %}
-      {% endif %}
+  {% assign nextIndex = i | plus: 1 %}
+  {% assign prevIndex = i | minus: 1 %}
+  {% if post.title == page.title %}
+    {% if forloop.first %}
+      {% assign prev = posts.last %}
+    {% else %}
+      {% assign prev = posts[prevIndex] %}
     {% endif %}
-    {% assign i = i | plus: 1 %}
+    {% if forloop.last %}
+      {% assign next = posts.first %}
+    {% else %}
+      {% assign next = posts[nextIndex] %}
+    {% endif %}
   {% endif %}
+  {% assign i = i | plus: 1 %}
 {% endfor %}
 
 <div id="project_landing" class="section">
@@ -97,7 +95,6 @@ layout: compress
         {% assign maxRelatedCounter = 0 %}
 
         {% for project in site.projects %}
-        {% if project.visible == true %}
 
         {% assign sameTagCount = 0 %}
         {% assign commonTags = "" %}
@@ -124,7 +121,6 @@ layout: compress
         {% endif %}
         {% endif %}
         
-        {% endif %}
         {% endfor %}
       </div>
     </div>
