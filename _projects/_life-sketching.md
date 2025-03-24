@@ -4,12 +4,12 @@ color: "#000000"
 featured: false
 order: 100
 
+client: Life Sketching
 title: Life Sketching
 subtitle: Collection of life sketches
 category:
   - Illustration
 
-client: Personal project
 tags:
   - Illustration
 

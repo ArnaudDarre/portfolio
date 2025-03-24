@@ -4,6 +4,7 @@ color: "#F3460B"
 featured: false
 order: 3
 
+client: Islington Arts Club
 title: Brand identity of an event
 subtitle: Create a original and recognisable identity for an series of events in North London
 body: |-
@@ -11,7 +12,6 @@ body: |-
 category:
   - Design
 
-client: Islington Arts Club
 tags:
   - Brand identity
   - Poster

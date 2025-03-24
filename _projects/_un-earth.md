@@ -4,6 +4,7 @@ color: "#d6a881"
 featured: false
 order: 100
 
+client: [un]earth
 title: "[un]earth"
 subtitle: What if aliens discovered a desolated Earth in a millenia
 body: |-
@@ -11,7 +12,6 @@ body: |-
 category:
   - Editorial
 
-client: Degree Project
 tags:
   - Art Direction
   - Editorial design

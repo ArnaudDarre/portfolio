@@ -4,6 +4,7 @@ color: "#C6882C"
 featured: true
 order: 4
 
+client: Bluto
 title: E-commerce online platform
 subtitle: Bespoke web-app and admin system for an online bakery
 body: |-
@@ -12,7 +13,6 @@ category:
   - Design
   - Development
 
-client: Bluto
 website:
   url: https://www.bluto.co.uk/
   label: Visit website

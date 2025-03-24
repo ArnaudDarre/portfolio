@@ -4,6 +4,7 @@ color: "#00FFC4"
 featured: true
 order: 7
 
+client: Pallote
 title: React component library
 subtitle: Bespoke components for React apps
 body: |-
@@ -11,7 +12,6 @@ body: |-
 category:
   - Development
 
-client: Personal project
 website:
   url: https://react.pallote.com
   label: Go to Storybook project

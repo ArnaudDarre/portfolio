@@ -4,6 +4,7 @@ color: "#003FFF"
 featured: false
 order: 100
 
+client: Wallet app
 title: Wallet app
 subtitle: Creating a prototype to pitch to investors
 body: |-

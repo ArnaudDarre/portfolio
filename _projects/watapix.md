@@ -4,6 +4,7 @@ color: "#00aec7"
 featured: false
 order: 100
 
+client: Watapix
 title: Creative agency brand identity
 subtitle: Rebranding to boost brand awareness and align with the customer base
 body: |-
@@ -11,7 +12,6 @@ body: |-
 category:
   - Design
 
-client: Watapix
 website:
   url: http://www.watapix.com/
   label: Visit websiste

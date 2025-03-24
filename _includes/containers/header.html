@@ -21,7 +21,7 @@
 		gtag('config', 'G-V0K5S2M45K');
 	</script>
 
-	<title>{{ site.title }} | {% if page.layout == 'index' %}Portfolio{% else %}{{ page.title }}{% endif %}</title>	
+	<title>{% if page.layout == 'index' %}{{ site.title }} | Portfolio{% elsif page.layout == 'project' %}{{ page.client }} | {{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>	
 
 	<!-- META -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">

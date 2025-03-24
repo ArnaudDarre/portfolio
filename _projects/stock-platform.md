@@ -4,6 +4,7 @@ color: "#FF675B"
 featured: false
 order: 100
 
+client: Stock and ticketing platform
 title: Stock and ticketing platform
 subtitle: Back-office desktop and mobile app for a warehouse management system
 body: |-
@@ -11,7 +12,6 @@ body: |-
 category:
   - Design
 
-client: Applied Blockchain
 tags:
   - Data visualisation
   - Design system

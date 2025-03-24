@@ -4,6 +4,7 @@ color: "#dc9b64"
 featured: false
 order: 100
 
+client: Le Domaine des Prés Verts
 title: Luxury guest house website
 subtitle: Website redesign to improve booking experience
 body: |-
@@ -11,7 +12,6 @@ body: |-
 category:
   - Design
 
-client: Le Domaine des Prés Verts
 tags:
   - Brand identity
   - Web design

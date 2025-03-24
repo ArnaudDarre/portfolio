@@ -4,6 +4,7 @@ color: "#F3460B"
 featured: true
 order: 2
 
+client: Archizest
 title: Architect firm website
 subtitle: Improve admin user experience by implementing a CMS
 body: |-
@@ -12,7 +13,6 @@ category:
   - Design
   - Development
 
-client: Archizest
 website:
   url: https://www.archizest.com/
   label: Visit website

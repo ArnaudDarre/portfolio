@@ -4,6 +4,7 @@ color: "#be181f"
 featured: false
 order: 100
 
+client: Museum
 title: TV broadcast identity
 subtitle: Creating branding collaterals to give a professional look to a brand
 body: |-
@@ -11,7 +12,6 @@ body: |-
 category:
   - Design
 
-client: Museum
 tags: 
   - Art Direction
   - Brand identity

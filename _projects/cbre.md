@@ -4,6 +4,7 @@ color: "#003FFF"
 featured: false
 order: 100
 
+client: CBRE
 title: CBRE
 subtitle: Creating a mobile app prototype
 body: |-

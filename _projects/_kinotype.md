@@ -4,6 +4,7 @@ color: "#000000"
 featured: false
 order: 100
 
+client: Kinotype
 title: Movies data visualisation
 subtitle: Analysing creativity in movie poster design through data
 body: |-
@@ -11,7 +12,6 @@ body: |-
 category:
   - Motion
 
-client: Personal project
 tags: 
   - Data visualisation
   - Motion design

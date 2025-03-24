@@ -4,12 +4,12 @@ color: # primary color of the project or client
 featured: true # display on homepage carousel and project grid
 order: 
 
+client: 
 title: 
 subtitle: 
 body: |-
 category: [Digital, Drawing, Editorial, Identity, Posters, Typography, Video] # choose one
 
-client: 
 website:
   url: 
   label: 

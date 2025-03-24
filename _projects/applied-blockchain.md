@@ -4,6 +4,7 @@ color: "#007bff"
 featured: false
 order: 6
 
+client: Applied Blockchain
 title: Blockchain consultancy website
 subtitle: Website redesign to improve brand recognition, SEO scores and accessibility
 body: |-
@@ -12,7 +13,6 @@ category:
   - Design
   - Development
 
-client: Applied Blockchain
 website:
   url: https://appliedblockchain.com/
   label: Visit website

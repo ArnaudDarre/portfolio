@@ -4,6 +4,7 @@ color: "#OB2265"
 featured: true
 order: 1
 
+client: Westminster City Council
 title: Westminster City Coucil's design system
 subtitle: Learnings and challenges of building a design system for local governement
 body: |-
@@ -13,7 +14,6 @@ body: |-
 category:
   - Design
 
-client: Westminster City Council
 website:
   url: https://www.westminster.gov.uk/
   label: Visit website

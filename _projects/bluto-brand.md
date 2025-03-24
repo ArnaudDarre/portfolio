@@ -4,6 +4,7 @@ color: "#C6882C"
 featured: false
 order: 5
 
+client: Bluto
 title: E-commerce brand creation
 subtitle: Creating the first online artisan bakery in London
 body: |-
@@ -11,7 +12,6 @@ body: |-
 category:
   - Design
 
-client: Bluto
 website:
   url: https://www.bluto.co.uk/
   label: Visit website
