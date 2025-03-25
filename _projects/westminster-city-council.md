@@ -6,7 +6,7 @@ order: 1
 
 client: Westminster City Council
 title: Westminster City Coucil's design system
-subtitle: Learnings and challenges of building a design system for local governement
+subtitle: Learnings and challenges of building a design system for local government
 body: |-
   When launching a new service, speed and consistency are crucial, but without the right tools, teams face inefficiencies and redundant work. I was tasked with creating a design system for Westminster City Council. Collaborating with the Research and Design team, I developed a tool that not only enhanced user experience through consistency and accessibility but also improved team collaboration and product scalability.
 
