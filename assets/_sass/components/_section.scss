@@ -161,7 +161,7 @@ div.section {
 // index
 
 #landing.section {
-  @include calc(height, '100vh - '$spacing-xl);
+  @include calc(height, '100vh - '$navbar-height);
   padding-right: 0;
   padding-left: 0;
 

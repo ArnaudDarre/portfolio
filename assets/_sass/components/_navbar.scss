@@ -19,7 +19,7 @@
   }
 
   @include responsive(up, tablet) {
-    height: $spacing-xl;
+    height: $navbar-height;
   }
 
   &.section {
@@ -31,7 +31,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: $spacing-lg - $spacing-md;
+    padding-top: .25rem;
     padding-bottom: 0;
     border-bottom: $border;
 
@@ -60,9 +60,9 @@
     align-items: center;
 
     @include responsive(down, tablet) {
-      justify-content: space-between;
       padding-left: $spacing-lg;
       height: $spacing-xl - $spacing-md;
+      justify-content: space-between;
     }
   }
 
