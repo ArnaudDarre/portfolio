@@ -161,7 +161,7 @@ div.section {
 // index
 
 #landing.section {
-  @include calc(height, '100vh - '$spacing-xxl);
+  @include calc(height, '100vh - '$spacing-xl);
   padding-right: 0;
   padding-left: 0;
 
@@ -178,9 +178,9 @@ div.section {
   }
 }
 
-// projects
+// work
 
-.page--projects {
+.page--work {
 
   .section--lg {
 
