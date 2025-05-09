@@ -97,6 +97,7 @@
   }
 
   &__container {
+    position: relative;
     display: flex;
     list-style: none;
 
@@ -141,16 +142,6 @@
     padding-right: $spacing-md;
     padding-left: $spacing-md;
 
-    &:not(.nav__trigger--active) {
-      animation: get-thin $transition-md;
-      will-change: font-variation-settings;
-
-      @include hover {
-        animation: get-bold $transition-md forwards;
-        font-variation-settings: $font-bold;
-      }
-    }
-
     @include responsive(down, tablet) {
       @include transition($transition-md, background-color);
       width: 100%;
@@ -168,30 +159,12 @@
     }
 
     &--active {
-      font-variation-settings: $font-bold;
       color: $primary;
       
       .dark-mode & {
         color: $primary-dark;
       }
     
-      @include responsive(up, tablet) {
-
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -1px;
-          left: 0;
-          width: 100%;
-          height: $spacing-xs;
-          background-color: $primary;
-          
-          .dark-mode & {
-            background-color: $primary-dark;
-          }
-        }
-      }
-
       @include responsive(down, tablet) {
         @include transition($transition-md, background-color);
         background-color: $background-paper;
@@ -201,19 +174,20 @@
         }
       }
     }
+  }
 
-    &:before {
-      content: attr(data-text);
-      height: 0;
-      visibility: hidden;
-      overflow: hidden;
-      user-select: none;
-      pointer-events: none;
-      font-variation-settings: $font-bold;
-
-      @media speech {
-        display: none;
-      }
+  &__underline {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    background-color: $primary;
+    transition: all 0.3s ease;
+    left: 0;
+    width: 0;
+    pointer-events: none;
+    
+    .dark-mode & {
+      background-color: $primary-dark;
     }
   }
 }
