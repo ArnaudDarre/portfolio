@@ -10,7 +10,7 @@ body: |-
   I was tasked by ADDB to rebuild Archizest's website to allow them complete control over their content. We went for the platform Squarespace for its ease of use, however this brought some technical challenges around customisation and special features like a random quote generator or an introduction slideshow. I was able using bespoke Javascript to overcome those challenges and deliver an elegant website that does not feel like it is built on a website builder.
 category:
   - Design
-  - Development
+  - Code
 
 client: Archizest
 website:

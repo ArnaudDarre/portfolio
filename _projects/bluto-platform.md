@@ -10,7 +10,7 @@ body: |-
   This was my latest adventure: designing a bespoke e-commerce platform. The goal was to create a tool a tool that would completely match the products that were sold, bread, and we decided to code it from scratch. The result is a bespoke, easy to use, and completely customisable platform.
 category:
   - Design
-  - Development
+  - Code
 
 client: Bluto
 website:

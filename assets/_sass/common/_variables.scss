@@ -55,8 +55,10 @@ $secondary: #C4467B;
 
 // others
 
-$border: 1px solid rgba($black, 0.2);
-$border-dark: 1px solid rgba($white, 0.3);
+$border-color: rgba($primary-dark, 0.25);
+$border-color-subtle: rgba($primary-dark, 0.1);
+$border-color-dark: rgba($primary-light, 0.25);
+$border-color-subtle-dark: rgba($primary-light, 0.15);
 
 $overlay: rgba($white, 0.8);
 $overlay-dark: rgba($black, 0.7);

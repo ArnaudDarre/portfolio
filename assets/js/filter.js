@@ -2,7 +2,8 @@ $(document).ready(function() {
 
   // init Isotope
   var $grid = $('.js-grid').isotope({
-    layoutMode: 'fitRows'
+    layoutMode: 'fitRows',
+    filter: '.design'
   });
   // filter items on button click
   $('.js-filter-buttons').on( 'click', '.tab', function() {

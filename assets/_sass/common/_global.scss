@@ -80,7 +80,6 @@ body.js-freeze {
 	height: 0; 
 	overflow: hidden; 
 	max-width: 100%;
-	border-radius: $spacing-md;
 
 	iframe, object, embed { 
 		position: absolute; 
@@ -143,25 +142,20 @@ li {
 	}
 }
 
-// buttons and links
-
 button,
 a {
 	outline-color: $primary;
 	cursor: pointer;
 }
 
-// iframe
-
 iframe {
-	@include transition($transition-md, border);
 	display: block; // remove bottom spacing
 	width: 100%;
-	border-radius: $border-radius-md;
-	border: $border;
+	border: 1px solid $border-color-subtle;
+	border-top: 0;
 	
 	.dark-mode & {
-		border: $border-dark;
+		border-color: $border-color-subtle-dark;
 	}
 }
 

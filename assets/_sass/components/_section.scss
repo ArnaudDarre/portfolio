@@ -13,14 +13,10 @@
 div.section {
 
   & + & {
+    border-top: 1px solid $border-color;
 
-    .section__container {
-      @include transition($transition-md, border-top);
-      border-top: $border;
-
-      .dark-mode & {
-        border-top: $border-dark;
-      }
+    .dark-mode & {
+      border-color: $border-color-dark;
     }
   }
 }
@@ -32,17 +28,75 @@ div.section {
   padding-left: $spacing-section-horizontal;
 
   &__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-top: $spacing-section-vertical;
     padding-bottom: $spacing-section-vertical;
+
+    &:before {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border-left: 1px solid $border-color-subtle;
+      border-right: 1px solid $border-color-subtle;
+      
+      .dark-mode & {
+        border-color: $border-color-subtle-dark;
+      }
+    }
+  }
+
+  &__header,
+  &__content {
+
+    &:before {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      pointer-events: none;
+      border-top: 1px solid $border-color-subtle;
+      border-bottom: 1px solid $border-color-subtle;
+      
+      .dark-mode & {
+        border-color: $border-color-subtle-dark;
+      }
+    }
   }
 
   &__header {
+    position: relative;
     display: flex;
     align-items: baseline;
     margin: -$spacing-md;
+
+    &:before {
+      top: $spacing-md;
+      left: $spacing-md;
+      bottom: $spacing-md;
+      right: $spacing-md;
+    }
+
+    &:after {
+
+      @include responsive (up, tablet) {
+        content: "";
+        position: absolute;
+        border-top: 1px solid $border-color-subtle;
+        left: $spacing-md;
+        right: $spacing-md;
+        top: 2.45rem;
+        
+        .dark-mode & {
+          border-color: $border-color-subtle-dark;
+        }
+      }
+    }
 
     & + .section__header {
       margin-top: 2rem;
@@ -66,10 +120,27 @@ div.section {
   }
 
   &__title {
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &:after {
+
+      @include responsive (down, tablet) {
+        content: "";
+        position: absolute;
+        border-top: 1px solid $border-color-subtle;
+        left: $spacing-md;
+        right: $spacing-md;
+        bottom: $spacing-md;
+        
+        .dark-mode & {
+          border-color: $border-color-subtle-dark;
+        }
+      }
+    }
   }
 
   &__lead { @extend %h5; }
@@ -79,6 +150,7 @@ div.section {
     line-height: 1.5;
     margin-top: 5rem;
     position: relative;
+    z-index: -1;
 
     &:before {
       content: "“";
@@ -93,6 +165,14 @@ div.section {
   }
 
   &__content {
+    position: relative;
+
+    &:before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
 
     & + & {
       margin-top: $spacing-lg;
@@ -131,14 +211,29 @@ div.section {
 // variants
 // —————————————————————————————————————————————————————————————————
 
-.section--lg .section__lead {
-  @extend %h1;
+.section--lg {
+
+  .section {
+
+    &__header:after {
+      top: 5.8rem;
+    }
+
+    &__lead {
+      @extend %h1;
+      color: $primary;
+    }
+  }
 }
 
 .section--fullWidth .section__content,
 .section__content--fullWidth {
   margin-right: $spacing-section-horizontal-negative;
   margin-left: $spacing-section-horizontal-negative;
+
+  &:before, &:after {
+    display: none;
+  }
 }
 
 .section--fullWidth {
@@ -165,11 +260,19 @@ div.section {
   padding-right: 0;
   padding-left: 0;
 
+  &:before, &:after {
+    display: none;
+  }
+  
   .section {
-
+    
     &__container {
       padding-top: 0;
       padding-bottom: 0;
+
+      &:before, &:after {
+        display: none;
+      }
     }
   }
 
@@ -180,29 +283,17 @@ div.section {
 
 // work
 
-.page--work {
+.section--grid {
 
-  .section--lg {
-
-    .section__container {
-      padding-bottom: 0 !important;
-    }
-
-    + .section .section__container {
-      border-top: 0 !important;
-    }
+  .section__container {
+    padding-top: 0;
   }
-}
 
-// project
+  .section__container,
+  .section__content {
 
-#project_landing {
-  @include calc(min-height, '100vh - '$spacing-lg);
-
-  @include responsive (down, laptop) {
-
-    .section__container {
-      padding-top: 0;
+    &:before {
+      border-top: 0;
     }
   }
 }
@@ -211,8 +302,17 @@ div.section {
 
 .footer.section {
   margin-top: auto;
+  border-top: 1px solid $border-color;
+
+  .dark-mode & {
+    border-color: $border-color-dark;
+  }
 
   .section__header {
+
+    &:after {
+      top: 2.1rem;
+    }
 
     @include responsive (down, mobile) {
       flex-direction: column-reverse;

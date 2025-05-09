@@ -7,99 +7,60 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
+.section__title:has(.tabs):after {
+
+  @include responsive (down, tablet) {
+    display: none;
+  }
+}
+
 .tabs {
-  @include transition($transition-md, border-bottom);
   display: flex;
-  flex-wrap: wrap;
-  border-bottom: $border;
-  margin-top: -$spacing-sm;
-
-  .dark-mode & {
-    border-bottom: $border-dark;
-  }
-
+  align-items: baseline;
+  gap: 1rem;
+  
   @include responsive (down, mobile) {
-    @include transition($transition-md, border);
-    border: $border;
-    border-radius: $border-radius-md;
-    overflow: hidden;
-
-    .dark-mode & {
-      border: $border-dark;
-    }
-  }
-
-  &:after {
-    z-index: -1;
-    bottom: 0;
+    flex-direction: column;
+    gap: 0;
   }
 }
 
 .tab {
-  animation: get-thin $transition-md;
+  @include transition($transition-md, color);
   will-change: font-variation-settings;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
   position: relative;
-  padding: $spacing-sm $spacing-md;
+  text-align: left;
+  
+  &:not(.tab--active) {
+    @extend %h5;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 1.4rem;
 
-  @include hover {
-    animation: get-bold $transition-md forwards;
-    font-variation-settings: $font-bold;
+    @include responsive (down, tablet) { text-underline-offset: .55em; }
+    @include responsive (down, mobile) { text-underline-offset: .25em; }
+
+    @include hover {
+      text-decoration-thickness: .15em;
+    }
   }
 
-  @include responsive (down, mobile) {
-    @include transition($transition-md, border-top);
-    padding-top: $spacing-sm;
-    width: 50%;
-    border-top: $border;
+  &__separator {
+    @include transition($transition-md, width);
+    height: 1rem;
+    width: 100%;
+    min-width: 2rem;
+    background-color: rgba($primary, 0.2);
 
-    .dark-mode & {
-      border-top: $border-dark;
-    }
-
-    &:nth-child(even) {
-      @include transition($transition-md, border-left);
-      border-left: $border;
-
+    @include responsive (down, mobile) {
+      height: 1px;
+      background-color: transparent;
+      border-top: 1px solid $border-color-subtle;
+      
       .dark-mode & {
-        border-left: $border-dark;
+        border-color: $border-color-subtle-dark;
       }
     }
-  }
-
-  &:nth-child(1),
-  &:nth-child(2) {
-    border-top: 0 !important;
-  }
-
-  &:before {
-    content: attr(data-text);
-    height: 0;
-    visibility: hidden;
-    overflow: hidden;
-    user-select: none;
-    pointer-events: none;
-    font-variation-settings: $font-bold;
-
-    @media speech {
-      display: none;
-    }
-  }
-
-  &:after {
-    content: "";
-    @include transition($transition-md, background-color);
-    position: absolute;
-    height: $spacing-xs;
-    width: 100%;
-    background-color: transparent;
-    z-index: 0;
-    bottom: -1px;
-    left: 0;
   }
 }
 
@@ -108,27 +69,6 @@
 // —————————————————————————————————————————————————————————————————
 
 .tab--active {
-  animation: none;
-  font-variation-settings: $font-bold;
+  @extend %h1;
   color: $primary;
-
-  @include hover {
-    animation: none;
-  }
-
-  @include responsive (down, mobile) {
-    @include transition($transition-md, background-color);
-    background-color: $background-paper;
-
-    .dark-mode & {
-      background-color: $background-paper-dark;
-    }
-  }
-
-  @include responsive (up, mobile) {
-
-    &:after {
-      background-color: $primary;
-    }
-  }
 }

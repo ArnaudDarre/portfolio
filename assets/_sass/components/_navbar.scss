@@ -13,9 +13,11 @@
   left: 0;
   width: 100vw;
   background-color: $background-default;
+  border-bottom: 1px solid $border-color;
 
   .dark-mode & {
     background-color: $background-default-dark;
+    border-color: $border-color-dark;
   }
 
   @include responsive(up, tablet) {
@@ -27,17 +29,11 @@
   }
 
   .section__container {
-    @include transition($transition-md, border-bottom);
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: .25rem;
+    padding-top: .125rem;
     padding-bottom: 0;
-    border-bottom: $border;
-
-    .dark-mode & {
-      border-bottom: $border-dark;
-    }
 
     @include responsive(up, tablet) {
       height: 100%;
@@ -161,7 +157,6 @@
       margin-bottom: $spacing-xs;
       padding: $spacing-md - $spacing-xs;
       align-items: flex-start;
-      border-radius: $border-radius-sm;
 
       @include hover {
         background-color: $background-paper;

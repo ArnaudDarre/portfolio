@@ -7,36 +7,27 @@ title: Work
   <div class="section__container">
     <div class="section__header">
       <div class="section__title">
-        <h1 class="section__lead">Work</h1>
+        <div class="tabs js-filter-buttons" role="tablist" aria-label="Project categories">
+          {% for category in site.data.categories %}
+          <button
+            class="tab {% if forloop.first %}tab--active{% endif %}"
+            data-filter=".{{ category.title | slugify }}" data-text="{{ category.title }}"
+            role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+          >
+            {{ category.title }}
+          </button>
+          {% if forloop.last %}{% else %}<span class="tab__separator"></span>{% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="section">
+<div class="section section--grid">
   <div class="section__container">
     <div class="section__content">
-      <div class="tabs js-filter-buttons" role="tablist" aria-label="Project categories">
-        <button
-          class="tab tab--active"
-          data-filter="*" data-text="All"
-          role="tab" aria-selected="true"
-        >
-          All
-        </button>
-        {% for category in site.data.categories %}
-        <button
-          class="tab"
-          data-filter=".{{ category.title | slugify }}" data-text="{{ category.title }}"
-          role="tab" aria-selected="false"
-        >
-          {{ category.title }}
-        </button>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="section__content">
-      <div class="js-grid grid grid--spacing4">
+      <div class="js-grid tabs_container grid grid--spacing4">
         {% assign sorted = site.projects | sort: 'order' %}
         {% for project in sorted %}
         <div class="grid__item grid__item--lg4 grid__item--md6 {% for item in project.category %} {{ item | slugify }}{% endfor %}">

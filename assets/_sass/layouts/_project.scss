@@ -1,7 +1,6 @@
 .page--project {
 
   img:not(.project__cover) {
-    border-radius: $spacing-sm;
     max-height: 90vh;
     width: auto;
   }
@@ -26,13 +25,11 @@
 
     @include responsive (up, laptop) {
       position: absolute;
-      top: $spacing-lg;
+      top: $spacing-section-vertical;
       right: 0;
       bottom: $spacing-xl;
       left: $spacing-project;
       height: auto;
-      border-top-left-radius: $border-radius-lg;
-      border-bottom-left-radius: $border-radius-lg;
     }
 
     @include responsive (down, laptop) {
@@ -84,6 +81,24 @@
 
       p { opacity: 1; }
       img { opacity: 0.3; }
+    }
+  }
+}
+
+#project_landing {
+  @include calc(min-height, '100vh - '$spacing-lg);
+
+  @include responsive (down, laptop) {
+
+    .section__container {
+      padding-top: 0;
+    }
+  }
+
+  .section__content {
+
+    @include responsive (up, laptop) {
+      height: 100%;
     }
   }
 }
