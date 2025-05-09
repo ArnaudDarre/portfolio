@@ -24,7 +24,6 @@
   &__media,
   &__mediaInner {
     overflow: hidden;
-    border-radius: $border-radius-md;
   }
 
   &__mediaInner {
@@ -58,10 +57,6 @@
 			}
 		}
 
-		&__image {
-			border-radius: $size/3;
-		}
-
 		&__label {
 
 			& + .card__title {
@@ -90,7 +85,6 @@
   &.card--background {
     background-color: $background-default;
     padding: $size*2;
-    border-radius: $size;
 
     .dark-mode & {
 		  background-color: $background-default-dark;
@@ -113,8 +107,21 @@
 
 .card--projects {
 
-  .card__mediaInner {
-    @include transition($transition-lg, transform);
+  .card {
+
+    &__mediaInner {
+      @include transition($transition-lg, transform);
+    }
+
+    // &__subtitle {
+    //   display: -webkit-box;
+    //   line-clamp: 2;
+    //   -webkit-line-clamp: 2;
+    //   -webkit-box-orient: vertical;
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;    
+    //   height: calc(1.5em * 2);
+    // }
   }
 
   &:hover {
@@ -128,7 +135,7 @@
     }
   }
 
-  // make all card clickable
+  // make the entire card clickable
   .card__actions a:after {
     content: "";
     position: absolute;
@@ -159,10 +166,9 @@
     display: inline-block;
     background-color: $background-default;
     border-radius: $spacing-sm;
-    padding: $spacing-xs $spacing-md;
+    padding: $spacing-xs $spacing-md $spacing-xs 0;
     margin-top: -$spacing-xs;
     margin-bottom: -$spacing-xs;
-    margin-left: -$spacing-md;
 
     .dark-mode & {
       background-color: $background-default-dark;

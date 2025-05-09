@@ -13,13 +13,15 @@
   left: 0;
   width: 100vw;
   background-color: $background-default;
+  border-bottom: 1px solid $border-color;
 
   .dark-mode & {
     background-color: $background-default-dark;
+    border-color: $border-color-dark;
   }
 
   @include responsive(up, tablet) {
-    height: $spacing-xl;
+    height: $navbar-height;
   }
 
   &.section {
@@ -27,17 +29,11 @@
   }
 
   .section__container {
-    @include transition($transition-md, border-bottom);
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: $spacing-lg - $spacing-md;
+    padding-top: .125rem;
     padding-bottom: 0;
-    border-bottom: $border;
-
-    .dark-mode & {
-      border-bottom: $border-dark;
-    }
 
     @include responsive(up, tablet) {
       height: 100%;
@@ -60,9 +56,9 @@
     align-items: center;
 
     @include responsive(down, tablet) {
-      justify-content: space-between;
       padding-left: $spacing-lg;
       height: $spacing-xl - $spacing-md;
+      justify-content: space-between;
     }
   }
 
@@ -101,6 +97,7 @@
   }
 
   &__container {
+    position: relative;
     display: flex;
     list-style: none;
 
@@ -145,23 +142,12 @@
     padding-right: $spacing-md;
     padding-left: $spacing-md;
 
-    &:not(.nav__trigger--active) {
-      animation: get-thin $transition-md;
-      will-change: font-variation-settings;
-
-      @include hover {
-        animation: get-bold $transition-md forwards;
-        font-variation-settings: $font-bold;
-      }
-    }
-
     @include responsive(down, tablet) {
       @include transition($transition-md, background-color);
       width: 100%;
       margin-bottom: $spacing-xs;
       padding: $spacing-md - $spacing-xs;
       align-items: flex-start;
-      border-radius: $border-radius-sm;
 
       @include hover {
         background-color: $background-paper;
@@ -173,22 +159,12 @@
     }
 
     &--active {
-      font-variation-settings: $font-bold;
       color: $primary;
-
-      @include responsive(up, tablet) {
-
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -1px;
-          left: 0;
-          width: 100%;
-          height: $spacing-xs;
-          background-color: $primary;
-        }
+      
+      .dark-mode & {
+        color: $primary-dark;
       }
-
+    
       @include responsive(down, tablet) {
         @include transition($transition-md, background-color);
         background-color: $background-paper;
@@ -198,19 +174,20 @@
         }
       }
     }
+  }
 
-    &:before {
-      content: attr(data-text);
-      height: 0;
-      visibility: hidden;
-      overflow: hidden;
-      user-select: none;
-      pointer-events: none;
-      font-variation-settings: $font-bold;
-
-      @media speech {
-        display: none;
-      }
+  &__underline {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    background-color: $primary;
+    transition: all 0.3s ease;
+    left: 0;
+    width: 0;
+    pointer-events: none;
+    
+    .dark-mode & {
+      background-color: $primary-dark;
     }
   }
 }

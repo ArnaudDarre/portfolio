@@ -1,7 +1,7 @@
 - title: Home
   url: index.html
-- title: Projects
-  url: projects.html
+- title: Work
+  url: work.html
   collection: project
 - title: About
   url: about.html

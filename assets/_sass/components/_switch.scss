@@ -51,10 +51,10 @@ $toggle-size: $size - $margin-md;
     height: $size;
     border-radius: $size;
     position: relative;
-    border: $border;
+    border: 1px solid $border-color;
   
     .dark-mode & {
-      border: $border-dark;
+      border-color: $border-color-dark;
     }
   }
 
@@ -67,6 +67,10 @@ $toggle-size: $size - $margin-md;
     height: $toggle-size;
     border-radius: $toggle-size;
     background-color: $primary;
+
+    .dark-mode & {
+      background-color: $primary-dark;
+    }
   }
 
   svg {
@@ -79,10 +83,10 @@ $toggle-size: $size - $margin-md;
 
     &:nth-child(3) {
       left: $margin-lg;
-      stroke: $text-contrast;
+      stroke: $primary-text;
 
       .dark-mode & {
-        stroke: $primary;
+        stroke: $text-contrast;
       }
     }
 
@@ -91,7 +95,7 @@ $toggle-size: $size - $margin-md;
       stroke: $primary;
 
       .dark-mode & {
-        stroke: $text-contrast;
+        stroke: $primary-text;
       }
     }
   }

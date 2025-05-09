@@ -1,0 +1,40 @@
+---
+layout: default
+title: Work
+---
+
+<div class="section section--lg">
+  <div class="section__container">
+    <div class="section__header">
+      <div class="section__title">
+        <div class="tabs js-filter-buttons" role="tablist" aria-label="Project categories">
+          {% for category in site.data.categories %}
+          <button
+            class="tab {% if forloop.first %}tab--active{% endif %}"
+            data-filter=".{{ category.title | slugify }}" data-text="{{ category.title }}"
+            role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+          >
+            {{ category.title }}
+          </button>
+          {% if forloop.last %}{% else %}<span class="tab__separator"></span>{% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section--grid">
+  <div class="section__container">
+    <div class="section__content">
+      <div class="js-grid tabs_container grid grid--spacing4">
+        {% assign sorted = site.projects | sort: 'order' %}
+        {% for project in sorted %}
+        <div class="grid__item grid__item--lg4 grid__item--md6 {% for item in project.category %} {{ item | slugify }}{% endfor %}">
+          {% include components/card-project.html title_component='h2' %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

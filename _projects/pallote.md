@@ -10,7 +10,7 @@ subtitle: Bespoke components for React apps
 body: |-
   I started building this component library when I started learning React and have been completing it ever since. It's a great way to keep learning, and also to have a collection of resources at hand when I build design systems for new projects.
 category:
-  - Development
+  - Code
 
 website:
   url: https://react.pallote.com

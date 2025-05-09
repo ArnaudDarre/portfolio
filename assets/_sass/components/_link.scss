@@ -7,7 +7,11 @@
   color: $primary;
   text-decoration: underline;
   white-space: nowrap;
-  text-underline-offset: .25rem;
+  text-underline-offset: .25em;
+  
+	.dark-mode & {
+    color: $primary-dark;
+	}
 
   svg {
     @include transition($transition-md, stroke-width);

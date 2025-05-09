@@ -8,8 +8,6 @@
         <h1 class="text--primary">
           <a href="{% link index.html %}">{{ site.title }}</a>
         </h1>
-        <p class="text--alt">/</p>
-        <p>Portfolio</p>
       </div>
       <div class="switch ml-3">
         <input aria-label="Color mode switch" class="switch__input" type="checkbox" name="mode-switch" id="mode-switch">
@@ -34,6 +32,7 @@
           </a>
         </li>
         {% endfor %}
+        <span class="nav__underline"></span>
       </ul>
     </nav>
   </div>

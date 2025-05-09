@@ -14,4 +14,8 @@
   padding-left: .25rem;
   color: $primary;
   border: 1px solid;
+  
+  .dark-mode & {
+    color: $primary-dark;
+  }
 }
