@@ -33,7 +33,7 @@ body.js-freeze {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	
+
 	.dark-mode & {
 		background-color: $background-default-dark;
 		color: $text-contrast;		
@@ -52,7 +52,7 @@ body.js-freeze {
 	background-color: $overlay;
 	z-index: 13;
 	padding: $spacing-section-vertical $spacing-section-horizontal;
-	
+
 	.dark-mode & {
 		background-color: $overlay-dark;
 	}
@@ -94,16 +94,31 @@ body.js-freeze {
 ::-moz-selection {
 	background: $primary;
 	color: $primary-text;
+
+	.dark-mode & {
+		background: $primary-dark;
+		color: $primary-text-dark;
+	}
 }
 
 ::selection {
 	background: $primary;
 	color: $primary-text;
+
+	.dark-mode & {
+		background: $primary-dark;
+		color: $primary-text-dark;
+	}
 }
 
 ::-moz-selection {
 	background: $primary;
 	color: $primary-text;
+
+	.dark-mode & {
+		background: $primary-dark;
+		color: $primary-text-dark;
+	}
 }
 
 // remove autocomplete from webkit browsers
@@ -119,6 +134,10 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
 	-webkit-box-shadow: 0 0 0px 1000px rgba($primary, 0.1) inset;
 	@include transition($transition-md, background-color);
+
+	.dark-mode & {
+		-webkit-box-shadow: 0 0 0px 1000px rgba($primary-dark, 0.1) inset;
+	}
 }
 
 // prevent images from stretching with flex 
@@ -146,6 +165,10 @@ button,
 a {
 	outline-color: $primary;
 	cursor: pointer;
+	
+	.dark-mode & {
+		outline-color: $primary-dark;
+	}
 }
 
 iframe {
@@ -153,7 +176,7 @@ iframe {
 	width: 100%;
 	border: 1px solid $border-color-subtle;
 	border-top: 0;
-	
+
 	.dark-mode & {
 		border-color: $border-color-subtle-dark;
 	}
@@ -207,7 +230,7 @@ $step: 5;
 // responsive
 
 .hide {
-	
+
 	&-desktop { @include responsive(down, desktop) { display: none !important; } }
 	&-laptop { @include responsive(down, laptop) { display: none !important; } }
 	&-tablet { @include responsive(down, tablet) { display: none !important; } }

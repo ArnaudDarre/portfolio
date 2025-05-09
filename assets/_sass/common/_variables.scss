@@ -46,19 +46,22 @@ $background-paper-dark: $grey-90;
 
 // brand
 
-$primary-light: #BEFBFF;
-$primary: #00A3AE;
-$primary-dark: #006F7A;
+$primary: #3c6ef4;
+$primary-lighten: #b5c8fb;
+$primary-darken: #0934a7;
 $primary-text: $text-contrast;
 
-$secondary: #C4467B;
+$primary-dark: #ff5722;
+$primary-lighten-dark: #ffb8a2;
+$primary-darken-dark: #a22700;
+$primary-text-dark: $text;
 
 // others
 
-$border-color: rgba($primary-dark, 0.25);
-$border-color-subtle: rgba($primary-dark, 0.1);
-$border-color-dark: rgba($primary-light, 0.25);
-$border-color-subtle-dark: rgba($primary-light, 0.15);
+$border-color: rgba($primary-darken, 0.25);
+$border-color-subtle: rgba($primary-darken, 0.1);
+$border-color-dark: rgba($primary-lighten-dark, 0.25);
+$border-color-subtle-dark: rgba($primary-lighten-dark, 0.15);
 
 $overlay: rgba($white, 0.8);
 $overlay-dark: rgba($black, 0.7);

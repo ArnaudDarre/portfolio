@@ -161,6 +161,10 @@ div.section {
       line-height: 1;
       opacity: 20%;
       color: $primary;
+      
+      .dark-mode & {
+        color: $primary-dark;
+      }
     }
   }
 
@@ -222,6 +226,10 @@ div.section {
     &__lead {
       @extend %h1;
       color: $primary;
+      
+      .dark-mode & {
+        color: $primary-dark;
+      }
     }
   }
 }

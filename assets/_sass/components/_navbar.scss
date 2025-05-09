@@ -170,7 +170,11 @@
     &--active {
       font-variation-settings: $font-bold;
       color: $primary;
-
+      
+      .dark-mode & {
+        color: $primary-dark;
+      }
+    
       @include responsive(up, tablet) {
 
         &:after {
@@ -181,6 +185,10 @@
           width: 100%;
           height: $spacing-xs;
           background-color: $primary;
+          
+          .dark-mode & {
+            background-color: $primary-dark;
+          }
         }
       }
 

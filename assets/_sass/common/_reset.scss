@@ -79,5 +79,9 @@ iframe,
   &:focus {
     outline: revert;
     outline-color: $primary;
+    
+    .dark-mode & {
+      outline-color: $primary-dark;
+    }
   }
 }

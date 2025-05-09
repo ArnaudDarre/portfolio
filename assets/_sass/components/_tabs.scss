@@ -51,6 +51,10 @@
     width: 100%;
     min-width: 2rem;
     background-color: rgba($primary, 0.2);
+    
+    .dark-mode & {
+      background-color: rgba($primary-dark, 0.2);
+    }
 
     @include responsive (down, mobile) {
       height: 1px;
@@ -71,4 +75,8 @@
 .tab--active {
   @extend %h1;
   color: $primary;
+  
+  .dark-mode & {
+    color: $primary-dark;
+  }
 }

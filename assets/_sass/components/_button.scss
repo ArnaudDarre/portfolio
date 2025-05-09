@@ -128,7 +128,6 @@
 
 @include button-fill-color('button--',
 // prefix				background				color
-	'primary'			$primary					$primary-text,
 	'grey'				$background-paper	$text
 );
 
