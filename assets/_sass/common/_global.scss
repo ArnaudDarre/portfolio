@@ -8,6 +8,10 @@
 .page--test {
 	height: 100vh;
 	overflow: hidden;
+
+	.navbar {
+		display: none;
+	}
 }
 
 // —————————————————————————————————————————————————————————————————
