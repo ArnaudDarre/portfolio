@@ -35,7 +35,7 @@
     @extend %h5;
     cursor: pointer;
     text-decoration: underline;
-    text-underline-offset: 1.4rem;
+    text-underline-offset: .25em;
 
     @include responsive (down, tablet) { text-underline-offset: .55em; }
     @include responsive (down, mobile) { text-underline-offset: .25em; }
@@ -48,7 +48,7 @@
   &__separator {
     @include transition($transition-md, width);
     height: 1rem;
-    width: 100%;
+    width: 1rem;
     min-width: 2rem;
     background-color: rgba($primary, 0.2);
     
@@ -57,13 +57,7 @@
     }
 
     @include responsive (down, mobile) {
-      height: 1px;
-      background-color: transparent;
-      border-top: 1px solid $border-color-subtle;
-      
-      .dark-mode & {
-        border-color: $border-color-subtle-dark;
-      }
+      display: none;
     }
   }
 }
