@@ -17,6 +17,10 @@
     @extend %caption;
   }
 
+  &__title {
+    font-variation-settings: $font-black !important;
+  }
+
   &__subtitle {
     font-variation-settings: $font-bold;
   }
