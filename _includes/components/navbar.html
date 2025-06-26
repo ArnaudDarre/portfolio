@@ -6,7 +6,9 @@
     <div class="navbar__main">
       <div class="navbar__logo text--bold">
         <h1 class="text--primary">
-          <a href="{% link index.html %}">{{ site.title }}</a>
+          <a href="{% link index.html %}" aria-label="{{ site.title }}">
+            {% svg assets/logos/logo-full.svg %}
+          </a>
         </h1>
       </div>
       <div class="switch ml-3">

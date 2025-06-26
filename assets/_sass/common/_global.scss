@@ -1,7 +1,6 @@
 // —————————————————————————————————————————————————————————————————
 // general
 // misc
-// containers
 // logo
 // —————————————————————————————————————————————————————————————————
 
@@ -284,4 +283,26 @@ header { z-index: 13; }
 	@include background(50% 50%, cover);
 	width: 100%;
 	height: 100%;
+}
+
+// —————————————————————————————————————————————————————————————————
+// logo
+// —————————————————————————————————————————————————————————————————
+
+.fill--primary {
+	@include transition($transition-md, fill);
+	fill: $primary;
+	
+	.dark-mode & {
+		fill: $primary-dark;
+	}
+}
+
+.fill--text {
+	@include transition($transition-md, fill);
+	fill: $text;
+
+	.dark-mode & {
+		fill: $text-contrast;		
+	}
 }

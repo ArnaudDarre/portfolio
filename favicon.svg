@@ -1,25 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
-    #light-icon {
-      display: inline;
-    }
-    #dark-icon {
-      display: none;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      #light-icon {
-        display: none;
-      }
-      #dark-icon {
-        display: inline;
-      }
-    }
-  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(0.5952380952380952,0,0,0.5952380952380952,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1680" height="1680"><svg width="1680" height="1680" viewBox="0 0 1680 1680" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="40" y="40" width="1600" height="1600" stroke="#3C6EF4" stroke-width="80"></rect>
-<path d="M840 1640C1281.83 1640 1640 1281.83 1640 840C1640 398.172 1281.83 40 840 40" stroke="#3C6EF4" stroke-width="80"></path>
-<path d="M1620 1640L436 40" stroke="#3C6EF4" stroke-width="80"></path>
-</svg></svg></g></g></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(0.5952380952380952,0,0,0.5952380952380952,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1680" height="1680"><svg width="1680" height="1680" viewBox="0 0 1680 1680" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="40" y="40" width="1600" height="1600" stroke="#FF5722" stroke-width="80"></rect>
-<path d="M840 1640C1281.83 1640 1640 1281.83 1640 840C1640 398.172 1281.83 40 840 40" stroke="#FF5722" stroke-width="80"></path>
-<path d="M1620 1640L436 40" stroke="#FF5722" stroke-width="80"></path>
-</svg></svg></g></g></svg></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1090)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(0.49968769519050593,0,0,0.49968769519050593,100.24984384759523,100)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1601"><svg width="1600" height="1601" viewBox="0 0 1600 1601" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1600 0.880859V1600.88H0V0.880859H1600ZM76.1905 1524.69H1523.81V77.0713H76.1905V1524.69Z" fill="#3C6EF4"></path>
+<path d="M328 61.8334L1528 1585.64L1592 1539.93L392 16.1191L328 61.8334Z" fill="#3C6EF4"></path>
+<path d="M1600 800.881C1600 359.053 1241.83 0.880859 800 0.880859V77.0713C1199.75 77.0713 1523.81 401.132 1523.81 800.881C1523.81 1200.63 1199.75 1524.69 800 1524.69V1600.88C1241.83 1600.88 1600 1242.71 1600 800.881Z" fill="#3C6EF4"></path>
+<path d="M76.1905 1562.79C76.1905 1163.04 400.251 838.976 800 838.976L1561.9 838.976V762.785L800 762.785C358.172 762.785 0 1120.96 0 1562.79H76.1905Z" fill="#3C6EF4"></path>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1090"><rect width="1000" height="1000" x="0" y="0" rx="100" ry="100"></rect></clipPath></defs></svg>
