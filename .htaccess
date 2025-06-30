@@ -1,2 +1,21 @@
 RewriteEngine On
 RewriteRule ^projects/(.*)$ /work/$1 [R=301,L]
+RewriteRule ^projects$ /work [R=301,L]
+
+Redirect 301 /projects /work
+Redirect 301 /projects/applied-blockchain /work/applied-blockchain
+Redirect 301 /projects/applied-blockchain/ /work/applied-blockchain
+Redirect 301 /projects/archizest /work/archizest
+Redirect 301 /projects/bluto-platform /work/bluto-platform
+Redirect 301 /projects/le-domaine-des-pres-verts /work/le-domaine-des-pres-verts
+Redirect 301 /projects/le-domaine-des-pres-verts/ /work/le-domaine-des-pres-verts
+Redirect 301 /projects/museum /work/museum
+Redirect 301 /projects/museum/ /work/museum
+Redirect 301 /projects/pallote /work/pallote
+Redirect 301 /projects/shroomio /work/pallote
+Redirect 301 /projects/stock-platform /work/stock-platform
+Redirect 301 /projects/sunday-hearth-club /work/sunday-hearth-club
+Redirect 301 /projects/wallet-app /work/wallet-app
+Redirect 301 /projects/watapix /work/watapix
+Redirect 301 /projects/watapix/ /work/watapix
+
