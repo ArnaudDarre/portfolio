@@ -32,6 +32,7 @@ plugins:
   - jekyll-autoprefixer
   - jekyll-coffeescript
   - jekyll-inline-svg
+  - jekyll-sitemap
 # jekyll-inline-svg
 svg:
   optimize: true
