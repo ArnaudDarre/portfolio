@@ -1,0 +1,19 @@
+/projects /work 301
+/projects/* /work/:splat 301
+
+/projects /work 301
+/projects/applied-blockchain /work/applied-blockchain 301
+/projects/applied-blockchain/ /work/applied-blockchain  301
+/projects/archizest /work/archizest 301
+/projects/bluto-platform /work/bluto-platform 301
+/projects/le-domaine-des-pres-verts /work/le-domaine-des-pres-verts 301
+/projects/le-domaine-des-pres-verts/ /work/le-domaine-des-pres-verts  301
+/projects/museum /work/museum 301
+/projects/museum/ /work/museum  301
+/projects/pallote /work/pallote 301
+/projects/shroomio /work/pallote  301
+/projects/stock-platform /work/stock-platform 301
+/projects/sunday-hearth-club /work/sunday-hearth-club 301
+/projects/wallet-app /work/wallet-app 301
+/projects/watapix /work/watapix 301
+/projects/watapix/ /work/watapix  301
