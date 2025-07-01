@@ -1,7 +1,6 @@
 /projects                             /work                            301
 /projects/*                           /work/:splat                     301
 
-/projects                             /work                            301
 /projects/applied-blockchain          /work/applied-blockchain         301
 /projects/applied-blockchain/         /work/applied-blockchain         301
 /projects/archizest                   /work/archizest                  301
