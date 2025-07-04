@@ -2,6 +2,10 @@
 <html lang="en" class="theme-container">
 <head>
 
+	{% if page.noindex == true %}
+	<meta name="robots" content="noindex, nofollow" />
+ 	{% endif%}
+
 	<!-- check preferred mode before page load -->
 	<script>
 		const themeContainer = document.querySelector(".theme-container");
